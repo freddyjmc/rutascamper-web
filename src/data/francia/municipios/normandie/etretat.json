@@ -1,0 +1,47 @@
+{
+  "nombre": "Étretat",
+  "comunidad": "normandie",
+  "provincia": "Seine-Maritime (76)",
+  "estado": "sin-datos",
+  "resumen": "En las órdenes municipales que publica Étretat no hemos localizado ninguna sobre autocaravanas. Si no la hay, rige la norma nacional; respeta la señalización. Para dormir, la Oficina de Turismo indica un área de 35 plazas en la rue Guy de Maupassant, junto al camping municipal, abierta 24 h (de 10 a 13 €). El camping municipal abre del 15 de marzo al 15 de noviembre.",
+  "reglas": [
+    "No hemos localizado ninguna orden municipal. Si no la hay, rige la norma nacional; respeta la señalización.",
+    "Fuera de los campings, acampar en la orilla del mar está prohibido salvo excepción (art. R111-33 del Code de l'urbanisme).",
+    "Prohibido circular o estacionar vehículos a motor fuera de los caminos habilitados en la orilla del mar y en las playas y dunas públicas abiertas al público, salvo autorización del prefecto (art. L321-9 del Code de l'environnement).",
+    "La web municipal publica también una orden titulada «Etretat classé zone touristique» que no hemos leído."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de autocaravanas de Étretat",
+      "detalle": "Rue Guy de Maupassant, junto al camping municipal. 35 plazas, electricidad, agua, vaciado de aguas grises y WC, basura. Abierta 24 h, pago con tarjeta, de 10 a 13 €, según la Oficina de Turismo.",
+      "soloServicios": false,
+      "lat": 49.700802,
+      "lon": 0.215495,
+      "coordFuente": "https://www.lehavre-etretat-tourisme.com/en/fiche/etretat/aire-de-camping-cars-etretat_TFOHPANOR076FS0002T/"
+    },
+    {
+      "nombre": "Camping municipal de Étretat",
+      "detalle": "69 rue Guy de Maupassant. Abierto del 15 de marzo al 15 de noviembre. Autocaravana con coche y electricidad 20 €, sin electricidad 15 €, adulto, 8 €. Tiene punto de vaciado para autocaravanas. Datos de la web municipal.",
+      "soloServicios": false
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Ville d'Étretat: órdenes municipales (arrêtés)",
+      "url": "https://etretat.fr/arretes-municipaux/",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Ville d'Étretat: camping municipal",
+      "url": "https://etretat.fr/demarche/camping/",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Le Havre Étretat Normandie Tourisme: área de autocaravanas de Étretat",
+      "url": "https://www.lehavre-etretat-tourisme.com/en/fiche/etretat/aire-de-camping-cars-etretat_TFOHPANOR076FS0002T/",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-06",
+  "verificado": true
+}

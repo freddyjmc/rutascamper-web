@@ -1,0 +1,35 @@
+{
+  "nombre": "Canarias",
+  "resumen": "Canarias no tiene todavía una norma autonómica en vigor sobre campings y áreas de autocaravanas. El Gobierno de Canarias aprobó el 30 de octubre de 2026 un decreto que las regulará, con áreas de pernocta de hasta 72 horas, pero entrará en vigor tres meses después de publicarse en el Boletín Oficial de Canarias, y aún no se ha publicado. Mientras tanto, aparcar es tráfico: puedes estacionar como cualquier vehículo si no despliegas nada, salvo lo que diga cada ayuntamiento. En Tenerife, para pernoctar en las zonas de acampada del Cabildo hace falta autorización previa.",
+  "normaAutonomica": "Sin norma autonómica específica en vigor. El Consejo de Gobierno aprobó el 30/10/2026 el decreto de establecimientos turísticos de alojamiento al aire libre; no estará en vigor hasta tres meses después de su publicación en el BOC, que no se había producido a 03/11/2026. Lo actualizaremos cuando se publique.",
+  "claves": [
+    "Aparcar no es acampar: según la DGT, la autocaravana está estacionada si solo toca el suelo con las ruedas (los calzos se admiten), no ocupa más que cerrada y no emite fluidos ni ruidos; que haya gente dentro es irrelevante (Instrucción PROT 2026/04).",
+    "La administración local puede limitar el tiempo de estacionamiento y prohibir acampar en sus vías urbanas, como reconoce el Tribunal Supremo (sentencia de 13/03/2018, citada por la DGT): respeta siempre la ordenanza y las señales.",
+    "Decreto aprobado y pendiente de publicar: regulará campings, áreas de acampada para autocaravanas y áreas de pernocta, con una estancia máxima de 72 horas en estas últimas, y distingue entre estacionar y acampar (nota oficial del Gobierno de Canarias, 30/10/2026).",
+    "En Tenerife, las zonas de acampada del Cabildo admiten pernoctar en autocaravana hasta 7 días seguidos, previa autorización que se pide en la sede electrónica del Cabildo (web del Cabildo de Tenerife).",
+    "Si tienes dudas en una isla concreta, pregunta al cabildo insular o al ayuntamiento antes de pasar la noche."
+  ],
+  "fuentes": [
+    {
+      "titulo": "Nota oficial del Gobierno de Canarias: aprobación de la primera regulación de campings y alojamientos turísticos al aire libre (30/10/2026)",
+      "url": "https://www3.gobiernodecanarias.org/noticias/el-gobierno-de-canarias-aprueba-la-primera-regulacion-de-campings-y-alojamientos-turisticos-al-aire-libre/",
+      "tipo": "oficial",
+      "fecha": "2026-10-30"
+    },
+    {
+      "titulo": "Instrucción PROT 2026/04 de la Dirección General de Tráfico sobre autocaravanas (11/03/2026)",
+      "url": "https://www.dgt.es/export/sites/web-DGT/.galleries/downloads/muevete-con-seguridad/normas-de-trafico/NOR-normativa-general/report_Instruccion-PROT-2026_04-Autocaravanas.pdf",
+      "tipo": "oficial",
+      "fecha": "2026-03-11"
+    },
+    {
+      "titulo": "Cabildo de Tenerife: zonas de acampada",
+      "url": "https://www.tenerife.es/zonas-de-acampada",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-03",
+  "verificado": true,
+  "pernoctaVia": "Sin norma autonómica en vigor: aparcar sin desplegar nada es tráfico; manda la ordenanza de cada ayuntamiento.",
+  "estanciaAreas": "72 h en áreas de pernocta cuando entre en vigor el nuevo decreto"
+}

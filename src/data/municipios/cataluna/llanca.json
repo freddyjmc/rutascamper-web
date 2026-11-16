@@ -1,0 +1,35 @@
+{
+  "nombre": "Llançà",
+  "comunidad": "cataluna",
+  "provincia": "Girona",
+  "estado": "prohibido",
+  "resumen": "En Llançà puedes aparcar la autocaravana en la calle como cualquier otro vehículo, pero en ningún caso pernoctar allí. Solo se puede dormir en las zonas de estacionamiento reservadas y señalizadas para autocaravanas y en el área de servicio municipal, siempre sin acampar.",
+  "reglas": [
+    "Se reconoce el derecho a estacionar temporalmente en todo el municipio según las normas de tráfico, pero en ningún caso se puede pernoctar fuera de las zonas exclusivas (art. 4.3).",
+    "En las zonas de estacionamiento exclusivas para autocaravanas, debidamente señalizadas, se permite pernoctar pero no acampar ni desplegar elementos; solo se pueden abrir las ventanas para ventilar (arts. 4.4 y 7).",
+    "En el área de servicio municipal, con autorización y pago previo, se permite pernoctar dentro del vehículo y abrir ventanas, pero no acampar (art. 8).",
+    "Cuenta como estacionada si solo toca el suelo con las ruedas, sin patas estabilizadoras, sin ventanas proyectables ni elementos que sobresalgan, sin vertidos y sin ruidos molestos (art. 4.2).",
+    "Prohibido circular con autocaravanas por el casco antiguo del Port y de la Vila (art. 6)."
+  ],
+  "areas": [
+    { "nombre": "Zonas de estacionamiento reservadas para autocaravanas", "detalle": "en distintos aparcamientos públicos, señalizadas; se puede pernoctar sin acampar y sin servicios" },
+    { "nombre": "Área de servicio municipal de autocaravanas", "detalle": "con autorización y pago previo; uso recomendado de los servicios de 8:00 a 23:00" }
+  ],
+  "multa": "Leves: hasta 100 €. Graves: de 101 a 300 €. Muy graves: de 301 a 500 € (art. 22).",
+  "fuentes": [
+    {
+      "titulo": "Ordenança municipal reguladora de l'estacionament i pernocta d'autocaravanes de Llançà, aprovació definitiva (BOPG n.º 179, 15/09/2023)",
+      "url": "https://ssl4.ddgi.cat/bopV1/pdf/2023/179/202317907757.pdf",
+      "tipo": "oficial",
+      "fecha": "2023-09-15"
+    },
+    {
+      "titulo": "Decreto 75/2020 de turismo de Cataluña, art. 213-22",
+      "url": "https://noticias.juridicas.com/base_datos/CCAA/672738-d-75-2020-de-4-ago-ca-cataluna-turismo.html",
+      "tipo": "oficial",
+      "fecha": "2020-08-06"
+    }
+  ],
+  "revisado": "2026-11-01",
+  "verificado": true
+}

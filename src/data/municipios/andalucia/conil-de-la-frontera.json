@@ -1,0 +1,36 @@
+{
+  "nombre": "Conil de la Frontera",
+  "comunidad": "andalucia",
+  "provincia": "Cádiz",
+  "estado": "sin-datos",
+  "resumen": "En Conil no hemos localizado una ordenanza propia sobre autocaravanas. La ordenanza de playas de 2024 prohíbe acampar en las playas y estacionar caravanas o autocaravanas en ellas cuando vaya contra las normas de circulación. Fuera de las playas se aplica la norma andaluza: para dormir, usa un área o un camping.",
+  "reglas": [
+    "En las playas está prohibida la acampada, y la ordenanza define acampada incluyendo los vehículos o remolques habitables (Ordenanza de playas, art. 21 y definiciones).",
+    "También está prohibido estacionar caravanas, autocaravanas o similares en las playas cuando vaya contra la normativa de circulación (Ordenanza de playas, art. 21).",
+    "Andalucía prohíbe con carácter general la acampada y pernocta con fines vacacionales o de ocio fuera de campings y áreas de pernocta de autocaravanas (Decreto 26/2018, art. 1.5): para dormir, usa un área o un camping.",
+    "No hemos localizado una ordenanza municipal específica sobre estacionamiento y pernocta de autocaravanas: pregunta en el ayuntamiento antes de pasar la noche y respeta siempre la señalización.",
+    "Alternativas verificadas en la zona: Vejer de la Frontera y Chiclana de la Frontera."
+  ],
+  "areas": [],
+  "multa": "Ordenanza de playas: leves, hasta 750 €; graves, de 751 a 1.500 €; muy graves, de 1.501 a 3.000 €.",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza municipal reguladora de usos y aprovechamientos de las playas de Conil de la Frontera, aprobación definitiva (BOP de Cádiz n.º 208, 28/10/2024)",
+      "url": "https://www.bopcadiz.es/export/sites/default/.boletines_pdf/2024/10_octubre/BOP208_28-10-24.pdf",
+      "tipo": "oficial",
+      "fecha": "2024-10-28"
+    },
+    {
+      "titulo": "Decreto 26/2018, de 23 de enero, de ordenación de los campamentos de turismo de Andalucía (BOJA n.º 27 de 2018)",
+      "url": "https://www.juntadeandalucia.es/boja/2018/27/1",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Web oficial del Ayuntamiento de Conil de la Frontera: pregunta aquí por la normativa de estacionamiento y pernocta",
+      "url": "https://www.conil.org/",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-03",
+  "verificado": true
+}

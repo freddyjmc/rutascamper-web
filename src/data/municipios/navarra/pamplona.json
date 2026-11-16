@@ -1,0 +1,41 @@
+{
+  "nombre": "Pamplona / Iruña",
+  "comunidad": "navarra",
+  "provincia": "Navarra",
+  "estado": "restringido",
+  "resumen": "Pamplona tiene una zona de servicios para autocaravanas, de pago, con un máximo de 48 horas seguidas, y no se puede volver hasta pasada una semana. En todo el municipio la acampada libre está prohibida salvo autorización, y no puedes sacar mesas, sillas ni tendederos a la vía pública.",
+  "reglas": [
+    "Prohibida la acampada libre en todo el término municipal salvo autorización previa (art. 2.5).",
+    "Se considera aparcada, y no acampada, si solo toca el suelo con las ruedas o los calzos, no despliega nada fuera del perímetro, no vierte nada y no hace ruido, por ejemplo con un generador (art. 2.3).",
+    "Quedarte más tiempo del permitido también cuenta como acampada libre (art. 2.2).",
+    "Prohibido estacionar caravanas o remolques separados de su vehículo tractor en todo el municipio (art. 2.4).",
+    "En la zona de servicios: solo vehículos homologados como vivienda, de pago, máximo 48 horas seguidas y sin volver hasta pasada una semana; vaciado de aguas en un máximo de 45 minutos (art. 4).",
+    "Prohibido instalar mesas, sillas o tendederos en la vía pública y en las plazas de autocaravanas, salvo en lugares autorizados (art. 4.9)."
+  ],
+  "areas": [
+    {
+      "nombre": "Zona de servicios para autocaravanas de Pamplona",
+      "detalle": "En el meandro de Trinitarios, junto a la calle Biurdana y la avenida de Gipuzkoa. De pago (precio público municipal), máximo 48 h seguidas, con vaciado de aguas y agua potable; no vigilada",
+      "lat": 42.82091,
+      "lon": -1.65647,
+      "coordFuente": "https://www.pamplona.es/area-de-servicio-para-autocaravanas-en-el-meandro-de-trinitarios",
+      "coordTipo": "aproximada"
+    }
+  ],
+  "multa": "Leves (por ejemplo, desplegar toldo, mesas o patas niveladoras, o pasarse del tiempo): hasta 100 €. Graves (no pagar, aparcar en el punto de vaciado): 200 €. Muy graves (vertidos intencionados, daños): 500 €. Descuento del 50 % si pagas en 30 días (arts. 7 y 8).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza reguladora del estacionamiento y pernocta de autocaravanas y vehículos vivienda en la zona de servicios de Pamplona (web del Ayuntamiento de Pamplona; aprobada definitivamente el 31/05/2017)",
+      "url": "https://www.pamplona.es/sites/default/files/2022-01/Ordenanza%20reguladora%20del%20estacionamiento%20y%20pernocta%20de%20autocaravanas.pdf",
+      "tipo": "oficial",
+      "fecha": "2017-05-31"
+    },
+    {
+      "titulo": "Ayuntamiento de Pamplona: área de servicio para autocaravanas en el meandro de Trinitarios",
+      "url": "https://www.pamplona.es/area-de-servicio-para-autocaravanas-en-el-meandro-de-trinitarios",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-01",
+  "verificado": true
+}

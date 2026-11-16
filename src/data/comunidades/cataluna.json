@@ -1,0 +1,29 @@
+{
+  "nombre": "Cataluña",
+  "resumen": "En Cataluña, una autocaravana parada o estacionada en zona habilitada de la vía pública no está acampada si se apoya solo en sus ruedas, sin cuñas, no amplía su perímetro y no vierte nada. La diferencia clave con Cantabria o Navarra: aquí las cuñas o calzos ya cuentan como acampada. Muchos ayuntamientos de costa prohíben además pernoctar fuera de zonas autorizadas.",
+  "normaAutonomica": "Decreto 75/2020, de 4 de agosto, de turismo de Cataluña (DOGC n.º 8195, de 6 de agosto de 2020), arts. 213-21 a 213-24 sobre áreas de acogida de autocaravanas.",
+  "claves": [
+    "No se considera acampada la autocaravana parada o estacionada en zonas habilitadas de la vía pública, de acuerdo con las normas de tráfico, si se sostiene sobre sus propias ruedas sin utilizar cuñas, no supera ni amplía su perímetro desplegando elementos y no vierte sustancias ni residuos a la vía (art. 213-22).",
+    "Ojo con las cuñas o calzos niveladores: a diferencia de Cantabria o Navarra, en Cataluña usarlos en la vía pública puede convertir el estacionamiento en acampada.",
+    "En las áreas de acogida de autocaravanas la estancia máxima es de 48 horas, y no puedes volver hasta que pasen 24 horas desde la última estancia (art. 213-24).",
+    "Dentro de esas áreas sí puedes desplegar toldo y elementos portátiles, pero no instalar elementos fijos ni tiendas de campaña (art. 213-23).",
+    "Cada ayuntamiento puede ser más restrictivo: en la Costa Brava varios prohíben pernoctar fuera de las zonas reservadas o prohíben acampar en todo el término."
+  ],
+  "fuentes": [
+    {
+      "titulo": "Decreto 75/2020, de 4 de agosto, de turismo de Cataluña (DOGC n.º 8195, 06/08/2020), texto en Noticias Jurídicas",
+      "url": "https://noticias.juridicas.com/base_datos/CCAA/672738-d-75-2020-de-4-ago-ca-cataluna-turismo.html",
+      "tipo": "oficial",
+      "fecha": "2020-08-06"
+    },
+    {
+      "titulo": "Generalitat de Catalunya, Canal Empresa: preguntas frecuentes sobre el Decreto 75/2020",
+      "url": "https://canalempresa.gencat.cat/es/03_sectors_d_activitat/06_hostaleria_i_turisme/page/preguntes-frequents-hostaleria-turisme/preguntes-mes-frequeents-sobre-el-decret-de-guies/index.html",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-01",
+  "verificado": true,
+  "pernoctaVia": "No es acampada en zona habilitada si te apoyas solo en las ruedas, sin cuñas, y no despliegas nada (Decreto 75/2020, art. 213-22).",
+  "estanciaAreas": "48 h + 24 h de espera"
+}

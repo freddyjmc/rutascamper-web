@@ -1,0 +1,35 @@
+{
+  "nombre": "Lourdes",
+  "comunidad": "occitanie",
+  "provincia": "Hautes-Pyrénées (65)",
+  "estado": "sin-datos",
+  "resumen": "No hemos localizado ninguna orden municipal que regule con carácter permanente las autocaravanas. Si no la hay, rige la norma nacional; respeta la señalización. El ayuntamiento tiene en el aparcamiento de l'Arrouza 200 plazas reservadas a autocaravanas, con tarifa por tiempo y un forfait de día de 10 €.",
+  "reglas": [
+    "No hemos localizado ninguna orden municipal permanente sobre autocaravanas entre los arrêtés publicados por el ayuntamiento (desde julio de 2022). Si no la hay, rige la norma nacional; respeta la señalización. Estacionamiento abusivo: a partir de 7 días seguidos en el mismo sitio de la vía pública (art. R417-12 del Code de la route).",
+    "En l'Arrouza, la web municipal no indica duración máxima ni si se puede pasar la noche."
+  ],
+  "areas": [
+    {
+      "nombre": "Aparcamiento de l'Arrouza",
+      "detalle": "Avenue Monseigneur Rodhain. 200 plazas reservadas a autocaravanas (y 80 para autobuses). 0,25 € por cada 15 minutos hasta 12 horas de presencia, o forfait de día de 10 €. Lavado: 2,50 €. Vaciado: 2,50 €. Duración máxima: no indicada."
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Zones de stationnement (web municipal de Lourdes)",
+      "url": "https://www.lourdes.fr/vivre-a-lourdes/se-deplacer-et-stationner/zones-de-stationnement/",
+      "tipo": "oficial",
+      "noComercial": true,
+      "reutilizacion": "«L’ensemble des informations présentes sur ce site peut être téléchargé, reproduit, imprimé sous réserve de : […] n’utiliser ces informations qu’à des fins d’information et en aucune manière à des fins commerciales ;» (mentions légales de lourdes.fr, consulta 06/11/2026)."
+    },
+    {
+      "titulo": "Arrêtés municipaux (web municipal de Lourdes)",
+      "url": "https://www.lourdes.fr/vie-municipale/arretes-municipaux/",
+      "tipo": "oficial",
+      "noComercial": true,
+      "reutilizacion": "«L’ensemble des informations présentes sur ce site peut être téléchargé, reproduit, imprimé sous réserve de : […] n’utiliser ces informations qu’à des fins d’information et en aucune manière à des fins commerciales ;» (mentions légales de lourdes.fr, consulta 06/11/2026)."
+    }
+  ],
+  "revisado": "2026-11-06",
+  "verificado": true
+}

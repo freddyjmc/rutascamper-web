@@ -1,0 +1,43 @@
+{
+  "nombre": "Peñíscola",
+  "comunidad": "comunidad-valenciana",
+  "provincia": "Castellón",
+  "estado": "restringido",
+  "resumen": "En Peñíscola, la ordenanza de convivencia permite estacionar autocaravanas y caravanas en las vías públicas cuya anchura lo permita, salvo en la Avenida Papa Luna, la Avenida del Mar, la Avenida Akra Leuke, la zona portuaria y el casco antiguo; el Ayuntamiento puede añadir otras limitaciones. Acampar con el vehículo está prohibido: patas estabilizadoras en el suelo, toldo, mesas o sillas fuera del perímetro, vaciar fluidos al exterior o usar generadores en horas de descanso. La misma ordenanza prohíbe «dormir de día o de noche en las vías y espacios públicos» sin aclarar si incluye dormir dentro del vehículo. Según la Policía Local, no hay zonas ni espacios municipales para autocaravanas.",
+  "reglas": [
+    "No se permiten acampadas libres en todo el término municipal fuera de las zonas debidamente autorizadas; la ordenanza entiende por acampada libre la instalación eventual de tiendas, caravanas u otros albergues móviles (Ordenanza de campamentos turísticos, art. 4).",
+    "En las vías y espacios públicos no se permite la acampada libre con tiendas ni con autocaravanas, caravanas u otros vehículos. Cuenta como acampada si el vehículo tiene en el suelo las patas estabilizadoras u otro artilugio (salvo calzos en las ruedas en vías con pendiente), ocupa más espacio que el vehículo cerrado, tiene sillas, mesas, toldos extendidos o antenas desplegadas que invaden más espacio que su perímetro, emite fluidos al exterior (salvo los del tubo de escape) o hace ruido con generadores en horario de descanso o durante el día en periodos excesivamente largos (Ordenanza de convivencia ciudadana, art. 60.2 a).",
+    "La ordenanza prohíbe «dormir de día o de noche en las vías y espacios públicos». El texto no aclara si eso incluye dormir dentro de un vehículo estacionado, así que no podemos confirmarlo ni descartarlo: pregunta a la Policía Local antes de pasar la noche (Ordenanza de convivencia ciudadana, art. 60.2 b). La ordenanza la califica como infracción leve, con multa de hasta 400 € (art. 61 y anexo).",
+    "Está prohibido estacionar caravanas, autocaravanas y vehículos similares en tamaño y masa máxima autorizada en la Avenida Papa Luna, la Avenida del Mar, la Avenida Akra Leuke, la zona portuaria y el ámbito del Plan Especial de Protección del Casco Antiguo. En el resto de vías pueden estacionar siempre que la anchura lo permita, y el Ayuntamiento puede añadir nuevas limitaciones. La prohibición no se aplica a los vehículos especiales adaptados para personas con discapacidad que tienen reducida su movilidad (Ordenanza de convivencia ciudadana, art. 60.3).",
+    "Información municipal (no es una norma): la Jefatura de la Policía Local, en un correo recibido el 04/11/2026, indica que no existen zonas autorizadas expresamente para caravanas ni espacio municipal; que la circulación y el estacionamiento se rigen por las normas de tráfico con las excepciones de la ordenanza; que la acampada está totalmente prohibida desde que se sacan elementos fuera del perímetro del vehículo, y que existen campings y terrenos destinados al estacionamiento de caravanas, de explotación particular (correo de la Policía Local de Peñíscola, 04/11/2026).",
+    "En la playa está prohibida todo el año la acampada de cualquier duración, y la ordenanza define acampada incluyendo caravanas y autocaravanas (Ordenanza de playas, definiciones y art. 51).",
+    "En la Comunitat Valenciana no caben acampadas libres al amparo del Decreto 10/2021 (art. 2.5), y en las áreas de pernocta en tránsito la estancia máxima es de 48 horas (art. 50.10).",
+    "Alternativa verificada en la provincia: Castelló de la Plana."
+  ],
+  "areas": [],
+  "multa": "Ordenanza de convivencia ciudadana: infracción leve, multa de hasta 400 €; con reiteración, hasta 750 € (art. 61). Tras la denuncia, los agentes pueden retirar los materiales empleados y, en caso de acampada con vehículo, si la persona no acredita residencia legal en España y no deposita la multa, se inmoviliza el vehículo (art. 62). Ordenanza de playas: leves, hasta 750 €; graves, de 751 a 1.500 €; muy graves, de 1.501 a 3.000 € (art. 68).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza municipal para la protección de la convivencia ciudadana y de prevención de conductas o actuaciones antisociales en el espacio urbano de Peñíscola (publicada el 12/04/2011, en vigor desde el 02/05/2011; sede electrónica municipal)",
+      "url": "https://sede.peniscola.org/portal/sede/RecursosWeb/DOCUMENTOS/1/0_149_1.pdf",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Ordenanza reguladora de campamentos turísticos públicos de Peñíscola (sede electrónica municipal)",
+      "url": "https://sede.peniscola.org/portal/sede/RecursosWeb/DOCUMENTOS/1/2_145_1.pdf",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Ordenanza de seguridad en el uso, disfrute y aprovechamiento de las playas de Peñíscola (aprobada el 27/03/2008; sede electrónica municipal)",
+      "url": "https://sede.peniscola.org/portal/sede/RecursosWeb/DOCUMENTOS/1/0_297_1.pdf",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Generalitat Valenciana: decreto regulador de los campings y de las áreas de pernocta en tránsito para autocaravanas (Decreto 10/2021)",
+      "url": "https://cindi.gva.es/es/-/decreto-regulador-de-los-campings-y-de-las-areas-de-pernocta-en-transito-para-autocaravanas-de-la-comunitat-valenciana",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-04",
+  "verificado": true
+}

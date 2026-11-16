@@ -1,0 +1,25 @@
+{
+  "nombre": "Almuñécar",
+  "comunidad": "andalucia",
+  "provincia": "Granada",
+  "estado": "permitido",
+  "resumen": "Almuñécar reconoce por ordenanza el derecho a estacionar la autocaravana en todo el municipio según las normas de tráfico, de día y de noche, siempre que no despliegues nada y la actividad de dentro no trascienda al exterior. En las zonas especiales para autocaravanas el máximo es de 72 horas seguidas por semana.",
+  "reglas": [
+    "Se reconoce el derecho a estacionar en todo el municipio según las normas de tráfico, salvo en espacios naturales protegidos, terrenos forestales, suelo no urbanizable de especial protección y dominio público (art. 4.1).",
+    "Cuenta como estacionada si solo toca el suelo con las ruedas, sin estabilizadores, sin ventanas proyectables abiertas ni sillas, mesas o toldo, sin verter fluidos y sin ruidos molestos; da igual que haya gente dentro si la actividad no trasciende al exterior (art. 4.5).",
+    "En las zonas especiales para autocaravanas: máximo 72 horas continuas en una misma semana, y se permite abrir ventanas proyectables (art. 5.1 y 5.2).",
+    "En esas zonas está prohibido sacar toldos, estabilizadores, mesas, sillas, tendederos o cualquier mobiliario y verter líquidos o basura (art. 5.3).",
+    "Donde haya estacionamiento con horario limitado, hay que llevar el comprobante visible en el parabrisas (art. 4.4)."
+  ],
+  "multa": "Leves, como sacar toldo, mesas o sillas donde no está autorizado o verter residuos fuera de la zona señalada: hasta 50 €. Graves, como el vertido ocasional de líquidos o no acreditar el pago: hasta 200 €. Muy graves, como el vertido intencionado: hasta 500 € (arts. 10 y 11).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza reguladora de las actividades de autocaravanas de Almuñécar (BOP de Granada n.º 127, 6/07/2016, aprobación definitiva y texto íntegro)",
+      "url": "https://portaltransparencia.almunecar.es/wp-content/uploads/2016/01/ORD.-ACTIVIDADES-AUTOCARAVANAS.pdf",
+      "tipo": "oficial",
+      "fecha": "2016-07-06"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

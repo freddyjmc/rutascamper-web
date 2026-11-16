@@ -1,0 +1,30 @@
+{
+  "nombre": "Alicante",
+  "comunidad": "comunidad-valenciana",
+  "provincia": "Alicante",
+  "estado": "restringido",
+  "resumen": "En Alicante la ordenanza de convivencia cívica de 2022 prohíbe acampar en vías y espacios públicos, y lo define incluyendo la instalación estable de vehículos, autocaravanas o caravanas, salvo autorización para lugares concretos. Tampoco se permite dormir de día o de noche en esos espacios. La multa puede llegar a 750 euros.",
+  "reglas": [
+    "Se prohíbe acampar en las vías y los espacios públicos, lo que incluye la instalación estable de vehículos, autocaravanas o caravanas, salvo autorizaciones para lugares concretos; tampoco se permite dormir de día o de noche en esos espacios (Ordenanza de convivencia cívica, art. 22 bis).",
+    "En la Comunitat Valenciana no caben acampadas libres al amparo del Decreto 10/2021 (art. 2.5), y en las áreas de pernocta en tránsito la estancia máxima es de 48 horas (art. 50.10).",
+    "El ayuntamiento ha tenido un área de pernocta en tránsito para autocaravanas; no hemos podido comprobar si está abierta ahora: pregunta en el ayuntamiento antes de ir.",
+    "Alternativa verificada en la provincia: Santa Pola."
+  ],
+  "areas": [],
+  "multa": "Acampar en vías y espacios públicos con vehículos, autocaravanas o caravanas: hasta 750 € (cuadro de sanciones de la Ordenanza de convivencia cívica).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza de convivencia cívica en el término municipal de Alicante (aprobada el 15/02/2022; BOP n.º 43, 03/03/2022), web municipal",
+      "url": "https://www.alicante.es/sites/default/files/documentos/202204/ordenanza-convivencia-civica.pdf",
+      "tipo": "oficial",
+      "fecha": "2022-03-03"
+    },
+    {
+      "titulo": "Generalitat Valenciana: decreto regulador de los campings y de las áreas de pernocta en tránsito para autocaravanas (Decreto 10/2021)",
+      "url": "https://cindi.gva.es/es/-/decreto-regulador-de-los-campings-y-de-las-areas-de-pernocta-en-transito-para-autocaravanas-de-la-comunitat-valenciana",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-03",
+  "verificado": true
+}

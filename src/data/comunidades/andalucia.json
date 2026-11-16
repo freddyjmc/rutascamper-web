@@ -1,0 +1,27 @@
+{
+  "nombre": "Andalucía",
+  "resumen": "Andalucía es de las comunidades más estrictas: su decreto prohíbe con carácter general la acampada y también la pernocta con fines vacacionales o de ocio fuera de campings y áreas de pernocta de autocaravanas. El estacionamiento en la calle lo regulan las ordenanzas municipales.",
+  "normaAutonomica": "Decreto 26/2018, de 23 de enero, de ordenación de los campamentos de turismo (BOJA n.º 27 de 2018), con modificaciones posteriores.",
+  "claves": [
+    "Se prohíbe con carácter general la acampada y pernocta con fines vacacionales o de ocio fuera de los campamentos de turismo, es decir, campings y áreas de pernocta de autocaravanas (art. 1.5).",
+    "Las zonas de estacionamiento para autocaravanas en vías urbanas quedan fuera del decreto y se regulan por ordenanza municipal; en vías interurbanas, por el Reglamento General de Circulación (art. 1.4.b).",
+    "Una autocaravana, caravana o camper se considera acampada cuando amplía su perímetro de estacionamiento transformando o desplegando elementos (art. 7.3).",
+    "Las áreas de pernocta de autocaravanas son establecimientos turísticos para vehículos en tránsito, con vaciado de depósitos, agua y electricidad (art. 7.3).",
+    "Como la norma habla de «pernocta con fines vacacionales», dormir en la calle en zonas turísticas tiene más riesgo que en otras comunidades: usa áreas o campings y mira la ordenanza del municipio."
+  ],
+  "pernoctaVia": "El decreto prohíbe la «acampada y pernocta con fines vacacionales o de ocio» fuera de campings y áreas (art. 1.5); la calle depende de cada ordenanza.",
+  "fuentes": [
+    {
+      "titulo": "Decreto 26/2018, de 23 de enero, de ordenación de los campamentos de turismo (texto de la Junta de Andalucía)",
+      "url": "https://www.juntadeandalucia.es/export/drupaljda/Decreto_26-2018_de_23_de_enero__campamentos_de_turismo.pdf",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "BOJA n.º 27 de 2018: publicación del Decreto 26/2018",
+      "url": "https://www.juntadeandalucia.es/boja/2018/27/1",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

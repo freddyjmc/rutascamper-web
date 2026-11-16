@@ -1,0 +1,35 @@
+{
+  "nombre": "Calahorra",
+  "comunidad": "la-rioja",
+  "provincia": "La Rioja",
+  "estado": "restringido",
+  "resumen": "Calahorra tiene un área municipal gratuita de estacionamiento y pernocta para autocaravanas en el aparcamiento frente a la Catedral de Santa María, con 8 plazas y un máximo de 72 horas. La acampada libre está prohibida, y de 00:00 a 07:00 no se pueden dejar caravanas o remolques separados de su vehículo en el casco urbano.",
+  "reglas": [
+    "Acampada libre es instalar caravanas, autocaravanas, tiendas u otros elementos fuera de los campings; también lo es quedarse más tiempo del permitido (art. 3.1 y 3.2).",
+    "Se considera que la autocaravana está aparcada y no acampada si solo toca el suelo con las ruedas o los calzos de seguridad, no despliega nada fuera de su perímetro, no vierte fluidos y no hace ruidos molestos (art. 3.3).",
+    "Prohibido estacionar en el casco urbano caravanas o remolques separados de su vehículo todos los días de 00:00 a 07:00 (sábados y festivos, de 02:00 a 07:00) (art. 3.4).",
+    "Estancia máxima en el área: 72 horas; después hay que esperar 24 horas para volver (art. 5.5).",
+    "En el área no se pueden sacar mesas, sillas, toldos ni sombrillas (art. 5.2)."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de estacionamiento y pernocta de autocaravanas de Calahorra",
+      "detalle": "En el aparcamiento municipal frente a la Catedral de Santa María. 8 plazas, tomas de electricidad, agua potable y evacuación de aguas grises y negras (máximo 45 minutos para vaciar). Máximo 72 horas. Si hay un evento en el aparcamiento, el Ayuntamiento indica un lugar alternativo.",
+      "lat": 42.29909,
+      "lon": -1.95732,
+      "coordFuente": "https://web.larioja.org/bor-portada/boranuncio?n=13856709-13-HTML-533463-X",
+      "coordTipo": "aproximada"
+    }
+  ],
+  "multa": "Sacar toldos, mesas, sillas o patas niveladoras: 300 €. Superar la estancia máxima: 600 €. Colocar el vehículo fuera de la plaza: 200 €. Lavar el vehículo en el área: 800 € (art. 8).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza reguladora del uso del Área de estacionamiento y pernocta de autocaravanas de Calahorra (BOR n.º 124, 18/09/2020)",
+      "url": "https://web.larioja.org/bor-portada/boranuncio?n=13856709-13-HTML-533463-X",
+      "tipo": "oficial",
+      "fecha": "2020-09-18"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

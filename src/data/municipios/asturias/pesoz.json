@@ -1,0 +1,30 @@
+{
+  "nombre": "Pesoz",
+  "comunidad": "asturias",
+  "provincia": "Asturias",
+  "estado": "sin-datos",
+  "resumen": "En el concejo de Pesoz hay un área para autocaravanas que recoge Turismo Asturias, con su ubicación y condiciones. No hemos localizado la ordenanza municipal de estacionamiento y pernocta: fuera de las áreas, recuerda que Asturias define la acampada libre de forma muy amplia.",
+  "reglas": [
+    "Asturias prohíbe la acampada libre con un texto muy amplio, que incluye pernoctar en caravana o autocaravana fuera de campings y áreas sin autorización (Decreto 61/2022, art. 61.1): duerme en las áreas.",
+    "Las condiciones de cada área (plazas, precio, estancia máxima) son las que publica Turismo Asturias; respeta también la señalización del lugar.",
+    "No hemos localizado la ordenanza municipal sobre estacionamiento y pernocta: no damos multas."
+  ],
+  "areas": [
+    {
+      "nombre": "Parking autocaravanas de Pesoz",
+      "detalle": "Carretera AS13. 33735. Pezós/Pesoz. 4 plazas. Pública.",
+      "lat": 43.25472,
+      "lon": -6.878611,
+      "coordFuente": "https://www.turismoasturias.es/organiza-tu-viaje/como-llegar-y-moverse/autocaravanas/area-pesoz"
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Turismo Asturias (Principado de Asturias): Parking autocaravanas de Pesoz",
+      "url": "https://www.turismoasturias.es/organiza-tu-viaje/como-llegar-y-moverse/autocaravanas/area-pesoz",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

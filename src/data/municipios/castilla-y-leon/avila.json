@@ -1,0 +1,26 @@
+{
+  "nombre": "Ávila",
+  "comunidad": "castilla-y-leon",
+  "provincia": "Ávila",
+  "estado": "permitido",
+  "resumen": "En Ávila puedes estacionar tu autocaravana en todo el municipio como cualquier otro vehículo, y no cuenta como acampada aunque estés dentro, si no despliegas nada. La zona reservada para autocaravanas admite hasta 10 días y su zona de servicios es de pago.",
+  "reglas": [
+    "Se reconoce el derecho a estacionar en todo el municipio conforme a las normas de tráfico, salvo donde lo prohíba la señalización y en espacios protegidos (art. 3).",
+    "Está aparcada y no acampada la autocaravana que solo toca el suelo con las ruedas o calzos de seguridad, no despliega nada fuera de su perímetro, no vierte fluidos ni hace ruidos molestos; no importa que haya gente dentro si no trasciende al exterior (art. 3).",
+    "En la zona reservada la estancia máxima es de 10 días; para vaciar y cargar agua hay 45 minutos y el uso de la zona de servicios es de pago (art. 4).",
+    "Prohibido sacar toldos, patas estabilizadoras, mesas, sillas o tendederos en la zona reservada y en la vía pública (art. 4).",
+    "La ordenanza no indica la dirección de la zona reservada: guíate por la señalización."
+  ],
+  "areas": [],
+  "multa": "Leves (pasarte de la estancia máxima, sacar toldos, mesas o sillas, verter líquidos): hasta 100 €. Graves (no pagar la zona de servicios, aparcar en la zona de vaciado): 200 €. Muy graves: 500 €. Se puede expulsar del área (arts. 7 y 8).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza municipal reguladora del estacionamiento y pernocta de autocaravanas de Ávila (BOP de Ávila n.º 235, 03/12/2020)",
+      "url": "https://www.diputacionavila.es/bops/2020/03-12-2020/03-12-2020_243220.pdf",
+      "tipo": "oficial",
+      "fecha": "2020-12-03"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

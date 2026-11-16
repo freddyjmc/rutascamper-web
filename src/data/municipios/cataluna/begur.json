@@ -1,0 +1,31 @@
+{
+  "nombre": "Begur",
+  "comunidad": "cataluna",
+  "provincia": "Girona",
+  "estado": "restringido",
+  "resumen": "Begur prohíbe acampar en todo el término municipal con autocaravanas, caravanas, furgonetas o tiendas, con multas de 300 a 900 €. Puedes aparcar como cualquier otro vehículo, y según el folleto municipal estar dentro del vehículo, de día o de noche, cuenta como estacionamiento si no despliegas nada.",
+  "reglas": [
+    "La Ordenanza de Civismo y Convivencia Ciudadana prohíbe acampar en todo el término municipal con autocaravanas, caravanas, tiendas, furgonetas o similares.",
+    "Las autocaravanas pueden parar, estacionar y circular por el municipio en las mismas condiciones que cualquier otro vehículo, respetando la señalización.",
+    "Se considera acampada: sacar sillas o mesas, extender toldos o avances, abrir ventanas batientes o cualquier elemento que sobresalga del vehículo, poner patas o cuñas estabilizadoras, verter líquidos, hacer ruido con generadores o motores y colocar la escalera de acceso.",
+    "Según el folleto municipal, de día o de noche cuenta como estacionamiento tener ocupantes dentro y llevar el techo elevado o la claraboya abierta si no sobresalen del perímetro.",
+    "El ayuntamiento recomienda usar los alojamientos del municipio; no indica ninguna área de autocaravanas."
+  ],
+  "areas": [],
+  "multa": "Acampar es una infracción grave: de 300 a 900 €, según la Ordenanza de Civismo y Convivencia Ciudadana.",
+  "fuentes": [
+    {
+      "titulo": "Ajuntament de Begur: folleto «Normativa per autocaravanes, caravanes i campers» (2026)",
+      "url": "https://visitbegur.cat/wp-content/uploads/2026/02/Fulleto-Normativa-autocaravanes-CAT-GB.pdf",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Decreto 75/2020 de turismo de Cataluña, art. 213-22",
+      "url": "https://noticias.juridicas.com/base_datos/CCAA/672738-d-75-2020-de-4-ago-ca-cataluna-turismo.html",
+      "tipo": "oficial",
+      "fecha": "2020-08-06"
+    }
+  ],
+  "revisado": "2026-11-01",
+  "verificado": true
+}

@@ -1,0 +1,24 @@
+{
+  "nombre": "Castilla-La Mancha",
+  "resumen": "En Castilla-La Mancha las áreas para autocaravanas son establecimientos turísticos con un máximo de 48 horas, donde puedes sacar mesas y sillas dentro de tu plaza. El decreto autonómico no regula la parada y el estacionamiento en calles, carreteras y aparcamientos: eso depende de las normas de tráfico y de cada ayuntamiento.",
+  "normaAutonomica": "Decreto 94/2018, de 18 de diciembre, que regula la ordenación de los campings y de las áreas para autocaravanas de Castilla-La Mancha (DOCM n.º 250, de 26 de diciembre de 2018).",
+  "claves": [
+    "Área para autocaravanas es el espacio delimitado y abierto al público para uso exclusivo de autocaravanas, con servicios de mantenimiento, estacionamiento y pernocta, control de accesos y regulación de la permanencia (Decreto 94/2018, art. 2.b).",
+    "Quedan fuera del decreto la parada y el estacionamiento de autocaravanas en las áreas habilitadas en carreteras, vías urbanas y aparcamientos, y las zonas habilitadas por los ayuntamientos (art. 3.c).",
+    "En las áreas para autocaravanas la estancia no puede superar en ningún caso 48 horas (art. 24.3).",
+    "En esas áreas los toldos y soportes no pueden salirse de la plaza, pero sí puedes poner mesas y sillas fuera para uso personal; no se admiten tiendas de campaña (art. 24.2 y 24.4).",
+    "Las acampadas en montes y espacios protegidos se rigen por su normativa sectorial (art. 3.e)."
+  ],
+  "fuentes": [
+    {
+      "titulo": "Decreto 94/2018, de 18 de diciembre (DOCM n.º 250, 26/12/2018)",
+      "url": "https://docm.jccm.es/docm/descargarArchivo.do?ruta=2018/12/26/pdf/2018_14976.pdf&tipo=rutaDocm",
+      "tipo": "oficial",
+      "fecha": "2018-12-26"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true,
+  "pernoctaVia": "El decreto no regula la vía pública; depende de cada ayuntamiento (Decreto 94/2018, art. 3.c).",
+  "estanciaAreas": "48 h"
+}

@@ -1,0 +1,33 @@
+{
+  "nombre": "Saintes-Maries-de-la-Mer",
+  "comunidad": "provence-alpes-cote-d-azur",
+  "provincia": "Bouches-du-Rhône (13)",
+  "estado": "sin-datos",
+  "resumen": "No hemos localizado ninguna orden municipal. Si no la hay, rige la norma nacional; respeta la señalización. Ojo en la Camarga: la ley francesa (art. L321-9 del Code de l'environnement) prohíbe circular y estacionar vehículos a motor, fuera de los caminos habilitados, en la orilla del mar y en las dunas y playas «del dominio público o privado de las personas públicas, abiertas al público». La Oficina de Turismo anuncia el área Plage Ouest, junto al mar, abierta todo el año por 16 € la noche.",
+  "reglas": [
+    "No hemos localizado ninguna orden municipal. Si no la hay, rige la norma nacional; respeta la señalización.",
+    "Prohibido circular y estacionar vehículos a motor fuera de los caminos habilitados en la orilla del mar y en las dunas y playas del dominio público o privado de las personas públicas abiertas al público, salvo autorización del prefecto (art. L321-9 del Code de l'environnement)."
+  ],
+  "areas": [
+    {
+      "nombre": "Aire de camping-cars Plage Ouest",
+      "detalle": "Route d'Aigues-Mortes, Plage Ouest, a 2 km del pueblo y cerca del Petit Rhône, con acceso directo a la playa. 100 plazas junto al mar. Vaciado de aguas usadas, agua potable y contenedores de basura. Abierta todo el año. 16 € la noche. La fuente no indica duración máxima.",
+      "soloServicios": false
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Aire de camping-cars Plage Ouest (Office de Tourisme des Saintes-Maries-de-la-Mer)",
+      "url": "https://www.saintesmaries.com/annuaire/aire-de-camping-cars-plage-ouest",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Code de l'environnement, art. L321-9 (Légifrance)",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006833484",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-05",
+  "verificado": false,
+  "bloqueado": true
+}

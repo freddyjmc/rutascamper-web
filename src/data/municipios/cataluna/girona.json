@@ -1,0 +1,36 @@
+{
+  "nombre": "Girona",
+  "comunidad": "cataluna",
+  "provincia": "Girona",
+  "estado": "restringido",
+  "resumen": "En Girona solo puedes estacionar la autocaravana en dos sitios: los aparcamientos del Pavelló de Fontajau y la zona de autocaravanas de la calle Riera Bullidors, 31-39, que tiene 60 plazas, agua y vaciado. El máximo es de 72 horas. En el resto de espacios públicos de la ciudad no está permitido aparcar autocaravanas.",
+  "reglas": [
+    "Las autocaravanas pueden estacionar en los aparcamientos del Pavelló de Fontajau y en la zona acondicionada de la calle Riera Bullidors, 31-39 (web de movilidad del Ayuntamiento).",
+    "Tiempo máximo de estacionamiento: 72 horas.",
+    "En el resto de espacios públicos del municipio no se permite estacionar autocaravanas.",
+    "La web municipal no cita la ordenanza ni las multas; no damos cuantías."
+  ],
+  "areas": [
+    {
+      "nombre": "Zona de autocaravanas de Riera Bullidors",
+      "detalle": "Calle Riera Bullidors, 31-39. 60 plazas con agua potable y vaciado de aguas sucias. Máximo 72 horas.",
+      "lat": 41.990063,
+      "lon": 2.801552,
+      "coordFuente": "https://web.girona.cat/mobilitat/aparcaments/autocaravanes",
+      "coordTipo": "aproximada"
+    },
+    {
+      "nombre": "Aparcamientos del Pavelló de Fontajau",
+      "detalle": "Solo estacionamiento, sin servicios. Máximo 72 horas."
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Ajuntament de Girona: aparcamiento de autocaravanas (web de movilidad)",
+      "url": "https://web.girona.cat/mobilitat/aparcaments/autocaravanes",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

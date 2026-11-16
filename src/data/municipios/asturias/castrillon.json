@@ -1,0 +1,42 @@
+{
+  "nombre": "Castrillón",
+  "comunidad": "asturias",
+  "provincia": "Asturias",
+  "estado": "restringido",
+  "resumen": "Castrillón (Piedras Blancas, Salinas) permite estacionar autocaravanas en las vías urbanas si están bien aparcadas, y tiene áreas especiales de descanso donde puedes pernoctar hasta 48 horas seguidas. Fuera de las zonas autorizadas, pernoctar cuenta como acampada libre.",
+  "reglas": [
+    "Prohibida la acampada libre: instalar caravanas, autocaravanas u otros elementos para permanecer y pernoctar en lugares no autorizados o más tiempo del permitido (art. 2).",
+    "Parada y estacionamiento permitidos en todas las vías urbanas si el vehículo está correctamente aparcado y no supone peligro ni obstáculo (art. 3).",
+    "Áreas especiales de descanso: solo autocaravanas, máximo 48 horas seguidas para descansar y pernoctar, sin sacar mesas, sillas, toldo ni tendales (art. 5.1).",
+    "Áreas de servicio: máximo 1 hora, solo para vaciar aguas y cargar agua potable (art. 5.2)."
+  ],
+  "areas": [
+    {
+      "nombre": "Áreas especiales de descanso y de servicio del concejo",
+      "detalle": "las que fija el Anexo 1 de la ordenanza, que no aparece en la copia publicada; consulta la ubicación en el ayuntamiento"
+    },
+    {
+      "nombre": "Área autocaravanas de El Agüil (Salinas)",
+      "detalle": "C/ El Agüil, 17, 33405 Salinas. 12 plazas. Gratuita. Máximo 48 horas. Pública. Vaciado aguas grises, vaciado aguas negras, agua potable.",
+      "lat": 43.57047,
+      "lon": -5.95865,
+      "coordFuente": "https://www.turismoasturias.es/organiza-tu-viaje/como-llegar-y-moverse/autocaravanas/area-de-salinas"
+    }
+  ],
+  "multa": "Leves: de 80 a 100 €. Graves, como desplegar elementos, verter aguas o no respetar las plazas: de 200 a 300 €. Muy grave, no identificar al conductor: 350 € (arts. 8 y 9).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza reguladora del uso de áreas destinadas al estacionamiento y pernocta de autocaravanas de Castrillón (web del Ayuntamiento, firmada el 10/03/2016)",
+      "url": "https://castrillon.es/attachments/article/282/Ordenanza%20Autocaravanas.pdf",
+      "tipo": "oficial",
+      "fecha": "2016-03-10"
+    },
+    {
+      "titulo": "Turismo Asturias (Principado de Asturias): Área autocaravanas de El Agüil (Salinas)",
+      "url": "https://www.turismoasturias.es/organiza-tu-viaje/como-llegar-y-moverse/autocaravanas/area-de-salinas",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

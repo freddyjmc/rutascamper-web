@@ -1,0 +1,32 @@
+{
+  "nombre": "Águilas",
+  "comunidad": "murcia",
+  "provincia": "Murcia",
+  "estado": "permitido",
+  "resumen": "En Águilas puedes aparcar la autocaravana en todo el municipio como cualquier otro vehículo, aunque estés dentro, si no se nota desde fuera. No puedes acampar: nada de toldo, mesas, sillas ni vaciar aguas. En las zonas señalizadas para autocaravanas se puede pernoctar hasta 48 horas seguidas por semana. Las multas pueden llegar a 3.000 euros.",
+  "reglas": [
+    "Puedes estacionar en todo el municipio según las normas de tráfico, con las mismas limitaciones que cualquier vehículo, salvo en espacios naturales o culturales protegidos, terrenos forestales y dominio público (art. 4.1 y 4.3).",
+    "Se considera que estás aparcado si tocas el suelo con las ruedas o calzos de nivelación, con o sin patas estabilizadoras siempre que no amplíen el perímetro, no sacas sillas, mesas ni toldo, no abres ventanas que sobresalgan, no viertes nada y no haces ruido. Puedes estar dentro si no trasciende al exterior (art. 4.5).",
+    "En las zonas señalizadas solo para autocaravanas se permite pernoctar, pero no acampar, un máximo de 48 horas seguidas en la misma semana. Ahí puedes abrir las ventanas proyectables, pero no sacar toldo, mesas, sillas ni tendederos (art. 5).",
+    "En las áreas de servicio la pernocta máxima es de 48 horas y se entra y sale entre las 8:00 y las 23:00 (art. 7).",
+    "No se puede acampar a menos de 5 km de un camping, de un núcleo urbano o de lugares concurridos como playas o parques, ni a menos de 100 m de ríos o carreteras (art. 6.2)."
+  ],
+  "areas": [],
+  "multa": "Leves, hasta 750 € (por ejemplo, sacar toldo, mesas o sillas, o vaciar aguas con la llave del desagüe abierta); graves, de 751 a 1.500 € (acampar fuera de los lugares habilitados); muy graves, de 1.501 a 3.000 € (verter residuos a propósito fuera de los lugares indicados) (arts. 11 y 12).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza municipal de zonas de estacionamiento y áreas de servicio de autocaravanas y vehículos-vivienda homologados de Águilas, aprobación definitiva (BORM n.º 15, 19/01/2018, anuncio 370), copia en el portal de transparencia municipal",
+      "url": "https://transparencia.ayuntamientodeaguilas.org/wp-content/uploads/2018/02/35c5e9.pdf",
+      "tipo": "oficial",
+      "fecha": "2018-01-19"
+    },
+    {
+      "titulo": "Decreto n.º 193/2022 de campings y áreas de autocaravanas de la Región de Murcia (BORM n.º 254, 03/11/2022)",
+      "url": "https://borm.es/services/anuncio/ano/2022/numero/5528/pdf",
+      "tipo": "oficial",
+      "fecha": "2022-11-03"
+    }
+  ],
+  "revisado": "2026-11-03",
+  "verificado": true
+}

@@ -1,0 +1,58 @@
+{
+  "nombre": "La Teste-de-Buch (Duna de Pilat)",
+  "comunidad": "nouvelle-aquitaine",
+  "provincia": "Gironde (33)",
+  "estado": "restringido",
+  "resumen": "En el bosque litoral de La Teste-de-Buch, junto a la carretera RD 218 que lleva a las playas oceánicas, un arrêté municipal de 2014 regula la circulación y el estacionamiento. Del 1 de junio al 31 de octubre, los vehículos de más de 2 m de altura solo pueden ir a un espacio a la entrada de la playa del Petit Nice, donde pueden pasar una noche pagando. En el aparcamiento de la Duna de Pilat no se puede estacionar de 2:00 a 5:00. No hemos confirmado que el arrêté 2014-849 siga vigente ni hemos leído el arrêté 2025-221.",
+  "reglas": [
+    "Fuera de los espacios habilitados, prohibido circular y estacionar con vehículos a motor en todo el macizo forestal litoral junto a la RD 218 (art. 3 del arrêté municipal n.º 2014-849 de 25/07/2014; la copia escaneada tiene huecos en este artículo).",
+    "En los espacios habilitados para estacionar del litoral, el estacionamiento está prohibido de 23:00 a 6:00 (art. 3; parte de la frase no se lee en la copia escaneada).",
+    "Vehículos de más de 2 m de altura: acceso a las playas permitido del 1 de noviembre al 31 de mayo, de 9:00 a 20:00; prohibido del 1 de junio al 31 de octubre salvo en un espacio habilitado a la entrada del acceso a la playa del Petit Nice (art. 4).",
+    "En ese espacio pueden estacionar una noche, de 23:00 a 6:00, si pagan la tasa (redevance) votada por el pleno y no muestran signos de acampada (calzos, mesas, tiendas...). Si no, es estacionamiento abusivo y puede haber inmovilización y grúa (art. 4).",
+    "Aparcamiento de la Gran Duna de Pilat (lo gestiona el Syndicat mixte de la Grande Dune du Pilat): prohibido estacionar de 2:00 a 5:00 y todo estacionamiento nocturno tiene una penalización de 50 € (web oficial del Grand Site).",
+    "Acampada libre y vivac prohibidos en el Grand Site de la Duna de Pilat (web oficial del Grand Site).",
+    "No hemos confirmado que el arrêté 2014-849 siga vigente ni hemos leído el arrêté 2025-221 (acceso al macizo forestal), que cita la web del Grand Site."
+  ],
+  "areas": [
+    {
+      "nombre": "Espacio para vehículos de más de 2 m del Petit Nice",
+      "detalle": "A la entrada del acceso a la playa del Petit Nice. Una noche (de 23:00 a 6:00) pagando la tasa municipal; importe no localizado. Servicios: no indicados en la fuente oficial."
+    },
+    {
+      "nombre": "Aparcamiento de la Gran Duna de Pilat",
+      "detalle": "Solo de día: cerrado a estacionar de 2:00 a 5:00. Tarifa de la categoría bus/autocaravana en temporada alta (de las vacaciones escolares de invierno a las de Todos los Santos): 10 € 4 h, 12 € 8 h, 14 € 12 h; en temporada baja: 2 €, 4 € y 6 €; 30 minutos gratis. La web no indica el año de estas tarifas."
+    }
+  ],
+  "multa": "El arrêté no fija importe. En general, incumplir una orden municipal es una contravención de 2.ª clase (art. R610-5 del Code pénal), con multa de hasta 150 € (art. 131-13 del Code pénal); según cómo esté redactada la orden, puede aplicarse otra norma, como el Code de la route. Además, puede haber grúa.",
+  "fuentes": [
+    {
+      "titulo": "Arrêté municipal n.º 2014-849 de 25/07/2014, circulación y estacionamiento en el bosque domanial y el espacio litoral de La Teste-de-Buch (publicado por el Syndicat mixte de la Grande Dune du Pilat)",
+      "url": "https://ladunedupilat.com/wp-content/uploads/2021/05/Arre%CC%82te%CC%81-2014-849-Circulation-et-stationnement-foret-domaniale-et-Espace-littoral.pdf",
+      "tipo": "oficial",
+      "fecha": "2014-07-25"
+    },
+    {
+      "titulo": "Tarifs et abonnements (Grand Site de la Dune du Pilat)",
+      "url": "https://ladunedupilat.com/preparation/tarifs-et-abonnements/",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Réglementation (Grand Site de la Dune du Pilat)",
+      "url": "https://ladunedupilat.com/preparation/reglementation/",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Code pénal, art. R610-5 (incumplir un arrêté)",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045176320",
+      "tipo": "oficial",
+      "fecha": "2022-02-17"
+    },
+    {
+      "titulo": "Code pénal, art. 131-13 (Légifrance, version en vigueur au 05/11/2026)",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006417259/",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-05",
+  "verificado": false
+}

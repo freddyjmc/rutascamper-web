@@ -1,0 +1,91 @@
+{
+  "nombre": "Odemira (Vila Nova de Milfontes, Zambujeira do Mar)",
+  "comunidad": "alentejo",
+  "provincia": "Beja (distrito)",
+  "estado": "sin-datos",
+  "resumen": "No hemos localizado ningún reglamento municipal de autocaravanas en Odemira. El ayuntamiento publica un mapa de lugares para pernoctar: seis puntos en el interior del municipio (máximo 24 horas), dos áreas de servicio y seis campings. En la costa, dentro del Parque Natural do Sudoeste Alentejano e Costa Vicentina, el Código da Estrada prohíbe pernoctar fuera de los lugares autorizados.",
+  "reglas": [
+    "No hemos localizado ningún reglamento municipal de autocaravanas. Si no lo hay, el Código da Estrada permite pernoctar con una autocaravana homologada por el IMT hasta 48 horas en el mismo municipio, salvo en la Rede Natura 2000, las áreas protegidas y las zonas de los planes de la costa, donde solo se puede en los lugares autorizados (art. 50.º-A n.os 1 y 2). Respeta la señalización.",
+    "El mapa municipal «Locais para a Pernoita de Caravanas no Concelho de Odemira» (Município de Odemira, programa «Para um Autocaravanismo Responsável», consultado el 12/11/2026) indica en cada punto de pernocta municipal sus plazas y un máximo de 24 horas. El mapa no dice en qué norma se basa ese máximo de 24 horas.",
+    "El mapa incluye también seis campings: Sitava, Campiférias, Camping Milfontes, Monte Carvalhal da Rocha, São Miguel y Villa Park Zambujeira.",
+    "En las zonas sujetas a protección del Parque Natural do Sudoeste Alentejano e Costa Vicentina están prohibidos el campismo y el caravanismo fuera de los lugares destinados a ello y estacionar vehículos a motor fuera de los lugares señalizados (art. 8.º, letras r y o, de la Resolução do Conselho de Ministros n.º 11-B/2011).",
+    "En todo caso, no se puede acampar en la vía pública, verter aguas fuera de los puntos previstos ni ocupar más espacio que el perímetro del vehículo (art. 48.º n.º 7 del Código da Estrada; multa de 30 a 150 €)."
+  ],
+  "areas": [
+    {
+      "nombre": "Odemira: pernocta de autocaravanas",
+      "detalle": "3 plazas, máximo 24 horas, según el mapa municipal.",
+      "lat": 37.5941909,
+      "lon": -8.6444478,
+      "coordFuente": "https://turismo.cm-odemira.pt/o-concelho/autocaravanismo"
+    },
+    {
+      "nombre": "Boavista dos Pinheiros: pernocta de autocaravanas",
+      "detalle": "5 plazas, máximo 24 horas, según el mapa municipal.",
+      "lat": 37.5722989,
+      "lon": -8.6673568,
+      "coordFuente": "https://turismo.cm-odemira.pt/o-concelho/autocaravanismo"
+    },
+    {
+      "nombre": "São Luís: pernocta de autocaravanas",
+      "detalle": "5 plazas, máximo 24 horas, según el mapa municipal.",
+      "lat": 37.7159575,
+      "lon": -8.662303,
+      "coordFuente": "https://turismo.cm-odemira.pt/o-concelho/autocaravanismo"
+    },
+    {
+      "nombre": "São Martinho das Amoreiras: pernocta de autocaravanas",
+      "detalle": "3 plazas, máximo 24 horas, según el mapa municipal.",
+      "lat": 37.6514664,
+      "lon": -8.4026918,
+      "coordFuente": "https://turismo.cm-odemira.pt/o-concelho/autocaravanismo"
+    },
+    {
+      "nombre": "Luzianes-Gare: pernocta de autocaravanas",
+      "detalle": "5 plazas, máximo 24 horas, según el mapa municipal.",
+      "lat": 37.5878414,
+      "lon": -8.4908057,
+      "coordFuente": "https://turismo.cm-odemira.pt/o-concelho/autocaravanismo"
+    },
+    {
+      "nombre": "Sabóia: pernocta de autocaravanas",
+      "detalle": "5 plazas, máximo 24 horas, según el mapa municipal.",
+      "lat": 37.496491,
+      "lon": -8.4994294,
+      "coordFuente": "https://turismo.cm-odemira.pt/o-concelho/autocaravanismo"
+    },
+    {
+      "nombre": "Área de servicio de autocaravanas de Odemira",
+      "detalle": "El mapa municipal la llama «Área de serviços caravanas», sin nombre de localidad; la nombramos por su ubicación. El mapa no indica servicios ni límite de tiempo.",
+      "lat": 37.5999936,
+      "lon": -8.6311817,
+      "coordFuente": "https://turismo.cm-odemira.pt/o-concelho/autocaravanismo"
+    },
+    {
+      "nombre": "Área de servicio de autocaravanas de Santa Clara-a-Velha",
+      "detalle": "El mapa municipal la llama «Área de serviços caravanas», sin nombre de localidad; la nombramos por su ubicación. El mapa no indica servicios ni límite de tiempo.",
+      "lat": 37.5109998,
+      "lon": -8.4723066,
+      "coordFuente": "https://turismo.cm-odemira.pt/o-concelho/autocaravanismo"
+    }
+  ],
+  "multa": "Las del Código da Estrada: de 60 a 300 € por superar las 48 horas; de 120 a 600 € por pernoctar en la Rede Natura 2000, áreas protegidas o zonas de los planes de la costa fuera de los lugares autorizados (art. 50.º-A n.º 4).",
+  "notaAyuntamiento": "Câmara Municipal de Odemira: https://www.cm-odemira.pt, geral@cm-odemira.pt, +351 283 320 900; turismo@cm-odemira.pt.",
+  "fuentes": [
+    {
+      "titulo": "Turismo de Odemira (Câmara Municipal): Autocaravanismo, con el mapa «Locais para a Pernoita de Caravanas no Concelho de Odemira»",
+      "url": "https://turismo.cm-odemira.pt/o-concelho/autocaravanismo",
+      "tipo": "oficial",
+      "reutilizacion": "Sin cláusula de reutilización localizada en la web (consulta 12/11/2026). Solo hechos con nuestras palabras y enlace."
+    },
+    {
+      "titulo": "Resolução do Conselho de Ministros n.º 11-B/2011 (Plano de Ordenamento do PNSACV), art. 8.º",
+      "url": "https://diariodarepublica.pt/dr/detalhe/resolucao-conselho-ministros/11-b-2011-337243",
+      "tipo": "oficial",
+      "fecha": "2011-02-04",
+      "reutilizacion": "«O acesso universal e gratuito compreende a possibilidade de impressão, arquivo, pesquisa e livre acesso ao conteúdo dos atos publicados nas 1.ª e 2.ª séries do Diário da República.» (Avisos Legais del Diário da República, consulta 12/11/2026). No hay cláusula expresa sobre reutilización comercial."
+    }
+  ],
+  "revisado": "2026-11-12",
+  "verificado": true
+}

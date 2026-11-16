@@ -1,0 +1,29 @@
+{
+  "nombre": "Santa Margarida i els Monjos",
+  "comunidad": "cataluna",
+  "provincia": "Barcelona",
+  "estado": "restringido",
+  "resumen": "Santa Margarida i els Monjos (Alt Penedès) tiene un área de 12 plazas para vehículos recreativos en el descampado de la entrada este del pueblo, con un máximo de 48 horas. La acampada libre está prohibida en todo el municipio.",
+  "reglas": [
+    "Prohibida la acampada libre en todo el término municipal; es acampada sacar mesas, toldos u otros enseres o quedarse más de 48 horas (art. 2).",
+    "El área tiene 12 plazas y punto de reciclaje de residuos (art. 3).",
+    "Estancia máxima: 48 horas; puedes abrir ventanas dentro de tu plaza, pero no sacar sillas, mesas, toldos ni sombrillas (art. 4)."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de vehículos recreativos (RV) de Santa Margarida i els Monjos",
+      "detalle": "Descampado de la entrada este del municipio, delimitado y señalizado. 12 plazas; vaciado de aguas grises y negras y agua potable. Máximo 48 horas."
+    }
+  ],
+  "multa": "Leves (acampar en el área, pasarte de 48 horas): hasta 750 €. Graves (acampada libre fuera del área): hasta 1.500 €. Muy graves (dañar el área): hasta 3.000 € (art. 6).",
+  "fuentes": [
+    {
+      "titulo": "Ordenança municipal reguladora de l'estacionament i ús de l'àrea de recreational vehicles de Santa Margarida i els Monjos (BOPB 30/07/2024)",
+      "url": "https://bop.diba.cat/anuncio/ver-pdf/3659648",
+      "tipo": "oficial",
+      "fecha": "2024-07-30"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

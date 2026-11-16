@@ -1,0 +1,30 @@
+{
+  "nombre": "Comillas",
+  "comunidad": "cantabria",
+  "provincia": "Cantabria",
+  "estado": "restringido",
+  "resumen": "En Comillas está prohibido acampar y pernoctar en el aparcamiento de la playa durante todo el año, también en autocaravana. Fuera de la playa se aplican el decreto autonómico y las normas generales de estacionamiento.",
+  "reglas": [
+    "Prohibido acampar y pernoctar en el aparcamiento de la playa a vehículos de cualquier clase, incluidas las autocaravanas, todo el año (art. 27).",
+    "Prohibidas las tiendas de campaña y las acampadas de cualquier duración en la playa y en el frente costero del municipio (art. 26).",
+    "Fuera de esas zonas, rige el Decreto 35/2026 de Cantabria: dormir dentro del vehículo bien estacionado no es acampada si no despliegas nada."
+  ],
+  "areas": [],
+  "multa": "Acampar o pernoctar en el aparcamiento de la playa es infracción grave: multa de 91 a 300 euros (arts. 34.3.i y 35 de la ordenanza). Texto de 2019: no hemos localizado modificaciones posteriores.",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza reguladora del Uso y Aprovechamiento de las Playas de Comillas (BOC n.º 86, 07/05/2019, CVE-2019-3858)",
+      "url": "https://www.lineaverdecomillas.es/documentacion/ordenanzas/OrdenanzaUsoAprovechamientoPlaya.pdf",
+      "tipo": "oficial",
+      "fecha": "2019-05-07"
+    },
+    {
+      "titulo": "Decreto 35/2026 de Cantabria (BOC n.º 95, 20/05/2026)",
+      "url": "https://profesional.turismodecantabria.com/wp-content/uploads/2026/05/DECRETO-AUTOCARAVANAS-Y-CAMPAMENTOS-TURISMO.pdf",
+      "tipo": "oficial",
+      "fecha": "2026-05-20"
+    }
+  ],
+  "revisado": "2026-11-01",
+  "verificado": true
+}

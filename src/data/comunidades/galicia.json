@@ -1,0 +1,30 @@
+{
+  "nombre": "Galicia",
+  "resumen": "Galicia prohíbe la acampada turística fuera de los campings autorizados, pero el estacionamiento y la pernocta en la calle los regulan los concellos. Muchos siguen la ordenanza modelo de la FEGAMP, que reconoce el derecho a estacionar y pernoctar conforme a las normas de tráfico, con límites en zonas protegidas y en las áreas reservadas.",
+  "normaAutonomica": "Decreto 159/2019, de 21 de noviembre, de ordenación de los campamentos de turismo (DOG n.º 246, de 27 de diciembre de 2019), que desarrolla la Ley 7/2011 del turismo de Galicia.",
+  "claves": [
+    "Queda prohibida la acampada turística fuera de los campamentos de turismo autorizados por la Xunta; el decreto la define como toda acampada que proporciona alojamiento temporal a las personas (art. 1.4).",
+    "Existen campings exclusivos para autocaravanas y campers, donde no se admiten tiendas ni alojamientos fijos o móviles (art. 36.1).",
+    "Las zonas especiales de acogida de autocaravanas en tránsito las regula cada concello, y en ellas la estancia máxima es de una noche (art. 36.2).",
+    "La Federación Gallega de Municipios y Provincias (FEGAMP) ha elaborado una ordenanza modelo que reconoce el derecho a estacionar y, en su caso, pernoctar en todo el municipio según las normas de tráfico; varios concellos la han adoptado con sus propios plazos y multas.",
+    "En espacios naturales protegidos, Red Natura 2000, terrenos forestales y dominio público costero rigen normas especiales: no des por hecho que puedes dormir en un aparcamiento de playa."
+  ],
+  "fuentes": [
+    {
+      "titulo": "Decreto 159/2019, de 21 de noviembre, de ordenación de los campamentos de turismo (DOG n.º 246, 27/12/2019)",
+      "url": "https://www.xunta.gal/dog/Publicados/2019/20191227/AnuncioG0535-131219-0001_es.html",
+      "tipo": "oficial",
+      "fecha": "2019-12-27"
+    },
+    {
+      "titulo": "Ordenanza modelo de la FEGAMP adoptada por el Concello de Vilalba (BOP de Lugo n.º 175, 01/08/2025)",
+      "url": "https://vilalba.gal/archivos/documentacion/ordenanzas/ORDENANZA-74.pdf",
+      "tipo": "oficial",
+      "fecha": "2025-08-01"
+    }
+  ],
+  "revisado": "2026-11-01",
+  "verificado": true,
+  "pernoctaVia": "El decreto no regula la vía pública; varios concellos reconocen el derecho a pernoctar (ordenanza modelo FEGAMP).",
+  "estanciaAreas": "1 noche (zonas de tránsito)"
+}

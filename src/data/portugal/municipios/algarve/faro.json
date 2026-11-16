@@ -1,0 +1,30 @@
+{
+  "nombre": "Faro",
+  "comunidad": "algarve",
+  "provincia": "Faro (distrito)",
+  "estado": "restringido",
+  "resumen": "En Faro solo se puede pernoctar con autocaravana en el camping de la Ilha de Faro y en los demás lugares que licencie el ayuntamiento. El reglamento prohíbe también el «aparcamento», el estacionamiento y la inmovilización de autocaravanas fuera de los lugares autorizados (art. 4.º n.º 2), pero otro artículo dice que fuera de los lugares del autocaravanismo solo se permite estacionar según el Código da Estrada (art. 9.º). El reglamento no aclara cómo se combinan: antes de estacionar fuera de un lugar autorizado, pregunta en la Câmara Municipal. Multas de 60 a 300 € por pernoctar fuera de los lugares autorizados.",
+  "reglas": [
+    "Prohibido el campismo, el caravanismo y el autocaravanismo fuera de los lugares destinados y licenciados (art. 4.º n.º 1 del Regulamento n.º 913/2023).",
+    "Prohibidos el «aparcamento», el estacionamiento o la inmovilización de caravanas y autocaravanas, y la pernocta, fuera de los lugares establecidos, autorizados y señalizados, como las áreas de servicio (art. 4.º n.º 2).",
+    "Fuera de los lugares destinados al autocaravanismo solo se permite estacionar según el Código da Estrada (art. 9.º).",
+    "Lugares para el autocaravanismo: el camping de la Ilha de Faro y los que licencie el ayuntamiento (art. 8.º).",
+    "Las áreas de servicio son para estacionar y pernoctar un máximo de 72 horas (arts. 3.º b y 11.º).",
+    "Cuenta como «aparcamento» bajar estabilizadores o poner calzos, abrir ventanas laterales, poner el escalón, vaciar aguas residuales, sacar mesas y sillas o equipos de ocio, tender ropa, hacer fuego, cocinar o comer fuera, o pernoctar (art. 10.º).",
+    "No hemos comprobado si el reglamento se ha modificado después de 2023."
+  ],
+  "areas": [],
+  "multa": "De 60 a 300 € por pernoctar o hacer «aparcamento» fuera de los lugares autorizados; de 120 a 600 € en la Rede Natura 2000 y áreas protegidas; de 150 a 200 € por practicar el autocaravanismo fuera de los lugares del art. 8.º (art. 19.º del Regulamento n.º 913/2023).",
+  "notaAyuntamiento": "Câmara Municipal de Faro: https://www.cm-faro.pt, geral@cm-faro.pt, +351 289 870 870.",
+  "fuentes": [
+    {
+      "titulo": "Regulamento n.º 913/2023: Regulamento Municipal para o Exercício da Atividade de Caravanismo e Autocaravanismo (Faro)",
+      "url": "https://diariodarepublica.pt/dr/detalhe/regulamento/913-2023-219975887",
+      "tipo": "oficial",
+      "fecha": "2023-08-16",
+      "reutilizacion": "«O acesso universal e gratuito compreende a possibilidade de impressão, arquivo, pesquisa e livre acesso ao conteúdo dos atos publicados nas 1.ª e 2.ª séries do Diário da República.» (Avisos Legais del Diário da República, consulta 12/11/2026). No hay cláusula expresa sobre reutilización comercial."
+    }
+  ],
+  "revisado": "2026-11-12",
+  "verificado": true
+}

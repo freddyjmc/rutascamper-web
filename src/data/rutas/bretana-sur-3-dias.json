@@ -1,0 +1,43 @@
+{
+  "pais": "fr",
+  "titulo": "Ruta en camper por el sur de Bretaña en 3 días con dónde dormir",
+  "h1": "Ruta en camper por el sur de Bretaña en 3 días",
+  "resumen": "Tres días por la costa bretona, de los alineamientos de menhires de Carnac y la Côte Sauvage de Quiberon, en el Morbihan, a la península de Crozon, en el Finistère. En cada parada indicamos las áreas y las normas que recogen nuestras fichas, con su fuente oficial.",
+  "dias": 3,
+  "comunidades": [
+    "bretagne"
+  ],
+  "cuando": "de finales de marzo a principios de noviembre, cuando abre el área de Kerné en Quiberon (fechas de la web municipal; compruébalas antes de salir)",
+  "etapas": [
+    {
+      "dia": "Día 1",
+      "titulo": "Carnac",
+      "texto": "Dedica el día a los alineamientos de menhires de Carnac y a pasear por su costa. Antes de ir, consulta en la web de la Oficina de Turismo cómo se visitan los alineamientos.",
+      "dormir": "Zona de estacionamiento para autocaravanas de Kérabus, en el Ménec (acceso por la route d'Auray, route du Purgatoire): abierta 24 h, gratuita y sin servicios, según el ayuntamiento y la Oficina de Turismo. Para vaciar y cargar agua está el área de servicio Square Illertissen (rue Saint-Cornély, Carnac Ville), que es solo un área de servicios: borne de vaciado y electricidad por 2,50 €, según la Oficina de Turismo. No hemos localizado ninguna orden municipal; si no la hay, rige la norma nacional, así que respeta la señalización. El camping aislado está prohibido, salvo excepción, en la orilla del mar, en sitios clasificados o inscritos, en zonas de patrimonio protegido, cerca de monumentos históricos y a menos de 200 m de captaciones de agua potable (art. R111-33 del Code de l'urbanisme).",
+      "ficha": "bretagne/carnac"
+    },
+    {
+      "dia": "Día 2",
+      "titulo": "Quiberon",
+      "texto": "Pasea por la Côte Sauvage de la península de Quiberon y por su costa.",
+      "dormir": "Área de autocaravanas de Kerné (Côte Sauvage): aparcamiento cerrado con barreras, unas 100 plazas, sin reserva. Abierta del 29 de marzo al 3 de noviembre. Vaciado de aguas grises y casete, sin electricidad. 4 € las 2 horas, 11,50 € las 24 horas, agua 2 € los 80 litros, tasa turística incluida (la tabla de tarifas que enlaza la web municipal es de 2024). No se puede entrar con dos vehículos ni con un segundo vehículo en remolque. Cuando cierra el área de Kerné, el camping municipal du Goviro acoge autocaravanas todo el año, a menos de 1 km del centro (tarifas en la web del camping). La web del ayuntamiento (consulta 05/11/2026) afirma que el camping libre está prohibido en todo el municipio, pero no cita la orden y no hemos localizado el arrêté.",
+      "ficha": "bretagne/quiberon"
+    },
+    {
+      "dia": "Día 3",
+      "titulo": "Península de Crozon",
+      "texto": "Cierra la ruta en la península de Crozon, con su costa y la localidad de Morgat.",
+      "dormir": "La Oficina de Turismo indica dos áreas de autocaravanas: la de la rue de Poulpatré (Crozon centro), con 22 plazas, y la de Morgat (parking du Loch, rue Penfrat), con 19 plazas. Las dos tienen vaciado de aguas grises, agua, wifi, tomas eléctricas y alumbrado, según su guía de 2024. Esa guía no indica precio ni duración máxima para Poulpatré, y para las tarifas de Morgat remite a campingcarpark.com. En los espacios naturales de Crozon (costa, sitios protegidos, reserva geológica y orilla del mar) está prohibido acampar con autocaravana y no se puede estacionar más de 24 horas seguidas. Del 1 de abril al 15 de noviembre, en una lista de aparcamientos de costa (Kerdreux, La Palue, Lostmarc'h y Pointe de Dinan, entre otros; la lista completa está en la ficha) no se puede estacionar ni parar ningún vehículo de 23:00 a 6:00 (art. 3 del arrêté n.º 144-2025 de 18/02/2025). En los aparcamientos de esos espacios naturales está prohibido acampar o sacar material, salvo permiso previo del ayuntamiento, y hacer fuego, incluidas barbacoas y camping-gas (arts. 4 y 5).",
+      "ficha": "bretagne/crozon"
+    }
+  ],
+  "consejos": [
+    "Cada alcalde puede limitar el estacionamiento de ciertos vehículos y prohibir el camping en algunas zonas con una orden municipal (arrêté): revisa siempre el municipio y respeta la señalización.",
+    "En Francia no existe en la ley un «derecho a pernoctar»: lo que puedes hacer depende del municipio.",
+    "Incumplir una orden municipal es, en general, una contravención de 2.ª clase (Code pénal, art. R610-5), con multa de hasta 150 € (art. 131-13). Según cómo esté redactada la orden, puede aplicarse otra norma, como el Code de la route.",
+    "El camping aislado está prohibido, salvo excepción, en la orilla del mar, en sitios clasificados o inscritos, en zonas de patrimonio protegido, cerca de monumentos históricos y a menos de 200 m de captaciones de agua potable (art. R111-33 del Code de l'urbanisme).",
+    "Las fechas de apertura, las tarifas y los accesos de las áreas cambian: compruébalos en la web del ayuntamiento o de la Oficina de Turismo antes de salir."
+  ],
+  "revisado": "2026-11-06",
+  "publicada": true
+}

@@ -1,0 +1,31 @@
+{
+  "nombre": "Porto (Oporto)",
+  "comunidad": "norte",
+  "provincia": "Porto (distrito)",
+  "estado": "sin-datos",
+  "resumen": "No hemos localizado ningún reglamento municipal de autocaravanas en Oporto. Si no lo hay, el Código da Estrada permite pernoctar con una autocaravana homologada por el IMT hasta 48 horas en el mismo municipio, salvo en la Rede Natura 2000, las áreas protegidas y las zonas del plan de la costa, donde solo se puede en los lugares autorizados. No hemos comprobado qué partes del municipio están en esas zonas ni hemos leído su reglamento de tráfico y estacionamiento. Respeta la señalización.",
+  "reglas": [
+    "No hemos localizado ningún reglamento municipal de autocaravanas. Si no lo hay, el Código da Estrada permite pernoctar con una autocaravana homologada por el IMT hasta 48 horas en el mismo municipio, salvo en la Rede Natura 2000, las áreas protegidas y las zonas de los planes de la costa, donde solo se puede en los lugares autorizados (art. 50.º-A n.os 1 y 2). Respeta la señalización.",
+    "En todo caso, no se puede acampar en la vía pública, verter aguas fuera de los puntos previstos ni ocupar más espacio que el perímetro del vehículo (art. 48.º n.º 7 del Código da Estrada; multa de 30 a 150 €)."
+  ],
+  "areas": [],
+  "multa": "Las del Código da Estrada: de 60 a 300 € por superar las 48 horas; de 120 a 600 € por pernoctar en la Rede Natura 2000, áreas protegidas o zonas de los planes de la costa fuera de los lugares autorizados (art. 50.º-A n.º 4).",
+  "notaAyuntamiento": "Câmara Municipal do Porto: https://www.cm-porto.pt, Linha Porto. 220 100 220, geral@cm-porto.pt.",
+  "fuentes": [
+    {
+      "titulo": "Câmara Municipal do Porto (web oficial)",
+      "url": "https://www.cm-porto.pt",
+      "tipo": "oficial",
+      "reutilizacion": "Sin cláusula de reutilización localizada en la web (consulta 12/11/2026). Solo hechos con nuestras palabras y enlace."
+    },
+    {
+      "titulo": "Lei n.º 66/2021 (Código da Estrada, art. 50.º-A)",
+      "url": "https://diariodarepublica.pt/dr/detalhe/lei/66-2021-170083315",
+      "tipo": "oficial",
+      "fecha": "2021-08-24",
+      "reutilizacion": "«O acesso universal e gratuito compreende a possibilidade de impressão, arquivo, pesquisa e livre acesso ao conteúdo dos atos publicados nas 1.ª e 2.ª séries do Diário da República.» (Avisos Legais del Diário da República, consulta 12/11/2026). No hay cláusula expresa sobre reutilización comercial."
+    }
+  ],
+  "revisado": "2026-11-12",
+  "verificado": true
+}

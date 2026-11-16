@@ -1,0 +1,33 @@
+{
+  "nombre": "Burgos",
+  "comunidad": "castilla-y-leon",
+  "provincia": "Burgos",
+  "estado": "sin-datos",
+  "resumen": "Burgos tiene un aparcamiento municipal para caravanas y autocaravanas en la calle Manuel Altolaguirre, abierto las 24 horas todo el año, donde se puede estacionar hasta 72 horas, con agua potable y vaciado de aguas residuales. No hemos localizado una ordenanza municipal específica sobre pernocta en la calle.",
+  "reglas": [
+    "En el aparcamiento municipal de caravanas y autocaravanas se puede estacionar un máximo de 72 horas; está abierto las 24 horas, los 365 días del año (web del Ayuntamiento de Burgos).",
+    "Castilla y León no tiene una norma turística sobre pernocta en la vía pública; en los montes y en la franja de 400 metros a su alrededor está prohibida la acampada libre salvo en lugares habilitados (Orden FYM/510/2013).",
+    "No hemos localizado una ordenanza municipal específica sobre estacionamiento y pernocta de autocaravanas: pregunta en el ayuntamiento (teléfono 010) y respeta la señalización."
+  ],
+  "areas": [
+    {
+      "nombre": "Aparcamiento municipal de caravanas y autocaravanas de Burgos",
+      "detalle": "Calle Manuel Altolaguirre, frente al n.º 10 (acceso también por la calle Severo Ochoa), 09006 Burgos. Máximo 72 horas; abierto 24 horas todo el año; fuente de agua potable y pileta para aguas residuales. Datos del Ayuntamiento de Burgos."
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Ayuntamiento de Burgos: aparcamiento municipal de caravanas y autocaravanas",
+      "url": "https://www.aytoburgos.es/-/aparcamiento-municipal-de-caravanas-y-autocaravanas",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Orden FYM/510/2013, de 25 de junio, uso del fuego y prevención de incendios forestales en Castilla y León",
+      "url": "https://sirdoc.ccyl.es/Biblioteca/Dosieres/DL205IncendiosEntidadesLocales/pdfs/CyL-Orden-FYM-510-2013-UsoFuego.pdf",
+      "tipo": "oficial",
+      "fecha": "2013-06-27"
+    }
+  ],
+  "revisado": "2026-11-03",
+  "verificado": true
+}

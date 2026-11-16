@@ -1,0 +1,162 @@
+{
+  "nombre": "Portugal",
+  "resumen": "En Portugal, el estacionamiento y la pernocta de autocaravanas los regula el Código da Estrada (arts. 48.º y 50.º-A, en la redacción de la Lei n.º 66/2021). En las áreas de la Rede Natura 2000, las áreas protegidas y las zonas de los Planos de Ordenamento da Orla Costeira está prohibido pernoctar fuera de los lugares expresamente autorizados; en la Rede Natura 2000, las áreas de paisaje protegido y esas zonas de la costa también está prohibido estacionar la autocaravana fuera de los lugares autorizados para estacionar. En el resto del territorio, si el municipio no tiene un reglamento para esta actividad, la ley permite pernoctar hasta 48 horas en el mismo municipio a las autocaravanas homologadas por el IMT. Cada municipio puede tener su regulamento municipal: revisa siempre la señalización y la web del ayuntamiento.",
+  "secciones": [
+    {
+      "titulo": "Estacionar",
+      "puntos": [
+        "Estacionar es inmovilizar el vehículo, con o sin ocupantes, sin que sea una simple parada (Código da Estrada, art. 48.º, n.º 2).",
+        "La autocaravana estaciona en las mismas condiciones que los demás vehículos y debe respetar los reglamentos municipales de estacionamiento y tráfico (art. 48.º, n.º 7).",
+        "Al estacionar, la ley prohíbe tres cosas: hacer campismo o actividades asociadas en la vía y el espacio público; verter residuos orgánicos y aguas fuera de los sistemas previstos; y ocupar más espacio que el perímetro de la autocaravana (art. 48.º, n.º 7)."
+      ]
+    },
+    {
+      "titulo": "Pernoctar",
+      "puntos": [
+        "Según la ley, «pernoita» es la permanencia de la autocaravana, con ocupantes, entre las 22:00 y las 7:00. «Autocaravana o similar» es el vehículo con espacio habitable o adaptado para ello, clasificado por el IMT como «autocaravana», «especial dormitório» o «caravana» (Código da Estrada, art. 50.º-A, n.º 3).",
+        "Fuera de la Rede Natura 2000, las áreas protegidas y las zonas de los planes de la costa, y si el municipio no tiene un reglamento para esta actividad, la ley permite la pernocta de autocaravanas homologadas por el IMT durante un máximo de 48 horas en el mismo municipio (art. 50.º-A, n.º 2).",
+        "En los lugares expresamente autorizados para pernoctar, la ley no fija un límite de noches, pero cada lugar puede tener sus propias normas: algunas áreas de servicio que hemos leído limitan la estancia a 72 horas (art. 50.º-A, n.º 2).",
+        "La ley habla de autocaravanas «homologadas pelo Instituto da Mobilidade e dos Transportes» (IMT): es la fórmula de la ley. En las fuentes que hemos leído no hemos localizado qué ocurre con las furgonetas sin homologar ni con los vehículos matriculados en otro país.",
+        "La ley prevé que el Gobierno pueda crear una plataforma electrónica gratuita de registro diario de la pernocta (art. 50.º-A, n.os 7 a 9). No hemos localizado que esa plataforma exista, así que no podemos decir que haya que registrarse."
+      ]
+    },
+    {
+      "titulo": "Zonas protegidas y costa",
+      "puntos": [
+        "Está prohibido estacionar autocaravanas y similares en las áreas de la Rede Natura 2000, las áreas de paisaje protegido y las zonas de los Planos de Ordenamento da Orla Costeira, fuera de los lugares autorizados para estacionar vehículos (Código da Estrada, art. 48.º, n.º 6).",
+        "También están prohibidos la pernocta y el «aparcamento» (estacionar ocupando más espacio que el perímetro del vehículo) de autocaravanas en las áreas de la Rede Natura 2000, las áreas protegidas y las zonas de los Planos de Ordenamento da Orla Costeira, salvo en los lugares expresamente autorizados (art. 50.º-A, n.os 1 y 3).",
+        "Esta guía no lista cuáles son esas zonas concretas: comprueba la señalización y pregunta en el ayuntamiento."
+      ]
+    },
+    {
+      "titulo": "Multas",
+      "puntos": [
+        "Estacionar donde está prohibido (Rede Natura 2000, paisaje protegido o zonas de los planes de la costa): coima (multa) de 60 a 300 € (Código da Estrada, art. 48.º, n.º 9).",
+        "Incumplir las tres prohibiciones al estacionar (campismo en la vía pública, verter residuos o aguas, ocupar más espacio que el perímetro del vehículo): coima de 30 a 150 € (art. 48.º, n.º 8).",
+        "Pernoctar o hacer «aparcamento» en Rede Natura 2000, áreas protegidas o zonas de los planes de la costa: coima de 120 a 600 € (art. 50.º-A, n.º 4).",
+        "Incumplir las condiciones de la pernocta fuera de esas zonas, como pasar del máximo de 48 horas: coima de 60 a 300 € (art. 50.º-A, n.º 4).",
+        "La ley prevé el pago voluntario inmediato por el importe mínimo de la coima (art. 48.º, n.os 10 y 11, y art. 50.º-A, n.os 5 y 6)."
+      ]
+    },
+    {
+      "titulo": "Reglamentos municipales",
+      "puntos": [
+        "El máximo de 48 horas solo rige si el municipio no tiene un reglamento para esta actividad (Código da Estrada, art. 50.º-A, n.º 2): cada municipio puede tener su regulamento municipal.",
+        "Antes de aparcar, mira la ficha del municipio, si la tenemos, y la señalización. Si el municipio no está en nuestras fichas, consulta su web oficial o pregunta en el ayuntamiento."
+      ]
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Lei n.º 66/2021, de 24 de agosto (Diário da República, 1.ª série, n.º 164, págs. 9-13)",
+      "url": "https://diariodarepublica.pt/dr/detalhe/lei/66-2021-170083315",
+      "tipo": "oficial",
+      "fecha": "2021-08-24"
+    },
+    {
+      "titulo": "Código da Estrada, arts. 48.º a 50.º-A, versión consolidada (Procuradoria-Geral Distrital de Lisboa, 28.ª versión, hasta la Lei n.º 24/2025; sin valor legal oficial)",
+      "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=349&tabela=leis",
+      "tipo": "oficial"
+    }
+  ],
+  "i18n": {
+    "en": {
+      "resumen": "In Portugal, parking and overnight stays in motorhomes are governed by the Código da Estrada (arts. 48.º and 50.º-A, as worded by Lei n.º 66/2021). In Rede Natura 2000 areas, protected areas and the zones covered by the Planos de Ordenamento da Orla Costeira, overnight stays are banned outside expressly authorised places; in Rede Natura 2000 areas, protected landscape areas and those coastal zones, parking a motorhome outside places authorised for parking is also banned. Elsewhere, if the municipality has no rule of its own for this activity, the law allows motorhomes approved by the IMT to stay overnight for up to 48 hours in the same municipality. Each municipality may have its own regulamento municipal: always check the signs and the town council's website.",
+      "secciones": [
+        {
+          "titulo": "Parking",
+          "puntos": [
+            "Parking means immobilising the vehicle, with or without occupants, when it is not just a stop (Código da Estrada, art. 48.º, n.º 2).",
+            "A motorhome parks under the same conditions as other vehicles and must respect the municipal parking and traffic regulations (art. 48.º, n.º 7).",
+            "When parking, the law bans three things: camping or related activities on the road and in public space; dumping organic waste and water outside the intended systems; and taking up more space than the perimeter of the motorhome (art. 48.º, n.º 7)."
+          ]
+        },
+        {
+          "titulo": "Staying overnight",
+          "puntos": [
+            "Under the law, «pernoita» is the stay of the motorhome, with occupants, between 22:00 and 7:00. An «autocaravana ou similar» is a vehicle with living space or adapted for it, classified by the IMT as «autocaravana», «especial dormitório» or «caravana» (Código da Estrada, art. 50.º-A, n.º 3).",
+            "Outside Rede Natura 2000 areas, protected areas and coastal plan zones, and if the municipality has no rule for this activity, the law allows motorhomes approved by the IMT to stay overnight for a maximum of 48 hours in the same municipality (art. 50.º-A, n.º 2).",
+            "In places expressly authorised for overnight stays, the law sets no limit on the number of nights, but each place may have its own rules: some service areas we have read limit stays to 72 hours (art. 50.º-A, n.º 2).",
+            "The law speaks of motorhomes «homologadas pelo Instituto da Mobilidade e dos Transportes» (approved by the IMT): that is the wording of the law. In the sources we have read we have not found what happens with unapproved vans or with vehicles registered in another country.",
+            "The law provides that the Government may create a free electronic platform for the daily registration of overnight stays (art. 50.º-A, n.os 7 to 9). We have not found that this platform exists, so we cannot say that you have to register."
+          ]
+        },
+        {
+          "titulo": "Protected areas and the coast",
+          "puntos": [
+            "Parking motorhomes and similar vehicles is banned in Rede Natura 2000 areas, protected landscape areas and the zones covered by the Planos de Ordenamento da Orla Costeira, outside places authorised for parking vehicles (Código da Estrada, art. 48.º, n.º 6).",
+            "Overnight stays and «aparcamento» (parking and taking up more space than the perimeter of the vehicle) of motorhomes are also banned in Rede Natura 2000 areas, protected areas and the zones covered by the Planos de Ordenamento da Orla Costeira, except in expressly authorised places (art. 50.º-A, n.os 1 and 3).",
+            "This guide does not list which areas these are: check the signs and ask the town council."
+          ]
+        },
+        {
+          "titulo": "Fines",
+          "puntos": [
+            "Parking where it is banned (Rede Natura 2000, protected landscape or coastal plan zones): a coima (fine) of €60 to €300 (Código da Estrada, art. 48.º, n.º 9).",
+            "Breaking the three bans when parking (camping on the public road, dumping waste or water, taking up more space than the vehicle's perimeter): a coima of €30 to €150 (art. 48.º, n.º 8).",
+            "Staying overnight or «aparcamento» in Rede Natura 2000, protected areas or coastal plan zones: a coima of €120 to €600 (art. 50.º-A, n.º 4).",
+            "Breaking the conditions for overnight stays outside those zones, such as exceeding the 48-hour maximum: a coima of €60 to €300 (art. 50.º-A, n.º 4).",
+            "The law provides for immediate voluntary payment of the minimum amount of the coima (art. 48.º, n.os 10 and 11, and art. 50.º-A, n.os 5 and 6)."
+          ]
+        },
+        {
+          "titulo": "Municipal regulations",
+          "puntos": [
+            "The 48-hour maximum applies only if the municipality has no rule for this activity (Código da Estrada, art. 50.º-A, n.º 2): each municipality may have its own regulamento municipal.",
+            "Before you park, look at the municipality's page, if we have one, and at the signs. If the municipality is not among our pages, check its official website or ask at the town council."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "resumen": "Au Portugal, le stationnement et la nuit en camping-car sont régis par le Código da Estrada (arts. 48.º et 50.º-A, dans la rédaction de la Lei n.º 66/2021). Dans les zones Rede Natura 2000, les zones protégées et les zones couvertes par les Planos de Ordenamento da Orla Costeira, la nuit est interdite en dehors des lieux expressément autorisés ; dans les zones Rede Natura 2000, les zones de paysage protégé et ces zones du littoral, le stationnement du camping-car en dehors des lieux autorisés pour le stationnement est aussi interdit. Ailleurs, si la commune n'a pas de règlement pour cette activité, la loi permet aux camping-cars homologués par l'IMT de passer la nuit pendant 48 heures au maximum dans la même commune. Chaque commune peut avoir son regulamento municipal (règlement municipal) : vérifiez toujours la signalisation et le site de la mairie.",
+      "secciones": [
+        {
+          "titulo": "Stationner",
+          "puntos": [
+            "Stationner, c'est immobiliser le véhicule, avec ou sans occupants, sans que ce soit un simple arrêt (Código da Estrada, art. 48.º, n.º 2).",
+            "Le camping-car stationne dans les mêmes conditions que les autres véhicules et doit respecter les règlements municipaux de stationnement et de circulation (art. 48.º, n.º 7).",
+            "Au stationnement, la loi interdit trois choses : pratiquer le camping ou des activités associées sur la voie et l'espace public ; déverser des déchets organiques et des eaux en dehors des systèmes prévus ; et occuper plus de place que le périmètre du camping-car (art. 48.º, n.º 7)."
+          ]
+        },
+        {
+          "titulo": "Passer la nuit",
+          "puntos": [
+            "Selon la loi, la «pernoita» est le séjour du camping-car, avec ses occupants, entre 22:00 et 7:00. Une «autocaravana ou similar» est un véhicule avec un espace habitable ou aménagé à cet effet, classé par l'IMT comme «autocaravana», «especial dormitório» ou «caravana» (Código da Estrada, art. 50.º-A, n.º 3).",
+            "En dehors des zones Rede Natura 2000, des zones protégées et des zones des plans du littoral, et si la commune n'a pas de règlement pour cette activité, la loi permet aux camping-cars homologués par l'IMT de passer la nuit pendant 48 heures au maximum dans la même commune (art. 50.º-A, n.º 2).",
+            "Dans les lieux expressément autorisés pour passer la nuit, la loi ne fixe pas de limite du nombre de nuits, mais chaque lieu peut avoir ses propres règles : certaines aires de service que nous avons lues limitent le séjour à 72 heures (art. 50.º-A, n.º 2).",
+            "La loi parle de camping-cars «homologadas pelo Instituto da Mobilidade e dos Transportes» (homologués par l'IMT) : c'est la formule de la loi. Dans les sources que nous avons lues, nous n'avons pas trouvé ce qu'il en est des fourgons non homologués ni des véhicules immatriculés dans un autre pays.",
+            "La loi prévoit que le Gouvernement puisse créer une plateforme électronique gratuite d'enregistrement quotidien des nuitées (art. 50.º-A, n.os 7 à 9). Nous n'avons pas trouvé que cette plateforme existe : nous ne pouvons donc pas dire qu'il faille s'enregistrer."
+          ]
+        },
+        {
+          "titulo": "Zones protégées et littoral",
+          "puntos": [
+            "Le stationnement des camping-cars et véhicules similaires est interdit dans les zones Rede Natura 2000, les zones de paysage protégé et les zones couvertes par les Planos de Ordenamento da Orla Costeira, en dehors des lieux autorisés pour le stationnement des véhicules (Código da Estrada, art. 48.º, n.º 6).",
+            "La nuit et l'«aparcamento» (stationner en occupant plus de place que le périmètre du véhicule) des camping-cars sont aussi interdits dans les zones Rede Natura 2000, les zones protégées et les zones couvertes par les Planos de Ordenamento da Orla Costeira, sauf dans les lieux expressément autorisés (art. 50.º-A, n.os 1 et 3).",
+            "Ce guide ne liste pas ces zones : vérifiez la signalisation et renseignez-vous auprès de la mairie."
+          ]
+        },
+        {
+          "titulo": "Amendes",
+          "puntos": [
+            "Stationner là où c'est interdit (Rede Natura 2000, paysage protégé ou zones des plans du littoral) : une coima (amende) de 60 à 300 € (Código da Estrada, art. 48.º, n.º 9).",
+            "Ne pas respecter les trois interdictions au stationnement (camping sur la voie publique, déversement de déchets ou d'eaux, occupation de plus de place que le périmètre du véhicule) : une coima de 30 à 150 € (art. 48.º, n.º 8).",
+            "Passer la nuit ou faire de l'«aparcamento» en Rede Natura 2000, en zone protégée ou dans les zones des plans du littoral : une coima de 120 à 600 € (art. 50.º-A, n.º 4).",
+            "Ne pas respecter les conditions de la nuitée en dehors de ces zones, par exemple dépasser le maximum de 48 heures : une coima de 60 à 300 € (art. 50.º-A, n.º 4).",
+            "La loi prévoit le paiement volontaire immédiat du montant minimal de la coima (art. 48.º, n.os 10 et 11, et art. 50.º-A, n.os 5 et 6)."
+          ]
+        },
+        {
+          "titulo": "Règlements municipaux",
+          "puntos": [
+            "Le maximum de 48 heures ne s'applique que si la commune n'a pas de règlement pour cette activité (Código da Estrada, art. 50.º-A, n.º 2) : chaque commune peut avoir son regulamento municipal (règlement municipal).",
+            "Avant de vous garer, consultez la fiche de la commune, si nous en avons une, et la signalisation. Si la commune ne figure pas parmi nos fiches, consultez son site officiel ou renseignez-vous à la mairie."
+          ]
+        }
+      ]
+    }
+  },
+  "revisado": "2026-11-12",
+  "verificado": true
+}

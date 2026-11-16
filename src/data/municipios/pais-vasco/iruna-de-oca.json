@@ -1,0 +1,35 @@
+{
+  "nombre": "Iruña de Oca",
+  "comunidad": "pais-vasco",
+  "provincia": "Álava",
+  "estado": "restringido",
+  "resumen": "Iruña de Oca (Álava) tiene un área de servicio para autocaravanas junto al aparcamiento del complejo deportivo de Arrate, con un máximo de 72 horas. Puedes dormir dentro si estás bien aparcado, pero acampar en la vía urbana es infracción muy grave, con multas de 1.501 a 3.000 €.",
+  "reglas": [
+    "Estacionar es inmovilizar la autocaravana según las normas de tráfico, haya o no personas dentro, de día o de noche, sin desplegar nada, sobre sus ruedas o calzos, sin patas estabilizadoras y sin verter nada (art. 4).",
+    "Es acampada sacar toldo, mesas, sillas o abrir ventanas proyectables, quedarse más tiempo del permitido o verter fluidos (art. 4).",
+    "Se permite aparcar autocaravanas en los aparcamientos públicos habilitados si no se acampa; si el suelo está en pendiente, pueden justificarse calzos o patas de nivelación (art. 6).",
+    "En el área, estancia máxima de 72 horas y prohibido sacar mesas, sillas, toldos o sombrillas (art. 5).",
+    "Acampar en la vía urbana es infracción muy grave (art. 10.3.2)."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de servicio para autocaravanas de Iruña de Oca",
+      "detalle": "En la zona anexa al aparcamiento del complejo deportivo de Arrate. Solo autocaravanas y vehículos vivienda homologados; máximo 72 horas; vaciado de aguas grises y negras y agua potable. No está vigilada.",
+      "lat": 42.818178,
+      "lon": -2.798298,
+      "coordFuente": "https://irunadeoca.com/wp-content/uploads/2024/ordenanzas/ORDENANZA%20MUNICIPAL%20REGULADORA%20DEL%20APARCAMIENTO%20DE%20AUTOCARAVANAS%20finalizado.pdf",
+      "coordTipo": "aproximada"
+    }
+  ],
+  "multa": "Leves: hasta 750 €. Graves (acampar en el área, vaciar aguas fuera de lugar, barbacoas, ruidos de generador de 22:00 a 8:00): de 751 a 1.500 €. Muy graves (acampada en vía urbana, reiterar una grave): de 1.501 a 3.000 € (arts. 10 y 11).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza reguladora del aparcamiento de autocaravanas de Iruña de Oca (BOTHA n.º 38, 03/04/2024), web del Ayuntamiento",
+      "url": "https://irunadeoca.com/wp-content/uploads/2024/ordenanzas/ORDENANZA%20MUNICIPAL%20REGULADORA%20DEL%20APARCAMIENTO%20DE%20AUTOCARAVANAS%20finalizado.pdf",
+      "tipo": "oficial",
+      "fecha": "2024-04-03"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

@@ -1,0 +1,29 @@
+{
+  "nombre": "Silves",
+  "comunidad": "algarve",
+  "provincia": "Faro (distrito)",
+  "estado": "restringido",
+  "resumen": "En Silves solo se puede pernoctar con autocaravana en los campings y en los lugares autorizados y señalizados, como las áreas de servicio de autocaravanas. Fuera de ellos solo se puede estacionar según el Código da Estrada. En los aparcamientos de las playas no se puede dejar la autocaravana, y en playas, dunas y acantilados no se puede circular ni estacionar fuera de los lugares establecidos, ni en las zonas de protección del plan de la costa Burgau-Vilamoura. Multa de 100 a 150 € por practicar el autocaravanismo fuera de los lugares autorizados y de 150 a 200 € por acampada sin licencia. El reglamento es de 2017, anterior a la Lei n.º 66/2021: lo resumimos tal como se publicó y no hemos comprobado si se ha modificado después.",
+  "reglas": [
+    "Está prohibido el campismo, el caravanismo y el autocaravanismo fuera de los lugares adecuados y destinados a ello, sin licencia del ayuntamiento (art. 4.º del Regulamento n.º 284/2017).",
+    "El «aparcamento» de autocaravanas para pernoctar solo se permite en los campings o en los lugares autorizados y señalizados, como las áreas de servicio de autocaravanas (art. 15.º).",
+    "Fuera de esos lugares solo se permite estacionar según el Código da Estrada (art. 19.º).",
+    "Cuenta como «aparcamento» bajar estabilizadores o poner calzos, abrir ventanas laterales, poner el escalón, vaciar aguas residuales, sacar mesas y sillas o equipos de ocio, tender ropa, hacer fuego, cocinar o comer fuera, o pernoctar (art. 20.º).",
+    "Está prohibido circular y estacionar autocaravanas en playas, dunas y acantilados fuera de los lugares establecidos, y en las zonas de protección del plan de la costa Burgau-Vilamoura (art. 13.º n.º 2).",
+    "Se considera acampada sin licencia dejar la autocaravana en los aparcamientos y zonas de estacionamiento de las playas del municipio (art. 14.º b)."
+  ],
+  "areas": [],
+  "multa": "De 100 a 150 € por practicar el autocaravanismo fuera de los lugares autorizados; de 150 a 200 € por acampada sin licencia (art. 28.º del Regulamento n.º 284/2017).",
+  "notaAyuntamiento": "Câmara Municipal de Silves: https://www.cm-silves.pt, expediente@cm-silves.pt, +351 282 440 800.",
+  "fuentes": [
+    {
+      "titulo": "Regulamento n.º 284/2017: Regulamento Municipal para o Licenciamento da Atividade de Campismo e Caravanismo Ocasional e para o Exercício da Atividade de Autocaravanismo (Silves)",
+      "url": "https://diariodarepublica.pt/dr/detalhe/regulamento/284-2017-107071386",
+      "tipo": "oficial",
+      "fecha": "2017-05-24",
+      "reutilizacion": "«O acesso universal e gratuito compreende a possibilidade de impressão, arquivo, pesquisa e livre acesso ao conteúdo dos atos publicados nas 1.ª e 2.ª séries do Diário da República.» (Avisos Legais del Diário da República, consulta 12/11/2026). No hay cláusula expresa sobre reutilización comercial."
+    }
+  ],
+  "revisado": "2026-11-12",
+  "verificado": true
+}

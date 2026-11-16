@@ -1,0 +1,25 @@
+{
+  "nombre": "Almonte (Matalascañas)",
+  "comunidad": "andalucia",
+  "provincia": "Huelva",
+  "estado": "prohibido",
+  "resumen": "En Almonte, que incluye Matalascañas y El Rocío, pernoctar en la vía o en espacios públicos cuenta como acampada libre y se sanciona. Puedes aparcar una autocaravana de hasta 3.500 kg en la calle siempre que no la uses para alojarte ni despliegues nada.",
+  "reglas": [
+    "Se sanciona la acampada libre en todo el término municipal (art. 2), y pernoctar en la vía o en espacios públicos cuenta como acampada libre (art. 3).",
+    "Se permite estacionar en la vía pública autocaravanas de hasta 3.500 kg siempre que no se usen para habitar, alojarse o acampar (art. 4).",
+    "Cuenta como aparcada y no acampada si solo toca el suelo con las ruedas, sin ventanas abiertas ni sillas, mesas o toldo, sin verter fluidos y sin ruidos molestos, como un generador en horas de descanso (art. 4).",
+    "Durante la Romería de El Rocío y otras fechas de grandes concentraciones, la Alcaldía puede cambiar temporalmente estas normas; los cambios se anuncian a la entrada de los núcleos (art. 5).",
+    "Los agentes pueden ordenar el desalojo inmediato; si no se obedece, la Policía Local desaloja a cargo del infractor (art. 6)."
+  ],
+  "multa": "Estacionar la autocaravana incumpliendo la ordenanza: 90 € (leve), o 200 € si obstaculiza la vía (grave). Acampada libre: 120 € por persona, ampliable hasta 450 € si se ensucia la zona, se deteriora el mobiliario urbano o se hacen barbacoas (art. 8).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza municipal reguladora de campamentos y acampadas en el término municipal de Almonte (BOP de Huelva n.º 198, 18/10/2016)",
+      "url": "https://www.almonte.es/export/sites/almonte/es/.galleries/01_ayuntamiento/documentos-ordenanzas/ordenanzas-generales-urbanismo-vivienda-y-medio-ambiente/URB_16_ORDENANZA-REGULADORA-DE-CAMPAMENTOS-Y-ACAMPADAS-EN-TERMINO-MUNICIPAL-DE-ALMONTE.pdf",
+      "tipo": "oficial",
+      "fecha": "2016-10-18"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

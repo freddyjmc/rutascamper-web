@@ -1,0 +1,48 @@
+{
+  "titulo": "Ruta en camper por los Picos de Europa en 4 días",
+  "h1": "Ruta en camper por los Picos de Europa",
+  "resumen": "Una vuelta de cuatro días por los Picos de Europa entre Cantabria y Asturias: San Vicente de la Barquera, el desfiladero de La Hermida, Potes y Fuente Dé, la Ruta del Cares, Covadonga y Llanes. Dentro del Parque Nacional rigen sus propias normas, así que esta ruta duerme en los pueblos.",
+  "dias": 4,
+  "comunidades": [
+    "cantabria",
+    "asturias"
+  ],
+  "cuando": "de mayo a octubre; en invierno algunas carreteras de montaña pueden cerrarse",
+  "etapas": [
+    {
+      "dia": "Día 1",
+      "titulo": "San Vicente de la Barquera",
+      "texto": "Empieza en la costa cántabra, con las vistas de los Picos desde el puente y la villa marinera. Desde aquí la carretera sube hacia Liébana por el desfiladero de La Hermida.",
+      "dormir": "En temporada de baño no puedes estacionar la autocaravana en los aparcamientos de acceso a las playas, y está prohibido aparcar vehículos de más de 1.600 kg en el Tostadero y La Barra. El ayuntamiento ofrece plazas para vehículos grandes junto a la N-634.",
+      "ficha": "cantabria/san-vicente-de-la-barquera"
+    },
+    {
+      "dia": "Día 2",
+      "titulo": "Desfiladero de La Hermida, Potes y Fuente Dé",
+      "texto": "Cruza el desfiladero de La Hermida, uno de los más largos de España, hasta Potes, capital de Liébana. Sube después hasta Fuente Dé, donde el teleférico lleva a lo alto del macizo central (consulta horarios y colas en temporada alta). De camino, el monasterio de Santo Toribio de Liébana.",
+      "dormir": "No hemos verificado todavía las ordenanzas de Potes ni de Camaleño. La opción verificada más cercana está a la entrada del desfiladero, en Asturias: el área pública de Panes (Peñamellera Baja), con 30 plazas gratuitas, agua y vaciado y un máximo de 48 horas, según Turismo Asturias.",
+      "ficha": "asturias/penamellera-baja"
+    },
+    {
+      "dia": "Día 3",
+      "titulo": "Arenas de Cabrales y la Ruta del Cares",
+      "texto": "Cruza a Asturias hacia Arenas de Cabrales, tierra del queso, y camina un tramo de la Ruta del Cares desde Poncebos: la senda va excavada en la roca sobre el río. La carretera hasta Poncebos es estrecha y el aparcamiento escaso en verano.",
+      "dormir": "No hemos verificado todavía la normativa de Cabrales: usa un área o camping. Asturias define la acampada libre de forma amplia, así que evita dormir fuera de zonas autorizadas.",
+      "ficha": ""
+    },
+    {
+      "dia": "Día 4",
+      "titulo": "Cangas de Onís, Covadonga y Llanes",
+      "texto": "Termina con Cangas de Onís y Covadonga (consulta las restricciones de acceso a los Lagos antes de subir) y baja a la costa en Llanes.",
+      "dormir": "Dos opciones con área pública: El Lleráu, en Cangas de Onís (gratuita, 40 plazas, máximo 48 horas), o La Talá, en Llanes (el único espacio municipal del concejo para pernoctar, máximo 48 horas).",
+      "ficha": "asturias/cangas-de-onis"
+    }
+  ],
+  "consejos": [
+    "Dentro del Parque Nacional de los Picos de Europa rigen sus propias normas de uso: no pernoctes en el parque, duerme en los pueblos.",
+    "Las carreteras de La Hermida, Fuente Dé y Poncebos son de montaña: con vehículos grandes, conduce despacio y evita las horas punta de verano.",
+    "Ten en cuenta que pasas por dos comunidades con normas distintas: en Cantabria los calzos están permitidos; Asturias es más estricta con la acampada libre."
+  ],
+  "revisado": "2026-11-02",
+  "publicada": true
+}

@@ -1,0 +1,41 @@
+{
+  "nombre": "Vila Real de Santo António (Monte Gordo)",
+  "comunidad": "algarve",
+  "provincia": "Faro (distrito)",
+  "estado": "restringido",
+  "resumen": "En Vila Real de Santo António solo se puede pernoctar con autocaravana en el camping municipal de Monte Gordo, en el aparcamiento «Parque da Muralha» (frente al río) y en el «Parque da Manta Rota» (frente al mar), y en otros lugares que licencie el ayuntamiento. Fuera de ellos solo se puede estacionar. Multa de 150 a 200 €.",
+  "reglas": [
+    "El «aparcamento» para pernoctar solo se permite en los lugares del art. 8.º (art. 3.º del Regulamento n.º 114/2019).",
+    "Lugares: camping municipal de Monte Gordo; aparcamiento de la Frente Ribeirinha de Vila Real de Santo António («Parque da Muralha»); aparcamiento de la Frente Mar de la Praia da Manta Rota («Parque da Manta Rota»); y otros que licencie el ayuntamiento (art. 8.º).",
+    "Fuera de esos lugares solo se permite estacionar según el Código da Estrada (art. 4.º).",
+    "Cuenta como «aparcamento» bajar estabilizadores o poner calzos, abrir ventanas laterales, vaciar aguas residuales, poner el escalón, tender ropa, sacar mesas y sillas o pernoctar (art. 7.º).",
+    "Los espacios exclusivos para autocaravanas son de pago y con tiempo limitado según sus condiciones (art. 5.º)."
+  ],
+  "areas": [
+    {
+      "nombre": "Parque Municipal de Campismo de Monte Gordo",
+      "detalle": "Lugar autorizado para el autocaravanismo según el art. 8.º del reglamento municipal."
+    },
+    {
+      "nombre": "Parque da Muralha (Frente Ribeirinha de Vila Real de Santo António)",
+      "detalle": "Aparcamiento autorizado para el autocaravanismo según el art. 8.º del reglamento municipal. Es de pago y con tiempo limitado (art. 5.º); el reglamento no da precios ni horarios."
+    },
+    {
+      "nombre": "Parque da Manta Rota (Frente Mar de la Praia da Manta Rota)",
+      "detalle": "Aparcamiento autorizado para el autocaravanismo según el art. 8.º del reglamento municipal. Es de pago y con tiempo limitado (art. 5.º); el reglamento no da precios ni horarios."
+    }
+  ],
+  "multa": "De 150 a 200 € (art. 13.º del Regulamento n.º 114/2019).",
+  "notaAyuntamiento": "Câmara Municipal de Vila Real de Santo António: https://www.cm-vrsa.pt, geral@cm-vrsa.pt, +351 281 510 000.",
+  "fuentes": [
+    {
+      "titulo": "Regulamento n.º 114/2019: Regulamento Municipal para o Exercício da Atividade de Autocaravanismo no Concelho de Vila Real de Santo António",
+      "url": "https://diariodarepublica.pt/dr/detalhe/regulamento/114-2019-118748573",
+      "tipo": "oficial",
+      "fecha": "2019-01-29",
+      "reutilizacion": "«O acesso universal e gratuito compreende a possibilidade de impressão, arquivo, pesquisa e livre acesso ao conteúdo dos atos publicados nas 1.ª e 2.ª séries do Diário da República.» (Avisos Legais del Diário da República, consulta 12/11/2026). No hay cláusula expresa sobre reutilización comercial."
+    }
+  ],
+  "revisado": "2026-11-12",
+  "verificado": false
+}

@@ -1,0 +1,58 @@
+{
+  "nombre": "Boiro",
+  "comunidad": "galicia",
+  "provincia": "A Coruña",
+  "estado": "permitido",
+  "resumen": "Boiro reconoce por ordenanza el derecho a estacionar y pernoctar en todo el municipio según las normas de tráfico, siempre que no despliegues nada. Tiene además zonas reservadas para autocaravanas en las playas de Barraña y Mañóns, con un máximo de 48 horas seguidas y 72 por semana.",
+  "reglas": [
+    "Se reconoce el derecho a estacionar y, en su caso, pernoctar en todo el municipio según las normas de tráfico, salvo en espacios protegidos, terrenos forestales, suelo rústico de especial protección y dominio público (art. 4.1).",
+    "Cuenta como estacionada si solo toca el suelo con las ruedas, no abre ventanas proyectables ni saca sillas, mesas o toldo, no emite fluidos y no hace ruidos molestos (art. 4.5).",
+    "En las zonas reservadas: máximo 48 horas seguidas y 72 horas en una misma semana (art. 4.8).",
+    "En las zonas reservadas y áreas de servicio está prohibido sacar toldos, mesas, sillas, tendederos o cualquier elemento que amplíe el perímetro del vehículo (art. 3)."
+  ],
+  "areas": [
+    {
+      "nombre": "Zona reservada de la praia de Barraña",
+      "detalle": "máximo 48 h seguidas / 72 h por semana; tasa según la ordenanza fiscal"
+    },
+    {
+      "nombre": "Zona reservada de la praia de Mañóns",
+      "detalle": "máximo 48 h seguidas / 72 h por semana; tasa según la ordenanza fiscal"
+    },
+    {
+      "nombre": "Área de Boiro - Praia Mañóns",
+      "detalle": "Playa Mañons. 15930 Boiro. Área pública y gratuita. Admite pernocta. Servicios: agua potable, vaciado de aguas grises, vaciado de aguas negras. Datos de la Agencia de Turismo de Galicia, consultados el 02/11/2026.",
+      "lat": 42.632965,
+      "lon": -8.852951,
+      "coordFuente": "https://www.turismo.gal/recurso/-/detalle/280382420/area-de-praia-manons?langId=es_ES"
+    },
+    {
+      "nombre": "Área de Praia Xardin",
+      "detalle": "Paseo Praia Xardín- Barraña. 15930 Boiro. Área pública. Admite pernocta. Servicios: agua potable, duchas, vaciado de aguas grises, vaciado de aguas negras, zona de juegos para niños, zona de picnic. Datos de la Agencia de Turismo de Galicia, consultados el 02/11/2026.",
+      "lat": 42.641598,
+      "lon": -8.89696,
+      "coordFuente": "https://www.turismo.gal/recurso/-/detalle/280382419/area-de-praia-xardin?langId=es_ES"
+    }
+  ],
+  "multa": "Leves, como desplegar elementos o estacionar de forma no permitida: hasta 350 €. Graves, como verter líquidos o estacionar en espacios protegidos: hasta 750 €. Muy graves: hasta 1.500 € (arts. 8 y 9).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza municipal reguladora do estacionamento e pernoita de autocaravanas, vehículos camper e caravanas de Boiro (BOP da Coruña n.º 60, 25/03/2024, anuncio 2024/1939)",
+      "url": "https://bop.dacoruna.gal/bopportal/publicado/2024/03/25/2024_0000001939.pdf",
+      "tipo": "oficial",
+      "fecha": "2024-03-25"
+    },
+    {
+      "titulo": "Agencia de Turismo de Galicia (Xunta de Galicia): Área de Boiro - Praia Mañóns",
+      "url": "https://www.turismo.gal/recurso/-/detalle/280382420/area-de-praia-manons?langId=es_ES",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Agencia de Turismo de Galicia (Xunta de Galicia): Área de Praia Xardin",
+      "url": "https://www.turismo.gal/recurso/-/detalle/280382419/area-de-praia-xardin?langId=es_ES",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-01",
+  "verificado": true
+}

@@ -1,0 +1,67 @@
+{
+  "nombre": "Chamonix-Mont-Blanc",
+  "comunidad": "auvergne-rhone-alpes",
+  "provincia": "Haute-Savoie (74)",
+  "estado": "restringido",
+  "resumen": "Del 1 de mayo al 31 de octubre, una orden municipal prohíbe estacionar la autocaravana para alojarse en ella en espacios verdes, zonas boscosas, espacios sin señalizar y en una larga lista de calles y aparcamientos. Para dormir, el ayuntamiento indica el parking de autocaravanas de Le Cry (menos de 7 m), el parking Grépon Bus (más de 7 m) y los campings. Su folleto de septiembre de 2026 añade límites que no están en el texto de la orden: máximo 24 horas en el mismo sitio y no dormir de 22 h a 7 h fuera de esos dos parkings.",
+  "reglas": [
+    "Del 1 de mayo al 31 de octubre de cada año, prohibido el estacionamiento «con alojamiento» de autocaravanas, caravanas y vehículos acondicionados en los espacios no señalizados, los espacios verdes y las zonas boscosas (arts. 1, 2 y 3 del arrêté n.º 2026.00652 de 05/08/2026).",
+    "En ese mismo periodo, la prohibición se extiende a las calles y aparcamientos públicos enumerados por barrios: centro (Gare, Allobroges, Courmayeur, Corzolet, entre otros), Les Bossons, Les Pèlerins, Les Gaillands, La Frasse, Les Praz, Les Bois, Les Tines, Les Grassonets, Les Chosalets, Argentière, Le Planet, Montroc, Les Frasserands y Le Tour (art. 2 del arrêté n.º 2026.00652 de 05/08/2026)."
+  ],
+  "areas": [
+    {
+      "nombre": "Parking camping-cars de Le Cry",
+      "detalle": "A la entrada de Chamonix, junto al gran parking «Centre ville». De pago, unas 50 plazas, para autocaravanas de más de 2,20 m de alto y menos de 7 m de largo. En 2026 abrió el 24 de abril y abre hasta el 15 de noviembre (puede cambiar según la nieve). No es camping ni área de servicio: no se puede hacer pícnic ni sacar enseres. El precio no figura en las fuentes leídas.",
+      "soloServicios": false
+    },
+    {
+      "nombre": "Parking Grépon Bus",
+      "detalle": "Aparcamiento para vehículos de más de 7 m que el ayuntamiento indica como alternativa. Sin más datos en las fuentes leídas.",
+      "soloServicios": false
+    },
+    {
+      "nombre": "Área de servicios de la Route Blanche",
+      "detalle": "En la entrada de Chamonix, junto a la RD 1506 y el Carrefour Market. Vaciado y grifo de agua potable. Prohibido estacionar en ella.",
+      "soloServicios": true
+    }
+  ],
+  "multa": "El arrêté no fija importe. En general, incumplir una orden municipal es una contravención de 2.ª clase (art. R610-5 del Code pénal), con multa de hasta 150 € (art. 131-13 del Code pénal); según cómo esté redactada la orden, puede aplicarse otra norma, como el Code de la route.",
+  "fuentes": [
+    {
+      "titulo": "Arrêté n.º 2026.00652, réglementation du stationnement des véhicules aménagés (Mairie de Chamonix-Mont-Blanc)",
+      "url": "https://www.chamonix.fr/wp-content/uploads/2026/08/restriction_stationnement_campings_cars_arrete_5_8_2026.pdf",
+      "tipo": "oficial",
+      "fecha": "2026-08-05"
+    },
+    {
+      "titulo": "Réglementation du stationnement des véhicules aménagés (web municipal de Chamonix-Mont-Blanc)",
+      "url": "https://www.chamonix.fr/actualites/reglementation-du-stationnement-des-vehicules-amenages-camping-cars-caravanes-et-v-a-s-p-sur-la-commune-de-chamonix-mont-blanc/",
+      "tipo": "oficial",
+      "fecha": "2026-09-23"
+    },
+    {
+      "titulo": "Folleto «Bienvenue aux camping-caristes» (Mairie de Chamonix-Mont-Blanc)",
+      "url": "https://www.chamonix.fr/wp-content/uploads/2026/09/camping-cars-depliant-a5_sept-2026_spreads_web-1.pdf",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Ouverture d'un parking camping-cars à l'entrée de Chamonix-Mont-Blanc (web municipal)",
+      "url": "https://www.chamonix.fr/actualites/ouverture-dun-parking-camping-cars-a-lentree-de-chamonix-mont-blanc/",
+      "tipo": "oficial",
+      "fecha": "2026-04-24"
+    },
+    {
+      "titulo": "Code pénal, art. R610-5 (incumplir un arrêté)",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045176320",
+      "tipo": "oficial",
+      "fecha": "2022-02-17"
+    },
+    {
+      "titulo": "Code pénal, art. 131-13 (Légifrance, version en vigueur au 05/11/2026)",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006417259/",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-06",
+  "verificado": true
+}

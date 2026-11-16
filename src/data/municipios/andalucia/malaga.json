@@ -1,0 +1,32 @@
+{
+  "nombre": "Málaga",
+  "comunidad": "andalucia",
+  "provincia": "Málaga",
+  "estado": "permitido",
+  "resumen": "En Málaga la Ordenanza de Movilidad de 2024 permite parar y estacionar autocaravanas en las calles como cualquier otro vehículo, siempre que no las uses como lugar habitable con vocación de permanencia, no saques sillas, mesas ni toldo, no despliegues ventanas que sobresalgan, no viertas nada y no hagas ruido. Cada incumplimiento se multa con 100 euros.",
+  "reglas": [
+    "Puedes parar y estacionar en las vías urbanas en las mismas condiciones que cualquier vehículo, cumpliendo la normativa estatal de tráfico (Ordenanza de Movilidad, art. 31.1.a).",
+    "No puedes usar el estacionamiento como lugar habitable con cierta vocación de permanencia (art. 31.1.b y 29.2.h).",
+    "No saques sillas ni mesas, no extiendas toldos ni avances, no despliegues ventanas batientes ni nada que sobresalga del perímetro, no viertas líquidos ni basura y no hagas ruidos molestos (art. 31.1.d y e).",
+    "En pendiente, deja el vehículo bien calzado (art. 31.1.c).",
+    "El ayuntamiento puede habilitar zonas exclusivas para caravanas y autocaravanas (art. 31.2).",
+    "Andalucía prohíbe con carácter general la acampada y pernocta con fines vacacionales o de ocio fuera de campings y áreas de pernocta de autocaravanas (Decreto 26/2018, art. 1.5): para dormir, lo más seguro es un área o un camping."
+  ],
+  "areas": [],
+  "multa": "Cada una de estas infracciones es leve y se multa con 100 € (cuadro de infracciones de la Ordenanza de Movilidad, arts. 29.2.h y 31.1).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza de Movilidad de la Ciudad de Málaga, aprobación definitiva (BOP de Málaga n.º 231, 29/11/2024, edicto 4724/2024)",
+      "url": "https://movilidad.malaga.eu/opencms/export/sites/movilidad/.content/galerias/Documentos-del-site/Ordenanza-de-Movilidad-de-la-Ciudad-de-Malaga-2024.pdf",
+      "tipo": "oficial",
+      "fecha": "2024-11-29"
+    },
+    {
+      "titulo": "Decreto 26/2018, de 23 de enero, de ordenación de los campamentos de turismo de Andalucía (BOJA n.º 27 de 2018)",
+      "url": "https://www.juntadeandalucia.es/boja/2018/27/1",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-03",
+  "verificado": true
+}

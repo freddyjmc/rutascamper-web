@@ -1,0 +1,34 @@
+{
+  "nombre": "Azores (Açores)",
+  "resumen": "En la Región Autónoma de las Azores no hemos localizado ninguna norma regional sobre autocaravanas. El Código da Estrada es una ley nacional; no hemos comprobado si tiene adaptaciones en las Azores. Consulta el reglamento del municipio y respeta la señalización.",
+  "normaAutonomica": "Sin norma regional localizada sobre autocaravanas. No se ha comprobado si el Código da Estrada tiene adaptaciones regionales en las Azores.",
+  "claves": [
+    "La autocaravana estaciona como los demás vehículos, respetando los reglamentos municipales de estacionamiento y tráfico. No se puede acampar en la vía pública, verter aguas fuera de los puntos previstos ni ocupar más espacio que el perímetro del vehículo (art. 48.º n.º 7 del Código da Estrada). Multa de 30 a 150 € (art. 48.º n.º 8).",
+    "En la Rede Natura 2000, las áreas protegidas y las zonas de los Planos de Ordenamento da Orla Costeira (planes de la costa) está prohibido pernoctar y hacer «aparcamento» fuera de los lugares autorizados (art. 50.º-A n.º 1). Multa de 120 a 600 € (art. 50.º-A n.º 4).",
+    "En esas mismas zonas (Rede Natura 2000, paisajes protegidos y planes de la costa) tampoco se puede estacionar la autocaravana fuera de los lugares autorizados para estacionar vehículos (art. 48.º n.º 6). Multa de 60 a 300 € (art. 48.º n.º 9).",
+    "Según el Código da Estrada (no hemos comprobado si tiene adaptaciones en las Azores), en el resto del territorio, si el municipio no tiene reglamento para esta actividad, se puede pernoctar con una autocaravana homologada por el IMT un máximo de 48 horas en el mismo municipio; en los lugares expresamente autorizados la ley no fija un límite de noches, pero cada lugar puede tener sus propias normas (art. 50.º-A n.º 2). Multa de 60 a 300 € (art. 50.º-A n.º 4).",
+    "«Pernoita» (pernocta) es estar en la autocaravana con ocupantes entre las 22:00 y las 7:00; «aparcamento» es estacionar ocupando más espacio que el perímetro del vehículo (art. 50.º-A n.º 3)."
+  ],
+  "pernoctaVia": "Sin norma regional localizada. No hemos comprobado cómo se aplica en las Azores el art. 50.º-A del Código da Estrada: pregunta al ayuntamiento antes de pasar la noche.",
+  "fuentes": [
+    {
+      "titulo": "Lei n.º 66/2021, de 24 de agosto (modifica el régimen de estacionamiento, pernocta y «aparcamento» de autocaravanas en el Código da Estrada)",
+      "url": "https://diariodarepublica.pt/dr/detalhe/lei/66-2021-170083315",
+      "tipo": "oficial",
+      "fecha": "2021-08-24",
+      "reutilizacion": "«O acesso universal e gratuito compreende a possibilidade de impressão, arquivo, pesquisa e livre acesso ao conteúdo dos atos publicados nas 1.ª e 2.ª séries do Diário da República.» (Avisos Legais del Diário da República, consulta 12/11/2026). No hay cláusula expresa sobre reutilización comercial."
+    },
+    {
+      "titulo": "Código da Estrada, arts. 48.º a 50.º-A, versión consolidada (Procuradoria-Geral Distrital de Lisboa; sin valor legal oficial)",
+      "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=349&tabela=leis",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "ICNF: Rede Nacional de Áreas Protegidas (incluye las redes regionales de Azores y Madeira)",
+      "url": "https://www.icnf.pt/conservacao/rnapareasprotegidas",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-12",
+  "verificado": true
+}

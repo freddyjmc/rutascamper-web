@@ -1,0 +1,33 @@
+{
+  "nombre": "Gavarnie-Gèdre",
+  "comunidad": "occitanie",
+  "provincia": "Hautes-Pyrénées (65)",
+  "estado": "sin-datos",
+  "resumen": "No hemos localizado ninguna orden municipal sobre autocaravanas. Si no la hay, rige la norma nacional; respeta la señalización. En la parte del municipio dentro del corazón del Parque nacional de los Pirineos rigen además las normas del parque (ver la ficha de Occitanie). El pleno fijó para 2024 y 2025 una tarifa de 10 € por 24 horas para autocaravanas en el aparcamiento de Gavarnie.",
+  "reglas": [
+    "No hemos localizado ninguna orden municipal sobre autocaravanas en la web del ayuntamiento. Si no la hay, rige la norma nacional; respeta la señalización. Estacionamiento abusivo: a partir de 7 días seguidos en el mismo sitio de la vía pública (art. R417-12 del Code de la route).",
+    "Aparcamiento de Gavarnie: 10 € por 24 horas para autocaravanas en 2024 (acta del pleno de 07/12/2023), mantenido para 2025 (acta del pleno de 11/12/2024). Tarifa de 2026: no localizada."
+  ],
+  "areas": [
+    {
+      "nombre": "Aparcamiento de Gavarnie (tarifa municipal)",
+      "detalle": "10 € por 24 horas para autocaravanas en 2024 y 2025, según las actas del pleno. Las actas no dan la ubicación exacta, los servicios ni si se puede pasar la noche."
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Acta del pleno municipal de 11/12/2024 (tarifas de aparcamiento 2025)",
+      "url": "https://www.gavarnie-gedre.fr/app/download/20025765425/CR+11.12.2024.pdf",
+      "tipo": "oficial",
+      "fecha": "2024-12-11"
+    },
+    {
+      "titulo": "Acta del pleno municipal de 07/12/2023 (tarifas de aparcamiento 2024)",
+      "url": "https://www.gavarnie-gedre.fr/app/download/20025769525/8+CR+071223.pdf",
+      "tipo": "oficial",
+      "fecha": "2023-12-07"
+    }
+  ],
+  "revisado": "2026-11-05",
+  "verificado": false
+}

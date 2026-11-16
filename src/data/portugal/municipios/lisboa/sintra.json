@@ -1,0 +1,38 @@
+{
+  "nombre": "Sintra",
+  "comunidad": "lisboa",
+  "provincia": "Lisboa (distrito)",
+  "estado": "sin-datos",
+  "resumen": "No hemos localizado ningún reglamento municipal de autocaravanas en Sintra. En el Parque Natural de Sintra-Cascais (área protegida) el Código da Estrada prohíbe pernoctar fuera de los lugares autorizados. Fuera de la Rede Natura 2000, las áreas protegidas y las zonas del plan de la costa, y si no hay reglamento, el Código da Estrada permite pernoctar con una autocaravana homologada por el IMT hasta 48 horas en el mismo municipio. No hemos comprobado qué partes del municipio están en esas zonas. Respeta la señalización.",
+  "reglas": [
+    "No hemos localizado ningún reglamento municipal de autocaravanas. Si no lo hay, el Código da Estrada permite pernoctar con una autocaravana homologada por el IMT hasta 48 horas en el mismo municipio, salvo en la Rede Natura 2000, las áreas protegidas y las zonas de los planes de la costa, donde solo se puede en los lugares autorizados (art. 50.º-A n.os 1 y 2). Respeta la señalización.",
+    "El Parque Natural de Sintra-Cascais forma parte de la Rede Nacional de Áreas Protegidas (ICNF): allí está prohibido pernoctar y hacer «aparcamento» fuera de los lugares autorizados (art. 50.º-A n.º 1; multa de 120 a 600 €).",
+    "En todo caso, no se puede acampar en la vía pública, verter aguas fuera de los puntos previstos ni ocupar más espacio que el perímetro del vehículo (art. 48.º n.º 7 del Código da Estrada; multa de 30 a 150 €)."
+  ],
+  "areas": [],
+  "multa": "Las del Código da Estrada: de 60 a 300 € por superar las 48 horas; de 120 a 600 € por pernoctar en la Rede Natura 2000, áreas protegidas o zonas de los planes de la costa fuera de los lugares autorizados (art. 50.º-A n.º 4).",
+  "notaAyuntamiento": "Câmara Municipal de Sintra: https://cm-sintra.pt, +351 219 238 500.",
+  "fuentes": [
+    {
+      "titulo": "Câmara Municipal de Sintra (web oficial)",
+      "url": "https://cm-sintra.pt",
+      "tipo": "oficial",
+      "reutilizacion": "Sin cláusula de reutilización localizada en la web (consulta 12/11/2026). Solo hechos con nuestras palabras y enlace."
+    },
+    {
+      "titulo": "Lei n.º 66/2021 (Código da Estrada, art. 50.º-A)",
+      "url": "https://diariodarepublica.pt/dr/detalhe/lei/66-2021-170083315",
+      "tipo": "oficial",
+      "fecha": "2021-08-24",
+      "reutilizacion": "«O acesso universal e gratuito compreende a possibilidade de impressão, arquivo, pesquisa e livre acesso ao conteúdo dos atos publicados nas 1.ª e 2.ª séries do Diário da República.» (Avisos Legais del Diário da República, consulta 12/11/2026). No hay cláusula expresa sobre reutilización comercial."
+    },
+    {
+      "titulo": "ICNF: parques naturales (Sintra-Cascais)",
+      "url": "https://www.icnf.pt/conservacao/rnapareasprotegidas/parquesnaturais",
+      "tipo": "oficial",
+      "reutilizacion": "Aviso legal de icnf.pt no legible (la página no muestra texto). Solo hechos con nuestras palabras y enlace."
+    }
+  ],
+  "revisado": "2026-11-12",
+  "verificado": true
+}

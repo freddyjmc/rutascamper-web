@@ -1,0 +1,39 @@
+{
+  "nombre": "Vilalba",
+  "comunidad": "galicia",
+  "provincia": "Lugo",
+  "estado": "permitido",
+  "resumen": "Vilalba adoptó en 2025 la ordenanza modelo gallega: reconoce el derecho a estacionar y pernoctar en todo el municipio según las normas de tráfico, sin desplegar nada. En las zonas reservadas el máximo es de 72 horas seguidas por semana. Sus multas son altas, de hasta 3.000 €.",
+  "reglas": [
+    "Se reconoce el derecho a estacionar y, en su caso, pernoctar en todo el municipio según las normas de tráfico, salvo en espacios protegidos, terrenos forestales, suelo rústico de especial protección y dominio público (art. 4.1).",
+    "Las autocaravanas, campers y caravanas pueden parar y estacionar en las vías urbanas en las mismas condiciones que cualquier otro vehículo (art. 4.3).",
+    "En las zonas reservadas: máximo 72 horas seguidas en una misma semana (art. 4.8).",
+    "Horario de entrada, salida y uso de servicios en las zonas reservadas y puntos de reciclaje: de 9:30 a 22:00.",
+    "Prohibido desplegar elementos fuera del perímetro del vehículo en zonas no autorizadas y verter líquidos fuera de los puntos habilitados."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de Vilalba",
+      "detalle": "Rúa da Feira s/n. 27810 Vilalba. Área pública y gratuita. Admite pernocta. Servicios: agua potable, vaciado de aguas grises, vaciado de aguas negras. Datos de la Agencia de Turismo de Galicia, consultados el 02/11/2026.",
+      "lat": 43.2956,
+      "lon": -7.676581,
+      "coordFuente": "https://www.turismo.gal/recurso/-/detalle/280382427/area-de-vilalba?langId=es_ES"
+    }
+  ],
+  "multa": "Leves: hasta 750 €. Graves: hasta 1.500 €. Muy graves: hasta 3.000 €; en graves y muy graves, además, posible expulsión de la zona (art. 9).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza municipal reguladora do estacionamento e pernoita de autocaravanas, vehículos tipo camper e caravanas de Vilalba, texto regulador n.º 74 (BOP de Lugo n.º 175, 01/08/2025)",
+      "url": "https://vilalba.gal/archivos/documentacion/ordenanzas/ORDENANZA-74.pdf",
+      "tipo": "oficial",
+      "fecha": "2025-08-01"
+    },
+    {
+      "titulo": "Agencia de Turismo de Galicia (Xunta de Galicia): Área de Vilalba",
+      "url": "https://www.turismo.gal/recurso/-/detalle/280382427/area-de-vilalba?langId=es_ES",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-01",
+  "verificado": true
+}

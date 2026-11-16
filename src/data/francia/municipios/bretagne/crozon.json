@@ -1,0 +1,47 @@
+{
+  "nombre": "Crozon",
+  "comunidad": "bretagne",
+  "provincia": "Finistère (29)",
+  "estado": "restringido",
+  "resumen": "En los espacios naturales de Crozon (costa, sitios protegidos, reserva geológica y orilla del mar) está prohibido acampar con autocaravana y no se puede estacionar más de 24 horas seguidas. En una lista de aparcamientos de costa, entre el 1 de abril y el 15 de noviembre, no se puede estacionar de 23:00 a 6:00. Para dormir, la Oficina de Turismo indica dos áreas de autocaravanas: rue de Poulpatré y Morgat.",
+  "reglas": [
+    "Fuera de los campings oficiales, prohibido acampar de cualquier forma (tienda, coche, vehículo acondicionado, autocaravana, caravana, vivac) en los sitios clasificados e inscritos, espacios naturales notables de la Loi Littoral, espacios boscosos clasificados, reserva natural regional, orilla del mar y dominio público marítimo (arts. 1 y 2 del arrêté n.º 144-2025 de 18/02/2025).",
+    "Del 1 de abril al 15 de noviembre, prohibido estacionar o parar cualquier vehículo de 23:00 a 6:00 en estos lugares: Kerdreux, La Palue, Lostmarc'h, Moulin de Kerdroën, Pointe de Dinan, Kernavéno, Goulien, Kersiguénou, Kerloc'h, Trezh Rouz, Grève du Zorn, Rozan (four à chaux), Pointe de Raguenez y Aber Trébéron (art. 3 del arrêté n.º 144-2025 de 18/02/2025).",
+    "Del 16 de noviembre al 31 de marzo, en esos mismos lugares, estacionamiento limitado a 24 horas; en el resto de aparcamientos de los espacios naturales, máximo 24 horas seguidas todo el año (art. 3 del arrêté n.º 144-2025 de 18/02/2025).",
+    "Los aparcamientos son solo para estacionar: prohibido acampar o sacar material, salvo permiso previo del ayuntamiento (art. 4 del arrêté n.º 144-2025 de 18/02/2025).",
+    "Prohibido hacer fuego, incluidas barbacoas y camping-gas, dejar residuos y vaciar aguas fuera de los puntos previstos (arts. 5, 6 y 7 del arrêté n.º 144-2025 de 18/02/2025)."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de autocaravanas rue de Poulpatré (Crozon centro)",
+      "detalle": "22 plazas. Vaciado de aguas grises, agua, wifi, tomas eléctricas y alumbrado, según la guía de la Oficina de Turismo (2024). La guía no indica precio ni duración máxima.",
+      "soloServicios": false,
+      "lat": 48.247972,
+      "lon": -4.479972,
+      "coordFuente": "https://cdt29.media.tourinsoft.eu/upload/COMCOM-2024-Guide-Ccar-FR-Web.pdf"
+    },
+    {
+      "nombre": "Área de autocaravanas de Morgat (parking du Loch, rue Penfrat)",
+      "detalle": "19 plazas. Vaciado de aguas grises, agua, wifi, tomas eléctricas y alumbrado, según la guía de la Oficina de Turismo (2024). La guía remite a campingcarpark.com para las tarifas.",
+      "soloServicios": false,
+      "lat": 48.225139,
+      "lon": -4.507236,
+      "coordFuente": "https://cdt29.media.tourinsoft.eu/upload/COMCOM-2024-Guide-Ccar-FR-Web.pdf"
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Arrêté municipal n.º 144-2025 que regula el estacionamiento y ciertos usos en los espacios naturales de Crozon",
+      "url": "https://www.crozon.bzh/download/186/police-sur-les-espaces-naturels/14158/crozon-144-2025-reglementation-du-stationnement-espaces-naturels.pdf",
+      "tipo": "oficial",
+      "fecha": "2025-02-18"
+    },
+    {
+      "titulo": "Guía «Camping-cars et véhicules aménagés», Oficina de Turismo de la Presqu'île de Crozon – Aulne maritime",
+      "url": "https://cdt29.media.tourinsoft.eu/upload/COMCOM-2024-Guide-Ccar-FR-Web.pdf",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-06",
+  "verificado": true
+}

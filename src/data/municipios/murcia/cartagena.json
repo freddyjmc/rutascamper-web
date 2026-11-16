@@ -1,0 +1,51 @@
+{
+  "nombre": "Cartagena",
+  "comunidad": "murcia",
+  "provincia": "Murcia",
+  "estado": "sin-datos",
+  "resumen": "Cartagena no tiene, que hayamos localizado, una ordenanza propia sobre autocaravanas, pero su portal oficial de turismo recoge tres áreas de servicio con coordenadas: Los Dolores, Belmonte (Tentegorra) y Caravanas Home (carretera de Mazarrón). Fuera de ellas se aplica la norma murciana: aparcar sin desplegar nada sí, acampar no.",
+  "reglas": [
+    "En la Región de Murcia no se puede acampar con autocaravana fuera de campings y áreas de autocaravanas (Decreto 193/2022, art. 4.2). Estar parado o estacionado en zona autorizada, sin desplegar nada, sin cuñas y sin verter, no es acampar, salvo que la ordenanza municipal diga otra cosa (art. 4.4).",
+    "Las tres áreas de servicio que publica el Ayuntamiento son de gestión privada: consulta precios y condiciones en cada una (portal oficial de turismo de Cartagena).",
+    "No hemos localizado una ordenanza municipal específica sobre estacionamiento y pernocta de autocaravanas: pregunta en el ayuntamiento antes de pasar la noche y respeta siempre la señalización.",
+    "Alternativa verificada en la zona: Mazarrón, con ordenanza propia."
+  ],
+  "areas": [
+    {
+      "nombre": "Área Autocaravanas Cartagena (Los Dolores)",
+      "detalle": "Camino Molino Derribao, s/n, Los Dolores, Santa Ana (Cartagena). Área de servicio. Datos del portal oficial de turismo de Cartagena, consultados el 03/11/2026.",
+      "lat": 37.65374,
+      "lon": -1.003495,
+      "coordFuente": "https://turismo.cartagena.es/autocaravanas.asp"
+    },
+    {
+      "nombre": "Área Autocaravanas Belmonte",
+      "detalle": "Carretera Tentegorra, km 1, 30205 Cartagena. Área de servicio. Datos del portal oficial de turismo de Cartagena, consultados el 03/11/2026.",
+      "lat": 37.615069,
+      "lon": -1.00591,
+      "coordFuente": "https://turismo.cartagena.es/autocaravanas.asp"
+    },
+    {
+      "nombre": "Área Autocaravanas Caravanas Home",
+      "detalle": "Carretera de Mazarrón (N-332), km 6, Molinos Marfagones (Cartagena). Área de servicio. Datos del portal oficial de turismo de Cartagena, consultados el 03/11/2026.",
+      "lat": 37.63694,
+      "lon": -1.07556,
+      "coordFuente": "https://turismo.cartagena.es/autocaravanas.asp"
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Portal oficial de turismo del Ayuntamiento de Cartagena: áreas de servicio para autocaravanas",
+      "url": "https://turismo.cartagena.es/autocaravanas.asp",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Decreto n.º 193/2022 de campings y áreas de autocaravanas de la Región de Murcia (BORM n.º 254, 03/11/2022)",
+      "url": "https://borm.es/services/anuncio/ano/2022/numero/5528/pdf",
+      "tipo": "oficial",
+      "fecha": "2022-11-03"
+    }
+  ],
+  "revisado": "2026-11-03",
+  "verificado": true
+}

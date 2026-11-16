@@ -1,0 +1,37 @@
+{
+  "nombre": "Carnac",
+  "comunidad": "bretagne",
+  "provincia": "Morbihan (56)",
+  "estado": "sin-datos",
+  "resumen": "No hemos localizado ninguna orden municipal. Si no la hay, rige la norma nacional; respeta la señalización. La Oficina de Turismo indica que de día se puede estacionar en los aparcamientos salvo señales y salvo en Saint-Colomban y l'Anse du Pô, y que para la noche hay una zona gratuita para autocaravanas en Kérabus, en el Ménec.",
+  "reglas": [
+    "No hemos localizado ninguna orden municipal. Si no la hay, rige la norma nacional; respeta la señalización.",
+    "Fuera de los campings, acampar en la orilla del mar está prohibido salvo excepción (art. R111-33 del Code de l'urbanisme)."
+  ],
+  "areas": [
+    {
+      "nombre": "Zona de estacionamiento para autocaravanas de Kérabus",
+      "detalle": "En el Ménec, acceso por la route d'Auray (route du Purgatoire). Abierta 24 h, gratuita y sin servicios, según el ayuntamiento y la Oficina de Turismo.",
+      "soloServicios": false
+    },
+    {
+      "nombre": "Área de servicio Square Illertissen",
+      "detalle": "Rue Saint-Cornély, Carnac Ville. Borne de vaciado y electricidad por 2,50 €, según la Oficina de Turismo.",
+      "soloServicios": true
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Ville de Carnac: parking de Kérabus y zona de estacionamiento de autocaravanas",
+      "url": "https://www.carnac.fr/Annuaire-des-services-et-equipements/Parking-de-Kerabus-et-zone-de-stationnement-des-camping-cars",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Office de tourisme de Carnac: área de autocaravanas",
+      "url": "https://www.ot-carnac.fr/station-balneaire/hebergements/aire-camping-car/",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-06",
+  "verificado": true
+}

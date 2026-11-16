@@ -1,0 +1,50 @@
+{
+  "nombre": "Porto de Mós",
+  "comunidad": "centro",
+  "provincia": "Leiria (distrito)",
+  "estado": "restringido",
+  "resumen": "El reglamento de Porto de Mós solo permite el «aparcamento» para pernoctar en las áreas de servicio de Mira de Aire, Porto de Mós y São Bento (art. 4.º), aunque entre los deberes del autocaravanista dice que puede estacionar en el espacio público destinado a ello «podendo pernoitar, mas não pode acampar» (art. 15.º c). El reglamento no aclara cómo se combinan: pregunta en el ayuntamiento antes de pasar la noche fuera de un área. Fuera de ellas solo se puede estacionar según el Código da Estrada. Según el anexo I, las áreas son gratis 7 días; después, 3 € al día, y también 3 € al día desde las 72 horas si sales y vuelves antes de un mes. Multa de 50 a 200 €.",
+  "reglas": [
+    "Solo se permite el «aparcamento» para pernoctar en los lugares del art. 8.º (art. 4.º del Regulamento n.º 556/2021).",
+    "Fuera de ellos solo se permite estacionar según el Código da Estrada (art. 5.º).",
+    "Cuenta como «aparcamento» bajar estabilizadores o poner calzos, abrir ventanas laterales, vaciar aguas residuales, poner el escalón o pernoctar (art. 7.º).",
+    "Lugares: áreas de servicio de Mira de Aire, Porto de Mós y São Bento, y las que se añadan (art. 8.º).",
+    "Silencio de 24:00 a 7:00 (art. 13.º).",
+    "El autocaravanista puede estacionar en el espacio público destinado a ello, «podendo pernoitar, mas não pode acampar» (art. 15.º c).",
+    "El reglamento se publicó el 16/06/2021, antes de la Lei n.º 66/2021: lo resumimos tal como se publicó y no hemos comprobado si se ha modificado después."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de servicio de autocaravanas de Mira de Aire",
+      "detalle": "Lugar autorizado para pernoctar (art. 8.º). Gratis 7 días; después, 3 € al día; 3 € al día desde las 72 horas si sales y vuelves antes de un mes (anexo I)."
+    },
+    {
+      "nombre": "Área de servicio de autocaravanas de Porto de Mós",
+      "detalle": "Lugar autorizado para pernoctar (art. 8.º). Gratis 7 días; después, 3 € al día; 3 € al día desde las 72 horas si sales y vuelves antes de un mes (anexo I)."
+    },
+    {
+      "nombre": "Área de servicio de autocaravanas de São Bento",
+      "detalle": "Lugar autorizado para pernoctar (art. 8.º). Gratis 7 días; después, 3 € al día; 3 € al día desde las 72 horas si sales y vuelves antes de un mes (anexo I)."
+    }
+  ],
+  "multa": "De 50 a 200 € (art. 18.º del Regulamento n.º 556/2021).",
+  "notaAyuntamiento": "Município de Porto de Mós: https://www.municipio-portodemos.pt, geral@municipio-portodemos.pt, +351 244 499 600.",
+  "fuentes": [
+    {
+      "titulo": "Regulamento n.º 556/2021: Regulamento Municipal para o Exercício da Atividade de Autocaravanismo (Porto de Mós), PDF en la web municipal",
+      "url": "https://www.municipio-portodemos.pt/cmportomos/uploads/document/file/3633/regulamento_no_556_2021___regulamento_municipal_autocaravanismo.pdf",
+      "tipo": "oficial",
+      "reutilizacion": "Sin cláusula de reutilización localizada en la web (consulta 12/11/2026). Solo hechos con nuestras palabras y enlace.",
+      "fecha": "2021-06-16"
+    },
+    {
+      "titulo": "Regulamento n.º 556/2021 (Diário da República)",
+      "url": "https://diariodarepublica.pt/dr/detalhe/regulamento/556-2021-165207413",
+      "tipo": "oficial",
+      "fecha": "2021-06-16",
+      "reutilizacion": "«O acesso universal e gratuito compreende a possibilidade de impressão, arquivo, pesquisa e livre acesso ao conteúdo dos atos publicados nas 1.ª e 2.ª séries do Diário da República.» (Avisos Legais del Diário da República, consulta 12/11/2026). No hay cláusula expresa sobre reutilización comercial."
+    }
+  ],
+  "revisado": "2026-11-12",
+  "verificado": true
+}

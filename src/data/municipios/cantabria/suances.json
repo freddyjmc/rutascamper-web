@@ -1,0 +1,37 @@
+{
+  "nombre": "Suances",
+  "comunidad": "cantabria",
+  "provincia": "Cantabria",
+  "estado": "prohibido",
+  "resumen": "En Suances no puedes dormir en tu camper o autocaravana fuera de las zonas expresamente autorizadas, en todo el municipio y todo el año. La ordenanza de playas, modificada en 2026, considera acampada aparcar cualquier vehículo para pasar la noche con fines turísticos, aunque no saques nada fuera.",
+  "reglas": [
+    "Se considera acampada el estacionamiento de cualquier tipo de vehículo para que sus ocupantes pasen la noche con carácter turístico (art. 5.e).",
+    "Prohibida la acampada todo el año y a cualquier hora fuera de los campamentos de turismo, en todo el municipio, incluido aparcar para pernoctar fuera de las zonas expresamente autorizadas (art. 26.1).",
+    "Prohibido estacionar caravanas, autocaravanas y vehículos vivienda en el municipio salvo en las zonas autorizadas, que estarán señalizadas con carteles (art. 27.1).",
+    "En los aparcamientos públicos de pago hay que abonar la tasa; la multa por impago puede anularse en los parquímetros en las 24 horas siguientes al aviso (art. 27.2).",
+    "La ordenanza no enumera las zonas autorizadas. En 2019 el Ayuntamiento habilitó de forma provisional el Polígono de La Rasa (con pernocta) y el fondo del aparcamiento de pago de La Bárcena; no hemos podido confirmar si siguen vigentes, así que guíate por los carteles."
+  ],
+  "areas": [],
+  "multa": "Acampar o estacionar caravanas, autocaravanas o vehículos vivienda fuera de las zonas autorizadas es infracción leve (art. 34.2.d): multa de hasta 750 € (art. 35). Si pagas en los 10 días naturales siguientes a la notificación, se reduce un 50 %.",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza reguladora del Uso y Aprovechamiento de las Playas de Suances, modificación aprobada definitivamente (BOC n.º 164, 26/08/2026, CVE-2026-6645)",
+      "url": "https://boc.cantabria.es/boces/verAnuncioAction.do?idAnuBlob=439686",
+      "tipo": "oficial",
+      "fecha": "2026-08-26"
+    },
+    {
+      "titulo": "Ayuntamiento de Suances: habilita dos zonas para el aparcamiento de caravanas (2019)",
+      "url": "https://suances.es/el-ayuntamiento-de-suances-habilita-dos-zonas-para-el-aparcamiento-de-caravanas/",
+      "tipo": "oficial",
+      "fecha": "2019-07-29"
+    },
+    {
+      "titulo": "Motorpasión: En Cantabria, dormir dentro de la camper puede ser acampar",
+      "url": "https://www.motorpasion.com/furgonetas-y-caravanas/cantabria-dormir-dentro-camper-puede-ser-acampar-depende-donde-aparques",
+      "tipo": "secundaria"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

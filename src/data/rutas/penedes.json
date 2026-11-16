@@ -1,0 +1,40 @@
+{
+  "titulo": "Ruta en camper por el Penedès en 3 días con dónde dormir",
+  "h1": "Ruta en camper por el Penedès",
+  "resumen": "Tres días entre viñedos y cavas, a menos de una hora de Barcelona: Vilafranca del Penedès, Torrelavit y Sant Martí Sarroca. Todas las noches caen en áreas municipales gratuitas con ordenanza publicada en el Boletín Oficial de la Provincia de Barcelona y un máximo de 48 horas.",
+  "dias": 3,
+  "comunidades": [
+    "cataluna"
+  ],
+  "cuando": "todo el año; la vendimia (septiembre) es la época con más ambiente",
+  "etapas": [
+    {
+      "dia": "Día 1",
+      "titulo": "Vilafranca del Penedès",
+      "texto": "Empieza en la capital del Penedès: el casco antiguo, la basílica de Santa Maria y los museos dedicados al vino. Aparca la camper y recorre el centro a pie.",
+      "dormir": "Área gratuita de vehículos recreativos en la parte inferior del aparcamiento de la escuela l'Espiga, con un máximo de 48 horas; hay que registrar la estancia. En Vilafranca puedes estacionar en la calle como cualquier vehículo, pero la acampada está prohibida en todo el municipio.",
+      "ficha": "cataluna/vilafranca-del-penedes"
+    },
+    {
+      "dia": "Día 2",
+      "titulo": "Torrelavit y la zona del cava",
+      "texto": "Sube hacia el norte, a la zona del cava junto al río Anoia, con bodegas que se visitan con reserva. Si vas a catar, deja la camper en el área y no conduzcas después.",
+      "dormir": "Área de Torrelavit, en la calle Escoles, dentro del aparcamiento de la zona deportiva: solo 2 plazas para vehículos de hasta 6,25 m, agua, vaciado de aguas grises y punto de luz, con un máximo de 48 horas. Se puede pernoctar, pero no acampar.",
+      "ficha": "cataluna/torrelavit"
+    },
+    {
+      "dia": "Día 3",
+      "titulo": "Sant Martí Sarroca",
+      "texto": "Baja hacia el oeste por carreteras entre viñas hasta Sant Martí Sarroca, con su castillo y su iglesia románica sobre el pueblo.",
+      "dormir": "Área de autocaravanas de Sant Martí Sarroca, al este del pueblo, en el paraje del Camp dels Grecs: máximo 48 horas. La acampada está prohibida en todo el municipio, también dentro del área.",
+      "ficha": "cataluna/sant-marti-sarroca"
+    }
+  ],
+  "consejos": [
+    "El área de Torrelavit es muy pequeña (2 plazas): si está llena, tienes otras áreas con ordenanza en Sant Cugat Sesgarrigues y Santa Margarida i els Monjos.",
+    "En Cataluña los calzos o cuñas en la vía pública pueden contar como acampada: nivela el vehículo solo dentro de las áreas si sus normas lo permiten.",
+    "Si visitas bodegas, no conduzcas después de catar: duerme en el área del mismo pueblo."
+  ],
+  "revisado": "2026-11-02",
+  "publicada": true
+}

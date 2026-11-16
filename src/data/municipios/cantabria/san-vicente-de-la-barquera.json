@@ -1,0 +1,39 @@
+{
+  "nombre": "San Vicente de la Barquera",
+  "comunidad": "cantabria",
+  "provincia": "Cantabria",
+  "estado": "restringido",
+  "resumen": "En San Vicente de la Barquera no puedes estacionar la autocaravana en los aparcamientos de acceso a las playas durante la temporada de baño, y está prohibido acampar en las playas todo el año. Fuera de esos sitios rige el decreto autonómico.",
+  "reglas": [
+    "Durante la temporada de baño está prohibido estacionar autocaravanas o caravanas en los aparcamientos habilitados en los accesos a las playas (art. 26.3).",
+    "Prohibido estacionar o circular con cualquier vehículo dentro de las playas (art. 26.1).",
+    "Prohibidas las tiendas de campaña y las acampadas de cualquier duración en las playas (art. 27).",
+    "La temporada de baño la fija cada año una resolución de Alcaldía (art. 4).",
+    "Desde mayo de 2026 el ayuntamiento también ha señalizado la prohibición de aparcar vehículos de más de 1.600 kg en la playa del Tostadero y en La Barra."
+  ],
+  "areas": [
+    { "nombre": "Plazas para vehículos grandes junto a la N-634", "detalle": "80 plazas habilitadas tras la remodelación de la carretera, según el ayuntamiento; para estacionar, no para acampar" }
+  ],
+  "multa": "La ordenanza no asigna una categoría concreta a esta infracción. Sus multas van hasta 150 € las leves, de 151 a 600 € las graves y de 601 a 3.000 € las muy graves (art. 35).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza municipal del uso y aprovechamiento de las playas de San Vicente de la Barquera (portal de transparencia del ayuntamiento; no hemos localizado su anuncio en el BOC)",
+      "url": "https://transparencia.aytosanvicentedelabarquera.es/wp-content/uploads/2018/07/ordenanza_gestion7.pdf",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Ayuntamiento de San Vicente de la Barquera: limitación a vehículos de más de 1.600 kilos en el Tostadero y La Barra",
+      "url": "https://aytosanvicentedelabarquera.es/san-vicente-de-la-barquera-limita-el-estacionamiento-de-vehiculos-de-mas-de-1-600-kilos-en-la-playa-del-tostadero-y-en-la-barra/",
+      "tipo": "oficial",
+      "fecha": "2026-05-05"
+    },
+    {
+      "titulo": "Decreto 35/2026 de Cantabria (BOC n.º 95, 20/05/2026)",
+      "url": "https://profesional.turismodecantabria.com/wp-content/uploads/2026/05/DECRETO-AUTOCARAVANAS-Y-CAMPAMENTOS-TURISMO.pdf",
+      "tipo": "oficial",
+      "fecha": "2026-05-20"
+    }
+  ],
+  "revisado": "2026-11-01",
+  "verificado": true
+}

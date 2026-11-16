@@ -1,0 +1,40 @@
+{
+  "nombre": "Xàbia",
+  "comunidad": "comunidad-valenciana",
+  "provincia": "Alicante",
+  "estado": "restringido",
+  "resumen": "En Xàbia el área municipal de autocaravanas es solo de vaciado y llenado de aguas: no se permite pernoctar. Según el propio ayuntamiento, su ordenanza de circulación prohíbe aparcar autocaravanas en las calles de primera línea de playa y sus adyacentes, y usar los vehículos para acampar.",
+  "reglas": [
+    "El área de servicios de autocaravanas (Camí Cansalades, cruce con la calle Lago Como) es municipal, de vaciado y llenado de aguas, con contenedores; no está permitida la pernocta (portal oficial de turismo de Xàbia).",
+    "Según la nota del Ayuntamiento de 29/04/2016, la ordenanza de circulación prohíbe estacionar autocaravanas y remolques en calles de primera línea de playa y adyacentes, con multas de 50 a 100 €, y veta usar los vehículos como medio de acampada. No hemos leído el texto de la ordenanza.",
+    "En la Comunitat Valenciana no caben acampadas libres al amparo del Decreto 10/2021 (art. 2.5), y en las áreas de pernocta en tránsito la estancia máxima es de 48 horas (art. 50.10).",
+    "Alternativa verificada en la zona: Dénia, con ordenanza de tráfico consolidada."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de servicios de autocaravanas de Xàbia",
+      "detalle": "Camí Cansalades, cruce con la calle Lago Como. Área municipal de vaciado y llenado de aguas, con contenedores. No está permitida la pernocta (portal oficial de turismo de Xàbia).",
+      "soloServicios": true
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Portal oficial de turismo de Xàbia (Ayuntamiento): campings y área de servicios de autocaravanas",
+      "url": "https://www.xabia.org/ver/1105/Campings.html",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Ayuntamiento de Xàbia: «Xàbia regula en la ordenanza de circulación la acampada de autocaravanas» (29/04/2016)",
+      "url": "https://www.ajxabia.com/ver/6236/xabia-regula-en-la-ordenanza-de-circulacion-la-acampada-de-autocaravanas-y-la-circulacion-de-bicis-en-zonas-peatonales.html/",
+      "tipo": "oficial",
+      "fecha": "2016-04-29"
+    },
+    {
+      "titulo": "Generalitat Valenciana: decreto regulador de los campings y de las áreas de pernocta en tránsito para autocaravanas (Decreto 10/2021)",
+      "url": "https://cindi.gva.es/es/-/decreto-regulador-de-los-campings-y-de-las-areas-de-pernocta-en-transito-para-autocaravanas-de-la-comunitat-valenciana",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-03",
+  "verificado": true
+}

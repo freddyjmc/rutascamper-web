@@ -1,0 +1,52 @@
+{
+  "nombre": "Île-de-France",
+  "resumen": "En Île-de-France no hay norma regional sobre autocaravanas: se aplica la norma nacional y la orden (arrêté) de cada municipio. No hay parques nacionales en la región.",
+  "normaAutonomica": "No hay norma regional sobre autocaravanas: se aplica la norma nacional (Code de la route, Code de l'urbanisme y CGCT) y los arrêtés de cada municipio.",
+  "claves": [
+    "La autocaravana puede estacionar como cualquier vehículo si no es peligroso, molesto ni abusivo. Es abusivo dejarla más de 7 días seguidos en el mismo punto de la vía pública, o menos tiempo si lo fija una orden de la autoridad local (art. R417-12 del Code de la route).",
+    "El alcalde puede regular, mediante una orden municipal motivada (*arrêté motivé*), la parada y el estacionamiento de todos los vehículos o de ciertas categorías de vehículos (art. L2213-2 del CGCT). Respeta siempre las señales.",
+    "Acampar fuera de los campings se puede prohibir en el plan urbanístico o por orden del alcalde, pero esa prohibición solo vale si se ha anunciado en el ayuntamiento y con señales en los accesos habituales (art. R111-34 del Code de l'urbanisme).",
+    "Está prohibido circular y estacionar con vehículos a motor fuera de los caminos habilitados en la orilla del mar y en las dunas y playas públicas abiertas al público, salvo autorización del prefecto (art. L321-9 del Code de l'environnement).",
+    "La orden municipal no fija importe. En general, incumplir una orden municipal es una contravención de 2.ª clase (art. R610-5 del Code pénal), con multa de hasta 150 € (art. 131-13 del Code pénal); según cómo esté redactada la orden, puede aplicarse otra norma, como el Code de la route."
+  ],
+  "pernoctaVia": "Sin norma regional. Ningún texto nacional leído prohíbe como tal dormir dentro del vehículo bien estacionado, pero el alcalde puede limitar el estacionamiento, y si hay signos de acampada se aplican las normas de camping. Manda la orden (arrêté) de cada municipio.",
+  "fuentes": [
+    {
+      "titulo": "Code de la route, art. R417-12 (estacionamiento abusivo)",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006842300",
+      "tipo": "oficial",
+      "fecha": "2001-06-01"
+    },
+    {
+      "titulo": "Code général des collectivités territoriales, art. L2213-2",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043976727",
+      "tipo": "oficial",
+      "fecha": "2021-08-25"
+    },
+    {
+      "titulo": "Code de l'urbanisme, art. R111-32 a R111-35 (camping)",
+      "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074075/LEGISCTA000031719402/",
+      "tipo": "oficial",
+      "fecha": "2016-01-01"
+    },
+    {
+      "titulo": "Code de l'environnement, art. L321-9 (playas y dunas)",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006833484",
+      "tipo": "oficial",
+      "fecha": "2006-07-01"
+    },
+    {
+      "titulo": "Code pénal, art. R610-5 (incumplir un arrêté)",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045176320",
+      "tipo": "oficial",
+      "fecha": "2022-02-17"
+    },
+    {
+      "titulo": "Code pénal, art. 131-13 (Légifrance, version en vigueur au 05/11/2026)",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006417259/",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-06",
+  "verificado": true
+}

@@ -1,0 +1,31 @@
+{
+  "nombre": "Madrid",
+  "comunidad": "madrid",
+  "provincia": "Madrid",
+  "estado": "restringido",
+  "resumen": "En Madrid puedes aparcar la autocaravana en la calle como cualquier vehículo, pero no más de cinco días hábiles seguidos en el mismo sitio y sin usarla como vivienda: la Ordenanza de Movilidad Sostenible prohíbe estacionar caravanas y autocaravanas que se quieran usar como lugar habitable con cierta vocación de permanencia. En la Comunidad de Madrid la acampada libre está prohibida.",
+  "reglas": [
+    "Está prohibido estacionar en un mismo lugar de la vía pública más de cinco días seguidos; solo cuentan los días hábiles (Ordenanza de Movilidad Sostenible, art. 47.2.b).",
+    "Está prohibido el estacionamiento de caravanas, autocaravanas o similares que se pretendan utilizar como lugar habitable con cierta vocación de permanencia (art. 47.2.m).",
+    "Las autocaravanas de hasta 3.500 kg pueden obtener la autorización de estacionamiento de residente, como un turismo (art. 52.1.a).",
+    "En la Comunidad de Madrid la acampada libre está prohibida en todo el territorio, y en las áreas de acogida y pernocta la estancia máxima es de 48 horas seguidas (Decreto 26/2025, arts. 4 y 7.2).",
+    "Respeta también las zonas de estacionamiento regulado (SER) y sus horarios."
+  ],
+  "areas": [],
+  "fuentes": [
+    {
+      "titulo": "Modificación de la Ordenanza de Movilidad Sostenible de Madrid (BOCM n.º 225, 21/09/2021, BOCM-20210921-25)",
+      "url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2021/09/21/BOCM-20210921-25.PDF",
+      "tipo": "oficial",
+      "fecha": "2021-09-21"
+    },
+    {
+      "titulo": "Decreto 26/2025, de 14 de mayo, de campamentos de turismo y áreas de acogida y pernocta de autocaravanas de la Comunidad de Madrid (BOCM n.º 121, 22/05/2025)",
+      "url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2025/05/22/BOCM-20250522-2.PDF",
+      "tipo": "oficial",
+      "fecha": "2025-05-22"
+    }
+  ],
+  "revisado": "2026-11-03",
+  "verificado": true
+}

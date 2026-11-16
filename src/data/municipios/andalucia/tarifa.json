@@ -1,0 +1,36 @@
+{
+  "nombre": "Tarifa",
+  "comunidad": "andalucia",
+  "provincia": "Cádiz",
+  "estado": "restringido",
+  "resumen": "En Tarifa la ordenanza de convivencia de 2024 prohíbe acampar en todos los espacios públicos, y eso incluye desplegar elementos, sillas o mesas desde la autocaravana. En las playas está prohibido acampar y dormir. No hemos localizado una ordenanza propia de autocaravanas (el ayuntamiento la tiene en su plan normativo), así que lo seguro es dormir en un camping o un área.",
+  "reglas": [
+    "Está prohibido dormir a la intemperie y acampar en los espacios públicos, lo que incluye desplegar elementos proyectables, sillas o mesas desde vehículos, autocaravanas o caravanas, salvo autorización para lugares concretos (Ordenanza de convivencia, art. 8.5.a).",
+    "En las playas está prohibida todo el año la acampada de cualquier duración, y dormir en la playa cuenta como acampar; la definición de acampada incluye los vehículos (Ordenanza de playas, definiciones y art. 15).",
+    "Andalucía prohíbe con carácter general la acampada y pernocta con fines vacacionales o de ocio fuera de campings y áreas de pernocta de autocaravanas (Decreto 26/2018, art. 1.5): para dormir, usa un área o un camping.",
+    "No hemos localizado una ordenanza municipal específica sobre estacionamiento y pernocta de autocaravanas: pregunta en el ayuntamiento antes de pasar la noche y respeta siempre la señalización.",
+    "Alternativa verificada en la zona: Vejer de la Frontera, con ordenanza publicada."
+  ],
+  "areas": [],
+  "multa": "Acampar o desplegar elementos en espacios públicos: infracción leve de 100 a 600 € (Ordenanza de convivencia, art. 9.1). Acampar o dormir en la playa: leve, hasta 750 € (Ordenanza de playas, art. 68.2).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza municipal de convivencia ciudadana y protección del espacio público de Tarifa (publicada en el BOP de Cádiz el 15/10/2024, en vigor desde el 07/11/2024), web municipal",
+      "url": "https://www.aytotarifa.com/wp-content/uploads/2024/11/Ordenanza-convivencia-ciudadana-y-proteccion-espacio-publico.pdf",
+      "tipo": "oficial",
+      "fecha": "2024-10-15"
+    },
+    {
+      "titulo": "Ordenanza municipal de uso y disfrute de las playas de Tarifa (2018), web municipal",
+      "url": "https://www.aytotarifa.com/wp-content/uploads/2019/06/ORDENANZA-MUNICIPAL-DE-USO-Y-DISFRUTE-DE-LAS-PLAYAS-DE-TERMINO-MUNICIPAL-DE-TARIFA-2018.pdf",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Decreto 26/2018, de 23 de enero, de ordenación de los campamentos de turismo de Andalucía (BOJA n.º 27 de 2018)",
+      "url": "https://www.juntadeandalucia.es/boja/2018/27/1",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-03",
+  "verificado": true
+}
