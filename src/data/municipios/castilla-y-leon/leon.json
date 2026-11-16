@@ -1,0 +1,27 @@
+{
+  "nombre": "León",
+  "comunidad": "castilla-y-leon",
+  "provincia": "León",
+  "estado": "permitido",
+  "resumen": "En León puedes dormir en tu camper o autocaravana bien estacionada en la vía pública, siguiendo las normas de tráfico, sin que cuente como acampada. Lo que no puedes es acampar: sacar mesas, sillas o toldo, usar calzos o patas estabilizadoras fuera de las zonas reservadas, o verter aguas. En las zonas reservadas para autocaravanas la estancia máxima es de 72 horas del 15 de marzo al 15 de octubre y de una semana el resto del año.",
+  "reglas": [
+    "Prohibida cualquier forma de acampada libre en el término municipal (art. 4.1).",
+    "No es acampada el estacionamiento en la vía pública conforme a las normas de tráfico, ni el uso de las zonas reservadas y áreas de servicio para autocaravanas (art. 4.2).",
+    "Se considera acampado el vehículo que despliega mesas, sillas, tendederos, toldos, sombrillas, calzos o elevaciones; que toca el suelo con algo distinto de las ruedas (patas estabilizadoras); que vierte fluidos o que emite ruidos molestos (art. 4.3).",
+    "En las zonas reservadas y áreas de servicio sí se permiten patas estabilizadoras y calzos niveladores homologados, y la entrada y salida es de 7:00 a 23:00 (arts. 3 y 6.5).",
+    "Estancia máxima en zonas reservadas: 72 horas del 15/3 al 15/10 y una semana del 16/10 al 14/3; después hay que esperar cinco días para volver a una zona municipal (art. 6.6).",
+    "La ordenanza no indica la ubicación de las zonas: búscalas por la señalización."
+  ],
+  "areas": [],
+  "multa": "Infracciones leves (por ejemplo, superar la estancia máxima o sacar toldo, mesas o sillas): hasta 100 €. Graves (verter líquidos, ruidos): hasta 200 €. Muy graves, entre ellas la acampada libre: hasta 500 € (arts. 9 y 10).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza municipal reguladora del estacionamiento y pernocta de caravanas y autocaravanas en el municipio de León (BOP de León, 09/04/2025), web del Ayuntamiento",
+      "url": "https://aytoleon.es/es/tu-ayuntamiento/corporaci%C3%B3n/secretaria/Ordenanzas%20Generales/ORDENANZA%20REGULADORA%20DEL%20ESTACIONAMIENTO%20Y%20PERNOCTA%20DE%20VEH%C3%8DCULOS%20AUTOCARAVANAS.pdf",
+      "tipo": "oficial",
+      "fecha": "2025-04-09"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

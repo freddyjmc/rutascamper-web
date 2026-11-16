@@ -1,0 +1,34 @@
+{
+  "nombre": "Valle de Egüés",
+  "comunidad": "navarra",
+  "provincia": "Navarra",
+  "estado": "permitido",
+  "resumen": "En el Valle de Egüés (Sarriguren, junto a Pamplona) se permite parar y estacionar la autocaravana en las vías urbanas como cualquier vehículo, con un máximo de 48 horas, siempre que no acampes. Hay un área de servicio en la calle Elizmendi 8 de Sarriguren. Del 5 al 15 de julio (San Fermín) y en fiestas de Sarriguren las condiciones cambian y hay tasa.",
+  "reglas": [
+    "Se permite la parada y el estacionamiento de autocaravanas en las vías urbanas si no es peligroso ni obstaculiza y se hace en lugar autorizado (art. 4).",
+    "Está aparcada y no acampada si solo toca el suelo con las ruedas (sin patas estabilizadoras), no abre ventanas proyectables ni saca sillas, mesas o toldos y no vierte nada (art. 4).",
+    "Tiempo máximo de estacionamiento: 48 horas, salvo del 5 al 15 de julio y en fiestas de Sarriguren, cuando puede haber tasa diaria y otro límite (art. 5).",
+    "Es acampada libre sacar enseres fuera de la autocaravana o quedarse más tiempo del permitido en el aparcamiento (art. 3)."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de servicio para autocaravanas de Sarriguren",
+      "detalle": "Calle Elizmendi, 8, Sarriguren. Solo autocaravanas y vehículos vivienda; máximo 48 horas; vaciado de aguas grises y negras y toma de agua no tratada. Borne: 2 € por ficha; del 5 al 15 de julio y en fiestas de Sarriguren, 8 € por día.",
+      "lat": 42.807618,
+      "lon": -1.594933,
+      "coordFuente": "https://www.valledeegues.com/wp-content/uploads/2026/01/29.ord_estacion_autocaravanas.pdf",
+      "coordTipo": "aproximada"
+    }
+  ],
+  "multa": "Estacionar incumpliendo el art. 4: 90 €, o 300 € si obstaculizas la vía. Superar las 48 horas: 300 €. Acampada libre: 300 €, hasta 450 € si hay daños, suciedad o barbacoas (art. 9).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza reguladora del estacionamiento y pernocta de autocaravanas del Valle de Egüés (BON n.º 191, 16/08/2021), web del Ayuntamiento",
+      "url": "https://www.valledeegues.com/wp-content/uploads/2026/01/29.ord_estacion_autocaravanas.pdf",
+      "tipo": "oficial",
+      "fecha": "2021-08-16"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

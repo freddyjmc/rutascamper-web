@@ -1,0 +1,25 @@
+{
+  "nombre": "Asturias",
+  "resumen": "Asturias prohíbe la acampada libre con un texto muy amplio: incluye permanecer o pernoctar fuera de campings y áreas de autocaravanas usando una caravana o autocaravana sin autorización. En la práctica, dónde puedes estacionar y dormir lo deciden sobre todo las ordenanzas de cada concejo, y varios tienen áreas específicas con un máximo de 48 horas.",
+  "normaAutonomica": "Decreto 61/2022, de 23 de septiembre, de ordenación de campamentos de turismo y áreas especiales de acogida de autocaravanas en tránsito (BOPA n.º 191, de 4 de octubre de 2022). Deroga el Decreto 280/2007.",
+  "claves": [
+    "Queda prohibida cualquier forma de acampada libre. El decreto la define como permanecer o pernoctar al aire libre fuera de campings y áreas de autocaravanas usando tiendas, caravanas, autocaravanas u otros medios, sin autorización ni derecho de uso sobre el terreno (art. 61.1).",
+    "El decreto no aclara si dormir dentro de un vehículo correctamente estacionado en la vía pública es acampada; esa parte la regulan las normas de tráfico y las ordenanzas municipales. Ante la duda, usa las áreas habilitadas.",
+    "En las áreas especiales de acogida de autocaravanas en tránsito la estancia máxima es de 48 horas, salvo periodos de máxima ocupación que fije la Consejería (art. 51).",
+    "Dentro de esas áreas sí puedes desplegar toldo, mesas y asientos portátiles en tu parcela, según el reglamento del área; lo prohibido son los elementos fijos y las tiendas de campaña (arts. 50 y 55.6).",
+    "En espacios naturales protegidos y Red Natura 2000 mandan sus propios planes de uso (art. 62).",
+    "Las sanciones se rigen por la Ley 7/2001, de 22 de junio, de Turismo del Principado de Asturias."
+  ],
+  "fuentes": [
+    {
+      "titulo": "Decreto 61/2022, de 23 de septiembre (BOPA n.º 191, 04/10/2022, cód. 2022-07386)",
+      "url": "https://miprincipado.asturias.es/bopa/2022/10/04/2022-07386.pdf",
+      "tipo": "oficial",
+      "fecha": "2022-10-04"
+    }
+  ],
+  "revisado": "2026-11-01",
+  "verificado": true,
+  "pernoctaVia": "El decreto no lo aclara y define la acampada libre de forma amplia; depende de cada concejo.",
+  "estanciaAreas": "48 h"
+}

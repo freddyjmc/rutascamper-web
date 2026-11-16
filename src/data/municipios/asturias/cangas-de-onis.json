@@ -1,0 +1,37 @@
+{
+  "nombre": "Cangas de Onís",
+  "comunidad": "asturias",
+  "provincia": "Asturias",
+  "estado": "restringido",
+  "resumen": "Cangas de Onís, puerta de Covadonga y de los Picos de Europa, tiene un área pública y gratuita de autocaravanas en El Lleráu, con 40 plazas y un máximo de 48 horas. No hemos localizado una ordenanza municipal específica, así que fuera del área rige la norma asturiana.",
+  "reglas": [
+    "En el área de El Lleráu la estancia máxima es de 48 horas.",
+    "Fuera del área, Asturias prohíbe la acampada libre, definida como permanecer o pernoctar fuera de campings y áreas autorizadas sin autorización (Decreto 61/2022, art. 61).",
+    "Dentro del Parque Nacional de los Picos de Europa rigen sus propias normas de uso.",
+    "No hemos localizado una ordenanza municipal de autocaravanas de Cangas de Onís: respeta la señalización."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de autocaravanas de El Lleráu",
+      "detalle": "33550 El Lleráu. Por la N-625: en la rotonda hacia Covadonga, después del túnel, a la derecha. Pública y gratuita, 40 plazas, máximo 48 h. Carga de agua potable y vaciado de aguas grises y negras.",
+      "lat": 43.352222,
+      "lon": -5.124722,
+      "coordFuente": "https://www.turismoasturias.es/es/organiza-tu-viaje/como-llegar-y-moverse/autocaravanas/area-del-llerau"
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Turismo Asturias (Principado de Asturias): Área de autocaravanas de El Lleráu (Cangas de Onís)",
+      "url": "https://www.turismoasturias.es/es/organiza-tu-viaje/como-llegar-y-moverse/autocaravanas/area-del-llerau",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Decreto 61/2022 de Asturias (BOPA n.º 191, 04/10/2022)",
+      "url": "https://miprincipado.asturias.es/bopa/2022/10/04/2022-07386.pdf",
+      "tipo": "oficial",
+      "fecha": "2022-10-04"
+    }
+  ],
+  "revisado": "2026-11-01",
+  "verificado": true
+}

@@ -1,0 +1,26 @@
+{
+  "nombre": "Castelló de la Plana",
+  "comunidad": "comunidad-valenciana",
+  "provincia": "Castellón",
+  "estado": "permitido",
+  "resumen": "Castelló de la Plana reconoce por ordenanza el derecho a estacionar la autocaravana en todo el municipio, con un máximo de 48 horas continuas por semana, tanto en la calle como en las zonas exclusivas para autocaravanas. Tienes que llevar el comprobante horario visible en el parabrisas. Hacer a la vez más de una actividad de acampada (toldo, tendedero, vertidos, lavado o tienda) se considera acampada libre y es una falta muy grave.",
+  "reglas": [
+    "Se reconoce el derecho a estacionar en todo el municipio según las normas de tráfico (art. 3.1).",
+    "En la vía pública, máximo 48 horas continuas en una misma semana. La hora de inicio la marca el comprobante horario que expiden la Policía Local o el responsable municipal, o una nota manuscrita y firmada por el propio conductor si no están presentes, y hay que llevarlo visible en el parabrisas (art. 6.1 a 6.3).",
+    "En las zonas de estacionamiento exclusivo para autocaravanas, también máximo 48 horas continuas por semana y comprobante visible (art. 7). Si hay zonas exclusivas, hay que usarlas preferentemente (art. 4).",
+    "En zonas de aparcamiento por tiempo limitado rigen el tiempo y las tarifas de esa ordenanza (art. 6.4).",
+    "Se permite abrir ventanas proyectables si no supone peligro para el tráfico ni para otros usuarios (art. 8.2).",
+    "Prohibido sacar toldos, estabilizadores, mesas, barbacoas, sillas o tendederos, verter líquidos o basura, lavar el vehículo o la ropa e instalar tiendas. Hacer a la vez más de una de estas cosas se considera acampada libre (art. 9)."
+  ],
+  "multa": "Las infracciones de tráfico se sancionan según la Ley de Tráfico (art. 13.1). Para el resto: leves, como sacar toldo, mesas o sillas o pasar de las 48 horas, hasta 750 €; graves, de 750,01 a 1.500 €; muy graves, como la acampada libre o el vertido intencionado, de 1.500,01 a 3.000 € (arts. 12 y 13).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza municipal reguladora del estacionamiento de autocaravanas, campers y vehículos similares de Castelló de la Plana (aprobada por el Pleno el 31/10/2019; BOP de Castellón n.º 31, 12/03/2020)",
+      "url": "https://www.castello.es/es/-/ordenan%C3%87a-municipal-reguladora-de-l-estacionament-de-autocaravanes-campers-i-vehicles-semblants-al-municipi-de-castell%C3%93-de-la-plana.-1",
+      "tipo": "oficial",
+      "fecha": "2020-03-12"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

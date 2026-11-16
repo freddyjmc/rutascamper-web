@@ -1,0 +1,41 @@
+{
+  "nombre": "Saint-Tropez",
+  "comunidad": "provence-alpes-cote-d-azur",
+  "provincia": "Var (83)",
+  "estado": "restringido",
+  "resumen": "Una orden municipal (arrêté) de septiembre de 2026 prohíbe estacionar autocaravanas, caravanas y vehículos acondicionados en todo el municipio, salvo en la avenue du Général De Gaulle, en la avenue du Général Leclerc y, de mediados de noviembre a Semana Santa (como tarde el 31 de marzo), en una zona del Parking du Nouveau Port. No hemos localizado ningún área de autocaravanas en las fuentes oficiales leídas.",
+  "reglas": [
+    "Prohibido estacionar autocaravanas, mobil-homes, caravanas y vehículos acondicionados, con o sin ocupación del dominio público, en todo el municipio, salvo en la avenue du Général De Gaulle y la avenue du Général Leclerc (art. 16 del arrêté n.º 2199/2026 de 14/09/2026).",
+    "Excepción de temporada baja: desde el primer día laborable tras el fin de semana del 11 de noviembre hasta el viernes anterior al fin de semana de Pascua (como tarde el 31 de marzo), se permite en el Parking du Nouveau Port, en la parte junto a la entrada de la ciudad (zona C) (art. 16 del arrêté n.º 2199/2026 de 14/09/2026).",
+    "En el casco urbano solo se estaciona en plazas señalizadas, con un máximo de 48 horas en las plazas reguladas, salvo indicación contraria (art. 15 del arrêté n.º 2199/2026 de 14/09/2026).",
+    "Prohibido circular con vehículos de más de 2,50 m de ancho por varias calles del centro (avenue Grangeon entre la rue du Temple y el boulevard Vasserot, rue Gambetta, vieux chemin de Saint-Amé, rue de l'Aïoli, rue du Petit Bal) y con más de 2,00 m de ancho y 6,00 m de largo por un tramo de la avenue du 8 mai 1945 (arts. 10 y 11 del arrêté n.º 2199/2026 de 14/09/2026)."
+  ],
+  "areas": [],
+  "multa": "El arrêté no fija importe. En general, incumplir una orden municipal es una contravención de 2.ª clase (art. R610-5 del Code pénal), con multa de hasta 150 € (art. 131-13 del Code pénal); según cómo esté redactada la orden, puede aplicarse otra norma, como el Code de la route.",
+  "fuentes": [
+    {
+      "titulo": "Arrêté du Maire n.º 2199/2026 de circulación y estacionamiento (Ville de Saint-Tropez)",
+      "url": "https://www.saint-tropez.fr/wp-content/uploads/2026/10/A2199-ARRETE-GENERAL.pdf",
+      "tipo": "oficial",
+      "fecha": "2026-09-14"
+    },
+    {
+      "titulo": "Actes administratifs (web municipal de Saint-Tropez)",
+      "url": "https://www.saint-tropez.fr/votre-mairie/actes-administratifs/",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Code pénal, art. R610-5 (incumplir un arrêté)",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045176320",
+      "tipo": "oficial",
+      "fecha": "2022-02-17"
+    },
+    {
+      "titulo": "Code pénal, art. 131-13 (Légifrance, version en vigueur au 05/11/2026)",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006417259/",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-06",
+  "verificado": true
+}

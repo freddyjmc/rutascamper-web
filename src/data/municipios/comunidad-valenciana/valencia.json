@@ -1,0 +1,29 @@
+{
+  "nombre": "Valencia",
+  "comunidad": "comunidad-valenciana",
+  "provincia": "Valencia",
+  "estado": "restringido",
+  "resumen": "En València puedes aparcar la autocaravana en la calle, pero está prohibido estacionarla para usarla como lugar habitable con cierta vocación de permanencia. La ordenanza lo concreta: tener el toldo extendido, apoyar el vehículo en calzos de sujeción o situaciones similares. Es infracción grave.",
+  "reglas": [
+    "Está prohibido estacionar en la vía pública caravanas, autocaravanas o similares que se pretendan utilizar como lugar habitable con cierta vocación de permanencia: se entiende así si la caravana está separada del vehículo tractor, hay un toldo extendido, el vehículo se apoya en calzos de sujeción o situaciones similares (Ordenanza de Movilidad, art. 77.2.b).",
+    "Hacerlo es infracción grave, y muy grave si afecta gravemente a la seguridad de los peatones, al tráfico o a un servicio público (art. 123).",
+    "Tampoco se pueden dejar en la calle remolques o semirremolques separados del vehículo tractor (art. 77.2.a).",
+    "En la Comunitat Valenciana no caben acampadas libres al amparo del Decreto 10/2021 (art. 2.5), y en las áreas de pernocta en tránsito la estancia máxima es de 48 horas (art. 50.10)."
+  ],
+  "areas": [],
+  "fuentes": [
+    {
+      "titulo": "Ordenanza de Movilidad de València (aprobada el 25/04/2019, publicada en el BOP el 17/05/2019; texto modificado en diciembre de 2021), web municipal",
+      "url": "https://www.valencia.es/documents/20142/16100788/modificada+141221+ORDENANZA+DE+MOVILIDAD+castellano+definitiva.pdf/d75b6c4b-fb53-3ed1-4884-9b2715fc274e?t=1641376214266",
+      "tipo": "oficial",
+      "fecha": "2019-05-17"
+    },
+    {
+      "titulo": "Generalitat Valenciana: decreto regulador de los campings y de las áreas de pernocta en tránsito para autocaravanas (Decreto 10/2021)",
+      "url": "https://cindi.gva.es/es/-/decreto-regulador-de-los-campings-y-de-las-areas-de-pernocta-en-transito-para-autocaravanas-de-la-comunitat-valenciana",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-03",
+  "verificado": true
+}

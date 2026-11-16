@@ -1,0 +1,253 @@
+{
+  "nombre": "Francia",
+  "resumen": "En Francia no hay una ley específica de autocaravanas. La autocaravana es un vehículo y puede estacionar donde pueda hacerlo cualquier otro, si no es peligroso, molesto ni abusivo. Cada alcalde puede limitar el estacionamiento de ciertos vehículos y prohibir el camping en algunas zonas con una orden municipal (arrêté), así que revisa siempre el municipio y la señalización.",
+  "secciones": [
+    {
+      "titulo": "Estacionar",
+      "puntos": [
+        "La autocaravana puede estacionar como cualquier vehículo si el estacionamiento no es peligroso, molesto ni abusivo (Code de la route, arts. R417-9 a R417-13).",
+        "Es abusivo dejar el vehículo en el mismo sitio de la vía pública más de siete días seguidos, o menos si lo fija una orden de la autoridad local (art. R417-12). Es una contravención de 2.ª clase.",
+        "En zonas turísticas delimitadas por la autoridad local, un vehículo de 20 m² o menos mal estacionado pasa a ser abusivo si sigue ahí más de dos horas después de la denuncia (art. R417-13). Es una contravención de 4.ª clase.",
+        "Si no estás o no lo mueves cuando te lo piden, el vehículo puede ser inmovilizado y llevado al depósito (arts. R417-12 y R417-13)."
+      ]
+    },
+    {
+      "titulo": "Dormir dentro del vehículo",
+      "puntos": [
+        "Ningún texto nacional que hayamos leído prohíbe como tal dormir dentro del vehículo bien estacionado, pero el alcalde puede limitar el estacionamiento, y si hay signos de acampada se aplican las normas de camping.",
+        "No existe en la ley un «derecho a pernoctar». Una circular del Gobierno de 2004 recomienda a los prefectos limitar las prohibiciones a zonas sensibles y preservar una parada nocturna en algún lugar del municipio, pero es una recomendación, no una norma obligatoria."
+      ]
+    },
+    {
+      "titulo": "Qué puede prohibir el alcalde",
+      "puntos": [
+        "Con una orden motivada, el alcalde puede regular la parada y el estacionamiento de los vehículos o de ciertas categorías de ellos, y prohibir el acceso a algunas vías (Code général des collectivités territoriales, art. L2213-2).",
+        "También puede prohibir el acceso de vehículos a vías o zonas para proteger espacios naturales, paisajes o la tranquilidad (art. L2213-4).",
+        "Según el Gobierno, si una orden se aplica solo a un tipo de vehículo, debe definir con precisión sus características, y salvo circunstancias excepcionales no cabe una prohibición general y absoluta en todo el municipio (circular de 19/10/2004; respuestas en el Senado publicadas en 2020 y 2025)."
+      ]
+    },
+    {
+      "titulo": "Acampar",
+      "puntos": [
+        "El camping se practica libremente fuera de las carreteras y vías públicas, con el acuerdo de quien tenga el uso del terreno y salvo oposición del propietario (Code de l'urbanisme, art. R111-32).",
+        "El camping aislado está prohibido, salvo excepción, en la orilla del mar, en sitios clasificados o inscritos, en zonas de patrimonio protegido, cerca de monumentos históricos y a menos de 200 m de captaciones de agua potable (art. R111-33).",
+        "El alcalde puede prohibir el camping fuera de los campings en ciertas zonas. La prohibición solo vale si se anuncia en el ayuntamiento y con señales en los accesos (art. R111-34).",
+        "El Code de l'urbanisme regula las caravanas (art. R111-47). No hemos localizado un artículo vigente que diga expresamente si una autocaravana es una caravana a estos efectos."
+      ]
+    },
+    {
+      "titulo": "Playas y dunas",
+      "puntos": [
+        "Está prohibido circular y estacionar con vehículos a motor fuera de los caminos habilitados en la orilla del mar y en las dunas y playas públicas abiertas al público, salvo autorización del prefecto (Code de l'environnement, art. L321-9)."
+      ]
+    },
+    {
+      "titulo": "Multas",
+      "puntos": [
+        "Incumplir una orden municipal es, en general, una contravención de 2.ª clase (Code pénal, art. R610-5), con multa de hasta 150 € (art. 131-13). Según cómo esté redactada la orden, puede aplicarse otra norma, como el Code de la route.",
+        "Máximos por clase de contravención (Code pénal, art. 131-13): 2.ª clase, 150 €; 4.ª clase, 750 €.",
+        "Las contravenciones del Code de la route pueden tramitarse con multa a tanto alzado (amende forfaitaire) (Code de procédure pénale, art. R48-1): 35 € las de 2.ª clase y 135 € las de 4.ª (art. R49). Además existen importes reducidos por pago rápido y aumentados por impago, que no hemos comprobado."
+      ]
+    },
+    {
+      "titulo": "Parques nacionales",
+      "puntos": [
+        "En el corazón de varios parques nacionales (Écrins, Mercantour, Vanoise, Pirineos y Cévennes) está prohibido acampar, también dentro del vehículo, salvo autorización o en los lugares que permita cada parque (en las Cévennes hay áreas autorizadas para pasar una noche); en Calanques y Port-Cros se prohíben la acampada y el vivac de cualquier forma. Mira la ficha de cada región."
+      ]
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Code de la route, arts. R417-9 a R417-13 (Légifrance, version en vigueur au 05/11/2026)",
+      "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074228/LEGISCTA000006177136/",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Code de l'urbanisme, arts. R111-32 a R111-35 (Légifrance, version en vigueur au 05/11/2026)",
+      "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074075/LEGISCTA000031719402/",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Code de l'urbanisme, arts. R111-47 a R111-50 (Légifrance, version en vigueur au 05/11/2026)",
+      "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074075/LEGISCTA000031719440/",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Code général des collectivités territoriales, art. L2213-2 (Légifrance, version en vigueur au 05/11/2026)",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043976727",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Code général des collectivités territoriales, arts. L2213-1 a L2213-6-1 (Légifrance, version en vigueur au 05/11/2026)",
+      "url": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006180977",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Code de l'environnement, art. L321-9 (Légifrance, version en vigueur au 05/11/2026)",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006833484",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Code pénal, art. R610-5 (Légifrance, version en vigueur au 05/11/2026)",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045176320",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Code pénal, art. 131-13 (Légifrance, version en vigueur au 05/11/2026)",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006417259/",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Code de procédure pénale, art. R48-1 (Légifrance, version en vigueur au 05/11/2026)",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000046490578",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Code de procédure pénale, art. R49 (Légifrance, version en vigueur au 05/11/2026)",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000041765693",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Circulaire INTD0400127C du 19 octobre 2004 relative au stationnement des autocaravanes dans les communes (Légifrance)",
+      "url": "https://www.legifrance.gouv.fr/circulaire/id/27499",
+      "tipo": "oficial",
+      "fecha": "2004-10-19"
+    },
+    {
+      "titulo": "Sénat, question écrite n° 14376, réponse publiée au JO Sénat du 26/03/2020, p. 1468 (senat.fr)",
+      "url": "https://www.senat.fr/questions/base/2020/qSEQ200214376.html",
+      "tipo": "oficial",
+      "fecha": "2020-03-26",
+      "noComercial": true,
+      "reutilizacion": "«Leur reproduction sous forme papier ou électronique est libre sous réserve : de la gratuité de la diffusion ; du respect de l'intégrité des documents (aucune modification ni altération) ; de la citation expresse du site www.senat.fr comme source, accompagnée d'un lien hypertexte le cas échéant, ainsi que de toutes les informations utiles s'y rapportant» (mentions légales de senat.fr, consulta 06/11/2026)."
+    },
+    {
+      "titulo": "Sénat, question écrite n° 04932, réponse publiée au JO Sénat du 17/07/2025, p. 4193 (senat.fr)",
+      "url": "https://www.senat.fr/questions/base/2025/qSEQ250504932.html",
+      "tipo": "oficial",
+      "fecha": "2025-07-17",
+      "noComercial": true,
+      "reutilizacion": "«Leur reproduction sous forme papier ou électronique est libre sous réserve : de la gratuité de la diffusion ; du respect de l'intégrité des documents (aucune modification ni altération) ; de la citation expresse du site www.senat.fr comme source, accompagnée d'un lien hypertexte le cas échéant, ainsi que de toutes les informations utiles s'y rapportant» (mentions légales de senat.fr, consulta 06/11/2026)."
+    }
+  ],
+  "i18n": {
+    "en": {
+      "resumen": "France has no specific law on motorhomes. A motorhome is a vehicle and may park wherever any other vehicle can, as long as it is not dangerous, a nuisance or abusive. Each mayor can limit the parking of certain vehicles and ban camping in some areas with a municipal order (arrêté), so always check the municipality and the signs.",
+      "secciones": [
+        {
+          "titulo": "Parking",
+          "puntos": [
+            "A motorhome may park like any vehicle if the parking is not dangerous, a nuisance or abusive (Code de la route, arts. R417-9 to R417-13).",
+            "It is abusive to leave the vehicle in the same place on the public road for more than seven days in a row, or less if a local authority order sets so (art. R417-12). It is a 2nd-class contravention.",
+            "In tourist zones delimited by the local authority, a badly parked vehicle of 20 m² or less becomes abusive if it is still there more than two hours after the report (art. R417-13). It is a 4th-class contravention.",
+            "If you are not there or do not move it when asked, the vehicle may be immobilised and taken to the pound (arts. R417-12 and R417-13)."
+          ]
+        },
+        {
+          "titulo": "Sleeping inside the vehicle",
+          "puntos": [
+            "No national text we have read bans sleeping inside a properly parked vehicle as such, but the mayor can limit parking, and if there are signs of camping, the camping rules apply.",
+            "The law contains no «right to stay overnight». A 2004 government circular recommends that prefects limit bans to sensitive areas and preserve a night stop somewhere in the municipality, but it is a recommendation, not a binding rule."
+          ]
+        },
+        {
+          "titulo": "What the mayor can ban",
+          "puntos": [
+            "By a reasoned order, the mayor can regulate the stopping and parking of vehicles or of certain categories of them, and ban access to some roads (Code général des collectivités territoriales, art. L2213-2).",
+            "The mayor can also ban vehicle access to roads or zones to protect natural areas, landscapes or quiet (art. L2213-4).",
+            "According to the Government, if an order applies only to one type of vehicle, it must define its characteristics precisely, and except in exceptional circumstances a general and absolute ban across the whole municipality is not allowed (circular of 19/10/2004; Senate replies published in 2020 and 2025)."
+          ]
+        },
+        {
+          "titulo": "Camping",
+          "puntos": [
+            "Camping is freely practised away from roads and public ways, with the agreement of whoever has the use of the land and unless the owner objects (Code de l'urbanisme, art. R111-32).",
+            "Isolated camping is banned, with exceptions, on the seashore, in classified or listed sites, in protected heritage areas, near historic monuments and within 200 m of drinking-water intakes (art. R111-33).",
+            "The mayor can ban camping outside campsites in certain areas. The ban is only valid if it is posted at the town hall and signed at the access points (art. R111-34).",
+            "The Code de l'urbanisme regulates caravans (art. R111-47). We have not found a current article that says expressly whether a motorhome is a caravan for these purposes."
+          ]
+        },
+        {
+          "titulo": "Beaches and dunes",
+          "puntos": [
+            "Driving and parking motor vehicles outside the permitted tracks is banned on the seashore and on public dunes and beaches open to the public, unless authorised by the prefect (Code de l'environnement, art. L321-9)."
+          ]
+        },
+        {
+          "titulo": "Fines",
+          "puntos": [
+            "Breaking a municipal order is, in general, a 2nd-class contravention (Code pénal, art. R610-5), with a fine of up to €150 (art. 131-13). Depending on how the order is worded, another rule may apply, such as the Code de la route.",
+            "Maximum amounts by class of contravention (Code pénal, art. 131-13): 2nd class, €150; 4th class, €750.",
+            "Contraventions under the Code de la route can be handled with a fixed fine (amende forfaitaire) (Code de procédure pénale, art. R48-1): €35 for 2nd-class ones and €135 for 4th-class ones (art. R49). There are also reduced amounts for quick payment and increased amounts for non-payment, which we have not checked."
+          ]
+        },
+        {
+          "titulo": "National parks",
+          "puntos": [
+            "In the core of several national parks (Écrins, Mercantour, Vanoise, Pyrénées and Cévennes) camping is banned, also inside the vehicle, unless authorised or in the places each park allows (in the Cévennes there are areas authorised for one night); in Calanques and Port-Cros, camping and bivouacking in any form are banned. See the page of each region."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "resumen": "En France, il n'existe pas de loi spécifique sur les camping-cars. Le camping-car est un véhicule et peut stationner partout où n'importe quel autre véhicule le peut, s'il n'est ni dangereux, ni gênant, ni abusif. Chaque maire peut limiter le stationnement de certains véhicules et interdire le camping dans certaines zones par un arrêté municipal : vérifiez donc toujours la commune et la signalisation.",
+      "secciones": [
+        {
+          "titulo": "Stationner",
+          "puntos": [
+            "Le camping-car peut stationner comme n'importe quel véhicule si le stationnement n'est ni dangereux, ni gênant, ni abusif (Code de la route, art. R417-9 à R417-13).",
+            "Il est abusif de laisser le véhicule au même endroit de la voie publique plus de sept jours consécutifs, ou moins si un arrêté de l'autorité locale le fixe (art. R417-12). C'est une contravention de 2e classe.",
+            "Dans les zones touristiques délimitées par l'autorité locale, un véhicule de 20 m² ou moins mal stationné devient abusif s'il est encore là plus de deux heures après la constatation de l'infraction (art. R417-13). C'est une contravention de 4e classe.",
+            "Si vous n'êtes pas là ou si vous ne le déplacez pas quand on vous le demande, le véhicule peut être immobilisé et mis en fourrière (art. R417-12 et R417-13)."
+          ]
+        },
+        {
+          "titulo": "Dormir dans le véhicule",
+          "puntos": [
+            "Aucun texte national que nous avons lu n'interdit en tant que tel de dormir dans un véhicule bien stationné, mais le maire peut limiter le stationnement, et s'il y a des signes de camping, les règles du camping s'appliquent.",
+            "La loi ne prévoit pas de « droit à la nuitée ». Une circulaire du Gouvernement de 2004 recommande aux préfets de limiter les interdictions aux zones sensibles et de préserver une halte nocturne quelque part dans la commune, mais c'est une recommandation, non une règle obligatoire."
+          ]
+        },
+        {
+          "titulo": "Ce que le maire peut interdire",
+          "puntos": [
+            "Par un arrêté motivé, le maire peut réglementer l'arrêt et le stationnement des véhicules ou de certaines catégories d'entre eux, et interdire l'accès à certaines voies (Code général des collectivités territoriales, art. L2213-2).",
+            "Il peut aussi interdire l'accès des véhicules à des voies ou à des zones pour protéger des espaces naturels, des paysages ou la tranquillité (art. L2213-4).",
+            "Selon le Gouvernement, si un arrêté ne vise qu'un type de véhicule, il doit en définir précisément les caractéristiques, et sauf circonstances exceptionnelles, une interdiction générale et absolue sur toute la commune n'est pas possible (circulaire du 19/10/2004 ; réponses au Sénat publiées en 2020 et 2025)."
+          ]
+        },
+        {
+          "titulo": "Camper",
+          "puntos": [
+            "Le camping se pratique librement en dehors des routes et des voies publiques, avec l'accord de celui qui a la jouissance du terrain et sauf opposition du propriétaire (Code de l'urbanisme, art. R111-32).",
+            "Le camping isolé est interdit, sauf exception, sur le rivage de la mer, dans les sites classés ou inscrits, dans les zones de patrimoine protégé, près des monuments historiques et à moins de 200 m des points de captage d'eau potable (art. R111-33).",
+            "Le maire peut interdire le camping en dehors des campings dans certaines zones. L'interdiction n'est valable que si elle est affichée en mairie et signalée aux accès par des panneaux (art. R111-34).",
+            "Le Code de l'urbanisme réglemente les caravanes (art. R111-47). Nous n'avons pas localisé d'article en vigueur qui dise expressément si un camping-car est une caravane à ces fins."
+          ]
+        },
+        {
+          "titulo": "Plages et dunes",
+          "puntos": [
+            "Il est interdit de circuler et de stationner avec des véhicules à moteur en dehors des chemins aménagés sur le rivage de la mer et sur les dunes et plages publiques ouvertes au public, sauf autorisation du préfet (Code de l'environnement, art. L321-9)."
+          ]
+        },
+        {
+          "titulo": "Amendes",
+          "puntos": [
+            "Ne pas respecter un arrêté municipal est, en général, une contravention de 2e classe (Code pénal, art. R610-5), avec une amende pouvant aller jusqu'à 150 € (art. 131-13). Selon la rédaction de l'arrêté, une autre règle peut s'appliquer, comme le Code de la route.",
+            "Montants maximaux par classe de contravention (Code pénal, art. 131-13) : 2e classe, 150 € ; 4e classe, 750 €.",
+            "Les contraventions du Code de la route peuvent être traitées par amende forfaitaire (Code de procédure pénale, art. R48-1) : 35 € pour celles de 2e classe et 135 € pour celles de 4e classe (art. R49). Il existe aussi des montants minorés en cas de paiement rapide et majorés en cas de non-paiement, que nous n'avons pas vérifiés."
+          ]
+        },
+        {
+          "titulo": "Parcs nationaux",
+          "puntos": [
+            "Dans le cœur de plusieurs parcs nationaux (Écrins, Mercantour, Vanoise, Pyrénées et Cévennes), le camping est interdit, y compris dans le véhicule, sauf autorisation ou dans les lieux que chaque parc permet (dans les Cévennes, il y a des aires autorisées pour passer une nuit) ; dans les Calanques et à Port-Cros, le camping et le bivouac sont interdits sous toutes leurs formes. Consultez la fiche de chaque région."
+          ]
+        }
+      ]
+    }
+  },
+  "revisado": "2026-11-06",
+  "verificado": true
+}

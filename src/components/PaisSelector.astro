@@ -1,0 +1,73 @@
+---
+// Selector de país (España | Francia | …). Se alimenta del registro src/lib/paises.ts.
+//  - modo "enlaces": navegación normal entre las páginas de cada país (cabeceras de país).
+//  - modo "pestañas": en la portada, pestañas que cambian la lista de regiones sin recargar.
+//    Sin JavaScript se queda la lista de enlaces a cada país.
+// Con un solo país no se muestra: no hay nada que elegir.
+import { getPaises } from "../lib/paises";
+import { t, paisesEn, type Lang } from "../i18n";
+interface Props { actual: string; modo?: "enlaces" | "pestañas"; idBase?: string; lang?: Lang; grande?: boolean }
+const { actual, modo = "enlaces", idBase = "pais", lang = "es", grande = false } = Astro.props;
+const T = t(lang);
+const paises = paisesEn(await getPaises(), lang);
+---
+{paises.length > 1 && (
+  <>
+    <nav class:list={["pais-sw", { grande }]} aria-label={T.selector.etiquetaEnlaces} data-sw-links>
+      {paises.map((p) => <a href={p.base} aria-current={p.code === actual ? "page" : undefined}>{p.nombre}</a>)}
+    </nav>
+    {modo === "pestañas" && (
+      <div class:list={["pais-sw", { grande }]} role="tablist" aria-label={T.selector.etiqueta} data-sw-tabs data-actual={actual} hidden>
+        {paises.map((p) => (
+          <button type="button" role="tab" id={`${idBase}-tab-${p.code}`} aria-controls={`${idBase}-panel-${p.code}`} aria-selected={p.code === actual ? "true" : "false"} tabindex={p.code === actual ? 0 : -1} data-pais={p.code}>{p.nombre}</button>
+        ))}
+      </div>
+    )}
+  </>
+)}
+
+<script>
+  // Pestañas de país: flechas, Inicio y Fin; recuerda la elección solo si la persona la hace (rc:pais).
+  const tabs = document.querySelector<HTMLElement>("[data-sw-tabs]");
+  if (tabs) {
+    const links = tabs.parentElement?.querySelector<HTMLElement>("[data-sw-links]");
+    const btns = [...tabs.querySelectorAll<HTMLButtonElement>("[role=tab]")];
+    const panels = btns.map((b) => document.getElementById(b.getAttribute("aria-controls")!)).filter((p): p is HTMLElement => !!p);
+    const KEY = "rc:pais";
+    const activar = (code: string, foco = false) => {
+      btns.forEach((b) => {
+        const on = b.dataset.pais === code;
+        b.setAttribute("aria-selected", String(on));
+        b.tabIndex = on ? 0 : -1;
+        if (on && foco) b.focus();
+      });
+      panels.forEach((p) => (p.hidden = p.dataset.pais !== code));
+      // Secciones de un solo país (rutas y radar de España): se ocultan al elegir otro.
+      document.querySelectorAll<HTMLElement>("[data-solo-pais]").forEach((el) => (el.hidden = el.dataset.soloPais !== code));
+    };
+    const elegir = (code: string, foco = false) => {
+      activar(code, foco);
+      try { localStorage.setItem(KEY, code); } catch {}
+    };
+    if (links) links.hidden = true;
+    tabs.hidden = false;
+    let guardado: string | null = null;
+    try { guardado = localStorage.getItem(KEY); } catch {}
+    // ?pais=fr en el enlace (por ejemplo, desde la pantalla de un país) manda sobre lo recordado, sin guardarlo.
+    let pedido: string | null = null;
+    try { pedido = new URLSearchParams(location.search).get("pais"); } catch {}
+    if (pedido && btns.some((b) => b.dataset.pais === pedido)) activar(pedido);
+    else if (guardado && btns.some((b) => b.dataset.pais === guardado)) activar(guardado);
+    else activar(tabs.dataset.actual || btns[0].dataset.pais!);
+    btns.forEach((b, i) => {
+      b.addEventListener("click", () => elegir(b.dataset.pais!));
+      b.addEventListener("keydown", (ev) => {
+        const k = ev.key;
+        const j = k === "ArrowRight" ? (i + 1) % btns.length : k === "ArrowLeft" ? (i - 1 + btns.length) % btns.length : k === "Home" ? 0 : k === "End" ? btns.length - 1 : -1;
+        if (j < 0) return;
+        ev.preventDefault();
+        elegir(btns[j].dataset.pais!, true);
+      });
+    });
+  }
+</script>

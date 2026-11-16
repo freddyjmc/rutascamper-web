@@ -1,0 +1,32 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getCollection } from "astro:content";
+import { publicada } from "../../site";
+import { getPaises } from "../../lib/paises";
+import { t } from "../../i18n";
+
+const R = t("es").rutas;
+const rutas = (await getCollection("rutas")).filter(publicada).sort((a, b) => a.data.h1.localeCompare(b.data.h1, "es"));
+// Un grupo por país, en el orden del registro de países; solo los que tienen rutas.
+const grupos = (await getPaises())
+  .map((p) => ({ code: p.code, nombre: p.nombre, rutas: rutas.filter((r) => r.data.pais === p.code) }))
+  .filter((g) => g.rutas.length > 0);
+---
+<Base title={R.indexTitulo} description={R.indexDescripcion} crumbs={[{ name: "Rutas", href: "/rutas/" }]}>
+  <h1>Rutas en camper</h1>
+  <p class="lead">{R.indexLead}</p>
+  {grupos.length ? grupos.map((g) => (
+    <section aria-labelledby={`rutas-${g.code}`}>
+      <h2 id={`rutas-${g.code}`}>{g.nombre}</h2>
+      <div class="grid">
+        {g.rutas.map((r) => (
+          <a class="card stretch" href={`/rutas/${r.id}/`}>
+            <h3>{r.data.h1}</h3>
+            <p class="meta">{r.data.dias} {R.dias} · {r.data.cuando}</p>
+            <p class="muted">{r.data.resumen}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  )) : <p class="muted">Estamos preparando las primeras rutas.</p>}
+</Base>

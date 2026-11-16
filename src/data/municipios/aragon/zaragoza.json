@@ -1,0 +1,25 @@
+{
+  "nombre": "Zaragoza",
+  "comunidad": "aragon",
+  "provincia": "Zaragoza",
+  "estado": "restringido",
+  "resumen": "En Zaragoza las autocaravanas deben estacionar preferentemente en los lugares habilitados. Fuera de ellos está prohibido aparcarlas si se usan como vivienda con carácter de permanencia, y en cualquier sitio está prohibido aparcarlas para acampar. Una autocaravana está acampada si ocupa más que circulando o no se apoya solo en sus neumáticos.",
+  "reglas": [
+    "El estacionamiento de autocaravanas se hará preferentemente en los lugares habilitados; fuera de ellos está prohibido si el vehículo se usa como vivienda con carácter de permanencia (Ordenanza de Movilidad Urbana, art. 30.8).",
+    "Está prohibido estacionar estos vehículos para acampar (art. 30.8). La ordenanza considera acampada una autocaravana que ocupa más superficie que circulando o que no se apoya exclusivamente en sus neumáticos (glosario).",
+    "Tienes que comprobar las condiciones de estacionamiento y la señalización del lugar al menos cada quince días (art. 30.7).",
+    "No se pueden dejar en la calle caravanas o remolques separados del vehículo que los arrastra (art. 30.6).",
+    "La ordenanza prevé estacionamientos específicos para autocaravanas, que pueden tener servicios y ser libres o de pago."
+  ],
+  "areas": [],
+  "fuentes": [
+    {
+      "titulo": "Ordenanza de Movilidad Urbana de Zaragoza (texto publicado en el BOP de Zaragoza n.º 192, 21/08/2024), web municipal",
+      "url": "https://www.zaragoza.es/contenidos/normativa/ORDENANZA_MOVILIDAD_URBANA_def.pdf",
+      "tipo": "oficial",
+      "fecha": "2024-08-21"
+    }
+  ],
+  "revisado": "2026-11-03",
+  "verificado": true
+}

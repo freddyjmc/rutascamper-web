@@ -1,0 +1,346 @@
+---
+// Radar de áreas cercanas. Usa solo las áreas con coordenadas publicadas por una fuente oficial
+// (las mismas del mapa). El punto de partida de cada municipio es el centro de sus áreas con
+// coordenadas. Distancias en línea recta (haversine), orientativas. Sin geolocalización.
+// `pais` elige el índice de áreas ("es", "fr" o "pt"); `lang` el idioma de los textos (src/i18n).
+// «Añadir a mi ruta» solo existe en el radar de España (Mi ruta admite también ids `fr-` y `pt-`).
+import { areasIndice } from "../lib/areas";
+import { haversine } from "../scripts/rc";
+import { t, META, type Lang } from "../i18n";
+
+interface Props { pais?: "es" | "fr" | "pt"; lang?: Lang }
+const { pais = "es", lang = "es" } = Astro.props;
+const R = t(lang).radar;
+const P = R.pais[pais];
+const areas = await areasIndice(pais);
+const nombreReg = (a: { comunidad: string; comunidadLocal?: string }) => (lang !== "es" && a.comunidadLocal) || a.comunidad;
+const loc = META[lang].fecha;
+const p = `rd-${pais}`;
+type Mun = { k: string; n: string; c: string; lat: number; lon: number; url: string };
+const porMun = new Map<string, { n: string; c: string; url: string; pts: { lat: number; lon: number }[] }>();
+for (const a of areas) {
+  const g = porMun.get(a.url) ?? { n: a.municipio, c: nombreReg(a), url: a.url, pts: [] };
+  g.pts.push({ lat: a.lat, lon: a.lon });
+  porMun.set(a.url, g);
+}
+const muns: Mun[] = [...porMun.values()]
+  .map((g, i) => ({
+    k: String(i), n: g.n, c: g.c, url: g.url,
+    lat: g.pts.reduce((s, p) => s + p.lat, 0) / g.pts.length,
+    lon: g.pts.reduce((s, p) => s + p.lon, 0) / g.pts.length,
+  }))
+  .sort((a, b) => a.c.localeCompare(b.c, loc) || a.n.localeCompare(b.n, loc));
+// Municipio inicial: el que tiene más áreas a menos de 50 km, para que el radar se vea con contenido.
+const inicial = muns
+  .map((m) => ({ m, n: areas.filter((a) => haversine(m, a) <= 50).length }))
+  .sort((a, b) => b.n - a.n || a.m.n.localeCompare(b.m.n, loc))[0]?.m;
+const grupos = [...new Set(muns.map((m) => m.c))];
+const datos = {
+  m: muns.map((m) => [m.k, m.n, m.c, +m.lat.toFixed(4), +m.lon.toFixed(4)]),
+  a: areas.map((a) => [a.id, a.nombre, a.municipio, nombreReg(a), a.url, +a.lat.toFixed(4), +a.lon.toFixed(4), a.aproximada ? 1 : 0, a.soloServicios ? 1 : 0, a.sinConfirmar ? 1 : 0]),
+  t: { ...R, pais: undefined },
+  ruta: pais === "es",
+  lang,
+};
+const hayU = areas.some((a) => a.sinConfirmar);
+const distancias = [10, 25, 50, 100];
+---
+{areas.length > 0 && (
+<section class="section radar" data-radar aria-labelledby={`${p}-t`}>
+  <div class="section-head reveal">
+    <div>
+      <p class="eyebrow">{R.eyebrow}</p>
+      <h2 id={`${p}-t`}>{R.titulo}</h2>
+    </div>
+    <p class="muted">{P.intro}{P.nota && ` ${P.nota}`}</p>
+  </div>
+
+  <div class="rd-panel reveal">
+    <div class="rd-ctrl">
+      <div class="rd-field">
+        <label for={`${p}-mun`}>{R.munLabel}</label>
+        <div class="rd-select">
+          <select id={`${p}-mun`} disabled>
+            {grupos.map((g) => (
+              <optgroup label={g}>
+                {muns.filter((m) => m.c === g).map((m) => <option value={m.k} selected={m.k === inicial?.k}>{m.n}</option>)}
+              </optgroup>
+            ))}
+          </select>
+        </div>
+      </div>
+      <div class="rd-field">
+        <span class="rd-lab" id={`${p}-dist-l`}>{R.distLabel}</span>
+        <div class="rd-seg" role="group" aria-labelledby={`${p}-dist-l`}>
+          {distancias.map((d) => <button type="button" data-d={d} aria-pressed={d === 50 ? "true" : "false"} disabled>{d} km</button>)}
+        </div>
+      </div>
+      <p class="rd-help">{R.help}</p>
+    </div>
+
+    <div class="rd-viz">
+      <svg class="rd-svg" viewBox="0 0 340 340" aria-hidden="true" focusable="false">
+        <defs>
+          <radialGradient id={`${p}-bg`} cx="50%" cy="50%" r="50%">
+            <stop offset="0" style="stop-color: var(--primary-soft)" />
+            <stop offset="1" style="stop-color: var(--paper)" />
+          </radialGradient>
+          <linearGradient id={`${p}-sw`} x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" style="stop-color: var(--primary)" stop-opacity="0" />
+            <stop offset="1" style="stop-color: var(--primary)" stop-opacity=".38" />
+          </linearGradient>
+        </defs>
+        <circle cx="170" cy="170" r="160" fill={`url(#${p}-bg)`} class="rd-edge" />
+        <g class="rd-grid" fill="none">
+          <circle cx="170" cy="170" r="107" /><circle cx="170" cy="170" r="53" />
+          <path d="M170 10V330M10 170H330" />
+        </g>
+        <g class="rd-sweep"><path d="M170 170 L170 10 A160 160 0 0 1 283 57Z" fill={`url(#${p}-sw)`} /></g>
+        <text x="170" y="28" text-anchor="middle" class="rd-n">N</text>
+        <g class="rd-blips"></g>
+        <circle cx="170" cy="170" r="6" class="rd-me" /><circle cx="170" cy="170" r="13" class="rd-me-ring" />
+      </svg>
+      <p class="rd-legend" aria-hidden="true"><span><i class="lg-c"></i> {R.legC}</span><span><i class="lg-d"></i> {R.legD}</span>{hayU && <span><i class="lg-u"></i> {R.legU}</span>}<span>{R.anillos} <b data-ring>–</b></span></p>
+    </div>
+
+    <div class="rd-res">
+      <p class="rd-status" role="status" aria-live="polite" data-status>{P.sinJs}</p>
+      <ol class="rd-list" data-list></ol>
+      <p class="rd-more" data-more-wrap hidden><button type="button" class="act act-sm" data-more></button></p>
+      <p class="rd-foot">{P.pie}{P.enlace && <> <a href="/mapa-areas-autocaravanas/">{P.enlace}</a></>}</p>
+    </div>
+  </div>
+  <script type="application/json" id={`${p}-data`} data-rd-data set:html={JSON.stringify(datos).replace(/</g, "\\u003c")} />
+</section>
+)}
+
+<style is:global>
+  .rd-panel { display: grid; gap: var(--space-24); grid-template-columns: 1fr; background: var(--bg-2); border-radius: var(--radius-lg); padding: var(--space-16); border: 1px solid color-mix(in srgb, var(--line) 70%, transparent); }
+  @media (min-width: 640px) { .rd-panel { padding: var(--space-32); } }
+  @media (min-width: 960px) {
+    .rd-panel { grid-template-columns: minmax(0, 380px) minmax(0, 1fr); grid-template-areas: "ctrl res" "viz res"; align-items: start; gap: var(--space-24) var(--space-48); }
+    .rd-ctrl { grid-area: ctrl; } .rd-viz { grid-area: viz; } .rd-res { grid-area: res; }
+    .rd-viz { position: sticky; top: 92px; }
+    .rd-list { grid-template-columns: 1fr 1fr; }
+  }
+  @media (min-width: 960px) and (max-width: 1199px) { .rd-list { grid-template-columns: 1fr; } }
+  .rd-ctrl { display: grid; gap: var(--space-16); min-width: 0; align-content: start; }
+  .rd-field { display: grid; gap: 6px; }
+  .rd-field label, .rd-lab { font-weight: 800; font-size: .9rem; color: var(--head); }
+  .rd-select { position: relative; }
+  .rd-select::after { content: ""; position: absolute; right: 18px; top: 50%; width: 9px; height: 9px; border-right: 2.5px solid var(--primary); border-bottom: 2.5px solid var(--primary); translate: 0 -75%; rotate: 45deg; pointer-events: none; }
+  .rd-select select { width: 100%; appearance: none; -webkit-appearance: none; font: inherit; font-weight: 700; min-height: 52px; padding: 10px 44px 10px 18px; color: var(--ink); background: var(--paper); border: 1.5px solid var(--line); border-radius: 999px; box-shadow: var(--shadow-sm); cursor: pointer; }
+  .rd-select select:disabled { opacity: .7; cursor: default; }
+  .rd-seg { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; padding: 4px; background: var(--paper); border: 1.5px solid var(--line); border-radius: 999px; }
+  .rd-seg button { font: inherit; font-weight: 800; font-size: .92rem; min-height: 44px; border: 0; border-radius: 999px; background: transparent; color: var(--muted); cursor: pointer; transition: background-color .25s ease, color .25s ease, transform .2s var(--ease-out); }
+  .rd-seg button:hover:not(:disabled) { color: var(--ink); }
+  .rd-seg button[aria-pressed="true"] { background: var(--pine); color: var(--pine-ink); box-shadow: var(--shadow-sm); }
+  .rd-seg button:active:not(:disabled) { transform: scale(.95); }
+  .rd-seg button:disabled { opacity: .6; cursor: default; }
+  .rd-help { margin: 0; font-size: .85rem; color: var(--muted); }
+
+  .rd-viz { min-width: 0; }
+  .rd-svg { display: block; width: 100%; max-width: 380px; height: auto; margin-inline: auto; aspect-ratio: 1; overflow: visible; }
+  .rd-edge { stroke: var(--line); stroke-width: 2; }
+  .rd-grid circle, .rd-grid path { stroke: color-mix(in srgb, var(--primary) 32%, transparent); stroke-width: 1.2; stroke-dasharray: 3 5; }
+  .rd-n { font: 800 13px var(--display); fill: var(--muted); }
+  .rd-sweep { transform-origin: 170px 170px; animation: rd-spin 7s linear infinite; }
+  @keyframes rd-spin { to { rotate: 360deg; } }
+  .rd-me { fill: var(--accent); stroke: var(--paper); stroke-width: 3; }
+  .rd-me-ring { fill: none; stroke: var(--accent); stroke-width: 2; transform-origin: 170px 170px; animation: rd-ping 2.4s ease-out infinite; }
+  @keyframes rd-ping { from { opacity: .7; scale: .5; } to { opacity: 0; scale: 1.8; } }
+  .rd-blip { cursor: pointer; transform-box: fill-box; transform-origin: center; animation: rd-pop .5s var(--ease-spring) both; animation-delay: calc(var(--i, 0) * 45ms); transition: scale .2s var(--ease-out); }
+  .rd-blip .b { fill: var(--primary); stroke: var(--paper); stroke-width: 2.5; }
+  .rd-blip.s .b { fill: var(--accent); }
+  .rd-blip.u .b { fill: var(--muted); }
+  .rd-blip.on, .rd-blip:hover { scale: 1.45; }
+  .rd-blip.on .b { stroke: var(--ink); }
+  @keyframes rd-pop { from { opacity: 0; scale: 0; } }
+  .rd-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 16px; margin: var(--space-12) 0 0; font-size: .82rem; color: var(--muted); }
+  .rd-legend i { display: inline-block; width: 11px; height: 11px; margin-right: 6px; vertical-align: -1px; background: var(--primary); }
+  .rd-legend .lg-c { border-radius: 50%; }
+  .rd-legend .lg-d { background: var(--accent); rotate: 45deg; scale: .85; }
+  .rd-legend .lg-u { background: var(--muted); border-radius: 3px; }
+  .rd-legend b { color: var(--ink); }
+
+  .rd-res { min-width: 0; }
+  .rd-status { margin: 0 0 var(--space-12); font-weight: 750; color: var(--head); min-height: 3em; }
+  .rd-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .rd-item { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 14px; align-items: center; padding: 12px 14px; background: var(--paper); border: 1px solid color-mix(in srgb, var(--line) 60%, transparent); border-radius: 18px; box-shadow: var(--shadow-sm); transition: box-shadow .25s ease, border-color .25s ease, transform .25s var(--ease-out); animation: rise .45s var(--ease-out) both; animation-delay: calc(var(--i, 0) * 40ms); }
+  .rd-item.on { border-color: var(--primary); box-shadow: var(--shadow); }
+  .rd-dist { display: grid; place-items: center; align-content: center; min-width: 68px; padding: 8px 6px; border-radius: 14px; background: var(--primary-soft); color: var(--primary-deep); text-align: center; line-height: 1.1; }
+  @media (prefers-color-scheme: dark) { .rd-dist { color: var(--primary); } }
+  .rd-dist b { font: 800 1.25rem/1 var(--display); letter-spacing: -.03em; }
+  .rd-dist span { font-size: .72rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; margin-top: 3px; }
+  .rd-info { min-width: 0; }
+  .rd-info h3 { margin: 0; font-size: 1.02rem; line-height: 1.25; }
+  .rd-info h3 a { color: var(--ink); text-decoration: none; }
+  .rd-info h3 a:hover { text-decoration: underline; text-decoration-color: var(--accent); }
+  .rd-info p { margin: 2px 0 0; font-size: .85rem; color: var(--muted); }
+  .rd-tag { display: inline-block; margin-left: 4px; padding: 1px 8px; font-size: .72rem; font-weight: 800; border-radius: 999px; background: var(--accent-soft); color: var(--accent-ink); vertical-align: 1px; }
+  .rd-act { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+  .rd-act a { font-weight: 800; font-size: .9rem; display: inline-flex; align-items: center; min-height: 44px; }
+  .rd-more { margin: var(--space-12) 0 0; }
+  .rd-foot { margin: var(--space-16) 0 0; font-size: .85rem; color: var(--muted); }
+  .radar .act-ruta { min-height: 44px; }
+  @media (max-width: 400px) { .rd-item { grid-template-columns: 1fr; } .rd-dist { grid-auto-flow: column; justify-content: start; gap: 8px; padding: 6px 12px; } .rd-dist span { margin: 0; } }
+  @media (prefers-reduced-motion: reduce) {
+    .rd-sweep, .rd-me-ring { animation: none; }
+    .rd-me-ring { opacity: .4; }
+    .rd-blip, .rd-item { animation: none; }
+    .rd-blip:hover, .rd-blip.on { scale: 1; }
+  }
+</style>
+
+<script>
+  import { getRuta, alternaRuta, alCambiarRuta, pintaBotonRuta, haversine } from "../scripts/rc";
+
+  type Textos = {
+    anillosTxt: string; rumbos: string[][]; linea: string; menos1: string; locale: string; tagSv: string; tagU: string; aprox: string;
+    ficha: string; fichaDe: string; addRuta: string; mas: string; menos: string; nada: string; uno: string; varias: string; errAlmacen: string;
+  };
+  type Area = { id: string; n: string; m: string; c: string; u: string; lat: number; lon: number; ap: boolean; sv: boolean; sc: boolean };
+  const fmt = (s: string, v: Record<string, string | number>) => s.replace(/\{(\w+)\}/g, (_, k) => String(v[k]));
+
+  document.querySelectorAll<HTMLElement>("[data-radar]").forEach((root) => {
+    const raw = root.querySelector("[data-rd-data]")?.textContent;
+    if (!raw) return;
+    const d = JSON.parse(raw) as { m: [string, string, string, number, number][]; a: (string | number)[][]; t: Textos; ruta: boolean; lang: string };
+    const X = d.t;
+    const muns = d.m.map(([k, n, c, lat, lon]) => ({ k, n, c, lat, lon }));
+    const areas: Area[] = d.a.map((r) => ({ id: r[0] as string, n: r[1] as string, m: r[2] as string, c: r[3] as string, u: r[4] as string, lat: r[5] as number, lon: r[6] as number, ap: r[7] === 1, sv: r[8] === 1, sc: r[9] === 1 }));
+    const km = (x: number) => (x < 1 ? X.menos1 : `${Math.round(x).toLocaleString(X.locale)} km`);
+    const sel = root.querySelector<HTMLSelectElement>("select")!;
+    const segs = [...root.querySelectorAll<HTMLButtonElement>(".rd-seg button")];
+    const list = root.querySelector<HTMLOListElement>("[data-list]")!;
+    const status = root.querySelector<HTMLElement>("[data-status]")!;
+    const blips = root.querySelector<SVGGElement>(".rd-blips")!;
+    const ring = root.querySelector<HTMLElement>("[data-ring]")!;
+    const moreWrap = root.querySelector<HTMLElement>("[data-more-wrap]")!;
+    const moreBtn = root.querySelector<HTMLButtonElement>("[data-more]")!;
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const SVGNS = "http://www.w3.org/2000/svg";
+    const rumbos = X.rumbos;
+    const hl = d.lang === "es" ? "" : ' hreflang="es"';
+    const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
+    const rad = (g: number) => (g * Math.PI) / 180;
+    const bearing = (a: { lat: number; lon: number }, b: { lat: number; lon: number }) => {
+      const y = Math.sin(rad(b.lon - a.lon)) * Math.cos(rad(b.lat));
+      const x = Math.cos(rad(a.lat)) * Math.sin(rad(b.lat)) - Math.sin(rad(a.lat)) * Math.cos(rad(b.lat)) * Math.cos(rad(b.lon - a.lon));
+      return (Math.atan2(y, x) * 180 / Math.PI + 360) % 360;
+    };
+    const LIMITE = 6;
+    let max = 50;
+    let verTodas = false;
+
+    const render = () => {
+      const o = muns.find((m) => m.k === sel.value)!;
+      const todas = areas
+        .map((a) => ({ a, dist: haversine(o, a), br: bearing(o, a) }))
+        .sort((x, y) => x.dist - y.dist);
+      const cerca = todas.filter((x) => x.dist <= max);
+      ring.textContent = fmt(X.anillosTxt, { a: Math.round(max / 3), b: Math.round((max * 2) / 3), c: max });
+
+      // Radar
+      blips.replaceChildren();
+      cerca.forEach((x, i) => {
+        const r = Math.min(1, x.dist / max) * 150;
+        const px = 170 + r * Math.sin(rad(x.br));
+        const py = 170 - r * Math.cos(rad(x.br));
+        const g = document.createElementNS(SVGNS, "g");
+        g.setAttribute("class", `rd-blip${x.a.sv ? " s" : x.a.sc ? " u" : ""}`);
+        g.setAttribute("style", `--i:${Math.min(i, 20)}`);
+        g.dataset.id = x.a.id;
+        const sh = document.createElementNS(SVGNS, x.a.sv ? "rect" : "circle");
+        sh.setAttribute("class", "b");
+        if (x.a.sv) {
+          sh.setAttribute("x", String(px - 6)); sh.setAttribute("y", String(py - 6));
+          sh.setAttribute("width", "12"); sh.setAttribute("height", "12"); sh.setAttribute("rx", "2");
+          sh.setAttribute("transform", `rotate(45 ${px} ${py})`);
+        } else {
+          sh.setAttribute("cx", String(px)); sh.setAttribute("cy", String(py)); sh.setAttribute("r", "7");
+        }
+        const t = document.createElementNS(SVGNS, "title");
+        t.textContent = `${x.a.n} (${km(x.dist)})`;
+        g.append(sh, t);
+        blips.append(g);
+      });
+
+      // Texto de estado
+      const n = cerca.length;
+      if (n === 0) {
+        const prox = todas[0];
+        status.textContent = fmt(X.nada, { max, mun: o.n, area: prox.a.n, munArea: prox.a.m, dist: km(prox.dist) });
+      } else {
+        status.textContent = fmt(n === 1 ? X.uno : X.varias, { n, max, mun: o.n });
+      }
+
+      // Lista
+      const visibles = verTodas ? cerca : cerca.slice(0, LIMITE);
+      list.innerHTML = visibles.map((x, i) => {
+        const [rn, rs] = rumbos[Math.round(x.br / 45) % 8];
+        const addRuta = d.ruta ? `<button type="button" class="act act-sm act-ruta" data-ruta="${esc(x.a.id)}" aria-pressed="false"><span class="ruta-txt">${esc(X.addRuta)}</span><span class="sr-only">: ${esc(x.a.n)}</span></button>` : "";
+        return `<li class="rd-item" style="--i:${Math.min(i, 8)}" data-id="${esc(x.a.id)}">
+          <div class="rd-dist"><b>${x.dist < 1 ? "&lt;1" : Math.round(x.dist)}</b><span>km · ${rs}</span></div>
+          <div class="rd-info"><h3><a href="${esc(x.a.u)}"${hl}>${esc(x.a.n)}</a>${x.a.sv ? `<span class="rd-tag">${esc(X.tagSv)}</span>` : x.a.sc ? `<span class="rd-tag">${esc(X.tagU)}</span>` : ""}</h3>
+          <p>${esc(x.a.m)} · ${esc(x.a.c)}<br>${esc(fmt(X.linea, { rumbo: rn, dist: km(x.dist) }))}${x.a.ap ? esc(X.aprox) : ""}</p></div>
+          <div class="rd-act">${addRuta}<a href="${esc(x.a.u)}"${hl}>${esc(X.ficha)}<span class="sr-only">${esc(fmt(X.fichaDe, { mun: x.a.m }))}</span></a></div></li>`;
+      }).join("");
+      pintaRuta();
+      moreWrap.hidden = cerca.length <= LIMITE;
+      moreBtn.textContent = verTodas ? X.menos : fmt(X.mas, { n: cerca.length });
+      moreBtn.setAttribute("aria-expanded", String(verTodas));
+    };
+
+    const pintaRuta = () => {
+      if (!d.ruta) return;
+      const ruta = getRuta();
+      list.querySelectorAll<HTMLElement>("[data-ruta]").forEach((b) => pintaBotonRuta(b, ruta.includes(b.dataset.ruta!)));
+    };
+    if (d.ruta) alCambiarRuta(pintaRuta);
+
+    list.addEventListener("click", (ev) => {
+      if (!d.ruta) return;
+      const b = (ev.target as HTMLElement).closest<HTMLButtonElement>("[data-ruta]");
+      if (!b) return;
+      const r = alternaRuta(b.dataset.ruta!);
+      if (!r.ok) status.textContent = X.errAlmacen;
+      pintaRuta();
+    });
+
+    // Resaltado cruzado radar <-> lista (con ratón y con el foco del teclado).
+    const marca = (id: string | undefined, on: boolean) => {
+      if (!id) return;
+      root.querySelectorAll(`.rd-blip[data-id="${CSS.escape(id)}"]`).forEach((e) => e.classList.toggle("on", on));
+      root.querySelectorAll(`.rd-item[data-id="${CSS.escape(id)}"]`).forEach((e) => e.classList.toggle("on", on));
+    };
+    list.addEventListener("pointerover", (ev) => marca((ev.target as HTMLElement).closest<HTMLElement>(".rd-item")?.dataset.id, true));
+    list.addEventListener("pointerout", (ev) => marca((ev.target as HTMLElement).closest<HTMLElement>(".rd-item")?.dataset.id, false));
+    list.addEventListener("focusin", (ev) => marca((ev.target as HTMLElement).closest<HTMLElement>(".rd-item")?.dataset.id, true));
+    list.addEventListener("focusout", (ev) => marca((ev.target as HTMLElement).closest<HTMLElement>(".rd-item")?.dataset.id, false));
+    blips.addEventListener("pointerover", (ev) => marca((ev.target as Element).closest<SVGElement>(".rd-blip")?.dataset.id, true));
+    blips.addEventListener("pointerout", (ev) => marca((ev.target as Element).closest<SVGElement>(".rd-blip")?.dataset.id, false));
+    blips.addEventListener("click", (ev) => {
+      const id = (ev.target as Element).closest<SVGElement>(".rd-blip")?.dataset.id;
+      if (!id) return;
+      verTodas = true;
+      render();
+      const li = list.querySelector<HTMLElement>(`.rd-item[data-id="${CSS.escape(id)}"] a`);
+      li?.scrollIntoView({ block: "center", behavior: reduce ? "auto" : "smooth" });
+      li?.focus({ preventScroll: true });
+    });
+
+    sel.addEventListener("change", () => { verTodas = false; render(); });
+    segs.forEach((b) => b.addEventListener("click", () => {
+      max = Number(b.dataset.d);
+      segs.forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+      verTodas = false;
+      render();
+    }));
+    moreBtn.addEventListener("click", () => { verTodas = !verTodas; render(); moreBtn.focus(); });
+
+    sel.disabled = false;
+    segs.forEach((b) => (b.disabled = false));
+    render();
+  });
+</script>

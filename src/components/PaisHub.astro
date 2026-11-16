@@ -1,0 +1,108 @@
+---
+// Pantalla de país: la misma estructura para /pernocta/, /francia/, /portugal/ y los países que vengan.
+//   selector · foto del país · título y resumen · cifras y última revisión · norma nacional (slot "nacional")
+//   · botonera de saltos a cada sección · regiones con foto · radar de áreas · rutas del país (solo en español)
+//   · por provincia o departamento · últimas fichas revisadas · resto (slot por defecto)
+import PaisSelector from "./PaisSelector.astro";
+import RegionesPais from "./RegionesPais.astro";
+import CifrasPais from "./CifrasPais.astro";
+import FotoDestino from "./FotoDestino.astro";
+import RutasPais from "./RutasPais.astro";
+import RadarAreas from "./RadarAreas.astro";
+import AtajosViaje from "./AtajosViaje.astro";
+import { getCollection } from "astro:content";
+import { areasIndice } from "../lib/areas";
+import { ESTADOS, fecha, publicada } from "../site";
+import { t as tr, META, type Lang } from "../i18n";
+import type { Pais } from "../lib/paises";
+interface Props { pais: Pais; h1: string; lead?: string; aviso?: string; lang?: Lang }
+const { pais, h1, lead, aviso, lang = "es" } = Astro.props;
+const T = tr(lang);
+const loc = META[lang].fecha;
+const t = (T.paises as Record<string, { normaTitulo: string; normaLead: string; cifras: Record<string, [string, string]>; provTitulo: string; provLead: string }>)[pais.code];
+const tieneNacional = Astro.slots.has("nacional");
+const etMunicipios = t.cifras.municipios;
+const tp = (T.paises as Record<string, { regionCorto: string }>)[pais.code];
+// Botonera: un salto por cada sección que existe en esta página (etiqueta corta de i18n).
+const radar = (await areasIndice(pais.code)).length > 0;
+const hayRutas = lang === "es" && (await getCollection("rutas")).filter(publicada).some((r) => r.data.pais === pais.code);
+const saltos = [
+  ...(tieneNacional ? [{ href: "#nacional-t", label: t.normaTitulo, icono: "norma" as const }] : []),
+  { href: "#regiones-t", label: tp.regionCorto, icono: "regiones" as const },
+  ...(radar ? [{ href: `#rd-${pais.code}-t`, label: T.radar.corto, icono: "radar" as const }] : []),
+  ...(hayRutas ? [{ href: `#rutas-${pais.code}-t`, label: T.rutas.corto, icono: "rutas" as const }] : []),
+];
+---
+<div class="pais-barra">
+  <PaisSelector actual={pais.code} lang={lang} grande />
+</div>
+<FotoDestino id={`paises/${pais.code}`} prioridad sizes="(min-width: 1180px) 1120px, calc(100vw - 32px)" />
+<header class="pais-head">
+  <p class="eyebrow">{pais.nombre}</p>
+  <h1>{h1}</h1>
+  {lead && <p class="lead">{lead}</p>}
+  {aviso && <p class="notice">{aviso}</p>}
+</header>
+
+<CifrasPais pais={pais} lang={lang} />
+{pais.ultimaRevision && (
+  <p class="pais-revision meta">{T.hub.ultimaRevision}{lang === "fr" ? " :" : ":"} <time datetime={pais.ultimaRevision.toISOString().slice(0, 10)}>{fecha(pais.ultimaRevision, loc)}</time></p>
+)}
+
+<div class="pais-botones">
+  <AtajosViaje lang={lang} pais={pais.code} saltos={saltos} sinMapa sinEs={lang !== "es"} />
+</div>
+
+{tieneNacional && (
+  <section class="section-hub" aria-labelledby="nacional-t">
+    <h2 id="nacional-t">{t.normaTitulo}</h2>
+    {t.normaLead && <p class="muted">{t.normaLead}</p>}
+    <slot name="nacional" />
+  </section>
+)}
+
+
+<section class="section-hub" aria-labelledby="regiones-t">
+  <h2 id="regiones-t">{pais.regionTitulo}</h2>
+  <RegionesPais pais={pais} lang={lang} />
+</section>
+
+{radar && <RadarAreas pais={pais.code} lang={lang} />}
+
+{lang === "es" && <RutasPais pais={pais.code} variante="hub" lang={lang} />}
+
+{pais.provincias.length > 0 && (
+  <section class="section-hub" aria-labelledby="prov-t">
+    <h2 id="prov-t">{t.provTitulo}</h2>
+    <p class="muted">{t.provLead}</p>
+    <div class="prov-lista">
+      {pais.provincias.map((p) => (
+        <details class="prov">
+          <summary><span class="prov-n">{p.nombre}</span> <span class="meta">{p.items.length} {etMunicipios[p.items.length === 1 ? 0 : 1]}</span></summary>
+          <ul>
+            {p.items.map((m) => (
+              <li><i class={`dot ${ESTADOS[m.estado].tone}`} aria-hidden="true"></i><a href={m.href} hreflang="es">{m.nombre}</a><span class="sr-only"> ({T.estados[m.estado]})</span></li>
+            ))}
+          </ul>
+        </details>
+      ))}
+    </div>
+  </section>
+)}
+
+{pais.novedades.length > 0 && (
+  <section class="section-hub" aria-labelledby="nov-t">
+    <h2 id="nov-t">{T.hub.novedadesTitulo}</h2>
+    <p class="muted">{T.hub.novedadesLead}</p>
+    <ol class="novedades">
+      {pais.novedades.map((n) => (
+        <li>
+          <a href={n.href} hreflang="es"><b>{n.nombre}</b> <span class="meta">{n.region}</span></a>
+          <time class="meta" datetime={n.fecha.toISOString().slice(0, 10)}>{fecha(n.fecha, loc)}</time>
+        </li>
+      ))}
+    </ol>
+  </section>
+)}
+
+<slot />

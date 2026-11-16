@@ -1,0 +1,45 @@
+{
+  "nombre": "Sevilla",
+  "comunidad": "andalucia",
+  "provincia": "Sevilla",
+  "estado": "sin-datos",
+  "resumen": "En Sevilla no hemos localizado una regla municipal específica sobre pernocta en autocaravana. El portal oficial de turismo de la ciudad recoge varios aparcamientos y áreas para autocaravanas, entre ellos el aparcamiento público gratuito del Parque de la Vega de Triana, sin servicios. Se aplica la norma andaluza: para dormir, mejor un área o un camping.",
+  "reglas": [
+    "Andalucía prohíbe con carácter general la acampada y pernocta con fines vacacionales o de ocio fuera de campings y áreas de pernocta de autocaravanas (Decreto 26/2018, art. 1.5): para dormir, lo más seguro es un área o un camping.",
+    "El portal oficial de turismo (Visita Sevilla) recoge en la ciudad el Área Autocaravana Sevilla (avenida García Morato, junto a Tablada), el Parking Las Razas (avenida de las Razas, 41; no se permiten actividades de campamento), el Parking Kansas City junto a la estación de Santa Justa y el aparcamiento del Parque de la Vega de Triana (público, gratuito, sin servicios ni vigilancia). Los precios cambian: confírmalos en cada uno.",
+    "No hemos localizado en la ordenanza de circulación una regla sobre pernocta en autocaravana: pregunta en el ayuntamiento si tienes dudas y respeta la señalización.",
+    "Alternativa verificada en la provincia: Cañada Rosal, con área municipal y ordenanza."
+  ],
+  "areas": [
+    {
+      "nombre": "Aparcamiento del Parque de la Vega de Triana",
+      "detalle": "Aparcamiento en terreno público, gratuito, sin servicios y sin vigilancia; se admiten mascotas; autobús 43 al centro. Datos del portal oficial de turismo de Sevilla (actualizado en enero de 2024).",
+      "lat": 37.373056,
+      "lon": -6.016944,
+      "coordFuente": "https://visitasevilla.es/wp-content/uploads/2024/06/Camping-y-zona-de-pernocta-de-autocaravana-ESP.pptx.pdf"
+    },
+    {
+      "nombre": "Área Autocaravana Sevilla",
+      "detalle": "Avenida García Morato s/n, junto a Tablada, 41011 Sevilla. Pernocta con vaciado y llenado incluidos; capacidad máxima 100. Datos del portal oficial de turismo de Sevilla (actualizado en enero de 2024)."
+    },
+    {
+      "nombre": "Parking Las Razas",
+      "detalle": "Avenida de las Razas, 41, Sevilla. Aparcamiento mixto con vaciado, agua y electricidad; no se permiten actividades de campamento; longitud máxima 10 m. Datos del portal oficial de turismo de Sevilla (actualizado en enero de 2024)."
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Visita Sevilla (portal oficial de turismo de la ciudad): campings y áreas de pernocta para autocaravanas (actualizado en enero de 2024)",
+      "url": "https://visitasevilla.es/wp-content/uploads/2024/06/Camping-y-zona-de-pernocta-de-autocaravana-ESP.pptx.pdf",
+      "tipo": "oficial",
+      "fecha": "2024-01-01"
+    },
+    {
+      "titulo": "Decreto 26/2018, de 23 de enero, de ordenación de los campamentos de turismo de Andalucía (BOJA n.º 27 de 2018)",
+      "url": "https://www.juntadeandalucia.es/boja/2018/27/1",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-03",
+  "verificado": true
+}

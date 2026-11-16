@@ -1,0 +1,87 @@
+---
+import Base from "../layouts/Base.astro";
+import { ESTADOS } from "../site";
+import { getBuscador } from "../lib/buscador";
+import { getPaises } from "../lib/paises";
+import { T } from "../i18n/es";
+
+const paises = await getPaises();
+const municipios = await getBuscador();
+const filtros = (Object.keys(ESTADOS) as (keyof typeof ESTADOS)[]).filter((k) => municipios.some((m) => m.k === k));
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "¿Puedo dormir aquí?",
+  applicationCategory: "TravelApplication",
+  operatingSystem: "Web",
+  inLanguage: "es",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
+};
+---
+<Base title="¿Puedo dormir aquí? Pernocta en camper por municipio" description="Busca un municipio y comprueba si puedes dormir en tu camper o autocaravana, con la ordenanza, su fuente y la fecha de revisión." crumbs={[{ name: "¿Puedo dormir aquí?", href: "/puedo-dormir-aqui/" }]} schema={schema}>
+  <h1>¿Puedo dormir aquí?</h1>
+  <p class="lead">Escribe un municipio, provincia, comunidad o región para ver si se puede pernoctar en camper o autocaravana y dónde.</p>
+  <label for="q" class="sr-only">Municipio, provincia, comunidad o región</label>
+  <input id="q" class="search" type="search" placeholder="Ej.: Llanes, Gipuzkoa, Galicia, Bretaña…" autocomplete="off" />
+  {paises.length > 1 && (
+    <div class="chips" role="group" aria-label={T.buscador.pais}>
+      <button class="chip" type="button" data-p="" aria-pressed="true">{T.buscador.todosPaises}</button>
+      {paises.map((p) => <button class="chip" type="button" data-p={p.code} aria-pressed="false">{p.nombre}</button>)}
+    </div>
+  )}
+  <div class="chips" role="group" aria-label="Filtrar por estado">
+    <button class="chip" type="button" data-f="" aria-pressed="true">Todos</button>
+    {filtros.map((k) => <button class="chip" type="button" data-f={k} aria-pressed="false">{ESTADOS[k].label}</button>)}
+  </div>
+  <p class="meta" id="count" aria-live="polite"></p>
+  <ul class="results" id="list">
+    {municipios.map((m) => (
+      <li data-name={m.q.toLowerCase()} data-estado={m.k} data-pais={m.pc}>
+        <a href={m.h}>
+          <span>{m.n}<br /><span class="where">{m.d}{m.p && ` · ${m.p}`}</span></span>
+          <span class={`badge ${m.t}`}>{m.e}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+  <p class="empty-msg" id="empty" hidden>Todavía no hemos verificado ese municipio. Mira los <a href="/destinos/">destinos</a> para ver la norma de su región o la <a href="/normativa-pernocta-camper/">guía general de España</a>.</p>
+  {municipios.length === 0 && <p class="muted">Estamos verificando los primeros municipios. Vuelve pronto.</p>}
+</Base>
+
+<script>
+  const norm = (s: string) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+  const q = document.getElementById("q") as HTMLInputElement;
+  const items = [...document.querySelectorAll<HTMLLIElement>("#list li")];
+  const chips = [...document.querySelectorAll<HTMLButtonElement>(".chip[data-f]")];
+  const paisChips = [...document.querySelectorAll<HTMLButtonElement>(".chip[data-p]")];
+  const count = document.getElementById("count")!;
+  const empty = document.getElementById("empty")!;
+  let filtro = "";
+  let pais = "";
+  const update = () => {
+    const v = norm(q.value.trim());
+    let n = 0;
+    for (const li of items) {
+      const hit = (!v || norm(li.dataset.name || "").includes(v)) && (!filtro || li.dataset.estado === filtro) && (!pais || li.dataset.pais === pais);
+      li.hidden = !hit;
+      if (hit) n++;
+    }
+    count.textContent = items.length ? `${n} de ${items.length} resultados` : "";
+    empty.hidden = n > 0 || !items.length;
+  };
+  chips.forEach((c) => c.addEventListener("click", () => {
+    filtro = c.dataset.f || "";
+    chips.forEach((x) => x.setAttribute("aria-pressed", String(x === c)));
+    update();
+  }));
+  paisChips.forEach((c) => c.addEventListener("click", () => {
+    pais = c.dataset.p || "";
+    paisChips.forEach((x) => x.setAttribute("aria-pressed", String(x === c)));
+    update();
+  }));
+  // Viene de la portada con ?q=
+  const pre = new URLSearchParams(location.search).get("q");
+  if (pre) q.value = pre;
+  q.addEventListener("input", update);
+  update();
+</script>

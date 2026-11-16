@@ -1,0 +1,29 @@
+{
+  "nombre": "Orea",
+  "comunidad": "castilla-la-mancha",
+  "provincia": "Guadalajara",
+  "estado": "restringido",
+  "resumen": "En Orea (Guadalajara) la ordenanza solo permite aparcar autocaravanas en el camping municipal, en la carretera de Orea a Griegos, km 6. Acampar en las calles fuera de ese recinto es infracción muy grave.",
+  "reglas": [
+    "Solo se puede aparcar la autocaravana en los aparcamientos públicos habilitados, que son exclusivamente los del camping municipal (carretera Orea-Griegos, km 6) (art. 3).",
+    "Se considera estacionamiento estar sobre tus ruedas o calzos, sin bajar patas, sin sacar sillas ni mesas y sin verter nada, aunque estés dentro (art. 2.2).",
+    "Es infracción grave poner en marcha un generador entre las 22:00 y las 8:00 o vaciar aguas grises o negras fuera de los lugares habilitados (art. 4.4).",
+    "Acampar en la vía urbana fuera del recinto delimitado es infracción muy grave (art. 4.4). La ordenanza publicada no indica las cuantías de las multas."
+  ],
+  "areas": [
+    {
+      "nombre": "Camping municipal de Orea",
+      "detalle": "Carretera de Orea a Griegos, km 6, 19311 Orea (Guadalajara). Es el único lugar donde la ordenanza permite aparcar autocaravanas."
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Ordenanza reguladora del aparcamiento de autocaravanas y vehículos vivienda homologados de Orea, aprobación definitiva (BOP de Guadalajara n.º 154, 13/08/2026)",
+      "url": "https://boletin.dguadalajara.es/boletin/pdf/pdf2026_2175.pdf",
+      "tipo": "oficial",
+      "fecha": "2026-08-13"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

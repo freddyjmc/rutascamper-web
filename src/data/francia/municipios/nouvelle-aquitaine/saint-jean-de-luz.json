@@ -1,0 +1,31 @@
+{
+  "nombre": "Saint-Jean-de-Luz",
+  "comunidad": "nouvelle-aquitaine",
+  "provincia": "Pyrénées-Atlantiques (64)",
+  "estado": "sin-datos",
+  "resumen": "No hemos localizado ninguna orden municipal sobre autocaravanas en la web del ayuntamiento. Si no la hay, rige la norma nacional; respeta la señalización. La web municipal indica una zona para autocaravanas en el parking Charles-de-Gaulle: 18 plazas, máximo 48 horas y pago por tramos de 24 horas.",
+  "reglas": [
+    "No hemos localizado ninguna orden municipal. Si no la hay, rige la norma nacional; respeta la señalización. Se puede estacionar como cualquier vehículo si no es peligroso, molesto ni abusivo. Estacionamiento abusivo: a partir de 7 días seguidos en el mismo sitio de la vía pública (art. R417-12 del Code de la route).",
+    "En la zona para autocaravanas del parking Charles-de-Gaulle el estacionamiento está limitado a 48 horas (web municipal)."
+  ],
+  "areas": [
+    {
+      "nombre": "Zona para autocaravanas del parking Charles-de-Gaulle",
+      "detalle": "18 plazas reservadas a autocaravanas. Máximo 48 horas. Solo se paga por tramos de 24 horas: 4 € del 1 de noviembre al 31 de marzo y 6 € del 1 de abril al 31 de octubre. Servicios: no detallados en la fuente oficial."
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Le stationnement à Saint-Jean-de-Luz (web municipal)",
+      "url": "https://www.saintjeandeluz.fr/fr/vie-quotidienne/mobilite-et-stationnement/le-stationnement-a-saint-jean-de-luz/",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Arrêtés municipaux (portal de publicación del ayuntamiento)",
+      "url": "https://www.saintjeandeluz.fr/fr/votre-mairie/actes-reglementaires/arretes-municipaux/",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-05",
+  "verificado": false
+}

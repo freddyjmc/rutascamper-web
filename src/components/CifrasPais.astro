@@ -1,0 +1,39 @@
+---
+// Tira de cifras de un país. Los números se calculan en src/lib/paises.ts a partir de las fichas visibles,
+// así que al añadir fichas (cada 15 días) se actualizan solos. El contador animado respeta «reducir movimiento».
+import { t, type Lang } from "../i18n";
+import type { Pais } from "../lib/paises";
+interface Props { pais: Pais; lang?: Lang; /** Atributo data-solo-pais (portada): lo muestra u oculta el selector de país. */ soloPais?: boolean; oculta?: boolean }
+const { pais, lang = "es", soloPais = false, oculta = false } = Astro.props;
+const T = t(lang);
+const etiquetas = (T.paises as Record<string, { cifras: Record<string, [string, string]> }>)[pais.code].cifras;
+---
+<div class="stats cifras-pais" style={`--cols: ${pais.cifras.length}`} role="group" aria-label={`${T.hub.cifrasEtiqueta} ${pais.nombre}`} data-solo-pais={soloPais ? pais.code : undefined} hidden={oculta}>
+  {pais.cifras.map((c) => (
+    <div class="stat"><b data-count={c.n}>{c.n}</b><span>{etiquetas[c.clave][c.n === 1 ? 0 : 1]}</span></div>
+  ))}
+</div>
+
+<script>
+  // El valor final ya está en el HTML; al entrar en pantalla cuenta desde cero.
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const counts = document.querySelectorAll<HTMLElement>("[data-count]");
+  if (!reduce && "IntersectionObserver" in window && counts.length) {
+    const cio = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (!en.isIntersecting) return;
+        cio.unobserve(en.target);
+        const el = en.target as HTMLElement;
+        const end = Number(el.dataset.count) || 0;
+        const t0 = performance.now();
+        const step = (t: number) => {
+          const p = Math.min(1, (t - t0) / 1200);
+          el.textContent = String(Math.round(end * (1 - Math.pow(1 - p, 3))));
+          if (p < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+      });
+    }, { threshold: 0.6 });
+    counts.forEach((el) => cio.observe(el));
+  }
+</script>

@@ -1,0 +1,39 @@
+{
+  "nombre": "Póvoa de Lanhoso",
+  "comunidad": "norte",
+  "provincia": "Braga (distrito)",
+  "estado": "sin-datos",
+  "resumen": "Póvoa de Lanhoso tiene un área de servicio municipal gratuita para autocaravanas, la Maria da Fonte (9 + 1 plazas, abierta todo el año, máximo 72 horas), con su propio reglamento. No hemos localizado un reglamento municipal sobre pernoctar fuera de ella: si no lo hay, el Código da Estrada permite pernoctar con una autocaravana homologada por el IMT hasta 48 horas en el mismo municipio, salvo en la Rede Natura 2000, las áreas protegidas y las zonas de los planes de la costa.",
+  "reglas": [
+    "El reglamento de la Área de Serviço de Autocaravanas Maria da Fonte solo regula el área (art. 2.º). No hemos localizado ningún reglamento municipal de autocaravanas. Si no lo hay, el Código da Estrada permite pernoctar con una autocaravana homologada por el IMT hasta 48 horas en el mismo municipio, salvo en la Rede Natura 2000, las áreas protegidas y las zonas de los planes de la costa, donde solo se puede en los lugares autorizados (art. 50.º-A n.os 1 y 2). Respeta la señalización.",
+    "En el área: estacionar y pernoctar un máximo de 72 horas; abierta todo el año, 24 horas; por orden de llegada, sin reservas; silencio de 22:00 a 7:00 (arts. 2.º, 3.º, 4.º y 6.º).",
+    "En el área está prohibido sacar equipo de campismo y verter aguas al suelo (art. 10.º).",
+    "En todo caso, no se puede acampar en la vía pública, verter aguas fuera de los puntos previstos ni ocupar más espacio que el perímetro del vehículo (art. 48.º n.º 7 del Código da Estrada; multa de 30 a 150 €)."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de servicio de autocaravanas Maria da Fonte",
+      "detalle": "Municipal y gratuita según la nota justificativa del reglamento. 9 + 1 plazas, abierta todo el año las 24 horas, máximo 72 horas, sin reservas. Electricidad, agua potable, vaciado de aguas residuales y de WC químico (reglamento municipal)."
+    }
+  ],
+  "multa": "En el área de servicio, de 25 a 500 € por incumplir su reglamento (art. 14.º). Fuera, las del Código da Estrada.",
+  "notaAyuntamiento": "Câmara Municipal da Póvoa de Lanhoso: https://www.povoadelanhoso.pt, geral@mun-planhoso.pt, +351 253 639 700.",
+  "fuentes": [
+    {
+      "titulo": "Regulamento Municipal da Área de Serviço de Autocaravanas Maria da Fonte (aprobado por la Assembleia Municipal el 10/09/2021; aprobación publicada por Aviso n.º 21773/2021, Diário da República, 2.ª série, n.º 224, 18/11/2021)",
+      "url": "https://www.povoadelanhoso.pt/wp-content/uploads/2021/11/Regulamento-Municipal-Area-de-Servico-Autocaravanas-Maria-da-Fonte_deliberado-AM-10.09.2021.pdf",
+      "tipo": "oficial",
+      "reutilizacion": "Sin cláusula de reutilización localizada en la web (consulta 12/11/2026). Solo hechos con nuestras palabras y enlace.",
+      "fecha": "2021-09-10"
+    },
+    {
+      "titulo": "Lei n.º 66/2021 (Código da Estrada, art. 50.º-A)",
+      "url": "https://diariodarepublica.pt/dr/detalhe/lei/66-2021-170083315",
+      "tipo": "oficial",
+      "fecha": "2021-08-24",
+      "reutilizacion": "«O acesso universal e gratuito compreende a possibilidade de impressão, arquivo, pesquisa e livre acesso ao conteúdo dos atos publicados nas 1.ª e 2.ª séries do Diário da República.» (Avisos Legais del Diário da República, consulta 12/11/2026). No hay cláusula expresa sobre reutilización comercial."
+    }
+  ],
+  "revisado": "2026-11-12",
+  "verificado": true
+}

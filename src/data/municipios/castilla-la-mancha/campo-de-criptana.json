@@ -1,0 +1,30 @@
+{
+  "nombre": "Campo de Criptana",
+  "comunidad": "castilla-la-mancha",
+  "provincia": "Ciudad Real",
+  "estado": "restringido",
+  "resumen": "Campo de Criptana, el pueblo de los molinos, tiene un área de servicio municipal para autocaravanas en la calle Colón con la calle Ecuador y la carretera de Nieva: 5 € por noche, máximo 48 horas. Dentro del área sí puedes sacar mesas, sillas, toldo y patas estabilizadoras. La acampada libre fuera de las zonas habilitadas está prohibida.",
+  "reglas": [
+    "Se entiende por acampada libre instalar caravanas, autocaravanas, tiendas u otros elementos fuera de las zonas habilitadas; está prohibida y es infracción grave (arts. 3 y 7).",
+    "En el área puedes usar patas estabilizadoras, sillas, mesas y toldo; están prohibidos los tendederos, cocinar fuera y lavar el vehículo (art. 5.6 y 5.7).",
+    "Estancia máxima: 48 horas; la estancia va de las 14:00 del día de llegada a las 13:00 del de salida (art. 5.8 y 5.9).",
+    "Tarifas: pernocta 5 €/día; electricidad 2 €/día; baño 2 € por día y persona; agua y vaciado 2 € por servicio (art. 6)."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de servicio de autocaravanas de Campo de Criptana",
+      "detalle": "Calle Colón, esquina calle Ecuador y carretera de Nieva. Pernocta 5 €/día, máximo 48 horas; electricidad, baños, agua y vaciado con tarifa aparte."
+    }
+  ],
+  "multa": "Leves (pasarte del tiempo contratado, cocinar fuera, lavar el vehículo): hasta 50 €. Graves (acampada libre, no pagar, verter líquidos): de 51 a 200 €. Muy graves: de 201 a 500 €. Pagando en 30 días hay un 50 % de descuento.",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza reguladora y fiscal n.º 414 del aparcamiento y pernocta de autocaravanas de Campo de Criptana (BOP de Ciudad Real n.º 20, 01/02/2021), portal de transparencia del Ayuntamiento",
+      "url": "https://transparencia.campodecriptana.es/wp-content/uploads/2023/03/BOP-ordenanza-reguladora-autocaravanas.pdf",
+      "tipo": "oficial",
+      "fecha": "2021-02-01"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

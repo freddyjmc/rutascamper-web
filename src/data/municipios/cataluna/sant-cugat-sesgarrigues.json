@@ -1,0 +1,28 @@
+{
+  "nombre": "Sant Cugat Sesgarrigues",
+  "comunidad": "cataluna",
+  "provincia": "Barcelona",
+  "estado": "restringido",
+  "resumen": "Sant Cugat Sesgarrigues (Alt Penedès) tiene un área de vehículos recreativos en la carretera BV-2429 donde puedes aparcar y pernoctar un máximo de 48 horas; para volver tienen que pasar 24 horas.",
+  "reglas": [
+    "Área de estacionamiento y pernocta en la carretera BV-2429, s/n (art. 1).",
+    "Estancia máxima: 48 horas, y no puedes volver a usarla hasta pasadas 24 horas (art. 5.a).",
+    "Estacionar fuera de las plazas habilitadas para vehículos recreativos es infracción leve (art. 7)."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de vehículos recreativos de Sant Cugat Sesgarrigues",
+      "detalle": "Carretera BV-2429, s/n. Máximo 48 horas; 24 horas de espera para volver."
+    }
+  ],
+  "multa": "Leves (aparcar fuera de las plazas, pasarte de 48 horas): hasta 300 €. Graves: de 301 a 600 €. Muy graves (dañar el área): de 601 a 1.000 € (art. 7).",
+  "fuentes": [
+    {
+      "titulo": "Ordenança reguladora dels usos i serveis de l'àrea de vehicles recreatius de Sant Cugat Sesgarrigues, aprobación definitiva (BOPB, 2025)",
+      "url": "https://bop.diba.cat/anuncio/ver-pdf/3776643",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

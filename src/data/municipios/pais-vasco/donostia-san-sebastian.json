@@ -1,0 +1,50 @@
+{
+  "nombre": "Donostia / San Sebastián",
+  "comunidad": "pais-vasco",
+  "provincia": "Gipuzkoa",
+  "estado": "restringido",
+  "resumen": "Donostia tiene dos áreas municipales donde puedes pernoctar con la autocaravana hasta 72 horas: Berio, de pago y con servicios, e Illunbe, gratuita y sin servicios. En ellas puedes aparcar pero no acampar: sacar el toldo ya cuenta como acampada.",
+  "reglas": [
+    "En las áreas se permite aparcar y pernoctar, pero no acampar; sacar el toldo se considera acampar.",
+    "No se pueden colocar mesas ni sillas en la vía pública.",
+    "Se pueden usar calzos y estabilizadores para nivelar.",
+    "Estancia máxima de 72 horas en cada área.",
+    "Según la prensa, desde junio de 2023 el ayuntamiento prohíbe aparcar de noche (21:00 a 9:00) en varios paseos de la costa, como el Paseo Nuevo, la Zurriola o el Paseo de Salamanca, a vehículos sin distintivo de residente. No hemos localizado el texto oficial: respeta la señalización."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de autocaravanas de Berio",
+      "detalle": "Paseo Berio, 12. Unas 44 plazas, toma de agua y punto de vaciado. 11 € en temporada alta y 5,50 € el resto del año. Máximo 72 h.",
+      "lat": 43.307778,
+      "lon": -2.014333,
+      "coordFuente": "https://sansebastianturismoa.eus/venir/donde-aparcar/aparcamiento-para-autocaravanas/"
+    },
+    {
+      "nombre": "Área de autocaravanas de Illunbe",
+      "detalle": "Paseo Miramón, s/n. 27 plazas, gratuita y sin servicios. Máximo 72 h.",
+      "lat": 43.296766,
+      "lon": -1.969422,
+      "coordFuente": "https://sansebastianturismoa.eus/venir/donde-aparcar/aparcamiento-para-autocaravanas/"
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "San Sebastián Turismo (Ayuntamiento de Donostia): aparcamiento para autocaravanas",
+      "url": "https://sansebastianturismoa.eus/venir/donde-aparcar/aparcamiento-para-autocaravanas/",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Noticias de Navarra: multa a una furgoneta en el Paseo Nuevo (21/06/2023)",
+      "url": "https://www.noticiasdenavarra.com/sociedad/2023/06/21/cobran-450-euros-seis-dias-6958261.html",
+      "tipo": "secundaria",
+      "fecha": "2023-06-21"
+    },
+    {
+      "titulo": "Ley 13/2016 de Turismo del País Vasco, art. 67 (BOE-A-2016-8346)",
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2016-8346",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-01",
+  "verificado": true
+}

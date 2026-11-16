@@ -1,0 +1,39 @@
+{
+  "nombre": "Hendaye",
+  "comunidad": "nouvelle-aquitaine",
+  "provincia": "Pyrénées-Atlantiques (64)",
+  "estado": "sin-datos",
+  "resumen": "Hendaye aprueba cada verano un arrêté de temporada (orden del alcalde) que prohíbe a las autocaravanas estacionar en varias calles y aparcamientos cerca de la playa. Solo hemos leído el de 2024, ya vencido; el de 2026 no se ha localizado, por eso la ficha queda sin datos vigentes. El área municipal de la rue Ansoenia, frente a la estación de Hendaye-Plage, tiene 25 plazas.",
+  "reglas": [
+    "Verano de 2024 (ya vencido): prohibido parar y estacionar autocaravanas y vehículos usados como alojamiento del 1 de junio al 30 de septiembre de 2024 en las calles Pohotenia, Elissacilio, des Lilas, des Seringats, des Roseaux, des Rosiers y des Orangers, la Baie de Chingudy (entre la rotonda Jean Moulin y la rue des Tulipiers), la route de la Glacière, el boulevard de la Mer y los aparcamientos Bâbord, de la Floride y Sokoburu (art. 1 del arrêté n.º 2024-ODP-1296 de 28/05/2024).",
+    "Fuera de esas calles se podía estacionar sin molestar a la circulación ni a los vecinos y sin sacar ropa ni material, verter líquidos, dejar basura o dejar sueltos a los animales (art. 2 del mismo arrêté).",
+    "La Oficina de Turismo indica para 2025 una prohibición para autocaravanas grandes en el boulevard de la Mer y la rue Elissacilio del 7 de junio al 30 de septiembre de 2025. No hemos leído los arrêtés de 2025 ni de 2026.",
+    "No hemos localizado ninguna orden municipal vigente. Si no la hay, rige la norma nacional; respeta la señalización. Estacionamiento abusivo: a partir de 7 días seguidos en el mismo sitio de la vía pública (art. R417-12 del Code de la route)."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de estacionamiento y servicios de la rue Ansoenia",
+      "detalle": "Frente a la estación SNCF de Hendaye-Plage. 25 plazas y máximo 2 días. La web municipal indica 15 € por un día y 30 € por dos; pago con tarjeta, con barrera a la entrada y a la salida, y todo día empezado se cobra. El punto de agua y electricidad está fuera de servicio por tiempo indefinido; el vaciado de aguas grises es gratuito."
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Arrêté n.º 2024-ODP-1296 de 28/05/2024, estacionamiento de autocaravanas en modo alojamiento, temporada 2024 (Ville d'Hendaye, publicado por la Oficina de Turismo)",
+      "url": "https://www.hendaye-tourisme.fr/wp-content/uploads/2025/02/arrete-stationnement-camping-cars-2024-hendaye-tourisme.pdf",
+      "tipo": "oficial",
+      "fecha": "2024-05-28"
+    },
+    {
+      "titulo": "Camping-cars (web municipal de Hendaye)",
+      "url": "https://www.hendaye.fr/fr/hendaye-pratique/mobilite-stationnement/camping-cars/",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Camping-cars (Office de Tourisme d'Hendaye)",
+      "url": "https://www.hendaye-tourisme.fr/en/accommodations/motor-homes/",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-05",
+  "verificado": false
+}

@@ -1,0 +1,16 @@
+---
+import Base from "../layouts/Base.astro";
+import PaisTarjetas from "../components/PaisTarjetas.astro";
+import { t, href as L, type Lang } from "../i18n";
+
+interface Props { lang?: Lang }
+const { lang = "es" } = Astro.props;
+const T = t(lang);
+const d = T.destinos;
+---
+<Base title={d.titulo} description={d.descripcion} crumbs={[{ name: d.nav, href: L(lang, "/destinos/") }]} lang={lang}>
+  <h1>{d.h1}</h1>
+  <p class="lead">{d.lead}</p>
+  <PaisTarjetas lang={lang} />
+  <p class="meta">{d.pie}</p>
+</Base>

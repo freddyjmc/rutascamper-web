@@ -1,0 +1,28 @@
+{
+  "nombre": "La Rioja",
+  "resumen": "En La Rioja la acampada libre está prohibida en todo el territorio, y el estacionamiento de autocaravanas lo regulan las ordenanzas de cada ayuntamiento. Así lo recoge el Reglamento General de Turismo (Decreto 10/2017, art. 75), según cita la ordenanza de Calahorra publicada en el Boletín Oficial de La Rioja.",
+  "normaAutonomica": "Decreto 10/2017, de 17 de marzo, Reglamento General de Turismo de La Rioja (modificado por el Decreto 15/2021). Aún no hemos leído el texto consolidado del artículo 75: lo citamos según la ordenanza de Calahorra (BOR n.º 124, de 18 de septiembre de 2020).",
+  "claves": [
+    "El artículo 75 del Decreto 10/2017 prohíbe expresamente la acampada libre en todo el territorio riojano (según la ordenanza de Calahorra, BOR 18/09/2020).",
+    "El mismo artículo remite la regulación del estacionamiento de autocaravanas a las ordenanzas municipales: mira siempre la del municipio.",
+    "No hemos localizado un límite autonómico de estancia para las áreas de autocaravanas."
+  ],
+  "fuentes": [
+    {
+      "titulo": "Ordenanza del Área de estacionamiento y pernocta de autocaravanas de Calahorra, que cita el art. 75 del Decreto 10/2017 (BOR n.º 124, 18/09/2020)",
+      "url": "https://web.larioja.org/bor-portada/boranuncio?n=13856709-13-HTML-533463-X",
+      "tipo": "oficial",
+      "fecha": "2020-09-18"
+    },
+    {
+      "titulo": "Ficha del Decreto 15/2021, que modifica el Reglamento General de Turismo (Gobierno de La Rioja)",
+      "url": "https://web.larioja.org/normativa?n=dyn-na02757",
+      "tipo": "oficial",
+      "fecha": "2021-02-19"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true,
+  "pernoctaVia": "Acampada libre prohibida; el estacionamiento depende de cada ayuntamiento.",
+  "estanciaAreas": "Sin límite autonómico localizado"
+}

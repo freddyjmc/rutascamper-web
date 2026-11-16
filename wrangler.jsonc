@@ -1,0 +1,11 @@
+// Sitio estático: Cloudflare sirve dist/ tal cual, sin código de servidor.
+// Publicar: npm run deploy (cada despliegue configura su propio dominio en Cloudflare).
+{
+	"$schema": "./node_modules/wrangler/config-schema.json",
+	"name": "rutascamper",
+	"compatibility_date": "2026-10-23",
+	"assets": {
+		"directory": "./dist",
+		"not_found_handling": "404-page"
+	}
+}

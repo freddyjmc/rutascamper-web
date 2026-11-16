@@ -1,0 +1,30 @@
+{
+  "nombre": "Navarra",
+  "resumen": "En Navarra la acampada libre necesita autorización previa de la entidad local, y desde 2024 las áreas de pernocta para autocaravanas son un tipo de alojamiento turístico regulado: 48 horas en las básicas y 96 en las plus. El estacionamiento en la vía pública lo regulan las normas de tráfico y cada ayuntamiento.",
+  "normaAutonomica": "Decreto Foral 22/2024, de 6 de marzo, que regula las áreas de pernocta del turismo itinerante (BON n.º 62, de 22 de marzo de 2024; deroga el Decreto Foral 103/2014). La acampada libre se rige por el Decreto Foral 226/1993, de 19 de julio.",
+  "claves": [
+    "La acampada libre debe estar autorizada previamente por la entidad local correspondiente (Decreto Foral 226/1993, art. 4.1).",
+    "Las áreas de pernocta básicas admiten un máximo de 48 horas y las áreas plus, 96 horas (Decreto Foral 22/2024, art. 16).",
+    "Dentro de las áreas puedes desplegar toldo y usar mesas y asientos portátiles; están prohibidos los elementos fijos, las tiendas de campaña y cocinar fuera salvo en zona habilitada (art. 17).",
+    "El decreto de 2024 no regula el estacionamiento en zonas autorizadas de la vía pública, que se rige por las normas de tráfico (art. 2.2.a); por eso mandan las ordenanzas municipales.",
+    "Las sanciones de las áreas se tramitan conforme a la Ley Foral 7/2003, de 14 de febrero, de Turismo de Navarra (art. 22)."
+  ],
+  "fuentes": [
+    {
+      "titulo": "Decreto Foral 22/2024, de 6 de marzo, áreas de pernocta del turismo itinerante (LexNavarra)",
+      "url": "https://www.lexnavarra.navarra.es/detalle.asp?r=56811",
+      "tipo": "oficial",
+      "fecha": "2024-03-22"
+    },
+    {
+      "titulo": "Decreto Foral 226/1993, de 19 de julio, condiciones medioambientales de la acampada libre (LexNavarra)",
+      "url": "https://www.lexnavarra.navarra.es/detalle.asp?r=15296",
+      "tipo": "oficial",
+      "fecha": "1993-07-30"
+    }
+  ],
+  "revisado": "2026-11-01",
+  "verificado": true,
+  "pernoctaVia": "El decreto no regula la vía pública; depende de cada ayuntamiento.",
+  "estanciaAreas": "48 h (básicas) / 96 h (plus)"
+}

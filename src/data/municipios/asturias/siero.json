@@ -1,0 +1,65 @@
+{
+  "nombre": "Siero",
+  "comunidad": "asturias",
+  "provincia": "Asturias",
+  "estado": "restringido",
+  "resumen": "Siero permite aparcar autocaravanas en las vías urbanas hasta 24 horas si están bien estacionadas y no despliegan nada, y tiene una zona reservada gratuita donde puedes quedarte hasta 48 horas.",
+  "reglas": [
+    "Parada y estacionamiento permitidos en todas las vías urbanas si el vehículo está bien aparcado y la actividad interior no trasciende al exterior; máximo 24 horas (art. 4).",
+    "Para estar aparcada y no acampada: solo ruedas en el suelo, sin ventanas proyectables abiertas, sillas, mesas ni toldo, sin vertidos y sin generador entre las 22:00 y las 8:00 (art. 4).",
+    "En la zona reservada para autocaravanas: solo autocaravanas (no caravanas ni furgonetas no homologadas como vivienda), máximo 48 horas, uso gratuito, con vaciado y agua potable (art. 5).",
+    "Quedarte más tiempo del permitido también cuenta como acampada libre (art. 3)."
+  ],
+  "areas": [
+    {
+      "nombre": "Zona de estacionamiento de autocaravanas del Ayuntamiento de Siero",
+      "detalle": "gratuita, máximo 48 horas, con vaciado de aguas y agua potable; no vigilada"
+    },
+    {
+      "nombre": "Aparcamiento autocaravanas de Lugones (Siero)",
+      "detalle": "C/ Conde de Santa Bárbara. 33420. Lugones/Llugones. 4 plazas. Gratuita. Pública. Carga agua potable, vaciado aguas grises, vaciado aguas negras.",
+      "lat": 43.406944,
+      "lon": -5.803056,
+      "coordFuente": "https://www.turismoasturias.es/organiza-tu-viaje/como-llegar-y-moverse/autocaravanas/aparcamiento-autocaravanas-de-lugones"
+    },
+    {
+      "nombre": "Aparcamiento Autocaravanas en Calle Asturias (Siero)",
+      "detalle": "C/ Asturias. 6 plazas. Gratuita. Pública. Agua potable, vaciado aguas grises, vaciado aguas negras.",
+      "lat": 43.39137,
+      "lon": -5.66746,
+      "coordFuente": "https://www.turismoasturias.es/organiza-tu-viaje/como-llegar-y-moverse/autocaravanas/aparcamiento-autocaravanas-en-calle-asturias-siero-"
+    },
+    {
+      "nombre": "Área de autocaravanas de Lugones (Siero)",
+      "detalle": "C/ Puerto Somiedo, 3. 33420. Lugones/Llugones. 30 plazas. 8 € (acceso y uso completo de las instalaciones). Máximo 48 horas. Pública.",
+      "lat": 43.401316,
+      "lon": -5.814956,
+      "coordFuente": "https://www.turismoasturias.es/organiza-tu-viaje/como-llegar-y-moverse/autocaravanas/area-de-autocaravanas-de-lugones"
+    }
+  ],
+  "multa": "Infracciones leves: 90 €. Graves, como acampar, desplegar elementos, verter aguas o superar el tiempo: 200 €, ampliable un 30 % según gravedad y reincidencia (art. 8).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza municipal reguladora del estacionamiento de autocaravanas en el concejo de Siero (web del Ayuntamiento de Siero)",
+      "url": "https://www.ayto-siero.es/descarga/95/ordenanzas/5407/ordenanza-municipal-reguladora-del-estacionamiento-de-autocaravanas-en-el-concejo-de-siero.pdf",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Turismo Asturias (Principado de Asturias): Aparcamiento autocaravanas de Lugones (Siero)",
+      "url": "https://www.turismoasturias.es/organiza-tu-viaje/como-llegar-y-moverse/autocaravanas/aparcamiento-autocaravanas-de-lugones",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Turismo Asturias (Principado de Asturias): Aparcamiento Autocaravanas en Calle Asturias (Siero)",
+      "url": "https://www.turismoasturias.es/organiza-tu-viaje/como-llegar-y-moverse/autocaravanas/aparcamiento-autocaravanas-en-calle-asturias-siero-",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Turismo Asturias (Principado de Asturias): Área de autocaravanas de Lugones (Siero)",
+      "url": "https://www.turismoasturias.es/organiza-tu-viaje/como-llegar-y-moverse/autocaravanas/area-de-autocaravanas-de-lugones",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

@@ -1,0 +1,23 @@
+{
+  "nombre": "Comunidad de Madrid",
+  "resumen": "En la Comunidad de Madrid la acampada libre está prohibida en toda la región. Desde 2025 existen las áreas de acogida y pernocta de autocaravanas y campers, con un máximo de 48 horas seguidas. El estacionamiento en calles y carreteras se rige por las ordenanzas municipales y las normas de tráfico.",
+  "normaAutonomica": "Decreto 26/2025, de 14 de mayo, de ordenación de los campamentos de turismo y de las áreas de acogida y pernocta de autocaravanas, cámperes y vehículos similares (BOCM n.º 121, de 22 de mayo de 2025). Deroga el Decreto 3/1993.",
+  "claves": [
+    "La acampada libre está prohibida en todo el territorio de la Comunidad de Madrid (Decreto 26/2025, art. 4).",
+    "Las áreas de estacionamiento de autocaravanas y campers en vías urbanas quedan fuera del decreto y se regulan por ordenanzas municipales; en vías interurbanas, por el Reglamento General de Circulación (art. 3.2.c).",
+    "En las áreas de acogida y pernocta puedes abrir toldo, mesas y sillas, nivelar el vehículo y abrir ventanas, siempre dentro de tu parcela (art. 2.b).",
+    "La estancia máxima en esas áreas es de 48 horas consecutivas (art. 7.2)."
+  ],
+  "fuentes": [
+    {
+      "titulo": "Decreto 26/2025, de 14 de mayo (BOCM n.º 121, 22/05/2025)",
+      "url": "https://www.bocm.es/boletin/CM_Orden_BOCM/2025/05/22/BOCM-20250522-2.PDF",
+      "tipo": "oficial",
+      "fecha": "2025-05-22"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true,
+  "pernoctaVia": "Depende de la ordenanza municipal (Decreto 26/2025, art. 3.2.c).",
+  "estanciaAreas": "48 h"
+}

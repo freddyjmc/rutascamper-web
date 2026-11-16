@@ -1,0 +1,43 @@
+{
+  "nombre": "Pornic",
+  "comunidad": "pays-de-la-loire",
+  "provincia": "Loire-Atlantique (44)",
+  "estado": "restringido",
+  "resumen": "En Pornic no se puede estacionar la autocaravana por la noche, de 22:00 a 8:00, en toda la parte del municipio entre la carretera D213 («route bleue») y el mar. Fuera de esa zona y horario no hemos localizado otra orden municipal: rige la norma nacional; respeta la señalización. Hay una borne de servicio en Val Saint-Martin (agua y vaciado, 24 h).",
+  "reglas": [
+    "Prohibido el estacionamiento de autocaravanas de 22:00 a 8:00 en el territorio de Pornic situado entre la carretera departamental 213 («route bleue») y el litoral (art. 2 del arrêté n.º PM.294/2005 de 18/06/2005).",
+    "El arrêté prevé señalización reglamentaria (art. 4 del arrêté n.º PM.294/2005). La fecha 18/06/2005 sale de un sello que se lee mal."
+  ],
+  "areas": [
+    {
+      "nombre": "Borne de servicio de Val Saint-Martin",
+      "detalle": "6 plazas con agua y vaciado, accesible 24 h, para autocaravanas de paso, según la web municipal. No indica precio ni si se puede pasar la noche.",
+      "soloServicios": true,
+      "coordCreador": "I_OT Pornic",
+      "lat": 47.12086,
+      "lon": -2.09095,
+      "coordFuente": "https://data.datatourisme.fr/49/b5059884-67fc-3496-8f79-72d333dbe1bb"
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Arrêté del alcalde n.º PM.294/2005, regulación del estacionamiento de autocaravanas",
+      "url": "https://www.pornic.fr/wp-content/uploads/2021/05/Stationnement-des-camping-cars.pdf",
+      "tipo": "oficial",
+      "fecha": "2005-06-18"
+    },
+    {
+      "titulo": "Ville de Pornic: estacionamiento",
+      "url": "https://www.pornic.fr/vivre-a-pornic/securite-mobilite-stationnement/stationnement/",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "DATAtourisme (ADN Tourisme), «Aire de ravitaillement du Val Saint-Martin», dato creado por I_OT Pornic, actualizado el 04/11/2026. Licence Ouverte 2.0 (Etalab). Solo coordenadas",
+      "url": "https://data.datatourisme.fr/49/b5059884-67fc-3496-8f79-72d333dbe1bb",
+      "tipo": "oficial",
+      "fecha": "2026-11-04"
+    }
+  ],
+  "revisado": "2026-11-06",
+  "verificado": true
+}

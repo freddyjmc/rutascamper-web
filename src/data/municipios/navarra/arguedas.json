@@ -1,0 +1,39 @@
+{
+  "nombre": "Arguedas (Bardenas Reales)",
+  "comunidad": "navarra",
+  "provincia": "Navarra",
+  "estado": "restringido",
+  "resumen": "Arguedas, puerta de entrada a las Bardenas Reales, tiene un área de autocaravanas con un máximo de 48 horas seguidas. En el resto del término la acampada libre está prohibida salvo autorización, y quedarte más tiempo del permitido también cuenta como acampada.",
+  "reglas": [
+    "Prohibida la acampada libre en el término municipal salvo autorización previa (art. 2).",
+    "Se permite la parada y el estacionamiento en el área reservada de autocaravanas (art. 4).",
+    "Se considera aparcada, y no acampada, si solo toca el suelo con las ruedas o los calzos, no despliega nada, no vierte nada y no hace ruidos molestos (art. 4).",
+    "Máximo 48 horas seguidas en el área reservada; el ayuntamiento puede limitar o prohibir el estacionamiento de autocaravanas en zonas concretas de la vía pública (art. 6).",
+    "Prohibido estacionar caravanas o remolques separados de su vehículo tractor (art. 5)."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de autocaravanas de Arguedas",
+      "detalle": "Paseo del Bordón. Abierta en octubre de 2013; máximo 48 h seguidas, con zona de servicios para vaciado",
+      "lat": 42.173889,
+      "lon": -1.591389,
+      "coordFuente": "http://www.arguedas.es/turismo/aparcamiento-autocaravanas/"
+    }
+  ],
+  "multa": "Estacionar incumpliendo las condiciones del art. 4: 90 €, o 300 € si obstaculizas la vía. Pasarte de las 48 horas: 300 €. Acampada libre: 300 €, hasta 450 € si hay daños o suciedad (art. 10).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza reguladora del estacionamiento y pernocta de autocaravanas en el área de Arguedas, aprobación definitiva (10/01/2014; web del Ayuntamiento de Arguedas)",
+      "url": "http://www.arguedas.es/wp-content/uploads/sites/49/2012/11/Ordenanza-autorcaravanas.pdf",
+      "tipo": "oficial",
+      "fecha": "2014-01-10"
+    },
+    {
+      "titulo": "Ayuntamiento de Arguedas: aparcamiento de autocaravanas",
+      "url": "http://www.arguedas.es/turismo/aparcamiento-autocaravanas/",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-01",
+  "verificado": true
+}

@@ -1,0 +1,47 @@
+{
+  "nombre": "Saint-Malo",
+  "comunidad": "bretagne",
+  "provincia": "Ille-et-Vilaine (35)",
+  "estado": "sin-datos",
+  "resumen": "No hemos localizado ninguna orden municipal. Si no la hay, rige la norma nacional; respeta la señalización. Se puede estacionar como cualquier vehículo si no molesta, no es peligroso y no pasa de 7 días en el mismo sitio. El ayuntamiento indica un área de autocaravanas en Les Ilots (Rothéneuf), abierta todo el año, y un aparcamiento disuasorio en Paul Féval con tarifa para autocaravanas.",
+  "reglas": [
+    "No hemos localizado ninguna orden municipal. Si no la hay, rige la norma nacional; respeta la señalización.",
+    "Fuera de los campings, acampar en la orilla del mar está prohibido salvo excepción (art. R111-33 del Code de l'urbanisme)."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de autocaravanas Les Ilots",
+      "detalle": "Avenue de la Guimorais, abierta todo el año según la web municipal. La ficha municipal no indica plazas, servicios ni precio.",
+      "soloServicios": false
+    },
+    {
+      "nombre": "Aparcamiento disuasorio (P+R) Paul Féval",
+      "detalle": "A la entrada de la ciudad, abierto todo el año. 7,50 € por día para autocaravanas; el ticket permite usar el autobús hacia intramuros. La web no dice si se puede pasar la noche.",
+      "soloServicios": false
+    },
+    {
+      "nombre": "Área de servicio Paul Féval",
+      "detalle": "8 rue de la Fée des Grèves. 3,00 € con tarjeta bancaria, todo el año, 24 h.",
+      "soloServicios": true
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Ville de Saint-Malo: área de autocaravanas Les Ilots",
+      "url": "https://www.saint-malo.fr/mes_contacts/aire-camping-cars-les-ilots/",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Ville de Saint-Malo: área de servicio Paul Féval",
+      "url": "https://www.saint-malo.fr/mes_contacts/aire-de-service-paul-feval/",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Ville de Saint-Malo: estacionamiento",
+      "url": "https://www.saint-malo.fr/accueil/sortir/se-deplacer/stationnement/",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-05",
+  "verificado": false
+}

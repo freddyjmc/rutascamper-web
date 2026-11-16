@@ -1,0 +1,26 @@
+{
+  "nombre": "Vitoria-Gasteiz",
+  "comunidad": "pais-vasco",
+  "provincia": "Álava",
+  "estado": "restringido",
+  "resumen": "Vitoria-Gasteiz tiene desde noviembre de 2025 una ordenanza propia de estacionamiento, pernocta y áreas de autocaravanas. En sus áreas puedes dormir dentro del vehículo e incluso abrir las ventanas proyectables, pero no acampar ni superar el tiempo máximo de cada área.",
+  "reglas": [
+    "Las áreas municipales son exclusivas para caravanas, autocaravanas y vehículos vivienda homologados que quepan en la plaza (art. 4.1).",
+    "Cada área fija su tiempo máximo de estancia, que no puedes superar en una misma semana; la entrada es a partir de las 12:00 (arts. 4.2 y 4.4.d).",
+    "Puedes estar dentro del vehículo y abrir las ventanas proyectables si no supone riesgo, siempre que no sobrepases la plaza y no acampes (art. 4.3).",
+    "Prohibido sacar toldos, mesas, sillas o tendederos fuera del perímetro reservado, verter líquidos o basura fuera de los puntos habilitados y usar hornillos en el exterior (art. 4.4).",
+    "Entrada a las áreas de servicio de 8:00 a 24:00, y cambio de aguas de 8:00 a 22:00; las tarifas las fija la ordenanza fiscal (art. 5)."
+  ],
+  "areas": [],
+  "multa": "Leves: hasta 50 €. Graves: de 51 a 200 €. Muy graves: de 201 a 500 €; en las graves y muy graves, además, posible expulsión del área.",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza reguladora del estacionamiento, pernocta y uso de las áreas de autocaravanas de Vitoria-Gasteiz, aprobación definitiva (BOTHA n.º 125, 03/11/2025, anuncio 2025-03153)",
+      "url": "https://www.araba.eus/BOTHA/Boletines/2025/125/2025_125_03153_C.pdf",
+      "tipo": "oficial",
+      "fecha": "2025-11-03"
+    }
+  ],
+  "revisado": "2026-11-01",
+  "verificado": true
+}

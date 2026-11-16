@@ -1,0 +1,32 @@
+{
+  "nombre": "Torrelavit",
+  "comunidad": "cataluna",
+  "provincia": "Barcelona",
+  "estado": "restringido",
+  "resumen": "Torrelavit (Alt Penedès) tiene un área con 2 plazas para autocaravanas, campers y caravanas de hasta 6,25 m en la calle Escoles, dentro del aparcamiento de la zona deportiva. Se puede pernoctar, con un máximo de 48 horas, pero no acampar.",
+  "reglas": [
+    "Autocaravanas, campers y caravanas circulan por el municipio con las mismas reglas que el resto de vehículos (art. 3).",
+    "Área de 2 plazas para vehículos de hasta 6,25 m de largo y 3 m de ancho; se puede pernoctar, pero no acampar (art. 4).",
+    "Estancia máxima: 48 horas; puedes abrir las ventanas dentro de tu plaza, pero no sacar sillas, mesas, toldos ni sombrillas; prohibido hacer fuego y lavar el vehículo (art. 5).",
+    "La ordenanza no fija cuantías de multa: no las damos."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de autocaravanas de Torrelavit",
+      "detalle": "Calle Escoles, s/n, dentro del aparcamiento de la zona deportiva. 2 plazas (máximo 6,25 m), vaciado de aguas grises, agua potable y punto de luz. Máximo 48 horas. No está vigilada.",
+      "lat": 41.449181,
+      "lon": 1.729409,
+      "coordFuente": "https://bop.diba.cat/anuncio/ver-pdf/3768307"
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Ordenança reguladora de l'àrea d'estacionament d'autocaravanes, campers i caravanes de Torrelavit, aprobación definitiva (BOPB 16/05/2025)",
+      "url": "https://bop.diba.cat/anuncio/ver-pdf/3768307",
+      "tipo": "oficial",
+      "fecha": "2025-05-16"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

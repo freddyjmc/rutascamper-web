@@ -1,0 +1,30 @@
+{
+  "nombre": "Roquetas de Mar",
+  "comunidad": "andalucia",
+  "provincia": "Almería",
+  "estado": "permitido",
+  "resumen": "Roquetas de Mar reconoce por ordenanza el derecho a estacionar la autocaravana en todo el municipio según las normas de tráfico, siempre que no despliegues nada. Prevé tres zonas especiales para autocaravanas (Urbanización y Playa Serena, Roquetas y Aguadulce) con un máximo de 72 horas seguidas por semana, aviso previo en la web municipal y ticket visible.",
+  "reglas": [
+    "Se reconoce el derecho a estacionar en todo el municipio según las normas de tráfico, salvo en espacios naturales protegidos, terrenos forestales, suelo no urbanizable de especial protección y dominio público (art. 4.1).",
+    "Cuenta como estacionada si solo toca el suelo con las ruedas, sin patas estabilizadoras, sin ventanas proyectables abiertas ni sillas, mesas o toldo, sin verter fluidos y sin ruidos molestos; da igual que haya gente dentro si la actividad no trasciende al exterior (art. 4.4).",
+    "En las zonas especiales para autocaravanas: máximo 72 horas continuas en una misma semana; se permite abrir ventanas solo para ventilar y elevar el techo (art. 5.1 y 5.2).",
+    "Al entrar en una zona especial hay que comunicar fecha, hora y zona con el formulario de la web del ayuntamiento y llevar el ticket visible; pasadas 72 horas, hay que cambiar de zona (art. 8.7).",
+    "En las zonas especiales está prohibido sacar toldos, patas estabilizadoras, mesas, sillas o tendederos y verter líquidos o basura (art. 5.3).",
+    "Quedarse más tiempo del que permite la ordenanza se considera acampada libre (art. 2). Una caravana sin su cabeza tractora también cuenta como acampada (art. 5.3)."
+  ],
+  "areas": [
+    { "nombre": "Zona 1: Urbanización de Roquetas de Mar y Playa Serena", "detalle": "zona especial prevista en el art. 5.2; máximo 72 h por semana" },
+    { "nombre": "Zona 2: Roquetas de Mar", "detalle": "zona especial prevista en el art. 5.2; máximo 72 h por semana" },
+    { "nombre": "Zona 3: Aguadulce", "detalle": "zona especial prevista en el art. 5.2; máximo 72 h por semana" }
+  ],
+  "multa": "Leves, como sacar toldo, mesas o sillas o no rotar pasadas las 72 horas: de 50 a 200 €. Graves, como verter líquidos o residuos o no acreditar el pago: de 201 a 500 €. Muy graves, como el vertido intencionado y reiterado: de 501 a 1.000 € (arts. 10 y 11).",
+  "fuentes": [
+    {
+      "titulo": "Ayuntamiento de Roquetas de Mar: Libro cuarto, regulador del estacionamiento y pernocta de autocaravanas en el término municipal (texto en roquetasdemar.es, archivo de mayo de 2025)",
+      "url": "https://roquetasdemar.es/sites/default/files/2025-05/Libro-cuarto.pdf",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

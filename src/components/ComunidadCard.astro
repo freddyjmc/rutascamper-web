@@ -1,0 +1,28 @@
+---
+import FotoDestino from "./FotoDestino.astro";
+import { ESTADOS, fechaCorta, fuenteOficial } from "../site";
+import { t, META, type Lang } from "../i18n";
+// mix: cuántos municipios verificados hay en cada estado, para la barra de colores.
+// Sirve para comunidades y para regiones de otros países: href, nombre y foto se pueden indicar.
+interface Props { c: any; n: number; mix?: Partial<Record<keyof typeof ESTADOS, number>>; i?: number; href?: string; nombre?: string; nombreLocal?: string; foto?: boolean; fotoId?: string; areasPorDefecto?: boolean; lang?: Lang }
+const { c, n, mix = {}, i = 0, href = `/pernocta/${c.id}/`, nombre = c.data.nombre, nombreLocal, foto = true, fotoId = `comunidades/${c.id}`, areasPorDefecto = true, lang = "es" } = Astro.props;
+const T = t(lang);
+const areas = c.data.estanciaAreas ?? (areasPorDefecto ? T.card.segunArea : undefined);
+const f = fuenteOficial(c.data);
+const partes = (Object.keys(ESTADOS) as (keyof typeof ESTADOS)[]).filter((k) => mix[k]);
+const resumen = partes.map((k) => `${mix[k]} ${T.estados[k].toLowerCase()}`).join(", ");
+---
+<article class="card com-card lift spot" style={`--i: ${i}`} data-e={partes.join(" ")}>
+  {foto && <FotoDestino id={fotoId} tamano="mini" />}
+  <h3><a href={href}>{nombre}{nombreLocal && <span class="meta"> ({nombreLocal})</span>} <span class="arrow" aria-hidden="true">→</span></a></h3>
+  <p class="meta">{n} {n === 1 ? T.card.municipio : T.card.municipios}{areas && ` · ${T.card.areas}: ${areas}`}</p>
+  {partes.length > 0 && (
+    <div class="mix" role="img" aria-label={`${T.card.mix}: ${resumen}`} title={resumen}>
+      {partes.map((k) => <span class={ESTADOS[k].tone} style={`flex: ${mix[k]}`} />)}
+    </div>
+  )}
+  <p class="com-foot">
+    <span class="badge idle" title={T.card.tituloRevision}>{T.card.actualizado}: {fechaCorta(c.data.revisado, META[lang].fecha)}</span>
+    {f && <a class="src-link" href={f.url} rel="nofollow noopener" target="_blank" title={f.titulo}>{T.card.normaOficial} ↗</a>}
+  </p>
+</article>

@@ -1,0 +1,202 @@
+---
+import Base from "../layouts/Base.astro";
+import AvisoTraduccion from "../components/AvisoTraduccion.astro";
+import { getCollection } from "astro:content";
+import { SITE, visible, fecha } from "../site";
+import { t, href as L, localePath, META, type Lang } from "../i18n";
+
+interface Props { lang?: Lang }
+const { lang = "es" } = Astro.props;
+const T = t(lang);
+const loc = META[lang].fecha;
+
+const comunidades = Object.fromEntries((await getCollection("comunidades")).map((c) => [c.id, c.data.nombre]));
+const conMulta = (await getCollection("municipios"))
+  .filter(visible)
+  .filter((m) => m.data.multa)
+  .sort((a, b) => (comunidades[a.data.comunidad] + a.data.nombre).localeCompare(comunidades[b.data.comunidad] + b.data.nombre, "es"));
+
+const M = {
+  es: {
+    title: "Multas por acampar con camper: cuantías por municipio",
+    description: "Cuánto cuesta acampar, verter aguas o pasarte del tiempo con tu camper: las multas que fijan las ordenanzas municipales que hemos leído, con su fuente.",
+    crumb: "Multas", th: ["Municipio", "Multas según su ordenanza"], lab: "Multas",
+  },
+  en: {
+    title: "Fines for camping with a camper: amounts by municipality",
+    description: "What it costs to camp, dump water or overstay with your camper: the fines set by the municipal ordinances we have read, with their source.",
+    crumb: "Fines", th: ["Municipality", "Fines according to its ordinance"], lab: "Fines",
+  },
+  fr: {
+    title: "Amendes pour camping en camping-car : montants par commune",
+    description: "Ce que coûte le fait de camper, de déverser des eaux ou de dépasser la durée avec votre camping-car : les amendes fixées par les ordenanzas municipales (règlements municipaux) que nous avons lues, avec leur source.",
+    crumb: "Amendes", th: ["Commune", "Amendes selon son ordenanza"], lab: "Amendes",
+  },
+}[lang];
+const revisado = new Date("2026-11-01");
+const title = M.title;
+const description = M.description;
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: title,
+  description,
+  inLanguage: lang,
+  dateModified: revisado.toISOString(),
+  publisher: { "@type": "Organization", name: SITE.name, url: SITE.url },
+};
+const es = lang === "es";
+---
+<Base title={title} description={description} schema={schema} crumbs={[{ name: M.crumb, href: localePath(lang, "/multas-acampar-camper/") }]} lang={lang}>
+  <article class="prose">
+    {lang === "es" && (
+      <>
+        <h1>Multas por acampar con camper: cuánto cuestan de verdad</h1>
+        <p class="lead">Las multas por acampar con una camper o autocaravana no las pone la DGT: las fijan sobre todo las ordenanzas municipales, y varían mucho de un sitio a otro. Aquí tienes las cuantías que fijan las ordenanzas que hemos leído, con su fuente.</p>
+      </>
+    )}
+    {lang === "en" && (
+      <>
+        <h1>Fines for camping with a camper: what they really cost</h1>
+        <p class="lead">Fines for camping with a camper or motorhome are not set by the DGT (Spain's traffic authority): they are set mainly by municipal ordinances, and they vary a lot from one place to another. Here are the amounts set by the ordinances we have read, with their source.</p>
+      </>
+    )}
+    {lang === "fr" && (
+      <>
+        <h1>Amendes pour camping en camping-car : ce qu'elles coûtent vraiment</h1>
+        <p class="lead">Les amendes pour camping en camping-car ne sont pas fixées par la DGT (l'autorité espagnole de la circulation) : elles le sont surtout par les ordenanzas municipales (règlements municipaux), et elles varient beaucoup d'un endroit à l'autre. Voici les montants fixés par les ordenanzas que nous avons lues, avec leur source.</p>
+      </>
+    )}
+    <p class="meta">{T.ui.ultimaRevision}: {fecha(revisado, loc)} · <a href={L(lang, "/metodo/")}>{es ? "Cómo verificamos" : T.ui.metodo}</a></p>
+    <AvisoTraduccion lang={lang} />
+
+    {lang === "es" && (
+      <>
+        <h2>Por qué te pueden multar</h2>
+        <ul>
+          <li><strong>Acampar</strong>: sacar toldo, mesas o sillas, bajar las patas estabilizadoras o, en Cataluña, usar cuñas. Es la infracción más común.</li>
+          <li><strong>Verter aguas</strong> grises o negras fuera de los puntos habilitados. Suele ser grave o muy grave.</li>
+          <li><strong>Pasarte del tiempo</strong> máximo en un área (normalmente 48 horas) o volver antes del plazo.</li>
+          <li><strong>Pernoctar donde está prohibido</strong>: aparcamientos de playa, zonas señalizadas o todo el municipio fuera de las áreas, según la ordenanza.</li>
+          <li><strong>Ruido</strong>, sobre todo generadores en horas de descanso.</li>
+        </ul>
+
+        <h2>Multas por municipio</h2>
+      </>
+    )}
+    {lang === "en" && (
+      <>
+        <h2>Why you can be fined</h2>
+        <ul>
+          <li><strong>Camping</strong>: putting out an awning, tables or chairs, lowering the stabiliser legs or, in Catalonia, using wedges. It is the most common offence.</li>
+          <li><strong>Dumping grey or black water</strong> outside the designated points. It is usually a serious or very serious offence.</li>
+          <li><strong>Overstaying</strong> the maximum time in an area (normally 48 hours) or coming back before the waiting period is over.</li>
+          <li><strong>Staying overnight where it is banned</strong>: beach car parks, signed zones or the whole municipality outside the areas, depending on the ordinance.</li>
+          <li><strong>Noise</strong>, above all generators during rest hours.</li>
+        </ul>
+
+        <h2>Fines by municipality</h2>
+      </>
+    )}
+    {lang === "fr" && (
+      <>
+        <h2>Pourquoi vous pouvez être verbalisé</h2>
+        <ul>
+          <li><strong>Camper</strong> : sortir un auvent, des tables ou des chaises, baisser les béquilles stabilisatrices ou, en Catalogne, utiliser des cales. C'est l'infraction la plus courante.</li>
+          <li><strong>Déverser des eaux</strong> grises ou noires en dehors des points prévus. C'est généralement une infraction grave ou très grave.</li>
+          <li><strong>Dépasser la durée</strong> maximale dans une aire (normalement 48 heures) ou revenir avant la fin du délai.</li>
+          <li><strong>Passer la nuit là où c'est interdit</strong> : parkings de plage, zones signalées ou toute la commune en dehors des aires, selon l'ordenanza.</li>
+          <li><strong>Le bruit</strong>, surtout les groupes électrogènes aux heures de repos.</li>
+        </ul>
+
+        <h2>Amendes par commune</h2>
+      </>
+    )}
+    <div class="table-wrap">
+      <table class="cmp">
+        <thead><tr><th>{M.th[0]}</th><th>{M.th[1]}</th></tr></thead>
+        <tbody>
+          {conMulta.map((m) => (
+            <tr>
+              <td><a href={`/pernocta/${m.data.comunidad}/${m.id.split("/").pop()}/`}><strong>{m.data.nombre}</strong></a><br /><span class="meta">{comunidades[m.data.comunidad]}</span></td>
+              <td data-label={M.lab} lang={es ? undefined : "es"}>{m.data.multa}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    {lang === "es" && <p class="meta">Solo incluimos municipios cuya ordenanza hemos leído en una fuente oficial. Pulsa en cada uno para ver el detalle y la fuente.</p>}
+    {lang === "en" && <p class="meta">We only include municipalities whose ordinance we have read in an official source. Select each one to see the detail and the source. The text in the table and the municipality pages are in Spanish for now.</p>}
+    {lang === "fr" && <p class="meta">Nous n'incluons que les communes dont nous avons lu l'ordenanza dans une source officielle. Sélectionnez chacune pour voir le détail et la source. Le texte du tableau et les fiches des communes sont pour l'instant en espagnol.</p>}
+
+    {lang === "es" && (
+      <>
+        <h2>Lo que hemos aprendido leyendo las ordenanzas</h2>
+        <ul>
+          <li><strong>Las cuantías van de 50 € a 3.000 €.</strong> Las más altas, de hasta 3.000 € para infracciones muy graves, están en ordenanzas como la de <a href="/pernocta/galicia/vilalba/">Vilalba</a> o la de playas de <a href="/pernocta/cantabria/san-vicente-de-la-barquera/">San Vicente de la Barquera</a>.</li>
+          <li><strong>Muchas tienen descuento por pronto pago.</strong> En <a href="/pernocta/navarra/pamplona/">Pamplona</a> pagas la mitad si lo haces en 30 días, y en <a href="/pernocta/cantabria/liendo/">Liendo</a> también hay un 50 % si reconoces la infracción.</li>
+          <li><strong>No identificar al conductor sale caro.</strong> Varias ordenanzas, como las de Liendo, Castrillón o Arguedas, lo castigan con multas de 300 a 350 €.</li>
+          <li><strong>Las normas autonómicas también sancionan</strong>, a través de sus leyes de turismo: la Ley 5/1999 en Cantabria, la Ley 7/2001 en Asturias y la Ley Foral 7/2003 en Navarra.</li>
+        </ul>
+
+        <h2>Cifras que circulan y no hemos podido confirmar</h2>
+        <p>En prensa y redes se repiten multas de hasta 30.000 € por pernoctar con autocaravana. No las hemos encontrado en ningún texto oficial que hayamos leído, así que no las damos por buenas. Si tienes la norma que las recoge, <a href="/metodo/">escríbenos</a>.</p>
+
+        <h2>Cómo evitar la multa</h2>
+        <ol>
+          <li>Consulta la ficha del municipio en <a href="/puedo-dormir-aqui/">¿Puedo dormir aquí?</a> antes de llegar.</li>
+          <li>Duerme sin desplegar nada y apoyado solo en las ruedas.</li>
+          <li>Vacía en los puntos habilitados y respeta los límites de tiempo de las áreas.</li>
+          <li>Si hay señal, manda la señal.</li>
+        </ol>
+        <p>Y si quieres entender la diferencia entre pernoctar y acampar, lee la <a href="/normativa-pernocta-camper/">guía general de normativa</a>.</p>
+      </>
+    )}
+    {lang === "en" && (
+      <>
+        <h2>What we have learned from reading the ordinances</h2>
+        <ul>
+          <li><strong>Amounts range from €50 to €3,000.</strong> The highest, up to €3,000 for very serious offences, are in ordinances such as that of <a href="/pernocta/galicia/vilalba/">Vilalba</a> or the beach ordinance of <a href="/pernocta/cantabria/san-vicente-de-la-barquera/">San Vicente de la Barquera</a>.</li>
+          <li><strong>Many offer a discount for prompt payment.</strong> In <a href="/pernocta/navarra/pamplona/">Pamplona</a> you pay half if you pay within 30 days, and in <a href="/pernocta/cantabria/liendo/">Liendo</a> there is also a 50 % reduction if you admit the offence.</li>
+          <li><strong>Not identifying the driver is expensive.</strong> Several ordinances, such as those of Liendo, Castrillón or Arguedas, punish it with fines of €300 to €350.</li>
+          <li><strong>Regional rules also penalise</strong>, through their tourism laws: Ley 5/1999 in Cantabria, Ley 7/2001 in Asturias and Ley Foral 7/2003 in Navarra.</li>
+        </ul>
+
+        <h2>Figures that circulate and that we could not confirm</h2>
+        <p>The press and social media keep repeating fines of up to €30,000 for staying overnight in a motorhome. We have not found them in any official text we have read, so we do not take them as valid. If you have the rule that contains them, <a href={L(lang, "/metodo/")}>write to us</a>.</p>
+
+        <h2>How to avoid a fine</h2>
+        <ol>
+          <li>Check the municipality page in <a href={L(lang, "/puedo-dormir-aqui/")}>Can I sleep here?</a> (in Spanish) before you arrive.</li>
+          <li>Sleep without setting anything up and resting only on the wheels.</li>
+          <li>Empty your tanks at the designated points and respect the time limits of the areas.</li>
+          <li>If there is a sign, the sign prevails.</li>
+        </ol>
+        <p>And if you want to understand the difference between staying overnight and camping, read the <a href={L(lang, "/normativa-pernocta-camper/")}>general guide to the rules</a>.</p>
+      </>
+    )}
+    {lang === "fr" && (
+      <>
+        <h2>Ce que nous avons appris en lisant les ordenanzas</h2>
+        <ul>
+          <li><strong>Les montants vont de 50 € à 3 000 €.</strong> Les plus élevés, jusqu'à 3 000 € pour les infractions très graves, figurent dans des ordenanzas comme celle de <a href="/pernocta/galicia/vilalba/">Vilalba</a> ou celle des plages de <a href="/pernocta/cantabria/san-vicente-de-la-barquera/">San Vicente de la Barquera</a>.</li>
+          <li><strong>Beaucoup prévoient une réduction en cas de paiement rapide.</strong> À <a href="/pernocta/navarra/pamplona/">Pamplona</a>, vous payez la moitié si vous réglez sous 30 jours, et à <a href="/pernocta/cantabria/liendo/">Liendo</a>, il y a aussi une réduction de 50 % si vous reconnaissez l'infraction.</li>
+          <li><strong>Ne pas identifier le conducteur coûte cher.</strong> Plusieurs ordenanzas, comme celles de Liendo, Castrillón ou Arguedas, le sanctionnent par des amendes de 300 à 350 €.</li>
+          <li><strong>Les règles des communautés sanctionnent aussi</strong>, par le biais de leurs lois sur le tourisme : la Ley 5/1999 en Cantabrie, la Ley 7/2001 dans les Asturies et la Ley Foral 7/2003 en Navarre.</li>
+        </ul>
+
+        <h2>Chiffres qui circulent et que nous n'avons pas pu confirmer</h2>
+        <p>La presse et les réseaux sociaux répètent des amendes allant jusqu'à 30 000 € pour avoir passé la nuit en camping-car. Nous ne les avons trouvées dans aucun texte officiel que nous ayons lu, donc nous ne les tenons pas pour valables. Si vous avez la règle qui les prévoit, <a href={L(lang, "/metodo/")}>écrivez-nous</a>.</p>
+
+        <h2>Comment éviter l'amende</h2>
+        <ol>
+          <li>Consultez la fiche de la commune dans <a href={L(lang, "/puedo-dormir-aqui/")}>Puis-je dormir ici ?</a> (en espagnol) avant d'arriver.</li>
+          <li>Dormez sans rien déployer, en appui uniquement sur les roues.</li>
+          <li>Vidangez aux points prévus et respectez les limites de durée des aires.</li>
+          <li>S'il y a un panneau, le panneau prime.</li>
+        </ol>
+        <p>Et si vous voulez comprendre la différence entre nuitée et camping, lisez le <a href={L(lang, "/normativa-pernocta-camper/")}>guide général de la réglementation</a>.</p>
+      </>
+    )}
+  </article>
+</Base>

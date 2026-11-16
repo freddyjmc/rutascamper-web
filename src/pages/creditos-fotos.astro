@@ -1,0 +1,99 @@
+---
+import Base from "../layouts/Base.astro";
+import { Picture } from "astro:assets";
+import { getCollection } from "astro:content";
+import { fotosPorId } from "../lib/fotos";
+import { getPaises } from "../lib/paises";
+import { visible, visibleFr, nombreFr } from "../site";
+
+const fotos = [...(await fotosPorId()).values()];
+// Un país con fotos solo aparece si está publicado (src/lib/paises.ts).
+const paisesPub = new Set((await getPaises()).map((p) => p.code));
+const comunidades = (await getCollection("comunidades")).filter(visible);
+const municipios = (await getCollection("municipios")).filter(visible);
+const regionesFr = (await getCollection("regionesFr")).filter(visibleFr);
+const municipiosFr = (await getCollection("municipiosFr")).filter(visibleFr);
+const regionesPt = (await getCollection("regionesPt")).filter(visibleFr);
+const municipiosPt = (await getCollection("municipiosPt")).filter(visibleFr);
+// Grupo de cada foto: por país. Las de cabecera de país van en el grupo de su país.
+const grupoDe = (id: string) => (id.startsWith("francia/") || id === "paises/fr" ? "fr" : id.startsWith("portugal/") || id === "paises/pt" ? "pt" : "es");
+const destino = (id: string) => {
+  const [tipo, ...resto] = id.split("/");
+  if (tipo === "paises") {
+    const x = ({ fr: ["Francia", "/francia/"], pt: ["Portugal", "/portugal/"] } as Record<string, string[]>)[resto[0]] ?? ["España", "/pernocta/"];
+    return { nombre: `${x[0]} (cabecera del país)`, href: x[1] };
+  }
+  if (tipo === "portugal") {
+    if (resto.length === 1) {
+      const r = regionesPt.find((x) => x.id === resto[0]);
+      return { nombre: r ? nombreFr(r.data.nombre).es : resto[0], href: `/portugal/${resto[0]}/` };
+    }
+    const m = municipiosPt.find((x) => x.data.comunidad === resto[0] && x.id.split("/").pop() === resto[1]);
+    return { nombre: m?.data.nombre ?? resto[1], href: `/portugal/${resto[0]}/${resto[1]}/` };
+  }
+  if (tipo === "francia") {
+    if (resto.length === 1) {
+      const r = regionesFr.find((x) => x.id === resto[0]);
+      return { nombre: r ? nombreFr(r.data.nombre).es : resto[0], href: `/francia/${resto[0]}/` };
+    }
+    const m = municipiosFr.find((x) => x.data.comunidad === resto[0] && x.id.split("/").pop() === resto[1]);
+    return { nombre: m?.data.nombre ?? resto[1], href: `/francia/${resto[0]}/${resto[1]}/` };
+  }
+  if (tipo === "comunidades") {
+    const c = comunidades.find((x) => x.id === resto[0]);
+    return { nombre: c?.data.nombre ?? resto[0], href: `/pernocta/${resto[0]}/` };
+  }
+  const m = municipios.find((x) => x.data.comunidad === resto[0] && x.id.split("/").pop() === resto[1]);
+  return { nombre: m?.data.nombre ?? resto[1], href: `/pernocta/${resto[0]}/${resto[1]}/` };
+};
+// Solo se listan las fotos de destinos publicados (si una ficha no sale a producción, su foto tampoco).
+const publicado = (id: string) => {
+  const [tipo, ...r] = id.split("/");
+  if (tipo === "paises") return paisesPub.has(r[0] as any);
+  if (tipo === "portugal") return paisesPub.has("pt") && (r.length === 1 ? regionesPt.some((x) => x.id === r[0]) : municipiosPt.some((x) => x.data.comunidad === r[0] && x.id.split("/").pop() === r[1]));
+  if (tipo === "francia") return r.length === 1 ? regionesFr.some((x) => x.id === r[0]) : municipiosFr.some((x) => x.data.comunidad === r[0] && x.id.split("/").pop() === r[1]);
+  if (tipo === "comunidades") return comunidades.some((x) => x.id === r[0]);
+  return municipios.some((x) => x.data.comunidad === r[0] && x.id.split("/").pop() === r[1]);
+};
+const lista = fotos
+  .filter((f) => publicado(f.id))
+  .map((f) => ({ f, d: destino(f.id), g: grupoDe(f.id) }))
+  .sort((a, b) => Number(b.f.id.startsWith("paises/")) - Number(a.f.id.startsWith("paises/")) || a.d.nombre.localeCompare(b.d.nombre, "es"));
+const grupos = [
+  { g: "es", titulo: "España" },
+  { g: "fr", titulo: "Francia" },
+  { g: "pt", titulo: "Portugal" },
+].map((x) => ({ ...x, items: lista.filter((l) => l.g === x.g) })).filter((x) => x.items.length);
+---
+<Base noindex={!lista.length} title="Créditos de las fotos" description="Autor, licencia y origen de cada foto que ilustra RutasCamper, con enlace a Wikimedia Commons." crumbs={[{ name: "Créditos de las fotos", href: "/creditos-fotos/" }]}>
+  <div class="prose">
+    <h1>Créditos de las fotos</h1>
+    <p class="lead">Las fotos ilustran el lugar; no muestran el estado actual de un área ni confirman la normativa.</p>
+    <p>Las versiones adaptadas que mostramos se ofrecen con la misma licencia que la foto original. Los autores no respaldan RutasCamper. Las licencias se ofrecen sin garantías; consulta su texto en cada enlace.</p>
+    <p>Usamos imágenes con licencia libre de Wikimedia Commons. Indicamos el autor, la licencia, el origen y si las hemos modificado (por ejemplo, redimensionado o recortado).</p>
+  </div>
+  {grupos.length ? grupos.map((gr) => (
+    <section class="creditos-grupo" aria-labelledby={`cred-${gr.g}`}>
+      <h2 id={`cred-${gr.g}`}>{gr.titulo} <span class="meta">({gr.items.length})</span></h2>
+      <ul class="creditos-lista">
+        {gr.items.map(({ f, d }) => (
+          <li>
+            <div class="foto-marco">
+              <Picture src={f.imagen} alt={f.alt} formats={["avif", "webp"]} fallbackFormat="jpg" width={320} height={Math.round((320 * f.imagen.height) / f.imagen.width)} widths={[160, 320]} sizes="160px" loading="lazy" decoding="async" style={f.focal ? `object-position: ${f.focal}` : undefined} />
+            </div>
+            <div>
+              <h3><a href={d.href}>{d.nombre}</a></h3>
+              <dl>
+                <div><dt>Título: </dt><dd>{f.titulo}</dd></div>
+                <div><dt>Autor: </dt><dd>{f.autor}</dd></div>
+                <div><dt>Licencia: </dt><dd><a href={f.licenciaUrl} rel="license noopener" target="_blank">{f.licencia}</a></dd></div>
+                <div><dt>Origen: </dt><dd><a href={f.origen} rel="noopener" target="_blank">Wikimedia Commons</a></dd></div>
+                <div><dt>Cambios: </dt><dd>{f.cambios}</dd></div>
+              </dl>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )) : <p class="muted">Todavía no hay fotos publicadas.</p>}
+</Base>

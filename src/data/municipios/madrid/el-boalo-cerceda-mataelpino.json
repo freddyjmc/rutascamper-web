@@ -1,0 +1,26 @@
+{
+  "nombre": "El Boalo, Cerceda y Mataelpino",
+  "comunidad": "madrid",
+  "provincia": "Madrid",
+  "estado": "permitido",
+  "resumen": "En El Boalo, Cerceda y Mataelpino la autocaravana puede aparcar en las calles como cualquier vehículo, pero no acampar. En la zona señalizada para autocaravanas puedes quedarte hasta 72 horas seguidas por semana, con punto de vaciado de aguas grises y negras.",
+  "reglas": [
+    "La acampada libre está prohibida, también dentro del aparcamiento de autocaravanas (art. 3).",
+    "Cuenta como acampada bajar soportes o niveladores, o sacar mesas, sillas o toldo. Los calzos se permiten si el sitio tiene mucha pendiente, y abrir las ventanas para ventilar, sin salir del perímetro del vehículo, no basta por sí solo para que se considere acampada (art. 4).",
+    "Puedes aparcar en el resto de calles en las mismas condiciones que cualquier vehículo, sin entorpecer el tráfico (art. 6).",
+    "En la zona señalizada para autocaravanas el máximo es de 72 horas seguidas en la misma semana. Solo pueden usarla autocaravanas, no caravanas ni furgonetas (art. 9).",
+    "En esa zona puedes abrir las ventanas proyectables, pero no sacar toldo, patas, mesas, sillas ni tendederos, ni verter nada; hay un espacio para vaciar aguas grises y negras (art. 9)."
+  ],
+  "areas": [],
+  "multa": "Leves, hasta 90 € (por ejemplo, pasar del tiempo máximo); graves, hasta 180 € (sacar toldo, mesas o patas en la zona de autocaravanas); muy graves, hasta 300 € (vaciar aguas fuera de los lugares habilitados) (art. 12).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza reguladora del aparcamiento y estancia de autocaravanas de El Boalo, Cerceda y Mataelpino (BOCM n.º 27, 02/02/2022, BOCM-20220202-68), copia en la web municipal",
+      "url": "https://elboalo-cerceda-mataelpino.org/wp-content/uploads/2025/05/Ordenanza_Reguladora_del_Aparcamiento_y_Estancia_Autocaravanas.pdf",
+      "tipo": "oficial",
+      "fecha": "2022-02-02"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

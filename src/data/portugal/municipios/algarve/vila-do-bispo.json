@@ -1,0 +1,28 @@
+{
+  "nombre": "Vila do Bispo (Sagres)",
+  "comunidad": "algarve",
+  "provincia": "Faro (distrito)",
+  "estado": "restringido",
+  "resumen": "En Vila do Bispo, que incluye Sagres, solo se puede pernoctar con autocaravana en los campings y en las áreas de servicio de autocaravanas (ASA). Fuera de ellos solo se puede estacionar, sin abrir ventanas laterales, sacar calzos, mesas ni sillas. Multa de 150 a 200 €.",
+  "reglas": [
+    "El «aparcamento» de autocaravanas y similares para pernoctar solo se permite en los campings (parques de campismo) y en las áreas de servicio de autocaravanas (art. 4.º n.º 1 del reglamento municipal, Edital n.º 1667/2025).",
+    "Fuera de esos lugares solo se permite estacionar, no el «aparcamento» (art. 5.º).",
+    "Cuenta como «aparcamento» bajar estabilizadores o poner calzos, abrir ventanas laterales, vaciar aguas residuales, poner el escalón, tender ropa, sacar mesas y sillas o pernoctar (art. 8.º).",
+    "Pernoctar es permanecer en el vehículo con ocupantes entre las 22:00 y las 7:00 (art. 3.º g).",
+    "En las áreas protegidas, como el Parque Natural do Sudoeste Alentejano e Costa Vicentina, el Código da Estrada prohíbe además pernoctar fuera de los lugares autorizados (art. 50.º-A n.º 1; multa de 120 a 600 €)."
+  ],
+  "areas": [],
+  "multa": "De 150 a 200 € por incumplir el reglamento municipal (art. 13.º del Edital n.º 1667/2025).",
+  "notaAyuntamiento": "Câmara Municipal de Vila do Bispo: https://cm-viladobispo.pt, geral@cm-viladobispo.pt.",
+  "fuentes": [
+    {
+      "titulo": "Edital n.º 1667/2025: Regulamento Municipal para o Exercício da Atividade de Autocaravanismo e Similares no Município de Vila do Bispo",
+      "url": "https://diariodarepublica.pt/dr/detalhe/edital/1667-2025-940848271",
+      "tipo": "oficial",
+      "fecha": "2025-10-20",
+      "reutilizacion": "«O acesso universal e gratuito compreende a possibilidade de impressão, arquivo, pesquisa e livre acesso ao conteúdo dos atos publicados nas 1.ª e 2.ª séries do Diário da República.» (Avisos Legais del Diário da República, consulta 12/11/2026). No hay cláusula expresa sobre reutilización comercial."
+    }
+  ],
+  "revisado": "2026-11-12",
+  "verificado": true
+}

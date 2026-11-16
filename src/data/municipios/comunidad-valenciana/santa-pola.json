@@ -1,0 +1,26 @@
+{
+  "nombre": "Santa Pola",
+  "comunidad": "comunidad-valenciana",
+  "provincia": "Alicante",
+  "estado": "permitido",
+  "resumen": "Santa Pola permite parar y estacionar autocaravanas y campers en todas sus vías urbanas, con un máximo de 48 horas en el mismo sitio. En las playas y el resto del dominio público marítimo-terrestre está prohibido estacionar, y la acampada está prohibida.",
+  "reglas": [
+    "Se permite la parada y el estacionamiento en todas las vías urbanas a autocaravanas, campers y vehículos similares homologados como vehículo vivienda (art. 1.1).",
+    "El tiempo máximo en el lugar de estacionamiento es de 48 horas; por circunstancias especiales justificadas se puede autorizar una prórroga de 24 horas (art. 2).",
+    "En el dominio público marítimo-terrestre, como las playas, se prohíbe estacionar, circular y acampar. Esta prohibición no alcanza la zona de policía (20 m en zona urbana y 100 m en zona rústica desde la ribera del mar) (art. 3.1 y 3.2).",
+    "No se puede aparcar tapando la vista de comercios o monumentos, sobre todo en el centro histórico (art. 3.5).",
+    "Cuenta como acampada desplegar niveladores o estabilizadores, o sacar mesas, toldo o sillas. Abrir ventanas sin peligro para el tráfico está permitido y no basta por sí solo para considerarlo acampada (art. 5).",
+    "En las áreas de servicio: máximo 72 horas y prohibido sacar mesas, sillas, toldos, sombrillas o tendederos (art. 4.2 y 4.3)."
+  ],
+  "multa": "Leves, como pasar de las 48 horas o dejar abierto el desagüe: 100 €. Graves, como estar acampado: 750,01 €. Muy graves, como vaciar aguas grises o negras fuera de los lugares habilitados: 1.500,01 € (art. 8 y anexo I).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza municipal sobre parada y estacionamiento de autocaravanas en el término municipal de Santa Pola (BOP de Alicante n.º 107, 6/06/2012, aprobación definitiva y texto íntegro)",
+      "url": "https://santapola.es/wp-content/uploads/bsk-pdf-manager/2018/01/ORDENANZA-AUTOCARAVANAS-BOP.-06062012.pdf",
+      "tipo": "oficial",
+      "fecha": "2012-06-06"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

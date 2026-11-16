@@ -1,0 +1,63 @@
+{
+  "titulo": "Ruta en camper por País Vasco y Navarra en 6 días",
+  "h1": "Ruta en camper por País Vasco y Navarra",
+  "resumen": "De la costa de Gipuzkoa al desierto de las Bardenas Reales en seis días: Hondarribia, Donostia, la costa del flysch, Vitoria-Gasteiz, Pamplona y Arguedas. Casi todas las noches caen en municipios con normativa verificada y áreas de autocaravanas propias.",
+  "dias": 6,
+  "comunidades": [
+    "pais-vasco",
+    "navarra"
+  ],
+  "cuando": "primavera y otoño (Bardenas mejor fuera del verano)",
+  "etapas": [
+    {
+      "dia": "Día 1",
+      "titulo": "Hondarribia",
+      "texto": "Empieza en la desembocadura del Bidasoa, junto a la frontera con Francia. Recorre a pie el casco histórico amurallado y el barrio de pescadores de La Marina, y sube por la carretera del monte Jaizkibel para ver la costa desde arriba.",
+      "dormir": "Hondarribia permite aparcar autocaravanas en plazas normales salvo señal que lo prohíba, y en País Vasco dormir dentro bien estacionado en zona urbana no es acampada. No saques nada fuera del vehículo.",
+      "ficha": "pais-vasco/hondarribia"
+    },
+    {
+      "dia": "Día 2",
+      "titulo": "Donostia / San Sebastián",
+      "texto": "Deja la camper en el área y muévete a pie o en transporte público: La Concha, la Parte Vieja y el monte Urgull se recorren mejor sin vehículo. Evita aparcar de noche en los paseos de la costa.",
+      "dormir": "Áreas municipales de Berio (de pago, con servicios) o Illunbe (gratuita, sin servicios), con un máximo de 72 horas. En las áreas sacar el toldo cuenta como acampar.",
+      "ficha": "pais-vasco/donostia-san-sebastian"
+    },
+    {
+      "dia": "Día 3",
+      "titulo": "Costa de Gipuzkoa: Zarautz, Getaria y Zumaia",
+      "texto": "Sigue la costa hacia el oeste: la playa de Zarautz, el pueblo marinero de Getaria y los acantilados del flysch de Zumaia, que se ven mejor con marea baja. Vuelve a dormir a Donostia o busca un área o camping en la zona.",
+      "dormir": "Aparcamiento municipal de autocaravanas de Abendaño, en Zarautz: de pago en verano, con un máximo de 3 días en verano y 5 el resto del año. En Getaria solo puedes aparcar en la zona de Gaztetape (vehículos de hasta 5 m). Zumaia aún no está verificada.",
+      "ficha": "pais-vasco/zarautz"
+    },
+    {
+      "dia": "Día 4",
+      "titulo": "Vitoria-Gasteiz",
+      "texto": "Baja al interior hacia la capital alavesa: el casco medieval en forma de almendra, la catedral de Santa María y el Anillo Verde, una red de parques que rodea la ciudad.",
+      "dormir": "Vitoria-Gasteiz tiene ordenanza propia de áreas de autocaravanas desde noviembre de 2025: en ellas puedes dormir dentro y abrir las ventanas, pero no sacar toldo, mesas ni hornillos.",
+      "ficha": "pais-vasco/vitoria-gasteiz"
+    },
+    {
+      "dia": "Día 5",
+      "titulo": "Pamplona / Iruña",
+      "texto": "Entra en Navarra por la capital: el casco antiguo, las murallas y la Ciudadela. Deja el vehículo en el área y camina.",
+      "dormir": "Zona de servicios para autocaravanas de Pamplona, de pago, con un máximo de 48 horas seguidas. En la calle no puedes sacar mesas, sillas ni tendederos.",
+      "ficha": "navarra/pamplona"
+    },
+    {
+      "dia": "Día 6",
+      "titulo": "Bardenas Reales desde Arguedas",
+      "texto": "Termina en el sur de Navarra, en el paisaje semidesértico de las Bardenas Reales. Infórmate en el centro de información del parque sobre las pistas abiertas y las normas de circulación antes de entrar.",
+      "dormir": "Área de autocaravanas de Arguedas, con un máximo de 48 horas seguidas. La acampada libre en el término municipal está prohibida salvo autorización.",
+      "ficha": "navarra/arguedas"
+    }
+  ],
+  "consejos": [
+    "En País Vasco la ley dice que dormir dentro bien estacionado en zona urbana no es acampada, pero en el medio natural sí puede serlo.",
+    "En las ciudades (Donostia, Vitoria, Pamplona) usa las áreas y muévete a pie o en transporte público.",
+    "Las Bardenas Reales son un parque natural: consulta sus normas de acceso y no salgas de las pistas autorizadas.",
+    "Lleva vaciados los depósitos al día: las áreas de Donostia (Berio), Vitoria-Gasteiz, Pamplona y Arguedas tienen punto de vaciado."
+  ],
+  "revisado": "2026-11-01",
+  "publicada": true
+}

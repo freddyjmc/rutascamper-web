@@ -1,0 +1,23 @@
+{
+  "nombre": "Roussillon",
+  "comunidad": "provence-alpes-cote-d-azur",
+  "provincia": "Vaucluse (84)",
+  "estado": "restringido",
+  "resumen": "No hemos localizado ninguna orden municipal (arrêté) sobre autocaravanas. La web del ayuntamiento avisa de que no se puede atravesar el pueblo en autocaravana y de que el único aparcamiento de pago accesible a las autocaravanas es el St Joseph Auto, a 600 m. Hay aseos y agua enfrente, pero no hay área de vaciado.",
+  "reglas": [
+    "Según la web municipal: está estrictamente prohibido atravesar el pueblo con autocaravana.",
+    "Según la web municipal: el único aparcamiento de pago accesible a las autocaravanas es el parking St Joseph Auto, a 600 m del pueblo (por cuartos de hora hasta 12 horas y después por horas).",
+    "Según la web municipal: no hay área de vaciado y está prohibido vaciar las aguas usadas en los aseos públicos.",
+    "No hemos localizado el arrêté que establece estas normas."
+  ],
+  "areas": [],
+  "fuentes": [
+    {
+      "titulo": "Stationnement (web municipal de Roussillon)",
+      "url": "https://roussillon-en-provence.fr/infos-pratiques/stationnement-2/",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-06",
+  "verificado": true
+}

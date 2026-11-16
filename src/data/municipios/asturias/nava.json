@@ -1,0 +1,30 @@
+{
+  "nombre": "Nava",
+  "comunidad": "asturias",
+  "provincia": "Asturias",
+  "estado": "sin-datos",
+  "resumen": "En el concejo de Nava hay un área para autocaravanas que recoge Turismo Asturias, con su ubicación y condiciones. No hemos localizado la ordenanza municipal de estacionamiento y pernocta: fuera de las áreas, recuerda que Asturias define la acampada libre de forma muy amplia.",
+  "reglas": [
+    "Asturias prohíbe la acampada libre con un texto muy amplio, que incluye pernoctar en caravana o autocaravana fuera de campings y áreas sin autorización (Decreto 61/2022, art. 61.1): duerme en las áreas.",
+    "Las condiciones de cada área (plazas, precio, estancia máxima) son las que publica Turismo Asturias; respeta también la señalización del lugar.",
+    "No hemos localizado la ordenanza municipal sobre estacionamiento y pernocta: no damos multas."
+  ],
+  "areas": [
+    {
+      "nombre": "Área autocaravanas de Nava",
+      "detalle": "33529. Gamonéu. 9 plazas. Gratuita. Máximo 72 horas. Pública. Vaciado aguas grises y negras, toma agua potable.",
+      "lat": 43.355495,
+      "lon": -5.5166,
+      "coordFuente": "https://www.turismoasturias.es/organiza-tu-viaje/como-llegar-y-moverse/autocaravanas/area-de-gamoneu"
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Turismo Asturias (Principado de Asturias): Área autocaravanas de Nava",
+      "url": "https://www.turismoasturias.es/organiza-tu-viaje/como-llegar-y-moverse/autocaravanas/area-de-gamoneu",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

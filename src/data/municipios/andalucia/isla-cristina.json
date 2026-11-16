@@ -1,0 +1,24 @@
+{
+  "nombre": "Isla Cristina",
+  "comunidad": "andalucia",
+  "provincia": "Huelva",
+  "estado": "prohibido",
+  "resumen": "Isla Cristina considera acampada libre pernoctar en la vía pública, incluidos aparcamientos, playas y caminos de tierra, y lo sanciona. Puedes aparcar una autocaravana de hasta 3.500 kg en la calle siempre que no la uses para alojarte, pero en todo el litoral está prohibido aparcar caravanas y autocaravanas.",
+  "reglas": [
+    "Se sanciona la acampada libre en todo el término municipal, y pernoctar en la vía pública cuenta como acampada libre (art. 2).",
+    "A efectos de pernoctar, se considera vía pública: zonas de aparcamiento, zonas donde está prohibido acampar sin autorización, playas, caminos de tierra y, en general, cualquier lugar donde aparquen vehículos sin estar catalogado como aparcamiento (art. 3).",
+    "Se permite estacionar en la vía pública autocaravanas de hasta 3.500 kg siempre que no se usen para habitar, alojarse o acampar (art. 6.3).",
+    "Los vehículos de más de 3.500 kg y los remolques separados del vehículo solo pueden estacionar en los lugares y periodos autorizados (art. 6.1 y 6.2).",
+    "Se prohíbe en todo caso aparcar caravanas y autocaravanas en todo el litoral (art. 7)."
+  ],
+  "multa": "Incumplir la prohibición de acampada libre: hasta 750 € (art. 13), y de 751 a 1.500 € si hay daños, como deterioro del mobiliario urbano, suciedad o barbacoas (art. 14). Aparcar en el litoral: 750 € (art. 17).",
+  "fuentes": [
+    {
+      "titulo": "Ayuntamiento de Isla Cristina: Ordenanza municipal de regulación de autocaravanas (documento en la web municipal; no hemos localizado la fecha de su publicación en el BOP de Huelva)",
+      "url": "https://islacristinaweb.org/wp-content/uploads/2024/06/15.-Ordenanza-autocaravana.pdf",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

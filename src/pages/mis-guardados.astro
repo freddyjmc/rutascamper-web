@@ -1,0 +1,168 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base
+  title="Mis guardados"
+  description="Tus fichas guardadas y tu pasaporte viajero: los municipios que has marcado como visitados. Todo se guarda solo en tu navegador, nunca en nuestros servidores."
+  noindex
+  crumbs={[{ name: "Mis guardados", href: "/mis-guardados/" }]}
+>
+  <p class="eyebrow">Solo en tu navegador</p>
+  <h1>Mis guardados</h1>
+  <p class="lead">Aquí ves lo que has guardado pulsando un botón: fichas, municipios visitados y tu ruta. Se queda en este navegador; no hay cuentas y no se envía a ningún sitio.</p>
+
+  <noscript>
+    <p class="notice">Esta página necesita JavaScript para leer lo que has guardado en tu navegador. Sin él puedes seguir usando <a href="/pernocta/">las fichas por comunidad</a> y el <a href="/mapa-areas-autocaravanas/">mapa de áreas</a>.</p>
+  </noscript>
+
+  <div class="guard-app" id="guard-app" hidden>
+    <section class="guard-sec" aria-labelledby="g-fichas">
+      <h2 id="g-fichas" tabindex="-1">Fichas guardadas</h2>
+      <ul class="guard-lista" id="lista-guardados"></ul>
+      <p class="guard-vacio" id="vacio-guardados" hidden>Aún no has guardado fichas. Pulsa «Guardar» en la ficha de un municipio y aparecerá aquí.</p>
+    </section>
+
+    <section class="guard-sec" aria-labelledby="g-pasaporte">
+      <h2 id="g-pasaporte" tabindex="-1">Mi pasaporte viajero</h2>
+      <p class="meta">Los municipios que marcas con «Lo he visitado» en su ficha. Es solo un recuerdo tuyo: no cuenta noches ni lugares donde pernoctar.</p>
+      <p class="pasaporte-total" id="pasaporte-total"></p>
+      <div class="reto" id="pasaporte-reto" hidden></div>
+      <div id="pasaporte-grupos"></div>
+      <p class="guard-vacio" id="vacio-visitados" hidden>Aún no has marcado municipios como visitados. En cada ficha encontrarás el botón «Lo he visitado».</p>
+    </section>
+
+    <section class="guard-sec" aria-labelledby="g-ruta">
+      <h2 id="g-ruta">Mi ruta</h2>
+      <p id="ruta-resumen"></p>
+      <a class="btn alt" href="/mi-ruta/">Ir a Mi ruta</a>
+    </section>
+
+    <section class="guard-sec" aria-labelledby="g-borrar">
+      <h2 id="g-borrar">Tus datos en este sitio</h2>
+      <p>Si quieres, puedes borrar de una vez las fichas guardadas, los municipios visitados y tu ruta.</p>
+      <button type="button" class="btn alt" id="borrar-todo">Borrar todos mis datos de este sitio</button>
+      <div class="confirm" id="borrar-confirm" role="group" aria-labelledby="borrar-q" hidden>
+        <p id="borrar-q"><strong>¿Borrar todo?</strong> Se eliminarán de este navegador tus fichas guardadas, tus municipios visitados y tu ruta. No se puede deshacer.</p>
+        <div class="ruta-botones">
+          <button type="button" class="btn" id="borrar-si">Sí, borrar todo</button>
+          <button type="button" class="btn alt" id="borrar-no">Cancelar</button>
+        </div>
+      </div>
+    </section>
+  </div>
+  <p class="sr-only" id="guard-aviso" role="status" aria-live="polite"></p>
+</Base>
+
+<script>
+  import { KEYS, getFichas, escribir, getRuta, borrar, paradas } from "../scripts/rc";
+
+  const $ = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T;
+  const aviso = (t: string) => {
+    const e = $("guard-aviso");
+    e.textContent = "";
+    requestAnimationFrame(() => { e.textContent = t; });
+  };
+  const el = (tag: string, cls?: string, texto?: string) => {
+    const e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (texto !== undefined) e.textContent = texto;
+    return e;
+  };
+  let foco: string | null = null;
+
+  const fila = (f: { slug: string; nombre: string; comunidad: string; url: string }, key: string, mostrarCom: boolean, quitaTxt: string) => {
+    const li = el("li", "guard-fila");
+    li.dataset.slug = f.slug;
+    const info = el("span", "guard-info");
+    const a = el("a", "", f.nombre) as HTMLAnchorElement;
+    a.href = f.url;
+    info.append(a);
+    if (mostrarCom) info.append(el("span", "meta", f.comunidad));
+    const b = el("button", "act act-sm", "Quitar") as HTMLButtonElement;
+    b.type = "button";
+    b.setAttribute("aria-label", `Quitar «${f.nombre}» ${quitaTxt}`);
+    b.addEventListener("click", () => quitar(key, f.slug, f.nombre, quitaTxt));
+    li.append(info, b);
+    return li;
+  };
+
+  function quitar(key: string, slug: string, nombre: string, donde: string) {
+    const lista = getFichas(key);
+    const i = lista.findIndex((x) => x.slug === slug);
+    const nueva = lista.filter((x) => x.slug !== slug);
+    if (!escribir(key, nueva)) { aviso("No se ha podido guardar: tu navegador bloquea el almacenamiento local"); return; }
+    const sig = nueva[Math.min(i, nueva.length - 1)];
+    const sec = key === KEYS.guardados ? "#lista-guardados" : "#pasaporte-grupos";
+    foco = sig ? `${sec} [data-slug="${CSS.escape(sig.slug)}"] button` : key === KEYS.guardados ? "#g-fichas" : "#g-pasaporte";
+    render();
+    aviso(`${nombre} quitado ${donde}`);
+  }
+
+  function render() {
+    $("guard-app").hidden = false;
+
+    // Fichas guardadas
+    const g = getFichas(KEYS.guardados);
+    const ul = $("lista-guardados");
+    ul.replaceChildren(...g.map((f) => fila(f, KEYS.guardados, true, "de guardados")));
+    $("vacio-guardados").hidden = g.length > 0;
+
+    // Pasaporte
+    const v = getFichas(KEYS.visitados);
+    const grupos = new Map<string, typeof v>();
+    for (const f of v) (grupos.get(f.comunidad) ?? grupos.set(f.comunidad, []).get(f.comunidad)!).push(f);
+    const orden = [...grupos.entries()].sort(([a], [b]) => a.localeCompare(b, "es"));
+    $("vacio-visitados").hidden = v.length > 0;
+    $("pasaporte-total").textContent = v.length
+      ? `${v.length} ${v.length === 1 ? "municipio" : "municipios"} en ${orden.length} ${orden.length === 1 ? "comunidad" : "comunidades"}`
+      : "";
+    $("pasaporte-total").hidden = v.length === 0;
+
+    // Reto amable: consultar y descubrir municipios, nunca pernoctar; sin premios.
+    const reto = $("pasaporte-reto");
+    if (orden.length) {
+      const [nom, lista] = orden.reduce((m, c) => (c[1].length > m[1].length ? c : m));
+      const falta = 3 - lista.length;
+      reto.hidden = false;
+      reto.textContent = falta > 0
+        ? `Te faltan ${falta} para descubrir 3 municipios de ${nom}.`
+        : `Ya has descubierto ${lista.length} municipios de ${nom}. Cuando quieras, sigue con otra comunidad.`;
+    } else {
+      reto.hidden = true;
+    }
+    const cont = $("pasaporte-grupos");
+    cont.replaceChildren(...orden.map(([com, lista]) => {
+      const s = el("div", "pasaporte-grupo");
+      s.append(el("h3", "", `${com} (${lista.length})`));
+      const u = el("ul", "guard-lista");
+      u.append(...lista.map((f) => fila(f, KEYS.visitados, false, "de visitados")));
+      s.append(u);
+      return s;
+    }));
+
+    // Ruta
+    const n = getRuta().length;
+    $("ruta-resumen").textContent = n ? `Tienes ${paradas(n)} en tu ruta.` : "Aún no has añadido paradas a tu ruta.";
+
+    if (foco) { const f = document.querySelector<HTMLElement>(foco); foco = null; f?.focus(); }
+  }
+
+  // Borrar todo, con confirmación.
+  const boton = $("borrar-todo");
+  const conf = $("borrar-confirm");
+  boton.addEventListener("click", () => { conf.hidden = false; boton.hidden = true; $("borrar-no").focus(); });
+  $("borrar-no").addEventListener("click", () => { conf.hidden = true; boton.hidden = false; boton.focus(); });
+  $("borrar-si").addEventListener("click", () => {
+    conf.hidden = true;
+    boton.hidden = false;
+    const ok = borrar([KEYS.guardados, KEYS.ruta, KEYS.visitados]);
+    // Avisa a la cabecera para que quite el contador de «Mi ruta».
+    dispatchEvent(new CustomEvent("rc:ruta"));
+    foco = "#g-fichas";
+    render();
+    aviso(ok ? "Se han borrado todos tus datos de este sitio" : "No se han podido borrar: tu navegador bloquea el almacenamiento local");
+  });
+
+  render();
+  addEventListener("storage", () => { if (!foco) render(); });
+</script>

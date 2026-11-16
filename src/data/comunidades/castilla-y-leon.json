@@ -1,0 +1,37 @@
+{
+  "nombre": "Castilla y León",
+  "resumen": "Castilla y León no tiene una norma turística autonómica que regule la pernocta en autocaravana fuera de los campings: el decreto de campings deja fuera la acampada libre y las áreas de servicio. En los montes y en la franja de 400 metros que los rodea, la acampada libre está prohibida por la normativa de prevención de incendios. En pueblos y ciudades deciden las normas de tráfico y cada ayuntamiento.",
+  "normaAutonomica": "Decreto 9/2017, de 15 de junio, que regula los campings en Castilla y León (BOCYL n.º 115, de 19 de junio de 2017).",
+  "claves": [
+    "El decreto de campings excluye de su ámbito las áreas de servicio para autocaravanas y la acampada libre (Decreto 9/2017, art. 3.a y 3.f).",
+    "En los montes y en la franja de 400 metros a su alrededor se prohíbe la acampada libre, salvo en los lugares habilitados (Orden FYM/510/2013, arts. 1 y 6.b).",
+    "La Junta considera las áreas de servicio para autocaravanas una actividad turística complementaria para estacionar, pernoctar y vaciar, si tienen agua potable, desagüe, vaciado de aguas negras y señalización (art. 52).",
+    "Puede haber campings de uso exclusivo para autocaravanas, con los requisitos mínimos de una estrella (art. 9).",
+    "No hemos localizado en esta norma un límite autonómico de estancia en las áreas: lo fija cada área o su ordenanza.",
+    "Revisa la ordenanza del municipio y la señalización: son las que deciden si puedes pernoctar en la vía pública."
+  ],
+  "fuentes": [
+    {
+      "titulo": "Decreto 9/2017, de 15 de junio, campings en Castilla y León (BOCYL n.º 115, 19/06/2017), copia de Turismo Castilla y León",
+      "url": "https://www.turismocastillayleon.com/es/espacio-profesionales/normativa-turistica/normativa-campings-turismo.ficheros/138849-Decreto%20Campings.pdf",
+      "tipo": "oficial",
+      "fecha": "2017-06-19"
+    },
+    {
+      "titulo": "Ficha del Decreto 9/2017 en el Boletín Oficial de Castilla y León",
+      "url": "https://bocyl.jcyl.es/eli/es-cl/d/2017/06/15/9/",
+      "tipo": "oficial",
+      "fecha": "2017-06-19"
+    },
+    {
+      "titulo": "Orden FYM/510/2013, de 25 de junio, uso del fuego y prevención de incendios forestales (BOCYL 27/06/2013), texto consolidado de la biblioteca de las Cortes de Castilla y León",
+      "url": "https://sirdoc.ccyl.es/Biblioteca/Dosieres/DL205IncendiosEntidadesLocales/pdfs/CyL-Orden-FYM-510-2013-UsoFuego.pdf",
+      "tipo": "oficial",
+      "fecha": "2013-06-27"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true,
+  "pernoctaVia": "Sin norma turística autonómica; en montes, acampada libre prohibida. Depende de cada ayuntamiento.",
+  "estanciaAreas": "Sin límite autonómico; lo fija cada área"
+}

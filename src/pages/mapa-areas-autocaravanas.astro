@@ -1,0 +1,411 @@
+---
+import Base from "../layouts/Base.astro";
+import { areasPorPais } from "../lib/areas";
+import "leaflet/dist/leaflet.css";
+import "leaflet.markercluster/dist/MarkerCluster.css";
+
+// El mapa recorre todos los países del registro (src/lib/paises.ts) que tengan áreas con ubicación oficial.
+// Para añadir un país basta con registrarlo allí y en src/lib/areas.ts: el mapa lo recoge solo.
+const grupos = await areasPorPais();
+const puntos = grupos.flatMap((g) => g.areas);
+const paises = grupos.map((g) => ({ code: g.pais.code as string, nombre: g.pais.nombre, n: g.areas.length }));
+const varios = grupos.length > 1;
+// Un país con menos áreas que este umbral lleva la nota «de momento hay pocas áreas».
+const POCAS = 20;
+const lista = (xs: string[]) => (xs.length > 1 ? `${xs.slice(0, -1).join(", ")} y ${xs[xs.length - 1]}` : (xs[0] ?? ""));
+const textoPocas = (xs: string[]) => (xs.length ? `De momento hay pocas áreas de ${lista(xs)} con ubicación oficial en nuestras fichas; iremos añadiendo más.` : "");
+const pocasDe = (cs: typeof paises) => cs.filter((p) => p.n < POCAS).map((p) => p.nombre);
+// Texto de la nota para cada selección: "" = todos los países.
+const notas: Record<string, string> = { "": textoPocas(pocasDe(paises)) };
+for (const p of paises) notas[p.code] = textoPocas(pocasDe([p]));
+const sinCoordsGrupos = grupos.filter((g) => g.sinCoords.length);
+// Tipo de cada punto: «servicios» (solo vaciado y agua), «estac» (estacionamiento; la fuente no dice si se puede pasar la noche) o «pernocta».
+const tipoDe = (p: (typeof puntos)[number]) => (p.soloServicios ? "servicios" : p.sinConfirmar ? "estac" : "pernocta");
+const nSrv = puntos.filter((p) => tipoDe(p) === "servicios").length;
+const nEst = puntos.filter((p) => tipoDe(p) === "estac").length;
+const nPernocta = puntos.length - nSrv - nEst;
+const hayAprox = puntos.some((p) => p.aproximada);
+const hayDatatourisme = puntos.some((p) => p.fuente.startsWith("https://data.datatourisme.fr/"));
+const porRegion = (areas: typeof puntos) => Object.entries(
+  areas.reduce<Record<string, typeof puntos>>((acc, p) => ((acc[p.comunidad] ??= []).push(p), acc), {}),
+).sort(([a], [b]) => a.localeCompare(b, "es"));
+const resumenPaises = paises.map((p) => `${p.n} en ${p.nombre}`).join(" · ");
+const datos = {
+  paises,
+  notas,
+  puntos: puntos.map((p) => ({
+    id: p.id, nombre: p.nombre, detalle: p.detalle, lat: p.lat, lon: p.lon, fuente: p.fuente,
+    tipo: tipoDe(p), creador: p.creador, fechaFuente: p.fechaFuente, aprox: p.aproximada, municipio: p.municipio, comunidad: p.comunidad, ficha: p.url, pais: p.pais,
+  })),
+};
+---
+<Base
+  title="Mapa de áreas de autocaravanas con fuente oficial"
+  description={`Mapa de áreas de autocaravanas en ${lista(paises.map((p) => p.nombre))} con coordenadas publicadas por fuentes oficiales: dónde dormir o vaciar, con su norma y la ficha de cada municipio.`}
+  crumbs={[{ name: "Mapa de áreas", href: "/mapa-areas-autocaravanas/" }]}
+>
+  <p class="eyebrow">Mapa</p>
+  <h1>Mapa de áreas de autocaravanas</h1>
+  <p class="lead">Solo ponemos en el mapa áreas cuya ubicación publica una fuente oficial (un portal oficial de turismo, la oficina de turismo o el ayuntamiento). Toca un punto para ver las condiciones y la ficha del municipio.</p>
+
+  {varios && (
+    <div class="pais-sw grande map-pais" id="map-pais" role="group" aria-label="Elegir país" hidden>
+      <button type="button" data-pais="" aria-pressed="true">Todos</button>
+      {paises.map((p) => <button type="button" data-pais={p.code} aria-pressed="false">{p.nombre}</button>)}
+    </div>
+  )}
+
+  <div class="map-shell">
+    <div class="map-side">
+      <div class="chips" role="group" aria-label="Filtrar áreas">
+        <button class="chip" type="button" data-f="" aria-pressed="true">Todas ({puntos.length})</button>
+        <button class="chip" type="button" data-f="pernocta" aria-pressed="false">Para dormir ({nPernocta})</button>
+        <button class="chip" type="button" data-f="servicios" aria-pressed="false" hidden={nSrv === 0}>Solo vaciado y agua ({nSrv})</button>
+        <button class="chip" type="button" data-f="estac" aria-pressed="false" hidden={nEst === 0}>Estacionamiento sin confirmar ({nEst})</button>
+      </div>
+      <p class="map-count" id="map-count" role="status" aria-live="polite">{puntos.length} {puntos.length === 1 ? "área" : "áreas"} en el mapa{varios ? `: ${resumenPaises}` : ` (${resumenPaises})`}.</p>
+      <p class="notice map-pocas" id="map-pocas" hidden={!notas[""]}>{notas[""]}</p>
+      <div class="map-empty" id="map-empty" hidden>
+        <p>Ningún área coincide con este filtro.</p>
+        <button class="btn" type="button" id="map-reset">Ver todas las áreas</button>
+      </div>
+      <div class="area-list" id="area-list" data-uno={varios ? undefined : ""}>
+        {grupos.map((g) => (
+          <div class="area-pais" data-pais={g.pais.code}>
+            {varios && <h2 class="area-pais-h">{g.pais.nombre}</h2>}
+            {porRegion(g.areas).map(([reg, ps]) => (
+              <section>
+                <h3>{reg}</h3>
+                <ul>
+                  {ps.map((p) => (
+                    <li id={p.id} data-tipo={tipoDe(p)} data-pais={p.pais}>
+                      <button type="button" class="area-item" data-id={p.id}>
+                        <span class={`pin-dot ${p.soloServicios ? "srv" : tipoDe(p) === "estac" ? "est" : ""}`} aria-hidden="true"></span>
+                        <span><strong>{p.nombre}</strong><small>{p.municipio}{p.soloServicios ? " · solo vaciado y agua" : tipoDe(p) === "estac" ? " · estacionamiento (la fuente no dice si se puede pasar la noche)" : ""}{p.aproximada ? " · ubicación aproximada" : ""}</small></span>
+                      </button>
+                      <button type="button" class="act act-sm act-ruta" data-ruta={p.id} aria-pressed="false" hidden><span class="ruta-txt">Añadir a mi ruta</span><span class="sr-only">: {p.nombre}</span></button>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
+    <div class="map-wrap">
+      <div id="map" class="map" role="region" aria-label="Mapa de áreas de autocaravanas">
+        <div class="map-loading" id="map-loading" role="status">Cargando el mapa…</div>
+        <div class="map-error" id="map-error" role="alert" hidden>
+          <strong>No hemos podido cargar el mapa</strong>
+          <p>La lista de áreas sigue disponible: cada una abre la ficha de su municipio con la fuente oficial.</p>
+        </div>
+        <noscript><style is:inline>.map-loading { display: none; }</style><p class="noscript-note">El mapa necesita JavaScript. Tienes la lista de áreas al lado.</p></noscript>
+      </div>
+      <p class="map-note" id="map-note" role="status" aria-live="polite" hidden></p>
+      <p class="meta map-legend">
+        <span><span class="pin-dot" aria-hidden="true"></span> Área para pernoctar</span>
+        {nSrv > 0 && <span><span class="pin-dot srv" aria-hidden="true"></span> Solo vaciado y agua</span>}
+        {nEst > 0 && <span><span class="pin-dot est" aria-hidden="true"></span> Estacionamiento para autocaravanas (la fuente no dice si se puede pasar la noche)</span>}
+        {hayAprox && <span><span class="pin-dot aprox" aria-hidden="true"></span> Ubicación aproximada</span>}
+      </p>
+    </div>
+  </div>
+  <aside class="ruta-panel" id="ruta-panel" aria-label="Tu próxima escapada" hidden>
+    <span class="rp-txt" id="ruta-panel-txt" aria-live="polite"></span>
+    <a class="rp-link" href="/mi-ruta/">Ver mi ruta <span aria-hidden="true">→</span></a>
+  </aside>
+  <p class="sr-only" id="ruta-aviso" role="status" aria-live="polite"></p>
+  <script type="application/json" id="map-data" set:html={JSON.stringify(datos).replace(/</g, "\\u003c")} />
+
+  <section class="prose">
+    <h2>Cómo hacemos este mapa</h2>
+    <p>Cada punto usa las coordenadas que publica la propia fuente oficial, enlazada en su ficha. No situamos áreas a partir de foros ni de aplicaciones de terceros.</p>
+    <p>Hay una excepción, marcada como <strong>ubicación aproximada</strong>: cuando la fuente oficial describe dónde está el área (por ejemplo, entre qué calles) pero no da coordenadas, la situamos con los datos de OpenStreetMap y lo indicamos en el punto. Si la descripción oficial es demasiado vaga, el área no aparece en el mapa, pero sigue en la ficha del municipio.</p>
+    {hayDatatourisme && <p>Algunas ubicaciones de Francia proceden de DATAtourisme, la plataforma nacional de datos turísticos que gestiona ADN Tourisme; el dato lo crea la oficina de turismo del municipio. Las reutilizamos con la Licence Ouverte 2.0: cada punto indica quién creó el dato y su fecha de actualización, y enlaza su fuente. De DATAtourisme solo tomamos la ubicación; las condiciones salen de la fuente municipal citada en la ficha.</p>}
+    <p>Antes de ir, comprueba la señalización y las condiciones en la ficha: plazas, precios y horarios cambian.</p>
+    {sinCoordsGrupos.length > 0 && (
+      <>
+        <h2>Áreas que aún no están en el mapa</h2>
+        <p>Están en nuestras fichas, pero todavía no tenemos su ubicación exacta de una fuente oficial:</p>
+        {sinCoordsGrupos.map((g) => (
+          <>
+            {sinCoordsGrupos.length > 1 && <h3>{g.pais.nombre}</h3>}
+            <ul>
+              {g.sinCoords.map((s) => <li><a href={s.ficha}>{s.municipio}</a>: {s.nombre}</li>)}
+            </ul>
+          </>
+        ))}
+      </>
+    )}
+  </section>
+</Base>
+
+<script>
+  import L from "../scripts/leaflet-global";
+  import "leaflet.markercluster";
+  import { getRuta, alternaRuta, alCambiarRuta, pintaBotonRuta, paradas } from "../scripts/rc";
+
+  type Punto = {
+    id: string; nombre: string; detalle: string; lat: number; lon: number; fuente: string;
+    tipo: "pernocta" | "servicios" | "estac"; creador?: string; fechaFuente?: string; aprox: boolean; municipio: string; comunidad: string; ficha: string; pais: string;
+  };
+  type PaisInfo = { code: string; nombre: string; n: number };
+  const datos: { paises: PaisInfo[]; notas: Record<string, string>; puntos: Punto[] } =
+    JSON.parse(document.getElementById("map-data")?.textContent || '{"paises":[],"notas":{},"puntos":[]}');
+  const { puntos, paises, notas } = datos;
+  const el = document.getElementById("map");
+  const loading = document.getElementById("map-loading");
+  const errorBox = document.getElementById("map-error");
+  const note = document.getElementById("map-note");
+  const items = [...document.querySelectorAll<HTMLButtonElement>(".area-item")];
+  const KEY_PAIS = "rc:pais";
+
+  // ===== Añadir a mi ruta (se guarda solo en este navegador y solo al pulsar) =====
+  const panel = document.getElementById("ruta-panel");
+  const panelTxt = document.getElementById("ruta-panel-txt");
+  const rutaAviso = document.getElementById("ruta-aviso");
+  const pintaRuta = () => {
+    const ruta = getRuta();
+    document.querySelectorAll<HTMLElement>("[data-ruta]").forEach((b) => pintaBotonRuta(b, ruta.includes(b.dataset.ruta!)));
+    if (panel && panelTxt) {
+      const antes = !panel.hidden;
+      panel.hidden = ruta.length === 0;
+      document.body.classList.toggle("tiene-panel", ruta.length > 0);
+      const t = `Tu próxima escapada: ${paradas(ruta.length)} ·`;
+      // Si el panel acaba de aparecer, el texto se pone después para que los lectores de pantalla lo anuncien.
+      if (!antes && ruta.length) requestAnimationFrame(() => { panelTxt.textContent = t; });
+      else panelTxt.textContent = ruta.length ? t : "";
+    }
+  };
+  const anuncia = (t: string) => {
+    if (!rutaAviso) return;
+    rutaAviso.textContent = "";
+    requestAnimationFrame(() => { rutaAviso.textContent = t; });
+  };
+  const alternar = (b: HTMLElement) => {
+    const r = alternaRuta(b.dataset.ruta!);
+    pintaRuta();
+    const nombre = b.querySelector(".sr-only")?.textContent?.replace(/^:\s*/, "") ?? "";
+    // El panel ya anuncia los cambios mientras es visible; aquí solo los errores y el vaciado.
+    if (!r.ok) anuncia("No se ha podido guardar: tu navegador bloquea el almacenamiento local");
+    else if (r.n === 0) anuncia(`${nombre} quitada de tu ruta. Tu ruta está vacía`);
+  };
+  document.querySelectorAll<HTMLButtonElement>(".area-list [data-ruta]").forEach((b) => {
+    b.hidden = false;
+    b.addEventListener("click", () => alternar(b));
+  });
+  pintaRuta();
+  alCambiarRuta(pintaRuta);
+
+  // ===== País y tipo de área: el filtro se aplica a la lista, a los contadores y al mapa =====
+  // País inicial: ?pais=fr (enlace compartible) > enlace a un área (#id: se ven todos) > el país guardado en rc:pais > todos.
+  const codigos = new Set(paises.map((p) => p.code));
+  const hash = decodeURIComponent(location.hash.slice(1));
+  const puntoHash = puntos.find((p) => p.id === hash);
+  let paisSel = "";
+  let tipoSel = "";
+  const q = new URLSearchParams(location.search).get("pais") ?? "";
+  if (codigos.has(q)) paisSel = q;
+  else if (!puntoHash) {
+    try { const g = localStorage.getItem(KEY_PAIS) ?? ""; if (codigos.has(g)) paisSel = g; } catch { /* sin almacenamiento */ }
+  }
+  if (puntoHash && paisSel && puntoHash.pais !== paisSel) paisSel = "";
+
+  const selPais = document.getElementById("map-pais");
+  const paisBtns = [...(selPais?.querySelectorAll<HTMLButtonElement>("button") ?? [])];
+  const chips = [...document.querySelectorAll<HTMLButtonElement>(".map-side .chip")];
+  const count = document.getElementById("map-count");
+  const pocas = document.getElementById("map-pocas");
+  const empty = document.getElementById("map-empty");
+  const list = document.getElementById("area-list");
+  const nombrePais = (c: string) => paises.find((p) => p.code === c)?.nombre ?? c;
+  const plural = (n: number) => (n === 1 ? "área" : "áreas");
+  if (selPais) selPais.hidden = false;
+
+  // Parte del mapa (Leaflet): se rellena si carga bien. La lista y los contadores funcionan sin él.
+  let alMapa: ((visibles: Punto[], encuadrar: boolean) => void) | null = null;
+
+  const aplica = (encuadrar = true) => {
+    const delPais = puntos.filter((p) => !paisSel || p.pais === paisSel);
+    const nSrv = delPais.filter((p) => p.tipo === "servicios").length;
+    const nEst = delPais.filter((p) => p.tipo === "estac").length;
+    if ((tipoSel === "servicios" && nSrv === 0) || (tipoSel === "estac" && nEst === 0)) tipoSel = "";
+    const visibles = delPais.filter((p) => !tipoSel || p.tipo === tipoSel);
+    const ids = new Set(visibles.map((p) => p.id));
+
+    paisBtns.forEach((b) => b.setAttribute("aria-pressed", String((b.dataset.pais ?? "") === paisSel)));
+    const etiquetas: Record<string, string> = { "": `Todas (${delPais.length})`, pernocta: `Para dormir (${delPais.length - nSrv - nEst})`, servicios: `Solo vaciado y agua (${nSrv})`, estac: `Estacionamiento sin confirmar (${nEst})` };
+    chips.forEach((c) => {
+      const f = c.dataset.f ?? "";
+      c.textContent = etiquetas[f];
+      c.setAttribute("aria-pressed", String(f === tipoSel));
+      if (f === "servicios") c.hidden = nSrv === 0;
+      if (f === "estac") c.hidden = nEst === 0;
+    });
+
+    document.querySelectorAll<HTMLElement>(".area-list li[id]").forEach((li) => { li.hidden = !ids.has(li.id); });
+    document.querySelectorAll<HTMLElement>(".area-list section").forEach((s) => { s.hidden = !s.querySelector("li:not([hidden])"); });
+    document.querySelectorAll<HTMLElement>(".area-pais").forEach((g) => { g.hidden = !g.querySelector("section:not([hidden])"); });
+    list?.toggleAttribute("data-uno", paises.length === 1 || !!paisSel);
+
+    // Texto de estado: por país si se ven varios, y «de N» cuando el filtro de tipo oculta alguno.
+    const v = visibles.length;
+    if (count) {
+      if (!v) count.textContent = "No hay áreas con este filtro.";
+      else {
+        const de = v < delPais.length ? ` de ${delPais.length}` : "";
+        const porPais = paises.filter((p) => !paisSel || p.code === paisSel).map((p) => ({ nombre: p.nombre, n: visibles.filter((x) => x.pais === p.code).length })).filter((x) => x.n);
+        count.textContent = porPais.length > 1
+          ? `Mostrando ${v}${de} ${plural(delPais.length)}: ${porPais.map((x) => `${x.n} en ${x.nombre}`).join(" · ")}.`
+          : `Mostrando ${v}${de} ${plural(delPais.length)}${paises.length > 1 ? ` en ${porPais[0].nombre}` : ""}.`;
+      }
+    }
+    if (pocas) { pocas.textContent = notas[paisSel] ?? ""; pocas.hidden = !pocas.textContent; }
+    if (empty) empty.hidden = v > 0;
+    if (list) list.hidden = v === 0;
+    alMapa?.(visibles, encuadrar);
+  };
+  const urlPais = () => {
+    try {
+      const u = new URL(location.href);
+      if (paisSel) u.searchParams.set("pais", paisSel); else u.searchParams.delete("pais");
+      history.replaceState(null, "", u);
+    } catch { /* sin historial */ }
+  };
+  paisBtns.forEach((b) => b.addEventListener("click", () => {
+    paisSel = b.dataset.pais ?? "";
+    tipoSel = "";
+    // Se recuerda la elección solo al pulsar (la misma clave que las pestañas de país de la portada).
+    if (paisSel) { try { localStorage.setItem(KEY_PAIS, paisSel); } catch { /* sin almacenamiento */ } }
+    urlPais();
+    aplica();
+  }));
+  chips.forEach((c) => c.addEventListener("click", () => { tipoSel = c.dataset.f || ""; aplica(); }));
+  document.getElementById("map-reset")?.addEventListener("click", () => { tipoSel = ""; aplica(); chips[0]?.focus(); });
+
+  // Si el mapa falla, la lista sigue siendo útil: cada área lleva a la ficha de su municipio.
+  const fallaMapa = () => {
+    if (loading) loading.hidden = true;
+    if (errorBox) errorBox.hidden = false;
+    for (const b of items) {
+      const p = puntos.find((x) => x.id === b.dataset.id);
+      if (p) b.addEventListener("click", () => { location.href = p.ficha; });
+    }
+  };
+  if (el && puntos.length) {
+   try {
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const map = L.map(el, { scrollWheelZoom: false, zoomControl: true });
+    const tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 18,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" rel="noopener" target="_blank">OpenStreetMap</a>',
+    }).addTo(map);
+    // Estados de las teselas: cargando, error parcial (los puntos y la lista siguen funcionando).
+    let tilesOk = false;
+    let tileErrors = 0;
+    const quitaCarga = () => { if (loading) loading.hidden = true; };
+    tiles.on("load", () => { tilesOk = true; quitaCarga(); if (note) note.hidden = true; });
+    tiles.on("tileerror", () => {
+      tileErrors++;
+      if (!tilesOk && tileErrors >= 3 && note) {
+        quitaCarga();
+        note.textContent = "El fondo del mapa no se ha podido cargar. Los puntos y la lista funcionan igual.";
+        note.hidden = false;
+      }
+    });
+    setTimeout(quitaCarga, 8000);
+    // Rueda del ratón solo tras hacer clic en el mapa, para no atrapar el scroll de la página.
+    map.on("click", () => map.scrollWheelZoom.enable());
+    map.on("mouseout", () => map.scrollWheelZoom.disable());
+
+    const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
+    const icon = (tipo: string, aprox: boolean) => L.divIcon({
+      className: "",
+      html: `<span class="map-pin${tipo === "servicios" ? " srv" : tipo === "estac" ? " est" : ""}${aprox ? " aprox" : ""}"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="13" height="8" rx="2"/><path d="M16 10h3l2 3v3h-5z"/><circle cx="7" cy="17" r="1.8"/><circle cx="17" cy="17" r="1.8"/></svg></span>`,
+      iconSize: [38, 46],
+      iconAnchor: [19, 44],
+      popupAnchor: [0, -40],
+    });
+    const markers = new Map<string, L.Marker>();
+    // Los puntos cercanos se agrupan en un círculo con su número; al acercar se separan.
+    const layer: L.FeatureGroup & { zoomToShowLayer: (m: L.Marker, cb: () => void) => void; addLayers: (ms: L.Marker[]) => void } = (L as any).markerClusterGroup({
+      showCoverageOnHover: false,
+      maxClusterRadius: 45,
+      spiderfyOnMaxZoom: true,
+      disableClusteringAtZoom: 15,
+      animate: !reduce,
+      iconCreateFunction: (c: { getChildCount: () => number }) => {
+        const n = c.getChildCount();
+        return L.divIcon({ className: "", html: `<span class="map-cluster" aria-label="${n} áreas">${n}</span>`, iconSize: [44, 44] });
+      },
+    }).addTo(map);
+    for (const p of puntos) {
+      const m = L.marker([p.lat, p.lon], { icon: icon(p.tipo, p.aprox), title: p.nombre, alt: p.nombre });
+      const datatourisme = p.fuente.startsWith("https://data.datatourisme.fr/");
+      m.bindPopup(
+        `<div class="pop"><span class="badge ${p.tipo === "pernocta" ? "ok" : p.tipo === "servicios" ? "warn" : "idle"}">${p.tipo === "servicios" ? "Solo vaciado y agua" : p.tipo === "estac" ? "Estacionamiento para autocaravanas (la fuente no dice si se puede pasar la noche)" : "Área para pernoctar"}</span>` +
+          `<h3>${esc(p.nombre)}</h3><p class="pop-where">${esc(p.municipio)} · ${esc(p.comunidad)}${paises.length > 1 ? ` · ${esc(nombrePais(p.pais))}` : ""}</p>` +
+          (p.detalle ? `<p>${esc(p.detalle)}</p>` : "") +
+          (p.aprox ? `<p class="pop-note">Ubicación aproximada: la fuente oficial describe el lugar sin dar coordenadas. Lo situamos con OpenStreetMap; sigue la señalización al llegar.</p>` : "") +
+          (datatourisme ? `<p class="pop-note">Ubicación: dato de ${esc(p.creador ?? "la oficina de turismo")} en DATAtourisme (ADN Tourisme)${p.fechaFuente ? `, actualizado el ${esc(p.fechaFuente)}` : ""}. Licence Ouverte 2.0. Las condiciones salen de la fuente municipal citada en la ficha.</p>` : "") +
+          `<p class="pop-links"><a href="${esc(p.ficha)}">Ficha del municipio →</a><a href="${esc(p.fuente)}" rel="nofollow noopener" target="_blank">${datatourisme ? "Fuente de la ubicación ↗" : "Fuente oficial ↗"}</a>` +
+          `<a href="https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lon}" rel="noopener" target="_blank">Cómo llegar ↗</a></p>` +
+          `<p><button type="button" class="act act-sm act-ruta" data-ruta="${esc(p.id)}" aria-pressed="false"><span class="ruta-txt">Añadir a mi ruta</span><span class="sr-only">: ${esc(p.nombre)}</span></button></p></div>`,
+        { maxWidth: 300 },
+      );
+      m.on("click", () => select(p.id, false));
+      markers.set(p.id, m);
+    }
+    // Los popups se crean al abrirse: se conecta aquí su botón (Leaflet no deja pasar los clics al documento).
+    map.on("popupopen", (ev: L.PopupEvent) => {
+      const b = ev.popup.getElement()?.querySelector<HTMLButtonElement>("[data-ruta]");
+      if (!b) return;
+      pintaRuta();
+      b.addEventListener("click", () => alternar(b));
+    });
+
+    // Marcadores y encuadre según el filtro (país y tipo).
+    alMapa = (visibles, encuadrar) => {
+      map.closePopup();
+      layer.clearLayers();
+      layer.addLayers(visibles.map((p) => markers.get(p.id)!));
+      if (visibles.length && encuadrar) map.fitBounds(layer.getBounds(), { padding: [40, 40], maxZoom: 12, animate: !reduce });
+    };
+    // Encuadre inicial sin animación: así un enlace directo (#area) puede acercar el mapa enseguida.
+    aplica(false);
+    if (layer.getLayers().length) map.fitBounds(layer.getBounds(), { padding: [40, 40], maxZoom: 12, animate: false });
+
+    const select = (id: string, fly = true) => {
+      items.forEach((b) => b.setAttribute("aria-current", String(b.dataset.id === id)));
+      const m = markers.get(id);
+      if (!m) return;
+      // zoomToShowLayer acerca el mapa lo justo para sacar el punto de su grupo y abre la ficha.
+      if (fly) layer.zoomToShowLayer(m, () => m.openPopup());
+      else m.openPopup();
+      document.getElementById(id)?.scrollIntoView({ block: "nearest", behavior: reduce ? "auto" : "smooth" });
+    };
+    items.forEach((b) => b.addEventListener("click", () => {
+      select(b.dataset.id!);
+      if (matchMedia("(max-width: 860px)").matches) el.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
+    }));
+
+    // Enlace directo a un área (#llanes-1), por ejemplo desde la ficha del municipio.
+    if (markers.has(hash)) {
+      // Sin animaciones: a zoom 16 el punto ya no está agrupado y la ficha se abre directamente.
+      const m = markers.get(hash)!;
+      map.setView(m.getLatLng(), 16, { animate: false });
+      setTimeout(() => select(hash, false), 150);
+    }
+   } catch (e) {
+    console.error("Mapa:", e);
+    alMapa = null;
+    fallaMapa();
+    aplica(false);
+   }
+  } else aplica(false);
+  if (!puntos.length) fallaMapa();
+  window.addEventListener("error", (ev) => {
+    if (loading && !loading.hidden && /leaflet/i.test(String(ev.filename))) fallaMapa();
+  });
+</script>

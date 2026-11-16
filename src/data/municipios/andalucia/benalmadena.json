@@ -1,0 +1,29 @@
+{
+  "nombre": "Benalmádena",
+  "comunidad": "andalucia",
+  "provincia": "Málaga",
+  "estado": "restringido",
+  "resumen": "En Benalmádena, fuera de la zona habilitada para autocaravanas, solo puedes aparcar en la calle de día: de 9:00 a 22:00 en verano y de 9:00 a 21:00 el resto del año. Para pasar la noche tienes la zona exclusiva para autocaravanas, con un máximo de 72 horas. La acampada libre está prohibida en todo el municipio.",
+  "reglas": [
+    "Fuera de la zona habilitada, las autocaravanas y campers solo pueden estacionar en las vías urbanas de 9:00 a 22:00 del 21 de junio al 21 de septiembre, y de 9:00 a 21:00 el resto del año (art. 4.5).",
+    "No se permite estacionar en vías urbanas autocaravanas de más de 3.500 kg, salvo en los lugares autorizados para ellas (art. 4.2).",
+    "Las caravanas no pueden estacionar en la vía pública fuera de los lugares habilitados (art. 4.3).",
+    "Cuenta como estacionada y no acampada si solo toca el suelo con las ruedas, sin estabilizadores, sin ventanas proyectables abiertas ni sillas, mesas, toldos o tendederos fuera; elevar el techo no cuenta. Se admiten calzos solo si el desnivel es pronunciado (art. 4.8).",
+    "En la zona exclusiva: máximo 72 horas, y después no puedes volver a entrar hasta pasados 7 días (art. 5.2). Prohibido sacar toldos, mesas, sillas o tendederos, lavar el vehículo o verter líquidos o basura (art. 5.3).",
+    "Queda prohibida la acampada libre en todo el término municipal (art. 4.10)."
+  ],
+  "areas": [
+    { "nombre": "Zona de estacionamiento exclusivo para autocaravanas", "detalle": "máximo 72 h y 7 días antes de volver a entrar; la ordenanza permite a la Alcaldía fijar por decreto qué vía o vías se usan como área" }
+  ],
+  "multa": "Leves, como verter residuos fuera de la zona señalada o lavar el vehículo: hasta 200 €. Graves, como sacar toldo, mesas o sillas o acampar en zonas no autorizadas: de 201 a 500 €. Muy graves, como vaciar aguas grises o negras fuera del punto de reciclaje: de 501 a 1.000 € (arts. 10 y 11). Pagar voluntariamente reduce la multa un 50 % (art. 11.4).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza municipal reguladora de estacionamiento y pernocta de autocaravanas, caravanas y vehículos vivienda de Benalmádena (BOP de Málaga n.º 86, 6/05/2022, texto íntegro)",
+      "url": "https://www.benalmadena.es/docs/legislacion/om-21-ordenanza-autocaravanas.pdf",
+      "tipo": "oficial",
+      "fecha": "2022-05-06"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

@@ -1,0 +1,31 @@
+{
+  "nombre": "Vilafranca del Penedès",
+  "comunidad": "cataluna",
+  "provincia": "Barcelona",
+  "estado": "permitido",
+  "resumen": "En Vilafranca del Penedès puedes estacionar tu camper o autocaravana en las calles como cualquier otro vehículo, y da igual que haya gente dentro si no se nota desde fuera. Hay un área gratuita en la parte inferior del aparcamiento de la escuela l'Espiga, con un máximo de 48 horas. La acampada libre está prohibida en todo el municipio, también dentro del área.",
+  "reglas": [
+    "Prohibida la acampada libre en todo el término municipal, incluida el área de vehículos recreativos (art. 3).",
+    "Puedes parar y estacionar en las vías urbanas en las mismas condiciones que cualquier vehículo, dentro de las marcas de aparcamiento (art. 4).",
+    "Está bien estacionado si solo toca el suelo con las ruedas (sin patas estabilizadoras), no tiene ventanas abiertas, toldos, mesas ni sillas fuera, no vierte nada y no hace ruido; no importa que haya ocupantes dentro (art. 4).",
+    "Área de vehículos recreativos: gratuita, máximo 48 horas consecutivas y no más de 2 días seguidos en la misma semana; hay que registrar la estancia y apagar el motor (art. 5).",
+    "Calzos: la ordenanza no los menciona expresamente; solo exige que el contacto con el suelo sea por las ruedas."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de vehículos recreativos de Vilafranca del Penedès",
+      "detalle": "En la parte inferior del aparcamiento de la escuela l'Espiga, delimitada y señalizada. Gratuita; máximo 48 horas; con vaciado de aguas grises y negras y toma de agua potable. Registro obligatorio de la estancia."
+    }
+  ],
+  "multa": "Leves (acampar en el área, pasarte de 48 horas, sacar toldo, mesas o sillas, no registrar la estancia): 150 €. Graves (verter líquidos, ruidos fuera de horario, molestias): 300 €. Muy graves: 600 € (anexo de la ordenanza).",
+  "fuentes": [
+    {
+      "titulo": "Ordenança general reguladora de l'estacionament d'autocaravanes, caravanes i campers de Vilafranca del Penedès, aprobación definitiva (BOPB 27/10/2025, CVE 202510163867)",
+      "url": "https://bop.diba.cat/anuncio/ver-pdf/3835557",
+      "tipo": "oficial",
+      "fecha": "2025-10-27"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

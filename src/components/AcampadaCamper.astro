@@ -1,0 +1,299 @@
+---
+// «¿Esto es acampar?»: camper ilustrada con elementos que se activan. Cada texto sale de las páginas ya
+// publicadas (/normativa-pernocta-camper/ y /multas-acampar-camper/); la correspondencia está en
+// scratchpad/textos-camper.md para la revisión del asesor. No se añade ningún dato nuevo.
+import { localePath, type Lang } from "../i18n";
+interface Props { lang?: Lang }
+const { lang = "es" } = Astro.props;
+type Tipo = "acampar" | "depende";
+const IDS: { id: string; tipo: Tipo }[] = [
+  { id: "toldo", tipo: "acampar" }, { id: "mesa", tipo: "acampar" }, { id: "patas", tipo: "acampar" }, { id: "calzos", tipo: "depende" },
+  { id: "ventanas", tipo: "depende" }, { id: "generador", tipo: "acampar" }, { id: "aguas", tipo: "acampar" },
+];
+// Textos por idioma. El español es el original; en inglés y francés se traducen las mismas frases (sin añadir datos).
+const TX = {
+  es: {
+    titulo: "¿Esto es acampar?", sub: "Pulsa un elemento y mira cómo cambia.",
+    items: {
+      toldo: ["Toldo", "En las normas revisadas, sacar el toldo, o cualquier elemento fuera del perímetro del vehículo, hace que pases de estar aparcado a estar acampado."],
+      mesa: ["Mesa y sillas", "Sacar mesas, sillas o tendederos fuera del vehículo cuenta como acampar."],
+      patas: ["Patas estabilizadoras", "Las normas autonómicas y municipales que hemos revisado coinciden en lo esencial: bajar las patas estabilizadoras es acampar."],
+      calzos: ["Calzos", "Depende de la norma. En Cantabria y en ordenanzas como las de Pamplona o Arguedas están permitidos; en Cataluña el Decreto 75/2020 exige que el vehículo se sostenga sobre sus propias ruedas «sin utilizar cuñas»."],
+      ventanas: ["Ventanas proyectables", "Abrirlas de forma que ocupen más espacio que el vehículo cerrado cuenta como acampar en las normas revisadas, aunque algunas lo permiten, como Vitoria-Gasteiz dentro de sus áreas."],
+      generador: ["Generador en horas de descanso", "Las normas revisadas incluyen el ruido de un generador en horas de descanso entre lo que convierte el estacionamiento en acampada."],
+      aguas: ["Verter aguas", "Verter aguas grises, negras o cualquier residuo a la vía es acampar. Para vaciar, usa los puntos habilitados."],
+    },
+    estacionar: "Dormir dentro, bien aparcado y sin sacar nada: la DGT trata a la autocaravana como a cualquier otro vehículo para parar y estacionar. En general no es acampada. Aun así, el ayuntamiento puede limitar el tiempo y prohibir la pernocta en zonas concretas: mira la ficha del municipio y la señalización.",
+    etiqueta: { acampar: "Acampar", depende: "Depende" },
+    titulos: { estacionar: "Estacionado: no es acampada", acampar: "Acampar", depende: "Depende de la norma" },
+    subs: { estacionar: "Pero puede estar prohibido pernoctar en esa zona", acampar: "En general, prohibido fuera de campings y zonas autorizadas", depende: "Según la norma de la comunidad o del municipio" },
+    reset: "Volver a estacionar",
+    nota: "Orientativo: la norma de tu comunidad y la ordenanza de cada municipio pueden ser más estrictas, y manda la señalización.",
+    guia: "Guía completa de normativa", dgt: "Nota de la DGT (16/03/2026) ↗",
+  },
+  en: {
+    titulo: "Is this camping?", sub: "Tap an item and see what changes.",
+    items: {
+      toldo: ["Awning", "In the rules we reviewed, putting out the awning, or anything else beyond the outline of the vehicle, means you go from being parked to camping."],
+      mesa: ["Table and chairs", "Putting tables, chairs or clothes racks outside the vehicle counts as camping."],
+      patas: ["Stabiliser legs", "The regional and municipal rules we have reviewed agree on the essentials: lowering the stabiliser legs is camping."],
+      calzos: ["Levelling wedges", "It depends on the rule. In Cantabria and in ordinances such as those of Pamplona or Arguedas they are allowed; in Catalonia, Decreto 75/2020 requires the vehicle to rest on its own wheels «sin utilizar cuñas» (without using wedges)."],
+      ventanas: ["Projecting windows", "Opening them so that they take up more space than the closed vehicle counts as camping in the rules we reviewed, although some allow it, such as Vitoria-Gasteiz inside its areas."],
+      generador: ["Generator during rest hours", "The rules we reviewed include generator noise during rest hours among the things that turn parking into camping."],
+      aguas: ["Dumping water", "Dumping grey water, black water or any waste onto the road is camping. To empty your tanks, use the designated points."],
+    },
+    estacionar: "Sleeping inside, properly parked and without putting anything out: the DGT treats a motorhome like any other vehicle for stopping and parking. In general this is not camping. Even so, the town council can limit the time and ban overnight stays in specific areas: check the municipality page and the signs.",
+    etiqueta: { acampar: "Camping", depende: "It depends" },
+    titulos: { estacionar: "Parked: not camping", acampar: "Camping", depende: "Depends on the rule" },
+    subs: { estacionar: "But overnight stays may be banned in that area", acampar: "In general, banned outside campsites and authorised areas", depende: "Depending on the rule of the region or the municipality" },
+    reset: "Back to parked",
+    nota: "For guidance only: the rule of your region and the ordinance of each municipality may be stricter, and the signs prevail.",
+    guia: "Full guide to the rules", dgt: "DGT note (16/03/2026) ↗",
+  },
+  fr: {
+    titulo: "Est-ce du camping ?", sub: "Touchez un élément et voyez ce qui change.",
+    items: {
+      toldo: ["Auvent", "Dans les règles que nous avons consultées, sortir l'auvent, ou tout autre élément au-delà du périmètre du véhicule, fait passer le véhicule du stationnement au camping."],
+      mesa: ["Table et chaises", "Sortir des tables, des chaises ou des étendoirs hors du véhicule compte comme du camping."],
+      patas: ["Béquilles stabilisatrices", "Les règles régionales et municipales que nous avons consultées s'accordent sur l'essentiel : baisser les béquilles stabilisatrices, c'est camper."],
+      calzos: ["Cales", "Cela dépend de la règle. En Cantabrie et dans des ordenanzas (règlements municipaux) comme celles de Pamplona ou d'Arguedas, elles sont autorisées ; en Catalogne, le Decreto 75/2020 exige que le véhicule repose sur ses propres roues «sin utilizar cuñas» (sans utiliser de cales)."],
+      ventanas: ["Fenêtres saillantes", "Les ouvrir de façon à occuper plus de place que le véhicule fermé compte comme du camping dans les règles consultées, bien que certaines l'autorisent, comme Vitoria-Gasteiz à l'intérieur de ses aires."],
+      generador: ["Groupe électrogène aux heures de repos", "Les règles consultées comptent le bruit d'un groupe électrogène aux heures de repos parmi ce qui transforme le stationnement en camping."],
+      aguas: ["Vidange des eaux", "Déverser des eaux grises, des eaux noires ou tout autre déchet sur la voie est du camping. Pour vidanger, utilisez les points prévus à cet effet."],
+    },
+    estacionar: "Dormir à l'intérieur, bien stationné et sans rien sortir : la DGT traite le camping-car comme n'importe quel autre véhicule pour l'arrêt et le stationnement. En général, ce n'est pas du camping. Malgré tout, la commune peut limiter la durée et interdire la nuitée dans certaines zones : consultez la fiche de la commune et la signalisation.",
+    etiqueta: { acampar: "Camping", depende: "Ça dépend" },
+    titulos: { estacionar: "Stationné : pas du camping", acampar: "Camping", depende: "Dépend de la règle" },
+    subs: { estacionar: "Mais la nuitée peut être interdite dans cette zone", acampar: "En général, interdit hors des campings et des zones autorisées", depende: "Selon la règle de la communauté ou de la commune" },
+    reset: "Revenir au stationnement",
+    nota: "À titre indicatif : la règle de votre communauté et l'ordenanza (règlement municipal) de chaque commune peuvent être plus strictes, et la signalisation prime.",
+    guia: "Guide complet de la réglementation", dgt: "Note de la DGT (16/03/2026) ↗",
+  },
+}[lang];
+const items = IDS.map((i) => ({ id: i.id, tipo: i.tipo, label: TX.items[i.id as keyof typeof TX.items][0], why: TX.items[i.id as keyof typeof TX.items][1] }));
+const estacionar = TX.estacionar;
+const etiqueta = TX.etiqueta;
+---
+<section class="cw" data-cw aria-labelledby="cw-t">
+  <header class="cw-head">
+    <h2 id="cw-t">{TX.titulo}</h2>
+    <p class="cw-sub">{TX.sub}</p>
+  </header>
+
+  <div class="cw-stage" data-state="estacionar">
+    <svg class="cw-svg" viewBox="0 56 480 200" aria-hidden="true" focusable="false">
+      <circle cx="62" cy="76" r="20" fill="var(--sun)" opacity=".9" />
+      <path d="M0 196 C60 150 120 160 180 182 C250 206 320 140 400 166 C440 178 460 172 480 168 V240 H0Z" fill="var(--mtn-far)" />
+      <path d="M0 214 C100 190 200 206 300 196 C380 188 440 196 480 190 V250 H0Z" fill="var(--mtn-near)" />
+      <rect y="222" width="480" height="48" fill="var(--road)" />
+      <path d="M0 222 H480" stroke="var(--line)" stroke-width="2" />
+
+      <!-- Elementos que aparecen -->
+      <g class="el" data-el="toldo">
+        <path d="M150 130 V141 L52 160 V149Z" fill="var(--accent)" />
+        <path d="M52 160 l12 -2 v7 l-12 2z M80 154 l12 -2 v7 l-12 2z M108 149 l12 -2 v7 l-12 2z M136 143 l12 -2 v7 l-12 2z" fill="#ffffff" opacity=".7" />
+        <path d="M56 160 V222" stroke="var(--muted)" stroke-width="3" stroke-linecap="round" />
+      </g>
+      <g class="el" data-el="mesa">
+        <g fill="var(--primary)"><rect x="68" y="190" width="54" height="6" rx="3" /><rect x="74" y="195" width="4" height="27" /><rect x="112" y="195" width="4" height="27" /></g>
+        <rect x="90" y="180" width="10" height="10" rx="2" fill="var(--accent)" />
+        <path d="M130 222 l8 -22 h14 M152 222 l-6 -22 M138 200 l-4 -18" stroke="var(--ink)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+      <g class="el" data-el="patas" fill="var(--muted)">
+        <rect x="165" y="202" width="6" height="18" /><rect x="157" y="219" width="22" height="4" rx="2" />
+        <rect x="327" y="202" width="6" height="18" /><rect x="319" y="219" width="22" height="4" rx="2" />
+      </g>
+      <g class="el" data-el="calzos" fill="var(--ink)">
+        <path d="M229 222 H254 L229 207Z" /><path d="M373 222 H348 L373 207Z" />
+      </g>
+      <g class="el" data-el="ventanas">
+        <path d="M226 152 L238 138 L296 138 L296 152Z" fill="#bfe6e6" stroke="var(--line)" />
+        <path d="M232 152 L240 140 M290 152 L290 140" stroke="var(--muted)" stroke-width="2" />
+      </g>
+      <g class="el" data-el="generador">
+        <rect x="6" y="200" width="36" height="22" rx="4" fill="var(--warn-bar)" />
+        <rect x="12" y="195" width="24" height="5" rx="2" fill="var(--ink)" />
+        <circle cx="16" cy="211" r="3" fill="var(--ink)" />
+        <g class="waves" fill="none" stroke="var(--muted)" stroke-width="2.4" stroke-linecap="round">
+          <path d="M48 204 q7 7 0 14" /><path d="M54 199 q11 12 0 24" />
+        </g>
+      </g>
+      <g class="el" data-el="aguas">
+        <rect x="296" y="202" width="8" height="6" fill="var(--muted)" />
+        <ellipse class="puddle" cx="300" cy="223" rx="26" ry="4" fill="var(--primary)" opacity=".55" />
+        <g class="drops" fill="var(--primary)"><circle cx="300" cy="212" r="3" /><circle cx="300" cy="212" r="3" /></g>
+      </g>
+
+      <!-- Camper -->
+      <g>
+        <rect x="150" y="112" width="210" height="90" rx="16" fill="#ffffff" stroke="var(--line)" />
+        <rect x="150" y="112" width="210" height="26" rx="14" fill="#ec7a3a" />
+        <path d="M358 140 h36 l32 38 v24 h-68z" fill="#ffffff" stroke="var(--line)" />
+        <path d="M366 146 h24 l18 22 h-42z" fill="#bfe6e6" />
+        <rect x="170" y="150" width="46" height="26" rx="5" fill="#bfe6e6" />
+        <rect class="win" x="232" y="152" width="58" height="24" rx="5" fill="#bfe6e6" />
+        <rect x="306" y="148" width="34" height="50" rx="5" fill="#0b6e78" opacity=".25" />
+        <rect x="185" y="100" width="80" height="12" rx="5" fill="#0b6e78" />
+        <circle cx="210" cy="204" r="18" fill="#14232a" /><circle cx="210" cy="204" r="7" fill="#d9d9d9" />
+        <circle cx="392" cy="204" r="18" fill="#14232a" /><circle cx="392" cy="204" r="7" fill="#d9d9d9" />
+        <g class="zzz" fill="var(--primary)" font-family="var(--display)" font-weight="800">
+          <text x="236" y="90" font-size="20">z</text><text x="252" y="76" font-size="15">z</text>
+        </g>
+      </g>
+    </svg>
+  </div>
+
+  <div class="cw-verdict" data-state="estacionar" role="status" aria-live="polite" aria-atomic="true">
+    <span class="cw-pill" data-pill><span class="cw-ico" aria-hidden="true"></span><span data-pill-txt>{TX.titulos.estacionar}</span></span> <span class="cw-sub2" data-sub>{TX.subs.estacionar}</span>
+    <div class="cw-why" data-why>{estacionar}</div>
+  </div>
+
+  <ul class="cw-list">
+    {items.map((it) => (
+      <li class="cw-item" data-tipo={it.tipo}>
+        <button type="button" data-el={it.id} aria-pressed="false">
+          <span class="cw-chk" aria-hidden="true"></span>
+          <span class="cw-lab">{it.label}</span>
+          <span class="cw-tag">{etiqueta[it.tipo]}</span>
+        </button>
+        <p class="cw-item-why">{it.why}</p>
+      </li>
+    ))}
+    <li class="cw-item cw-reset"><button type="button" data-reset hidden>{TX.reset}</button></li>
+  </ul>
+
+  <p class="cw-note">{TX.nota}</p>
+  <p class="cw-links"><a href={localePath(lang, "/normativa-pernocta-camper/")}>{TX.guia}</a> · <a href="https://www.dgt.es/export/sites/web-DGT/.galleries/downloads/nota_prensa/2026/20260316-nota-de-prensa.pdf" rel="nofollow noopener" target="_blank">{TX.dgt}</a></p>
+  <script type="application/json" id="cw-data" set:html={JSON.stringify({ items: Object.fromEntries(items.map((i) => [i.id, { l: i.label, t: i.tipo, w: i.why }])), est: estacionar, titulos: TX.titulos, subs: TX.subs, etq: etiqueta }).replace(/</g, "\\u003c")} />
+</section>
+
+<style is:global>
+  .cw { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); padding: var(--space-16); min-width: 0; }
+  @media (min-width: 640px) { .cw { padding: var(--space-24); } }
+  .cw-head { margin-bottom: var(--space-12); display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; }
+  .cw-head .eyebrow { margin-bottom: 2px; }
+  .cw-head h2 { margin: 0; font-size: clamp(1.45rem, 1.2rem + 1vw, 1.85rem); }
+  .cw-sub { margin: 0; color: var(--muted); font-size: .95rem; }
+
+  .cw-stage { border-radius: var(--radius); overflow: hidden; background: linear-gradient(180deg, var(--sky-1), var(--sky-2) 70%, var(--sky-3)); border: 1px solid var(--line); }
+  .cw-svg { display: block; width: 100%; height: auto; aspect-ratio: 480 / 200; }
+  .cw-svg .el { opacity: 0; transform: translateY(6px); transform-box: fill-box; transform-origin: center bottom; transition: opacity .35s ease, transform .5s var(--ease-spring); pointer-events: none; }
+  .cw-svg .el.on { opacity: 1; transform: none; }
+  html:not(.js) .cw-svg .el { opacity: 0; }
+  .cw-svg .el[data-el="toldo"] { transform-origin: right center; transform: scaleX(.2); }
+  .cw-svg .el[data-el="toldo"].on { transform: none; }
+  .cw-svg .zzz { transition: opacity .3s ease; }
+  .cw-stage[data-state="acampar"] .zzz, .cw-stage[data-state="depende"] .zzz { opacity: 0; }
+  .cw-svg .zzz text { animation: zz 2.4s ease-in-out infinite; }
+  .cw-svg .zzz text:nth-child(2) { animation-delay: .5s; }
+  .cw-svg .waves path { animation: cw-wave 1.2s ease-in-out infinite alternate; transform-box: fill-box; transform-origin: left center; }
+  .cw-svg .waves path:nth-child(2) { animation-delay: .3s; }
+  .cw-svg .drops circle { animation: cw-drop 1.1s ease-in infinite; opacity: 0; }
+  .cw-svg .drops circle:nth-child(2) { animation-delay: .55s; }
+  @keyframes cw-wave { from { opacity: .25; transform: scale(.85); } to { opacity: 1; transform: scale(1.08); } }
+  @keyframes cw-drop { 0% { transform: translateY(-4px); opacity: 0; } 20% { opacity: 1; } 100% { transform: translateY(10px); opacity: 0; } }
+  .cw-svg .el[data-el="ventanas"] { transform-origin: center bottom; transform: scaleY(.2); }
+  .cw-svg .el[data-el="ventanas"].on { transform: none; }
+
+  .cw-verdict { margin-top: var(--space-12); padding: var(--space-12) var(--space-16); border-radius: var(--radius); background: var(--ok-bg); border: 1px solid color-mix(in srgb, var(--ok) 35%, transparent); min-height: 9em; transition: background-color .35s ease, border-color .35s ease; }
+  .cw-verdict[data-state="acampar"] { background: var(--bad-bg); border-color: color-mix(in srgb, var(--bad) 40%, transparent); }
+  .cw-verdict[data-state="depende"] { background: var(--warn-bg); border-color: color-mix(in srgb, var(--warn) 40%, transparent); }
+  .cw-pill { display: inline-flex; align-items: center; gap: 8px; font: 800 1.15rem/1 var(--display); letter-spacing: -.01em; color: var(--ok); }
+  .cw-verdict[data-state="acampar"] .cw-pill { color: var(--bad); }
+  .cw-verdict[data-state="depende"] .cw-pill { color: var(--warn); }
+  .cw-ico { width: 22px; height: 22px; border-radius: 50%; background: currentColor; position: relative; flex: none; }
+  .cw-ico::after { content: ""; position: absolute; inset: 0; background: var(--paper); clip-path: polygon(22% 52%, 30% 44%, 44% 58%, 72% 28%, 80% 36%, 44% 74%); }
+  .cw-verdict[data-state="acampar"] .cw-ico::after { clip-path: polygon(28% 20%, 50% 42%, 72% 20%, 80% 28%, 58% 50%, 80% 72%, 72% 80%, 50% 58%, 28% 80%, 20% 72%, 42% 50%, 20% 28%); }
+  .cw-verdict[data-state="depende"] .cw-ico::after { clip-path: polygon(44% 20%, 56% 20%, 56% 58%, 44% 58%, 44% 20%, 44% 66%, 56% 66%, 56% 80%, 44% 80%); }
+  .cw-sub2 { display: block; margin-top: 4px; font-size: .82rem; font-weight: 750; color: var(--muted); }
+  .cw-why { margin: 8px 0 0; font-size: .95rem; line-height: 1.5; color: var(--ink); }
+
+  .cw-list { list-style: none; margin: var(--space-12) 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .cw-item { margin: 0; min-width: 0; }
+  .cw-item > button { width: 100%; display: flex; align-items: center; gap: 10px; min-height: 46px; padding: 6px 12px; font: inherit; font-weight: 750; font-size: .93rem; line-height: 1.2; text-align: left; color: var(--ink); background: var(--bg); border: 1.5px solid var(--line); border-radius: 14px; cursor: pointer; transition: transform .2s var(--ease-out), background-color .2s ease, border-color .2s ease, box-shadow .2s ease; }
+  .cw-item > button:hover { border-color: var(--primary); transform: translateY(-1px); }
+  .cw-item > button:active { transform: scale(.97); }
+  .cw-chk { flex: none; width: 20px; height: 20px; border-radius: 50%; border: 2px solid var(--idle-bar); background: var(--paper); transition: background-color .2s ease, border-color .2s ease; position: relative; }
+  .cw-lab { flex: 1; min-width: 0; }
+  .cw-tag { flex: none; font-size: .72rem; font-weight: 800; padding: 2px 8px; border-radius: 999px; }
+  .cw-item[data-tipo="acampar"] .cw-tag { color: var(--bad); background: var(--bad-bg); }
+  .cw-item[data-tipo="depende"] .cw-tag { color: var(--warn); background: var(--warn-bg); }
+  .js .cw-item > button:not([aria-pressed="true"]) .cw-tag { visibility: hidden; }
+  .cw-item > button[aria-pressed="true"] { background: var(--paper); box-shadow: var(--shadow); }
+  .cw-item[data-tipo="acampar"] > button[aria-pressed="true"] { border-color: var(--bad); }
+  .cw-item[data-tipo="depende"] > button[aria-pressed="true"] { border-color: var(--warn); }
+  .cw-item[data-tipo="acampar"] > button[aria-pressed="true"] .cw-chk { background: var(--bad); border-color: var(--bad); }
+  .cw-item[data-tipo="depende"] > button[aria-pressed="true"] .cw-chk { background: var(--warn); border-color: var(--warn); }
+  .cw-item > button[aria-pressed="true"] .cw-chk::after { content: ""; position: absolute; inset: 2px; background: var(--paper); clip-path: polygon(14% 52%, 26% 40%, 42% 58%, 76% 22%, 88% 34%, 42% 82%); }
+  .cw-item-why { margin: 6px 4px 0; font-size: .86rem; line-height: 1.45; color: var(--muted); }
+  .js .cw-item-why { display: none; }
+  .cw-reset { display: flex; }
+  .cw-reset button { width: 100%; min-height: 48px; padding: 8px 12px; font: inherit; font-weight: 800; font-size: .9rem; color: var(--primary); background: transparent; border: 1.5px dashed var(--line); border-radius: 14px; cursor: pointer; transition: background-color .2s ease, border-color .2s ease; }
+  .cw-reset button:hover { background: var(--primary-soft); border-color: var(--primary); }
+  .cw-reset button[hidden] { display: none; }
+  .cw-note { margin: var(--space-12) 0 0; font-size: .85rem; color: var(--muted); }
+  .cw-links { margin: 4px 0 0; font-size: .88rem; font-weight: 700; }
+  /* Sin JavaScript: lista simple con el texto de cada elemento. */
+  html:not(.js) .cw-list { grid-template-columns: 1fr; }
+  html:not(.js) .cw-item > button { pointer-events: none; }
+  html:not(.js) .cw-svg { display: none; }
+  @media (max-width: 340px) { .cw-list { grid-template-columns: 1fr; } }
+  @media (prefers-reduced-motion: reduce) {
+    .cw-svg .waves path, .cw-svg .drops circle, .cw-svg .zzz text { animation: none; }
+    .cw-svg .drops circle { opacity: 1; }
+    .cw-item > button:hover { transform: none; }
+  }
+</style>
+
+<script>
+  const root = document.querySelector<HTMLElement>("[data-cw]");
+  if (root) {
+    // En páginas sin bloques .reveal, la capa de Base no marca el documento: el widget lo necesita para mostrar la ilustración y ocultar la lista sin script.
+    document.documentElement.classList.add("js");
+    const data = JSON.parse(document.getElementById("cw-data")?.textContent || "{}") as {
+      items: Record<string, { l: string; t: "acampar" | "depende"; w: string }>; est: string;
+      titulos: Record<"estacionar" | "acampar" | "depende", string>; subs: Record<"estacionar" | "acampar" | "depende", string>; etq: Record<"acampar" | "depende", string>;
+    };
+    const verdict = root.querySelector<HTMLElement>(".cw-verdict")!;
+    const stage = root.querySelector<HTMLElement>(".cw-stage")!;
+    const pillTxt = root.querySelector<HTMLElement>("[data-pill-txt]")!;
+    const why = root.querySelector<HTMLElement>("[data-why]")!;
+    const sub = root.querySelector<HTMLElement>("[data-sub]")!;
+    const reset = root.querySelector<HTMLButtonElement>("[data-reset]")!;
+    const buttons = [...root.querySelectorAll<HTMLButtonElement>(".cw-item > button[data-el]")];
+    const on = new Set<string>();
+    let last = "";
+    const titulo = data.titulos;
+
+    const paint = () => {
+      const tipos = [...on].map((id) => data.items[id].t);
+      const state: keyof typeof titulo = tipos.includes("acampar") ? "acampar" : tipos.length ? "depende" : "estacionar";
+      verdict.dataset.state = state;
+      stage.dataset.state = state;
+      pillTxt.textContent = titulo[state];
+      const etq = { acampar: data.etq.acampar.toLowerCase(), depende: data.etq.depende.toLowerCase() };
+      if (state === "estacionar") why.textContent = data.est;
+      else {
+        // Se explica lo último que has tocado; si no queda activo, lo último que sigue activo.
+        const id = last && on.has(last) ? last : [...on].pop()!;
+        const it = data.items[id];
+        const b = document.createElement("b");
+        b.textContent = `${it.l} (${etq[it.t]}): `;
+        const t = document.createElement("span");
+        t.textContent = it.w;
+        why.replaceChildren(b, t);
+      }
+      sub.textContent = data.subs[state];
+      buttons.forEach((b) => b.setAttribute("aria-pressed", String(on.has(b.dataset.el!))));
+      root.querySelectorAll<SVGGElement>(".el").forEach((g) => g.classList.toggle("on", on.has(g.dataset.el!)));
+      reset.hidden = on.size === 0;
+    };
+    const toggle = (id: string) => {
+      if (on.has(id)) on.delete(id); else { on.add(id); last = id; }
+      paint();
+    };
+    buttons.forEach((b) => b.addEventListener("click", () => toggle(b.dataset.el!)));
+    reset.addEventListener("click", () => { on.clear(); last = ""; paint(); (buttons[0] as HTMLButtonElement).focus(); });
+    paint();
+  }
+</script>

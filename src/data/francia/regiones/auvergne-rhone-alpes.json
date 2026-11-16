@@ -1,0 +1,73 @@
+{
+  "nombre": "Auvergne-Rhône-Alpes",
+  "resumen": "En Auvergne-Rhône-Alpes no hay norma regional sobre autocaravanas: aparcar se rige por la norma nacional y por las órdenes de cada municipio. Lo propio que hemos localizado está en los parques nacionales de la Vanoise y des Écrins (parte de Isère): en su zona central (*cœur*) está prohibido acampar en el vehículo salvo autorización del director del parque, y en la de los Écrins tampoco se puede pasar la noche en los aparcamientos.",
+  "normaAutonomica": "No hay norma regional sobre autocaravanas: se aplica la norma nacional (Code de la route, Code de l'urbanisme y CGCT) y los arrêtés de cada municipio.",
+  "claves": [
+    "La autocaravana puede estacionar como cualquier vehículo si no es peligroso, molesto ni abusivo. Es abusivo dejarla más de 7 días seguidos en el mismo punto de la vía pública, o menos tiempo si lo fija una orden de la autoridad local (art. R417-12 del Code de la route).",
+    "El alcalde puede regular, mediante una orden municipal motivada (*arrêté motivé*), la parada y el estacionamiento de todos los vehículos o de ciertas categorías de vehículos (art. L2213-2 del CGCT). Respeta siempre las señales.",
+    "Acampar fuera de los campings se puede prohibir en el plan urbanístico o por orden del alcalde, pero esa prohibición solo vale si se ha anunciado en el ayuntamiento y con señales en los accesos habituales (art. R111-34 del Code de l'urbanisme).",
+    "Está prohibido circular y estacionar con vehículos a motor fuera de los caminos habilitados en la orilla del mar y en las dunas y playas públicas abiertas al público, salvo autorización del prefecto (art. L321-9 del Code de l'environnement).",
+    "La orden municipal no fija importe. En general, incumplir una orden municipal es una contravención de 2.ª clase (art. R610-5 del Code pénal), con multa de hasta 150 € (art. 131-13 del Code pénal); según cómo esté redactada la orden, puede aplicarse otra norma, como el Code de la route.",
+    "Parque nacional de la Vanoise (Savoie): en su corazón (*cœur*) están prohibidos, salvo autorización del director del parque, «le campement sous une tente, dans un véhicule ou dans tout autre abri» y la circulación y el estacionamiento de vehículos a motor fuera de las pistas que fije el consejo de administración; esto último no se aplica a la carretera D902 (art. 15.I y art. 22 del décret n.º 2009-447).",
+    "Parque nacional des Écrins: en su corazón están prohibidos, salvo autorización del director, la circulación y el estacionamiento de vehículos a motor y acampar «sous une tente, dans un véhicule ou dans tout autre abri» (art. 15.I del décret n.º 2009-448). Se mantiene el acceso en vehículo a algunos aparcamientos señalados en el art. 22.",
+    "Écrins: está prohibido pasar la noche en los aparcamientos, carreteras o pistas del corazón del parque, también dentro de un vehículo (art. 1 del arrêté n.º 148/2026 del director del parque, de 16/06/2026). El vivac a pie solo se permite de 19:00 a 9:00, una noche y a más de una hora de marcha de los aparcamientos y carreteras del corazón (art. 3)."
+  ],
+  "pernoctaVia": "Sin norma regional. Ningún texto nacional leído prohíbe como tal dormir dentro del vehículo bien estacionado, pero el alcalde puede limitar el estacionamiento, y si hay signos de acampada se aplican las normas de camping. Manda el arrêté de cada municipio. En el corazón de los parques nacionales de la Vanoise y des Écrins está prohibido acampar en el vehículo salvo autorización.",
+  "fuentes": [
+    {
+      "titulo": "Code de la route, art. R417-12 (estacionamiento abusivo)",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006842300",
+      "tipo": "oficial",
+      "fecha": "2001-06-01"
+    },
+    {
+      "titulo": "Code général des collectivités territoriales, art. L2213-2",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043976727",
+      "tipo": "oficial",
+      "fecha": "2021-08-25"
+    },
+    {
+      "titulo": "Code de l'urbanisme, art. R111-32 a R111-35 (camping)",
+      "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074075/LEGISCTA000031719402/",
+      "tipo": "oficial",
+      "fecha": "2016-01-01"
+    },
+    {
+      "titulo": "Code de l'environnement, art. L321-9 (playas y dunas)",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006833484",
+      "tipo": "oficial",
+      "fecha": "2006-07-01"
+    },
+    {
+      "titulo": "Code pénal, art. R610-5 (incumplir un arrêté)",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045176320",
+      "tipo": "oficial",
+      "fecha": "2022-02-17"
+    },
+    {
+      "titulo": "Code pénal, art. 131-13 (Légifrance, version en vigueur au 05/11/2026)",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006417259/",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Décret n.º 2009-447 du 21 avril 2009, Parc national de la Vanoise (versión vigente, art. 15 y 22)",
+      "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000020542607",
+      "tipo": "oficial",
+      "fecha": "2009-04-21"
+    },
+    {
+      "titulo": "Décret n.º 2009-448 du 21 avril 2009, Parc national des Écrins (versión vigente, art. 15 y 22)",
+      "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000020542722",
+      "tipo": "oficial",
+      "fecha": "2009-04-21"
+    },
+    {
+      "titulo": "Parc national des Écrins: arrêté n.º 148/2026 du 16 juin 2026 sobre el vivac en el corazón del parque (versión consolidada con el arrêté n.º 185-2026 du 6 juillet 2026)",
+      "url": "https://www.ecrins-parcnational.fr/sites/ecrins-parcnational.com/files/fiche_doc/27327/2606148arretebivouacvf-rectificatif.pdf",
+      "tipo": "oficial",
+      "fecha": "2026-06-16"
+    }
+  ],
+  "revisado": "2026-11-06",
+  "verificado": true
+}

@@ -1,0 +1,31 @@
+{
+  "nombre": "Illes Balears",
+  "resumen": "Baleares no tiene una norma autonómica que diga si se puede dormir dentro de la camper en la calle: depende de cada ayuntamiento. Lo que sí hay son reglas para los espacios naturales y los montes de todas las islas, y una ley propia para Ibiza que prohíbe pernoctar en vehículo en suelo rústico fuera de los campings, con multas de 10.001 a 30.000 euros.",
+  "normaAutonomica": "No hay una norma autonómica general sobre pernocta en autocaravana. La Ley 8/2012 de Turismo de las Illes Balears no regula la acampada. Hemos leído en el BOE la Ley 5/2024, de control de la afluencia de vehículos en la isla de Eivissa, y la Ley 4/2026, de 11 de junio, que modifica la ley de espacios de relevancia ambiental (Ley 5/2005, LECO) y el decreto de uso del fuego en terreno forestal (Decreto 125/2007).",
+  "claves": [
+    "En Mallorca, Menorca y Formentera no hemos localizado una norma insular sobre pernocta en autocaravana: manda la ordenanza de cada ayuntamiento y la señalización.",
+    "En los espacios de relevancia ambiental (espacios naturales protegidos y Red Natura 2000) es infracción leve la acampada, el vivac y la pernocta al aire libre sin autorización, y también aparcar fuera de las zonas señalizadas o habilitadas (Ley 5/2005, art. 50.1, letras e y g, en la redacción de la Ley 4/2026).",
+    "En terreno forestal está prohibido acampar en montes públicos sin autorización y aparcar fuera de los lugares habilitados (Decreto 125/2007, art. 6, apartados 3 y 4, en la redacción de la Ley 4/2026).",
+    "Ibiza: está prohibido acampar y pernoctar con vehículos a motor en suelo rústico fuera de los campings legales, y dejar el vehículo más de tres días en el mismo sitio de suelo rústico fuera de los aparcamientos públicos habilitados (Ley 5/2024, disposición adicional tercera).",
+    "Ibiza: incumplir esas prohibiciones es infracción muy grave, con multa de 10.001 a 30.000 euros (Ley 5/2024, arts. 16.4.c y 18.1.c).",
+    "Ibiza: en los periodos que fije el Consell, hace falta autorización para entrar con vehículo, y para caravanas y autocaravanas el Consell puede exigir una reserva previa en un camping de la isla (Ley 5/2024, arts. 3 y 4.4). Consulta las fechas y cuotas vigentes en el Consell d'Eivissa antes de embarcar."
+  ],
+  "fuentes": [
+    {
+      "titulo": "Ley 5/2024, de 11 de noviembre, de control de la afluencia de vehículos en la isla de Eivissa para la sostenibilidad turística, texto consolidado (BOE-A-2024-26254)",
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2024-26254",
+      "tipo": "oficial",
+      "fecha": "2024-12-17"
+    },
+    {
+      "titulo": "Ley 4/2026, de 11 de junio, de medidas urgentes de las Illes Balears; disposiciones finales 49.ª (modifica la Ley 5/2005, LECO) y 51.ª (modifica el Decreto 125/2007) (BOE-A-2026-15579)",
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-15579",
+      "tipo": "oficial",
+      "fecha": "2026-07-17"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true,
+  "pernoctaVia": "Sin norma autonómica: depende de cada ayuntamiento. En Ibiza, prohibido pernoctar en vehículo en suelo rústico fuera de campings.",
+  "estanciaAreas": "Sin límite autonómico localizado"
+}

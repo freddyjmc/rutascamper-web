@@ -1,0 +1,43 @@
+{
+  "nombre": "Le Mont-Saint-Michel",
+  "comunidad": "normandie",
+  "provincia": "Manche (50)",
+  "estado": "sin-datos",
+  "resumen": "No hemos localizado ninguna orden municipal. Si no la hay, rige la norma nacional; respeta la señalización. Para visitar el Mont, el organismo público que lo gestiona tiene una zona propia para autocaravanas de menos de 8 m en el gran aparcamiento (zona P8), de pago y con lanzadera incluida. Se puede estacionar de noche, pero está prohibido quedarse allí como alojamiento y no hay agua ni electricidad.",
+  "reglas": [
+    "No hemos localizado ninguna orden municipal. Si no la hay, rige la norma nacional; respeta la señalización.",
+    "En el aparcamiento del Mont, las autocaravanas de menos de 8 m van a la zona P8. Se puede estacionar de noche, pero está prohibido «séjourner» (usarlo como alojamiento), según la web del Établissement public national du Mont-Saint-Michel, que gestiona el aparcamiento; no es un arrêté con artículo.",
+    "La Oficina de Turismo indica un máximo de 24 h en la zona P8, y que no hay aseos en ella."
+  ],
+  "areas": [
+    {
+      "nombre": "Aparcamiento del Mont-Saint-Michel, zona P8 (autocaravanas)",
+      "detalle": "Para autocaravanas de menos de 8 m. Tarifas 2026 hasta 24 h: 18 € (enero-febrero y noviembre-diciembre), 25 € (marzo-junio y septiembre-1 de noviembre), 30 € (julio-agosto). Primeros 30 minutos gratis. Entrada desde las 18:30 y salida antes de las 3:00: gratis fuera de julio-agosto, 16 € en julio-agosto. Incluye la lanzadera. Sin agua ni electricidad.",
+      "soloServicios": false
+    },
+    {
+      "nombre": "Aparcamiento de La Caserne (clientes de hoteles y camping)",
+      "detalle": "Autocaravana 24 h: 8 €, 11,50 € o 13,50 € según temporada (2026). El camping du Mont-Saint-Michel, en La Caserne, tiene agua y electricidad para muy pocas plazas.",
+      "soloServicios": false
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Établissement public national du Mont-Saint-Michel: venir en coche o autocaravana",
+      "url": "https://montsaintmichel.gouv.fr/acceder-au-mont-saint-michel/venir-au-mont-saint-michel",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Établissement public national du Mont-Saint-Michel: horarios y tarifas",
+      "url": "https://montsaintmichel.gouv.fr/acceder-au-mont-saint-michel/horaires-et-tarifs",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Destination Mont-Saint-Michel Normandie (Office de tourisme): venir en coche, moto o autocaravana (www.ot-montsaintmichel.com)",
+      "url": "https://www.ot-montsaintmichel.com/je-decouvre/visiter-le-mont-saint-michel/jaccede-au-mont-saint-michel/en-voiture-en-moto-et-en-camping-car/",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-06",
+  "verificado": true
+}

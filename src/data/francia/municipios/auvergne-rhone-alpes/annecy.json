@@ -1,0 +1,52 @@
+{
+  "nombre": "Annecy",
+  "comunidad": "auvergne-rhone-alpes",
+  "provincia": "Haute-Savoie (74)",
+  "estado": "restringido",
+  "resumen": "Una orden municipal de 2007 limita a 24 horas el estacionamiento de autocaravanas y caravanas en el dominio público de Annecy y lo prohíbe en el parking des Marquisats; no hemos confirmado si se aplica a todo el municipio actual. El área municipal de Colmyr es gratuita, tiene 10 plazas, agua y vaciado, y un máximo de 24 horas.",
+  "reglas": [
+    "Autocaravanas, caravanas y demás vehículos habitables pueden estacionar como máximo 24 horas en el dominio público municipal (art. 3 del arrêté n.º 2007-2404 de 06/09/2007). La orden es de 2007; no hemos confirmado si se aplica a todo el territorio del municipio actual.",
+    "Prohibido estacionar en el parking des Marquisats (art. 2 del arrêté n.º 2007-2404 de 06/09/2007).",
+    "En el área de Colmyr: máximo 24 horas, solo en las 10 plazas marcadas, prohibida a coches y caravanas, sin sacar mesas, sillas, sombrillas, tendederos ni barbacoa, sin lavar el vehículo y vertiendo las aguas solo en la zona de vaciado (art. 4 del arrêté n.º 2007-2404 de 06/09/2007)."
+  ],
+  "areas": [
+    {
+      "nombre": "Aire de camping-cars de Colmyr",
+      "detalle": "Chemin de Colmyr (la Oficina de Turismo la sitúa en la avenue des Marquisats), a menos de 300 m del lago. Gratuita, abierta todo el año, 10 plazas, no vigilada, máximo 24 horas. Agua potable y vaciado de aguas usadas; el agua se corta de diciembre a marzo. Sin electricidad.",
+      "soloServicios": false
+    }
+  ],
+  "multa": "El arrêté no fija importe. En general, incumplir una orden municipal es una contravención de 2.ª clase (art. R610-5 del Code pénal), con multa de hasta 150 € (art. 131-13 del Code pénal); según cómo esté redactada la orden, puede aplicarse otra norma, como el Code de la route.",
+  "fuentes": [
+    {
+      "titulo": "Arrêté municipal n.º 2007-2404, stationnement des caravanes, autocaravanes et autres véhicules habitables (Ville d'Annecy)",
+      "url": "https://www.annecy.fr/api/fileadmin/mediatheque_annecy/Mon_quotidien/D%C3%A9placement_et_stationnement/Arrete-municipal-stationnement-camping-cars.pdf",
+      "tipo": "oficial",
+      "fecha": "2007-09-06"
+    },
+    {
+      "titulo": "Stationnement, apartado camping-cars (web municipal de Annecy)",
+      "url": "https://www.annecy.fr/quotidien/deplacement-et-stationnement/stationnement",
+      "tipo": "oficial",
+      "fecha": "2026-07-01"
+    },
+    {
+      "titulo": "Aire d'accueil et de service camping-cars à Annecy (Office de Tourisme du Lac d'Annecy)",
+      "url": "https://www.lac-annecy.com/camping/aire-daccueil-et-de-service-camping-cars-annecy/",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Code pénal, art. R610-5 (incumplir un arrêté)",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045176320",
+      "tipo": "oficial",
+      "fecha": "2022-02-17"
+    },
+    {
+      "titulo": "Code pénal, art. 131-13 (Légifrance, version en vigueur au 05/11/2026)",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006417259/",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-06",
+  "verificado": true
+}

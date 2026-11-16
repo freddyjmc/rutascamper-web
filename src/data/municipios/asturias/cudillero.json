@@ -1,0 +1,63 @@
+{
+  "nombre": "Cudillero",
+  "comunidad": "asturias",
+  "provincia": "Asturias",
+  "estado": "restringido",
+  "resumen": "Cudillero tiene dos sitios públicos donde Turismo Asturias indica que se puede pernoctar con la autocaravana: el aparcamiento del dique, en el puerto (de pago, 5 plazas, máximo 48 horas), y el área de la gasolinera de Avia (gratuita, 5 plazas, con agua y vaciado). No hemos localizado una ordenanza municipal específica, así que fuera de esos lugares rige la norma asturiana.",
+  "reglas": [
+    "En el aparcamiento del dique se puede pernoctar, con un máximo de 48 horas y pago de aparcamiento.",
+    "En el área de Avia se puede pernoctar en el aparcamiento; Turismo Asturias no indica estancia máxima.",
+    "El área del supermercado MasyMas (Las Dueñas) es solo para servicios: máximo 15 minutos, sin pernocta y en horario del supermercado.",
+    "Fuera de las áreas, Asturias prohíbe la acampada libre, definida como permanecer o pernoctar fuera de campings y áreas autorizadas sin autorización (Decreto 61/2022, art. 61).",
+    "No hemos localizado una ordenanza municipal de autocaravanas de Cudillero: respeta la señalización."
+  ],
+  "areas": [
+    {
+      "nombre": "Aparcamiento del dique de Cudillero",
+      "detalle": "Carretera CU-3, junto al puerto. Público y de pago, 5 plazas, máximo 48 h, se permite pernoctar.",
+      "lat": 43.56872,
+      "lon": -6.15349,
+      "coordFuente": "https://www.turismoasturias.es/en/organiza-tu-viaje/como-llegar-y-moverse/autocaravanas/organiza-tu-viaje/como-llegar-y-moverse/autocaravanas/aparcamiento-del-dique-de-cudillero"
+    },
+    {
+      "nombre": "Área de autocaravanas Avia-Cudillero",
+      "detalle": "En la gasolinera, junto a la salida 431 de la A-8. Pública y gratuita, 5 plazas, se permite pernoctar. Agua potable y vaciado (gratis para clientes de la gasolinera).",
+      "lat": 43.554748,
+      "lon": -6.16665,
+      "coordFuente": "https://www.turismoasturias.es/en/organiza-tu-viaje/como-llegar-y-moverse/autocaravanas/area-autocaravanas-avia-cudillero"
+    },
+    {
+      "nombre": "Área MasyMas (Las Dueñas)",
+      "detalle": "Gratuita, solo servicios (agua y vaciado), máximo 15 minutos, sin pernocta.",
+      "lat": 43.55528,
+      "lon": -6.16917,
+      "coordFuente": "https://www.turismoasturias.es/organiza-tu-viaje/como-llegar-y-moverse/autocaravanas/area-autocaravanas-de-masymas-cudillero-",
+      "soloServicios": true
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Turismo Asturias (Principado de Asturias): Aparcamiento del dique de Cudillero",
+      "url": "https://www.turismoasturias.es/en/organiza-tu-viaje/como-llegar-y-moverse/autocaravanas/organiza-tu-viaje/como-llegar-y-moverse/autocaravanas/aparcamiento-del-dique-de-cudillero",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Turismo Asturias (Principado de Asturias): Área autocaravanas Avia-Cudillero",
+      "url": "https://www.turismoasturias.es/en/organiza-tu-viaje/como-llegar-y-moverse/autocaravanas/area-autocaravanas-avia-cudillero",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Turismo Asturias (Principado de Asturias): Área autocaravanas de MasyMas (Cudillero)",
+      "url": "https://www.turismoasturias.es/organiza-tu-viaje/como-llegar-y-moverse/autocaravanas/area-autocaravanas-de-masymas-cudillero-",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Decreto 61/2022 de Asturias (BOPA n.º 191, 04/10/2022)",
+      "url": "https://miprincipado.asturias.es/bopa/2022/10/04/2022-07386.pdf",
+      "tipo": "oficial",
+      "fecha": "2022-10-04"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

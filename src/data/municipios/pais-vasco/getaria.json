@@ -1,0 +1,38 @@
+{
+  "nombre": "Getaria",
+  "comunidad": "pais-vasco",
+  "provincia": "Gipuzkoa",
+  "estado": "restringido",
+  "resumen": "En Getaria las autocaravanas solo pueden aparcar en la zona habilitada junto a la playa de Gaztetape, en el puerto, y solo si miden como máximo 5 metros. Fuera de esa zona no está permitido. Se paga la zona azul en horario regulado y no se puede sacar nada fuera del vehículo.",
+  "reglas": [
+    "Las autocaravanas solo pueden aparcar en la zona habilitada junto a la playa de Gaztetape; fuera de ella no está permitido.",
+    "Longitud máxima del vehículo: 5 metros.",
+    "Se paga la tarifa de zona azul (OTA), solo en horario regulado.",
+    "Prohibido sacar mesas, sillas, toldos, barbacoas, tendederos o cualquier objeto fuera del vehículo, y hacer fuego salvo autorización expresa.",
+    "Prohibido poner música alta, hacer ruidos molestos o usar generadores en horas de descanso, y limpiar el material de acampada o las mascotas en los aseos públicos.",
+    "En las bajadas al puerto desde Zarautz y desde Zumaia está prohibido el paso de caravanas y vehículos de más de 1,90 m de altura.",
+    "La web oficial no indica estancia máxima ni si se permite pernoctar. En País Vasco, dormir dentro sin desplegar nada no es acampada libre en zona urbana (Ley 13/2016, art. 67)."
+  ],
+  "areas": [
+    { "nombre": "Zona de autocaravanas de Gaztetape (puerto)", "detalle": "Sin servicios. Solo vehículos de hasta 5 m. Zona azul de pago en horario regulado." }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Getaria Turismo (Ayuntamiento de Getaria): caravanas y autocaravanas",
+      "url": "https://getariaturismo.eus/en/vans/",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Getaria Turismo (Ayuntamiento de Getaria): aparcamiento y acceso al puerto",
+      "url": "https://getariaturismo.eus/en/cars/",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Ley 13/2016 de Turismo del País Vasco, art. 67 (BOE-A-2016-8346)",
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2016-8346",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

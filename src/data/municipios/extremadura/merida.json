@@ -1,0 +1,35 @@
+{
+  "nombre": "Mérida",
+  "comunidad": "extremadura",
+  "provincia": "Badajoz",
+  "estado": "permitido",
+  "resumen": "En Mérida la ordenanza reconoce el derecho a estacionar la autocaravana en todo el municipio como cualquier otro vehículo, y da igual que haya personas dentro si no se nota desde fuera. No puedes sacar mesas, sillas, toldo ni patas estabilizadoras. Hay un área municipal de pago con 27 plazas y servicios.",
+  "reglas": [
+    "Se reconoce el derecho a estacionar en todo el municipio según las normas de tráfico, salvo en espacios naturales protegidos, suelo de especial protección y dominio público (art. 4).",
+    "Se considera estacionada, y no acampada, la autocaravana que solo toca el suelo con las ruedas o calzos de nivelación, sin patas estabilizadoras, sin ventanas proyectables abiertas ni sillas, mesas o toldos, sin verter nada y sin ruidos molestos; no importa que haya gente dentro (art. 4).",
+    "Prohibido parar autocaravanas en curvas, cruces, carriles bus o bici, paradas de transporte, paseos y zonas peatonales, entre otros lugares (art. 6).",
+    "Sacar toldos, mesas, sillas o patas niveladoras donde no está autorizado es infracción leve (art. 10)."
+  ],
+  "areas": [
+    {
+      "nombre": "Área municipal de autocaravanas de Mérida",
+      "detalle": "27 plazas de 50 m², con electricidad, aseos, duchas, vaciado de aguas grises y negras y agua limpia. Pernocta: 12 € al día con todos los servicios, según la web del Ayuntamiento. Atención 24 horas: +34 912 158 313."
+    }
+  ],
+  "multa": "Leves (por ejemplo, sacar toldo, mesas o sillas, o pasarte del tiempo contratado en el área): hasta 100 €. Graves: de 101 a 300 €. Muy graves: de 301 a 600 € (arts. 10 y 11).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza reguladora del régimen de estacionamiento para autocaravanas en tránsito de Mérida (BOP de Badajoz n.º 29, 09/02/2024)",
+      "url": "https://descargas.merida.es/ordenanzas/ordenanza_reguladora_autocaravanas.pdf",
+      "tipo": "oficial",
+      "fecha": "2024-02-09"
+    },
+    {
+      "titulo": "Ayuntamiento de Mérida: área municipal de autocaravanas",
+      "url": "https://merida.es/guia-util/area-municipal-autocaravanas/",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

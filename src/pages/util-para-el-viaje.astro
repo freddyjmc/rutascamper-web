@@ -1,0 +1,77 @@
+---
+// «Útil para el viaje»: webs oficiales y gratuitas por país (tiempo, tráfico, mapas, carburante, emergencias).
+// Solo enlaces: no se copian datos ni se incrustan servicios de terceros. Los datos están en src/data/util.json
+// y check.mjs comprueba que cada enlace va a un dominio oficial.
+import Base from "../layouts/Base.astro";
+import PaisSelector from "../components/PaisSelector.astro";
+import { getPaises } from "../lib/paises";
+import util from "../data/util.json";
+import { SITE } from "../site";
+
+type Code = keyof typeof util.paises;
+const paises = (await getPaises()).filter((p) => p.code in util.paises);
+const comprobado = new Date(util.comprobado).toLocaleDateString("es-ES", { day: "numeric", month: "long", year: "numeric" });
+const nombres = paises.length > 1 ? `${paises.slice(0, -1).map((p) => p.nombre).join(", ")} y ${paises[paises.length - 1].nombre}` : paises[0].nombre;
+const dominio = (u: string) => new URL(u).hostname.replace(/^www\./, "");
+---
+<Base title="Útil para el viaje: webs oficiales y gratuitas" description={`Tiempo, tráfico, mapas, precio del carburante y teléfonos de emergencia en ${nombres}: enlaces a las webs oficiales y gratuitas.`} crumbs={[{ name: "Útil para el viaje", href: "/util-para-el-viaje/" }]}>
+  <div class="prose">
+    <h1>Útil para el viaje</h1>
+    <p class="lead">Webs oficiales y gratuitas para preparar la ruta: el tiempo, el tráfico, mapas, el precio del carburante y los teléfonos de emergencia.</p>
+    <p class="muted">Solo enlazamos: no copiamos sus datos ni tenemos relación con estas webs. Comprobamos que los enlaces funcionaban el {comprobado}.</p>
+  </div>
+
+  <div class="pais-top util-sw">
+    <PaisSelector actual={paises[0].code} modo="pestañas" idBase="util" />
+  </div>
+
+  {paises.map((p, i) => {
+    const grupos = util.paises[p.code as Code];
+    const em = util.emergencias[p.code as Code];
+    return (
+      <section role="tabpanel" id={`util-panel-${p.code}`} aria-labelledby={`util-tab-${p.code}`} data-pais={p.code} hidden={i > 0} tabindex="0" class="util-panel">
+        <h2>{p.nombre}</h2>
+        <div class="util-em card">
+          <h3>Emergencias</h3>
+          <ul>
+            {em.numeros.map((n) => <li>{"llamada" in n && n.llamada === false ? <strong class="util-num">{n.num}</strong> : <a href={`tel:${n.num}`} class="util-num">{n.num}</a>} {n.texto}</li>)}
+          </ul>
+          <p class="muted">Fuente: <a href={em.fuente.url} rel="noopener">{em.fuente.nombre}</a>.</p>
+        </div>
+        <div class="util-grid">
+          {grupos.map((g) => (
+            <div class="card">
+              <h3>{g.grupo}</h3>
+              <ul>
+                {g.enlaces.map((e) => (
+                  <li>
+                    <a href={e.url} rel="noopener"><strong>{e.nombre}</strong></a>
+                    <span class="util-quien">{e.quien} · {dominio(e.url)}</span>
+                    <span>{e.texto}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+    );
+  })}
+
+  <div class="prose">
+    <p class="muted">¿Conoces otra web oficial y gratuita que sirva para viajar en camper? Escríbenos a {SITE.owner.email} y la revisamos. Para saber dónde se puede dormir, consulta la ficha del <a href="/destinos/">destino</a>.</p>
+  </div>
+</Base>
+
+<style>
+  .util-sw { margin-block: var(--space-24); }
+  .util-panel { margin-bottom: var(--space-32); }
+  .util-panel h2 { margin-bottom: var(--space-16); }
+  .util-grid { display: grid; gap: var(--space-16); grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr)); margin-top: var(--space-16); }
+  .util-grid ul, .util-em ul { list-style: none; margin: 0; padding: 0; }
+  .util-grid li { display: grid; gap: 2px; }
+  .util-grid li + li, .util-em li + li { margin-top: var(--space-16); }
+  .util-quien { font-size: .85rem; color: var(--muted); }
+  .util-em { border-left: 4px solid var(--bad); }
+  .util-num { display: inline-block; min-width: 3.2rem; font-weight: 800; font-size: 1.15rem; text-decoration: none; }
+</style>

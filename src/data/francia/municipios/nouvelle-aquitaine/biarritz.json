@@ -1,0 +1,74 @@
+{
+  "nombre": "Biarritz",
+  "comunidad": "nouvelle-aquitaine",
+  "provincia": "Pyrénées-Atlantiques (64)",
+  "estado": "restringido",
+  "resumen": "Biarritz regula el estacionamiento de autocaravanas, caravanas y vehículos acondicionados para vivir con un arrêté municipal (orden del alcalde) de 2021. Hay calles prohibidas todo el año, otras prohibidas de noche (de 21:00 a 7:00) entre el 15 de abril y el 31 de octubre y, en verano, un máximo de 48 horas en el centro protegido. Para estacionar y vaciar, el ayuntamiento remite a sus dos áreas: allée Gabrielle Dorziat y avenue de la Milady. La allée Gabrielle Dorziat figura en la lista del art. 2 del arrêté; el área está en el n.º 50 de esa calle.",
+  "reglas": [
+    "Prohibido estacionar día y noche, todo el año, en 35 calles y lugares, entre ellos el boulevard du Général de Gaulle, la avenue de l'Impératrice, la esplanade du Port Vieux, el Port des Pêcheurs y el plateau de la Grande Atalaye (art. 2 del arrêté n.º 21-01395-D de 29/04/2021).",
+    "Prohibido estacionar de 21:00 a 7:00, del 15 de abril al 31 de octubre de cada año, en 18 calles y aparcamientos, entre ellos la Perspective de la Côte des Basques, la avenue de la Milady, la avenue Édouard VII y el parking Labordotte (art. 3 del mismo arrêté).",
+    "Fuera de las dos áreas, del 1 de mayo al 30 de septiembre no se puede estacionar más de 48 horas dentro del perímetro del centro protegido (Site Patrimonial Remarquable) que marca el plano del arrêté (art. 4).",
+    "Donde sí se puede estacionar, está prohibido sacar material: toldo, tienda, mesa, barbacoa, ropa tendida, calzos, etc. (art. 5).",
+    "Vehículos de más de 2 m de ancho: prohibidos en los callejones sin salida de menos de 3,50 m de anchura (art. 6).",
+    "El vaciado y la carga de agua se hacen en las áreas de servicio del 50 allée Gabrielle Dorziat y el 65 avenue de la Milady (art. 7).",
+    "Los vehículos que incumplan el arrêté pueden ir a la grúa (art. 10)."
+  ],
+  "areas": [
+    {
+      "nombre": "Área municipal de la Milady",
+      "detalle": "65 avenue de la Milady. Área de servicios y de estacionamiento regulado para autocaravanas. 32 plazas y máximo 48 horas en temporada alta, según la web municipal. Precio: no indicado en la fuente oficial.",
+      "lat": 43.4660955,
+      "lon": -1.5718603,
+      "coordCreador": "OT Biarritz",
+      "coordFuente": "https://data.datatourisme.fr/23/826af083-6f33-3513-aca3-2f5ce530fe84"
+    },
+    {
+      "nombre": "Área municipal Gabrielle Dorziat",
+      "detalle": "50 allée Gabrielle Dorziat. Área de servicios y de estacionamiento regulado. La web municipal da 31 plazas (el texto tiene una errata) y máximo 48 horas en temporada alta. Precio: no indicado en la fuente oficial.",
+      "lat": 43.4582459,
+      "lon": -1.5584063,
+      "coordCreador": "OT Biarritz",
+      "coordFuente": "https://data.datatourisme.fr/23/28b78a33-780a-3f2b-91e3-7a25f4c656b8"
+    }
+  ],
+  "multa": "El arrêté no fija importe. En general, incumplir una orden municipal es una contravención de 2.ª clase (art. R610-5 del Code pénal), con multa de hasta 150 € (art. 131-13 del Code pénal); según cómo esté redactada la orden, puede aplicarse otra norma, como el Code de la route. Además, puede haber grúa.",
+  "fuentes": [
+    {
+      "titulo": "Arrêté n.º 21-01395-D de 29/04/2021, reglamentación del estacionamiento de las autocaravanas y vehículos en modo alojamiento (Ville de Biarritz)",
+      "url": "https://www.biarritz.fr/fileadmin/mediatheque/Actes_administratifs/arr-camping-car.pdf",
+      "tipo": "oficial",
+      "fecha": "2021-04-29"
+    },
+    {
+      "titulo": "En camping-car (web municipal de Biarritz)",
+      "url": "https://www.biarritz.fr/cadre-de-vie-bizi-ingurunea/mobilite/en-camping-car",
+      "tipo": "oficial",
+      "fecha": "2026-05-06"
+    },
+    {
+      "titulo": "Code pénal, art. R610-5 (incumplir un arrêté)",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045176320",
+      "tipo": "oficial",
+      "fecha": "2022-02-17"
+    },
+    {
+      "titulo": "Code pénal, art. 131-13 (Légifrance, version en vigueur au 05/11/2026)",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006417259/",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "DATAtourisme (ADN Tourisme), «Aire Biarritz - Milady», dato creado por OT Biarritz, actualizado el 01/07/2026. Licence Ouverte 2.0 (Etalab). Solo coordenadas",
+      "url": "https://data.datatourisme.fr/23/826af083-6f33-3513-aca3-2f5ce530fe84",
+      "tipo": "oficial",
+      "fecha": "2026-07-01"
+    },
+    {
+      "titulo": "DATAtourisme (ADN Tourisme), «Aire Biarritz - Dorziat», dato creado por OT Biarritz, actualizado el 05/10/2026. Licence Ouverte 2.0 (Etalab). Solo coordenadas",
+      "url": "https://data.datatourisme.fr/23/28b78a33-780a-3f2b-91e3-7a25f4c656b8",
+      "tipo": "oficial",
+      "fecha": "2026-10-05"
+    }
+  ],
+  "revisado": "2026-11-06",
+  "verificado": true
+}

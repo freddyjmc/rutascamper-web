@@ -1,0 +1,84 @@
+---
+import { ESTADOS, fecha, fuenteOficial } from "../site";
+// Ficha de municipio de Francia o Portugal. Mismo diseño que Ficha.astro (España), sin mapa propio ni «Mi ruta».
+interface Props { m: any; pais?: "fr" | "pt" }
+const { m, pais = "fr" } = Astro.props;
+const nacional = pais === "pt" ? { href: "/portugal/", texto: "Normativa nacional de Portugal", sin: "Reglamento municipal no localizado." } : { href: "/francia/", texto: "Normativa nacional de Francia", sin: "Orden municipal no localizada." };
+const e = ESTADOS[m.estado as keyof typeof ESTADOS];
+const oficiales = m.fuentes.filter((f: any) => f.tipo === "oficial");
+const oficial = fuenteOficial(m);
+// Las áreas se separan por lo que la fuente permite afirmar: dormir, solo servicios, o estacionamiento sin confirmar.
+const areasM = (m.areas as any[]).map((a) => ({ a }));
+const grupos = [
+  { titulo: "Dónde se puede dormir", items: areasM.filter(({ a }) => !a.soloServicios && a.pernocta !== "sin-confirmar") },
+  { titulo: "Estacionamiento para autocaravanas (la fuente no dice si se puede pasar la noche)", items: areasM.filter(({ a }) => !a.soloServicios && a.pernocta === "sin-confirmar") },
+  { titulo: "Solo vaciado y agua", items: areasM.filter(({ a }) => a.soloServicios) },
+];
+const sinNorma = m.estado === "sin-datos" || !oficial;
+---
+<section class="norma-card" aria-labelledby="norma-titulo">
+  <h2 id="norma-titulo">Antes de aparcar: qué dice la norma</h2>
+  <p class="norma-estado"><span class={`badge ${e.tone}`}>{e.label}</span></p>
+  <p class="norma-resumen">{m.resumen}</p>
+  {!m.verificado && <p class="notice">Borrador sin verificar: todavía no lo hemos contrastado con una fuente oficial. No se publica hasta entonces.</p>}
+  {m.bloqueado && <p class="notice">Ficha bloqueada: falta el permiso de una fuente. No se publica.</p>}
+  <p class="norma-rev">
+    {sinNorma
+      ? <><strong>{nacional.sin}</strong> Fecha de revisión: {fecha(m.revisado)}.</>
+      : <>Información revisada por RutasCamper el {fecha(m.revisado)}.</>}
+  </p>
+  {oficial && <a class="btn norma-btn" href={oficial.url} rel="nofollow noopener" target="_blank">Ver la fuente oficial ↗</a>}
+</section>
+
+{m.reglas.length > 0 && (
+  <section class="ficha-sec">
+    <h2>Qué dice la norma</h2>
+    <ul>{m.reglas.map((r: string) => <li>{r}</li>)}</ul>
+  </section>
+)}
+
+{m.temporada?.length > 0 && (
+  <section class="ficha-sec">
+    <h2>Solo en ciertas fechas</h2>
+    <ul>{m.temporada.map((t: any) => (
+      <li>{t.texto}{(t.desde || t.hasta) && <> <span class="meta">({t.desde ?? "…"} – {t.hasta ?? "…"})</span></>}{t.fuente && <> <span class="meta">· {t.fuente}</span></>}</li>
+    ))}</ul>
+  </section>
+)}
+
+{m.notaAyuntamiento && (
+  <section class="ficha-sec">
+    <h2>Información del ayuntamiento (no está en {pais === "pt" ? "el reglamento municipal" : "la orden municipal"})</h2>
+    <p>{m.notaAyuntamiento}</p>
+  </section>
+)}
+
+{grupos.map((g) => g.items.length > 0 && (
+  <section class="ficha-sec">
+    <h2>{g.titulo}</h2>
+    <ul>{g.items.map(({ a }: any) => (
+      <li><strong>{a.nombre}</strong>{a.detalle && <> · {a.detalle}</>}{a.lat !== undefined && <> · <a href={`https://www.openstreetmap.org/?mlat=${a.lat}&mlon=${a.lon}#map=16/${a.lat}/${a.lon}`} rel="noopener" target="_blank">Ver en OpenStreetMap ↗</a></>}{a.coordFuente?.startsWith("https://data.datatourisme.fr/") && <> · <span class="meta">Ubicación: DATAtourisme (ADN Tourisme), Licence Ouverte 2.0; quién creó el dato y su fecha, en «Fuentes». Solo usamos la ubicación; lo que dice la norma sale de la fuente municipal.</span></>}</li>
+    ))}</ul>
+  </section>
+))}
+
+{m.multa && (
+  <section class="ficha-sec">
+    <h2>Multas</h2>
+    <p>{m.multa}</p>
+  </section>
+)}
+
+<section class="ficha-sec">
+  <h2>Fuentes</h2>
+  {m.fuentes.length ? (
+    <ul class="sources">
+      {m.fuentes.map((f: any) => (
+        <li><a href={f.url} rel="nofollow noopener" target="_blank">{f.titulo}</a> <span class="meta">· {f.tipo === "oficial" ? "fuente oficial" : "fuente secundaria"}{f.fecha && ` · ${fecha(f.fecha)}`}</span></li>
+      ))}
+    </ul>
+  ) : <p class="muted">Sin fuentes todavía.</p>}
+  {oficiales.length === 0 && m.fuentes.length > 0 && <p class="meta">Aún no hay fuente oficial: las secundarias solo sirven como pista.</p>}
+  <p class="meta">Última revisión: {fecha(m.revisado)} · <a href="/metodo/">Cómo verificamos</a> · <a href={nacional.href}>{nacional.texto}</a></p>
+</section>
+<p class="print-only">Información orientativa. La norma puede cambiar: manda la señalización y la orden municipal vigente. Consulta la versión actual en rutascamper.com.</p>

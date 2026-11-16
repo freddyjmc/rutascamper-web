@@ -1,0 +1,29 @@
+{
+  "nombre": "Comunitat Valenciana",
+  "resumen": "En la Comunitat Valenciana no se permite la acampada libre al amparo de la normativa turística, y las áreas de pernocta en tránsito para autocaravanas tienen un máximo de 48 horas. Las áreas de estacionamiento que habilitan los ayuntamientos se rigen por sus ordenanzas.",
+  "normaAutonomica": "Decreto 10/2021, de 22 de enero, del Consell, por el que se aprueba el Reglamento regulador del alojamiento turístico (DOGV n.º 9015, de 8 de febrero de 2021). Incluye los campings y las áreas de pernocta en tránsito para autocaravanas.",
+  "claves": [
+    "No pueden producirse acampadas libres al amparo de la norma: se entiende por acampada libre la instalación ocasional de tiendas, caravanas, autocaravanas u otros albergues móviles para pernoctar fuera de los establecimientos regulados (art. 2.5).",
+    "En las áreas de pernocta en tránsito para autocaravanas la ocupación de una plaza no puede superar en ningún caso las 48 horas (art. 50.10).",
+    "En esas áreas no se pueden instalar tiendas de campaña ni albergues móviles o fijos (art. 50.8).",
+    "Las áreas de estacionamiento para autocaravanas que habilitan los ayuntamientos según su normativa municipal no se consideran áreas de pernocta del decreto (art. 50.9): sus reglas las fija cada ordenanza.",
+    "La normativa turística no regula la pernocta en la vía pública: depende de las normas de tráfico y de cada ayuntamiento."
+  ],
+  "pernoctaVia": "No hay acampada libre al amparo de la norma (art. 2.5); dormir en la calle depende de cada ordenanza municipal.",
+  "estanciaAreas": "48 h",
+  "fuentes": [
+    {
+      "titulo": "Decreto 10/2021, de 22 de enero, del Consell, Reglamento regulador del alojamiento turístico (DOGV n.º 9015, 08/02/2021), texto en Noticias Jurídicas",
+      "url": "https://noticias.juridicas.com/base_datos/CCAA/688298-d-10-2021-de-22-ene-ca-valenciana-reglamento-regulador-del-alojamiento-turistico.html",
+      "tipo": "oficial",
+      "fecha": "2021-02-08"
+    },
+    {
+      "titulo": "Generalitat Valenciana: decreto regulador de los campings y de las áreas de pernocta en tránsito para autocaravanas",
+      "url": "https://cindi.gva.es/es/-/decreto-regulador-de-los-campings-y-de-las-areas-de-pernocta-en-transito-para-autocaravanas-de-la-comunitat-valenciana",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

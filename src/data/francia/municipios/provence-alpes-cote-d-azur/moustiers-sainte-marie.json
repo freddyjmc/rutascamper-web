@@ -1,0 +1,28 @@
+{
+  "nombre": "Moustiers-Sainte-Marie",
+  "comunidad": "provence-alpes-cote-d-azur",
+  "provincia": "Alpes-de-Haute-Provence (04)",
+  "estado": "sin-datos",
+  "resumen": "No hemos localizado ninguna orden municipal. Si no la hay, rige la norma nacional; respeta la señalización. Al pie del pueblo hay un área de la red Camping-Car Park con 23 plazas, abierta todo el año, con agua y vaciado, desde 5,50 € con tasa turística incluida. Se entra y se paga con la tarjeta Pass'Etapes.",
+  "reglas": [
+    "No hemos localizado ninguna orden municipal. Si no la hay, rige la norma nacional; respeta la señalización."
+  ],
+  "areas": [
+    {
+      "nombre": "Aire de service et de stationnement Camping-Car Park",
+      "detalle": "Chemin de la Maladrerie, al pie del pueblo (5 minutos a pie). 23 plazas, abierta todo el año. Entrada y pago con la tarjeta Pass'Etapes, que se saca en la máquina de la entrada (5 €, solo con tarjeta bancaria). Agua y vaciado de aguas grises y negras. Plaza con servicios desde 5,50 € (incluye 1,40 € de tasa turística). La fuente no indica duración máxima. Datos de la Oficina de Turismo actualizados el 3 de septiembre de 2025.",
+      "soloServicios": false
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Aire de service et de stationnement camping-car park (Office de Tourisme de Moustiers-Sainte-Marie)",
+      "url": "https://www.moustiers.fr/fiche/aire-de-service-et-de-stationnement-camping-car-park/",
+      "tipo": "oficial",
+      "fecha": "2025-09-03"
+    }
+  ],
+  "revisado": "2026-11-05",
+  "verificado": false,
+  "bloqueado": true
+}

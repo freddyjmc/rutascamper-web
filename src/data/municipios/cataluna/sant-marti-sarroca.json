@@ -1,0 +1,29 @@
+{
+  "nombre": "Sant Martí Sarroca",
+  "comunidad": "cataluna",
+  "provincia": "Barcelona",
+  "estado": "restringido",
+  "resumen": "Sant Martí Sarroca (Alt Penedès) tiene un área de estacionamiento para autocaravanas y campers al este del pueblo, en el paraje del Camp dels Grecs, con un máximo de 48 horas. La acampada libre está prohibida en todo el municipio, también dentro del área.",
+  "reglas": [
+    "Prohibida la acampada libre en todo el término municipal, incluso en el área de autocaravanas (art. 4).",
+    "Es acampada sacar enseres fuera del vehículo o quedarse más de 48 horas en un estacionamiento (art. 4).",
+    "Estancia máxima en el área: 48 horas (art. 5)."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de autocaravanas de Sant Martí Sarroca",
+      "detalle": "Al este del núcleo urbano, en el paraje del Camp dels Grecs. Máximo 48 horas."
+    }
+  ],
+  "multa": "Leves (acampar en el área, estacionar contra la ordenanza sin obstaculizar): hasta 100 €. Graves (acampada libre fuera del área, molestias): hasta 300 €. Muy graves (dañar el área): hasta 600 € (art. 8).",
+  "fuentes": [
+    {
+      "titulo": "Ordenança reguladora dels usos i serveis de l'àrea d'estacionament d'autocaravanes de Sant Martí Sarroca, modificación aprobada definitivamente (BOPB 16/09/2025)",
+      "url": "https://bop.diba.cat/anuncio/ver-pdf/3814617",
+      "tipo": "oficial",
+      "fecha": "2025-09-16"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

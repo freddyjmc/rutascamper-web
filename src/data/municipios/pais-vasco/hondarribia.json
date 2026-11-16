@@ -1,0 +1,30 @@
+{
+  "nombre": "Hondarribia",
+  "comunidad": "pais-vasco",
+  "provincia": "Gipuzkoa",
+  "estado": "permitido",
+  "resumen": "Hondarribia permite estacionar autocaravanas en las plazas normales para vehículos a motor, salvo que la señalización lo prohíba, y en las zonas reservadas que habilite el ayuntamiento. Su ordenanza de movilidad no prohíbe la pernocta, así que se aplica la regla vasca: dormir dentro bien estacionado no es acampada.",
+  "reglas": [
+    "Fuera de las zonas reservadas puedes estacionar en plazas para otros vehículos de motor, salvo que la señalización lo prohíba, ocupando una sola plaza y sin obstaculizar (art. 73).",
+    "En las zonas reservadas, el vehículo no puede sobresalir de la plaza ni ocupar calzada, acera, paseo o jardín (art. 72).",
+    "El ayuntamiento puede fijar un máximo de horas seguidas de estacionamiento por semana en las zonas reservadas; la ordenanza no da una cifra concreta (art. 72).",
+    "Las autocaravanas no pueden circular por zonas peatonales, carriles bici ni espacios del transporte público (art. 71).",
+    "Pernoctar dentro sin desplegar nada no es acampada libre en zona urbana (Ley 13/2016 de Turismo, art. 67)."
+  ],
+  "areas": [],
+  "fuentes": [
+    {
+      "titulo": "Ordenanza de movilidad de Hondarribia, título octavo (arts. 70-73), aprobada el 28/04/2022 y en vigor desde el 23/06/2022",
+      "url": "https://www.hondarribia.eus/es/mugitzenarida/ordenanza/titulo-octavo",
+      "tipo": "oficial",
+      "fecha": "2022-04-29"
+    },
+    {
+      "titulo": "Ley 13/2016 de Turismo del País Vasco, art. 67 (BOE-A-2016-8346)",
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2016-8346",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-01",
+  "verificado": true
+}

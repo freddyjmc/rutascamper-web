@@ -1,0 +1,24 @@
+{
+  "nombre": "Región de Murcia",
+  "resumen": "En la Región de Murcia no se puede hacer acampada libre con autocaravana, caravana o camper fuera de los campings y de las áreas de autocaravanas reguladas. Sí puedes aparcar en las zonas autorizadas de calles y carreteras, siempre que el vehículo no despliegue nada, no use cuñas y no vierta nada. Lo dice el Decreto 193/2022 (art. 4), salvo que una ordenanza municipal o las normas de tráfico digan otra cosa.",
+  "normaAutonomica": "Decreto n.º 193/2022, de 27 de octubre, por el que se regulan los alojamientos turísticos en las modalidades de campings y áreas de autocaravanas, caravanas, camper y similares en la Región de Murcia (BORM n.º 254, de 3 de noviembre de 2022). Hemos leído el texto publicado en el BORM; no hemos localizado modificaciones posteriores.",
+  "claves": [
+    "Acampada libre prohibida con autocaravana, caravana, camper y similares fuera de campings y áreas de autocaravanas (art. 4.2).",
+    "Aparcar no es acampar: el vehículo parado o estacionado en una zona autorizada de calles y carreteras no se considera acampado si no despliega elementos ni amplía su perímetro, se apoya sobre sus propias ruedas sin cuñas y no vierte sustancias ni residuos (art. 4.4).",
+    "Ese criterio se aplica salvo que las normas de tráfico o la ordenanza municipal digan lo contrario: mira siempre la del municipio.",
+    "Las áreas de autocaravanas son establecimientos turísticos abiertos al público mediante precio, de uso exclusivo para estos vehículos (art. 3.3). Las zonas de estacionamiento municipales, gratuitas o no, quedan fuera del decreto y las regula cada ayuntamiento (art. 1.2.c).",
+    "En tienda de campaña sí cabe la acampada libre con límites: máximo 3 tiendas, a más de 500 m de un núcleo urbano o a más de 5 km de un camping o área, y hasta 3 días (art. 4.3)."
+  ],
+  "fuentes": [
+    {
+      "titulo": "Decreto n.º 193/2022, de 27 de octubre, de campings y áreas de autocaravanas, caravanas, camper y similares de la Región de Murcia (BORM n.º 254, 03/11/2022)",
+      "url": "https://borm.es/services/anuncio/ano/2022/numero/5528/pdf",
+      "tipo": "oficial",
+      "fecha": "2022-11-03"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true,
+  "pernoctaVia": "Aparcar sí, en zonas autorizadas y sin desplegar nada ni usar cuñas; acampar no (salvo lo que diga cada ordenanza).",
+  "estanciaAreas": "Sin límite autonómico localizado"
+}

@@ -1,0 +1,25 @@
+{
+  "nombre": "Argamasilla de Alba",
+  "comunidad": "castilla-la-mancha",
+  "provincia": "Ciudad Real",
+  "estado": "permitido",
+  "resumen": "En Argamasilla de Alba puedes aparcar la autocaravana en todo el municipio como cualquier otro vehículo, y da igual que estés dentro si no se nota desde fuera. No puedes sacar toldo, mesas ni sillas, ni bajar las patas estabilizadoras. El municipio tiene un área de servicio de pago.",
+  "reglas": [
+    "Puedes estacionar en todo el municipio según las normas de tráfico, salvo en espacios naturales protegidos, terrenos forestales y otras zonas protegidas (art. 4.1).",
+    "Se considera que estás aparcado si solo tocas el suelo con las ruedas o con calzos de nivelación, no bajas las patas estabilizadoras, no sacas nada fuera ni abres ventanas que sobresalgan, no viertes nada y no haces ruido. Puedes elevar el techo y estar dentro si lo que haces no trasciende al exterior (art. 4.5).",
+    "El ayuntamiento no tiene previsto habilitar zonas de estacionamiento exclusivas para autocaravanas (art. 5).",
+    "El área de servicio municipal se rige por el Decreto 94/2018 de Castilla-La Mancha y cobra un precio público. Pasar de 49 horas en el área es infracción grave (arts. 7, 10 y 11)."
+  ],
+  "areas": [],
+  "multa": "Leves, hasta 50 € (por ejemplo, sacar toldo, mesas o sillas, o pasarte del tiempo contratado en el área); graves, de 51 a 200 € (superar 49 horas en el área o no pagar el precio); muy graves, de 201 a 500 € (verter aguas a propósito fuera de los lugares indicados) (arts. 10 y 11).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza municipal reguladora del autocaravanismo o turismo itinerante de Argamasilla de Alba, aprobación definitiva (BOP de Ciudad Real n.º 12, 20/01/2021, anuncio 126), copia en la web municipal",
+      "url": "https://www.argamasilladealba.es/fileadmin/media/Registros_importados_a_mano/Ordenanzas/ORDENANZA_CARAVANAS_BOP_20-01-21.pdf",
+      "tipo": "oficial",
+      "fecha": "2021-01-20"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

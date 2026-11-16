@@ -1,0 +1,24 @@
+{
+  "nombre": "Mijas",
+  "comunidad": "andalucia",
+  "provincia": "Málaga",
+  "estado": "permitido",
+  "resumen": "En Mijas puedes aparcar la autocaravana o la camper en las calles como cualquier otro vehículo, siempre que no despliegues nada; da igual que haya gente dentro si no se nota fuera. Lo que prohíbe la ordenanza de tráfico es usarla como lugar habitable con vocación de permanencia. En las zonas exclusivas que habilite el ayuntamiento, el máximo es de 72 horas seguidas cada 10 días.",
+  "reglas": [
+    "Las autocaravanas, caravanas y campers pueden parar y estacionar en las vías urbanas en las mismas condiciones que cualquier otro vehículo (art. 16 ter.1 y art. 19.4).",
+    "Cuenta como estacionada si solo toca el suelo con las ruedas, sin estabilizadores, sin ventanas proyectables abiertas ni sillas, mesas o toldo, dentro de la plaza marcada si la hay, sin verter fluidos ni basura y sin ruidos molestos. No es relevante que haya ocupantes dentro si su actividad no trasciende al exterior (art. 16 ter.1).",
+    "En las zonas de estacionamiento exclusivo para autocaravanas: máximo 72 horas continuas en un periodo de 10 días; solo se permite abrir ventanas proyectables y está prohibido acampar fuera del vehículo. Estas zonas no tienen servicios (art. 16 ter y art. 19.4).",
+    "El ayuntamiento puede cerrar una zona exclusiva avisando con al menos 48 horas (art. 16 ter).",
+    "Está prohibido estacionar caravanas, autocaravanas o campers que se pretendan usar como lugar habitable con cierta vocación de permanencia (art. 20.23)."
+  ],
+  "multa": "No hemos localizado en la ordenanza una cuantía específica para estas infracciones.",
+  "fuentes": [
+    {
+      "titulo": "Ayuntamiento de Mijas: Ordenanza municipal de tráfico y circulación (texto en mijas.es, junio de 2022), arts. 16 ter, 19 y 20",
+      "url": "https://www.mijas.es/wp-content/uploads/2022/06/ORDENANZAS%20DE%20TRAFICO%20Y%20CIRCULACION%20AYUNTAMIENTO%20DE%20MIJAS.pdf",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

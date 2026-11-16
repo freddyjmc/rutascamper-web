@@ -1,0 +1,7 @@
+---
+import QuienesSomos from "../../views/QuienesSomos.astro";
+import { langParams, type Lang } from "../../i18n";
+export function getStaticPaths() { return langParams(); }
+const lang = Astro.params.lang as Lang;
+---
+<QuienesSomos lang={lang} />
