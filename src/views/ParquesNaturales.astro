@@ -1,0 +1,161 @@
+---
+import Base from "../layouts/Base.astro";
+import AvisoTraduccion from "../components/AvisoTraduccion.astro";
+import { SITE, fecha } from "../site";
+import { t, href as L, localePath, META, type Lang } from "../i18n";
+
+interface Props { lang?: Lang }
+const { lang = "es" } = Astro.props;
+const T = t(lang);
+const loc = META[lang].fecha;
+const M = {
+  es: {
+    title: "Camper en parques nacionales y naturales: dónde se puede dormir",
+    description: "Por qué las normas generales de pernocta no valen dentro de un parque nacional o natural, qué dicen las comunidades y cómo organizarte en Picos de Europa o las Bardenas.",
+    crumb: "Parques naturales",
+  },
+  en: {
+    title: "Campers in national and natural parks: where you can sleep",
+    description: "Why the general overnight stay rules do not apply inside a national or natural park, what the regions say and how to plan your trip in Picos de Europa or the Bardenas.",
+    crumb: "Natural parks",
+  },
+  fr: {
+    title: "Camping-car dans les parcs nationaux et naturels : où dormir",
+    description: "Pourquoi les règles générales de nuitée ne valent pas à l'intérieur d'un parc national ou naturel, ce que disent les communautés et comment vous organiser dans les Picos de Europa ou les Bardenas.",
+    crumb: "Parcs naturels",
+  },
+}[lang];
+const revisado = new Date("2026-11-01");
+const title = M.title;
+const description = M.description;
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: title,
+  description,
+  inLanguage: lang,
+  dateModified: revisado.toISOString(),
+  publisher: { "@type": "Organization", name: SITE.name, url: SITE.url },
+};
+const es = lang === "es";
+---
+<Base title={title} description={description} schema={schema} crumbs={[{ name: M.crumb, href: localePath(lang, "/camper-parques-naturales/") }]} lang={lang}>
+  <article class="prose">
+    {lang === "es" && (
+      <>
+        <h1>Camper en parques nacionales y naturales</h1>
+        <p class="lead">Dentro de un parque nacional, un parque natural o un espacio de la Red Natura 2000, las reglas generales de pernocta dejan de bastar: manda el plan de uso y gestión de cada espacio, que casi siempre es más estricto. La regla práctica: duerme en los pueblos y en las áreas, no dentro del parque.</p>
+      </>
+    )}
+    {lang === "en" && (
+      <>
+        <h1>Campers in national and natural parks</h1>
+        <p class="lead">Inside a national park, a natural park or a Natura 2000 site, the general overnight stay rules are no longer enough: the management and use plan of each space prevails, and it is almost always stricter. The practical rule: sleep in the villages and in the areas, not inside the park.</p>
+      </>
+    )}
+    {lang === "fr" && (
+      <>
+        <h1>Camping-car dans les parcs nationaux et naturels</h1>
+        <p class="lead">À l'intérieur d'un parc national, d'un parc naturel ou d'un site Natura 2000, les règles générales de nuitée ne suffisent plus : c'est le plan d'usage et de gestion de chaque espace qui prime, et il est presque toujours plus strict. La règle pratique : dormez dans les villages et dans les aires, pas à l'intérieur du parc.</p>
+      </>
+    )}
+    <p class="meta">{T.ui.ultimaRevision}: {fecha(revisado, loc)} · <a href={L(lang, "/metodo/")}>{es ? "Cómo verificamos" : T.ui.metodo}</a></p>
+    <AvisoTraduccion lang={lang} />
+
+    {lang === "es" && (
+      <>
+        <h2>Lo que dicen las comunidades</h2>
+        <p>Todas las normas autonómicas que hemos revisado dejan los espacios protegidos fuera de sus reglas generales:</p>
+        <ul>
+          <li><a href="/pernocta/cantabria/">Cantabria</a>: la prohibición de acampada se aplica sin perjuicio de la normativa sectorial, especialmente la de los espacios naturales (Decreto 35/2026, art. 2.3).</li>
+          <li><a href="/pernocta/asturias/">Asturias</a> y <a href="/pernocta/pais-vasco/">País Vasco</a>: sus decretos remiten a los regímenes especiales de los espacios naturales protegidos y de la Red Natura 2000, cuando sus planes prevean la acampada o la pernocta (Decreto 61/2022, art. 62; Decreto 396/2013, art. 82).</li>
+          <li><a href="/pernocta/galicia/">Galicia</a>: ordenanzas como las de <a href="/pernocta/galicia/boiro/">Boiro</a> y <a href="/pernocta/galicia/vilalba/">Vilalba</a> reconocen el derecho a pernoctar en el municipio, pero excluyen expresamente los espacios protegidos, la Red Natura 2000, los terrenos forestales y el dominio público. En Boiro, estacionar en espacios protegidos es infracción grave o muy grave.</li>
+        </ul>
+        <p>Es decir: aunque en la calle de un pueblo puedas dormir dentro de la camper, eso no te autoriza a hacerlo en un aparcamiento dentro de un parque.</p>
+
+        <h2>Picos de Europa</h2>
+        <p>El Parque Nacional de los Picos de Europa se reparte entre Asturias, Cantabria y Castilla y León, y cada comunidad ha aprobado su propio plan rector de uso y gestión. El de Asturias es el Decreto 21/2026, de 16 de marzo, publicado en el BOPA el 31 de marzo de 2026. Todavía no hemos podido leer los capítulos de esos planes sobre pernocta, así que no damos detalles: consulta las normas del parque antes de ir.</p>
+        <p>Lo que sí puedes hacer con seguridad es dormir en las áreas de los pueblos de alrededor: <a href="/pernocta/asturias/cangas-de-onis/">El Lleráu, en Cangas de Onís</a>, o <a href="/pernocta/asturias/llanes/">La Talá, en Llanes</a>. Tienes la ruta completa en <a href="/rutas/picos-de-europa/">Ruta en camper por los Picos de Europa</a>.</p>
+
+        <h2>Bardenas Reales</h2>
+        <p>Las Bardenas Reales son un parque natural con pistas y normas de acceso propias. Para dormir, la opción verificada es el <a href="/pernocta/navarra/arguedas/">área de autocaravanas de Arguedas</a>, con un máximo de 48 horas. En Arguedas la acampada libre está prohibida salvo autorización.</p>
+
+        <h2>Cómo organizarte</h2>
+        <ol>
+          <li>Antes de entrar en un parque, consulta su web oficial o su centro de visitantes: horarios, accesos y normas cambian.</li>
+          <li>No pernoctes dentro del parque salvo en zonas expresamente habilitadas.</li>
+          <li>Duerme en el área o camping del pueblo más cercano y entra de día.</li>
+          <li>Respeta los aparcamientos señalizados y no circules fuera de las pistas autorizadas.</li>
+        </ol>
+        <p>Para las reglas generales fuera de los espacios protegidos, lee la <a href="/normativa-pernocta-camper/">guía de normativa</a>. Para la costa, la <a href="/pernoctar-playa-camper/">guía de camper y playa</a>.</p>
+      </>
+    )}
+    {lang === "en" && (
+      <>
+        <h2>What the regions say</h2>
+        <p>All the regional rules we have reviewed leave protected areas outside their general rules. The pages of these regions and municipalities are in Spanish for now:</p>
+        <ul>
+          <li><a href="/pernocta/cantabria/">Cantabria</a>: the camping ban applies without prejudice to sector rules, especially those on natural areas (Decreto 35/2026, art. 2.3).</li>
+          <li><a href="/pernocta/asturias/">Asturias</a> and <a href="/pernocta/pais-vasco/">the Basque Country</a>: their decrees refer to the special regimes of protected natural areas and the Natura 2000 network, where their plans provide for camping or overnight stays (Decreto 61/2022, art. 62; Decreto 396/2013, art. 82).</li>
+          <li><a href="/pernocta/galicia/">Galicia</a>: ordinances such as those of <a href="/pernocta/galicia/boiro/">Boiro</a> and <a href="/pernocta/galicia/vilalba/">Vilalba</a> recognise the right to stay overnight in the municipality, but expressly exclude protected areas, the Natura 2000 network, forest land and the public domain. In Boiro, parking in protected areas is a serious or very serious offence.</li>
+        </ul>
+        <p>In other words: even if you can sleep inside your camper on a village street, that does not allow you to do so in a car park inside a park.</p>
+
+        <h2>Picos de Europa</h2>
+        <p>The Picos de Europa National Park is shared between Asturias, Cantabria and Castilla y León, and each region has approved its own management and use plan (plan rector de uso y gestión). Asturias's is Decreto 21/2026, of 16 March, published in the BOPA (Asturias's official gazette) on 31 March 2026. We have not yet been able to read the chapters of those plans on overnight stays, so we give no details: check the park's rules before you go.</p>
+        <p>What you can certainly do is sleep in the areas of the villages around it: <a href="/pernocta/asturias/cangas-de-onis/">El Lleráu, in Cangas de Onís</a>, or <a href="/pernocta/asturias/llanes/">La Talá, in Llanes</a>. The full route is in <a href="/rutas/picos-de-europa/">Camper route through the Picos de Europa</a> (in Spanish).</p>
+
+        <h2>Bardenas Reales</h2>
+        <p>The Bardenas Reales is a natural park with its own tracks and access rules. For sleeping, the verified option is the <a href="/pernocta/navarra/arguedas/">motorhome area in Arguedas</a>, with a maximum of 48 hours. In Arguedas, wild camping is banned unless authorised.</p>
+
+        <h2>How to plan</h2>
+        <ol>
+          <li>Before entering a park, check its official website or visitor centre: hours, access and rules change.</li>
+          <li>Do not stay overnight inside the park except in zones expressly set aside for it.</li>
+          <li>Sleep in the area or campsite of the nearest village and go in during the day.</li>
+          <li>Respect the signed car parks and do not drive outside the authorised tracks.</li>
+        </ol>
+        <p>For the general rules outside protected areas, read the <a href={L(lang, "/normativa-pernocta-camper/")}>guide to the rules</a>. For the coast, the <a href={L(lang, "/pernoctar-playa-camper/")}>guide to campers and beaches</a>.</p>
+      </>
+    )}
+    {lang === "fr" && (
+      <>
+        <h2>Ce que disent les communautés</h2>
+        <p>Toutes les règles des communautés que nous avons consultées laissent les espaces protégés en dehors de leurs règles générales. Les fiches de ces communautés et communes sont pour l'instant en espagnol :</p>
+        <ul>
+          <li><a href="/pernocta/cantabria/">Cantabrie</a> : l'interdiction de camper s'applique sans préjudice de la réglementation sectorielle, notamment celle des espaces naturels (Decreto 35/2026, art. 2.3).</li>
+          <li><a href="/pernocta/asturias/">Asturies</a> et <a href="/pernocta/pais-vasco/">Pays basque</a> : leurs décrets renvoient aux régimes spéciaux des espaces naturels protégés et du réseau Natura 2000, lorsque leurs plans prévoient le camping ou la nuitée (Decreto 61/2022, art. 62 ; Decreto 396/2013, art. 82).</li>
+          <li><a href="/pernocta/galicia/">Galice</a> : des ordenanzas (règlements municipaux) comme celles de <a href="/pernocta/galicia/boiro/">Boiro</a> et de <a href="/pernocta/galicia/vilalba/">Vilalba</a> reconnaissent le droit de passer la nuit dans la commune, mais excluent expressément les espaces protégés, le réseau Natura 2000, les terrains forestiers et le domaine public. À Boiro, stationner dans des espaces protégés est une infraction grave ou très grave.</li>
+        </ul>
+        <p>Autrement dit : même si vous pouvez dormir dans votre camping-car dans la rue d'un village, cela ne vous autorise pas à le faire sur un parking à l'intérieur d'un parc.</p>
+
+        <h2>Picos de Europa</h2>
+        <p>Le parc national des Picos de Europa est réparti entre les Asturies, la Cantabrie et la Castille-et-León, et chaque communauté a approuvé son propre plan rector de uso y gestión (plan directeur d'usage et de gestion). Celui des Asturies est le Decreto 21/2026, du 16 mars, publié au BOPA (le journal officiel des Asturies) le 31 mars 2026. Nous n'avons pas encore pu lire les chapitres de ces plans consacrés à la nuitée, donc nous ne donnons pas de détails : consultez les règles du parc avant d'y aller.</p>
+        <p>Ce que vous pouvez faire à coup sûr, c'est dormir dans les aires des villages alentour : <a href="/pernocta/asturias/cangas-de-onis/">El Lleráu, à Cangas de Onís</a>, ou <a href="/pernocta/asturias/llanes/">La Talá, à Llanes</a>. L'itinéraire complet se trouve dans <a href="/rutas/picos-de-europa/">Itinéraire en camping-car dans les Picos de Europa</a> (en espagnol).</p>
+
+        <h2>Bardenas Reales</h2>
+        <p>Les Bardenas Reales sont un parc naturel avec ses propres pistes et ses propres règles d'accès. Pour dormir, l'option vérifiée est l'<a href="/pernocta/navarra/arguedas/">aire de camping-cars d'Arguedas</a>, avec un maximum de 48 heures. À Arguedas, le camping sauvage est interdit sauf autorisation.</p>
+
+        <h2>Comment vous organiser</h2>
+        <ol>
+          <li>Avant d'entrer dans un parc, consultez son site officiel ou son centre d'accueil : les horaires, les accès et les règles changent.</li>
+          <li>Ne passez pas la nuit à l'intérieur du parc, sauf dans les zones expressément prévues.</li>
+          <li>Dormez dans l'aire ou le camping du village le plus proche et entrez dans le parc de jour.</li>
+          <li>Respectez les parkings signalés et ne circulez pas en dehors des pistes autorisées.</li>
+        </ol>
+        <p>Pour les règles générales en dehors des espaces protégés, lisez le <a href={L(lang, "/normativa-pernocta-camper/")}>guide de la réglementation</a>. Pour le littoral, le <a href={L(lang, "/pernoctar-playa-camper/")}>guide camping-car et plage</a>.</p>
+      </>
+    )}
+
+    <h2>{es ? "Fuentes" : T.ui.fuentes}</h2>
+    <ul class="sources">
+      <li><a href="https://profesional.turismodecantabria.com/wp-content/uploads/2026/05/DECRETO-AUTOCARAVANAS-Y-CAMPAMENTOS-TURISMO.pdf" rel="nofollow noopener" target="_blank">Decreto 35/2026 {es ? "de Cantabria" : lang === "en" ? "of Cantabria" : "de Cantabria"} (BOC n.º 95, 20/05/2026)</a> <span class="meta">· {es ? "fuente oficial" : T.ui.fuenteOficial}</span></li>
+      <li><a href="https://miprincipado.asturias.es/bopa/2022/10/04/2022-07386.pdf" rel="nofollow noopener" target="_blank">Decreto 61/2022 {es ? "de Asturias" : lang === "en" ? "of Asturias" : "des Asturies"} (BOPA n.º 191, 04/10/2022)</a> <span class="meta">· {es ? "fuente oficial" : T.ui.fuenteOficial}</span></li>
+      <li><a href="https://www.euskadi.eus/bopv2/datos/2013/09/1303845a.pdf" rel="nofollow noopener" target="_blank">Decreto 396/2013 {es ? "del País Vasco" : lang === "en" ? "of the Basque Country" : "du Pays basque"} (BOPV n.º 170, 06/09/2013)</a> <span class="meta">· {es ? "fuente oficial" : T.ui.fuenteOficial}</span></li>
+      <li><a href="https://laadministracionaldia.inap.es/noticia.asp?id=1264433" rel="nofollow noopener" target="_blank">INAP: Decreto 21/2026, Plan Rector de Uso y Gestión del Parque Nacional de los Picos de Europa en Asturias</a> <span class="meta">· {es ? "referencia del boletín" : lang === "en" ? "gazette reference" : "référence du bulletin officiel"}</span></li>
+    </ul>
+    {lang === "es" && <p class="meta">Esta guía es informativa y no constituye asesoramiento jurídico.</p>}
+    {lang === "en" && <p class="meta">This guide is for information only and is not legal advice.</p>}
+    {lang === "fr" && <p class="meta">Ce guide est informatif et ne constitue pas un conseil juridique.</p>}
+  </article>
+</Base>

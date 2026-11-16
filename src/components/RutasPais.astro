@@ -1,0 +1,54 @@
+---
+// Rutas de un país (colección `rutas`, campo `pais`). Si el país no tiene rutas publicadas, no pinta nada.
+//  - "portada": sección de la portada; con `soloPais` lleva data-solo-pais y la muestra u oculta el selector de país.
+//  - "hub": sección de la pantalla de país (/pernocta/, /francia/).
+// Las rutas solo existen en español: se usa únicamente en las páginas en español.
+import { getCollection } from "astro:content";
+import { publicada } from "../site";
+import { t, type Lang } from "../i18n";
+
+interface Props { pais: string; lang?: Lang; variante?: "portada" | "hub"; soloPais?: boolean; oculta?: boolean }
+const { pais, lang = "es", variante = "portada", soloPais = false, oculta = false } = Astro.props;
+const R = t(lang).rutas;
+const rutas = (await getCollection("rutas"))
+  .filter(publicada)
+  .filter((r) => r.data.pais === pais)
+  .sort((a, b) => a.data.h1.localeCompare(b.data.h1, "es"));
+const id = `rutas-${pais}-t`;
+---
+{rutas.length > 0 && (variante === "hub" ? (
+  <section class="section-hub" aria-labelledby={id}>
+    <h2 id={id}>{R.titulo}</h2>
+    <p class="muted">{R.nota}</p>
+    <div class="rail stagger reveal">
+      {rutas.map((r, i) => (
+        <a class="route lift" href={`/rutas/${r.id}/`} style={`--i: ${i}`}>
+          <span class="num" aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
+          <span class="go" aria-hidden="true">→</span>
+          <h3>{r.data.h1}</h3>
+          <p>{r.data.dias} {R.dias} · {r.data.cuando}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+) : (
+  <section class="section" aria-labelledby={id} data-solo-pais={soloPais ? pais : undefined} hidden={oculta}>
+    <div class="section-head reveal">
+      <div>
+        <p class="eyebrow">{R.eyebrow}</p>
+        <h2 id={id}>{R.titulo}</h2>
+      </div>
+      <p class="muted">{R.nota}</p>
+    </div>
+    <div class="rail stagger reveal">
+      {rutas.map((r, i) => (
+        <a class="route lift" href={`/rutas/${r.id}/`} style={`--i: ${i}`}>
+          <span class="num" aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
+          <span class="go" aria-hidden="true">→</span>
+          <h3>{r.data.h1}</h3>
+          <p>{r.data.dias} {R.dias} · {r.data.cuando}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+))}

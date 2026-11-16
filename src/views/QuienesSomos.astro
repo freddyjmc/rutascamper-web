@@ -1,0 +1,103 @@
+---
+import Base from "../layouts/Base.astro";
+import { SITE } from "../site";
+import { t, localePath, type Lang } from "../i18n";
+
+interface Props { lang?: Lang }
+const { lang = "es" } = Astro.props;
+const T = t(lang);
+const meta = {
+  es: { title: "Quiénes somos", description: "RutasCamper es un proyecto personal de Freddy Materano: información gratuita y clara sobre dónde dormir con camper, siempre con la fuente oficial citada." },
+  en: { title: "About us", description: "RutasCamper is a personal project by Freddy Materano: free, clear information on where to sleep in a camper, always citing the official source." },
+  fr: { title: "Qui sommes-nous", description: "RutasCamper est un projet personnel de Freddy Materano : des informations gratuites et claires sur les endroits où dormir en camping-car, avec toujours la source officielle citée." },
+}[lang];
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  name: meta.title,
+  url: `${SITE.url}${localePath(lang, "/quienes-somos/")}`,
+  inLanguage: lang,
+  about: { "@type": "WebSite", name: SITE.name, url: SITE.url },
+  author: { "@type": "Person", name: "Freddy Materano", email: SITE.owner.email },
+};
+const metodo = localePath(lang, "/metodo/");
+---
+<Base title={meta.title} description={meta.description} crumbs={[{ name: meta.title, href: localePath(lang, "/quienes-somos/") }]} schema={schema} lang={lang}>
+  <div class="prose">
+    {lang === "es" && (
+      <>
+        <h1>Quiénes somos</h1>
+        <p class="lead">RutasCamper (rutascamper.com) es un proyecto personal de Freddy Materano. Explica, con lenguaje claro y con la fuente oficial siempre a mano, dónde se puede estacionar y pernoctar con camper o autocaravana.</p>
+
+        <h2>Sobre mí</h2>
+        <p>Soy Freddy Materano, un chico apasionado por la tecnología. Mi principal misión con RutasCamper es ayudar: que quien viaja en camper o autocaravana encuentre en un solo sitio, y sin tener que pelearse con boletines oficiales, lo que dicen las normas del lugar donde quiere pasar la noche.</p>
+        <p>A la vez, este proyecto es mi manera de seguir aprendiendo. Con él estoy aprendiendo a diseñar y publicar webs rápidas y accesibles, a organizar mucha información para que se entienda a la primera y a trabajar con herramientas de inteligencia artificial que me ayudan a buscar, leer y ordenar la normativa. La última palabra la tengo siempre yo: nada se publica sin comprobarlo en la fuente oficial.</p>
+
+        <h2>Cómo trabajo</h2>
+        <ul>
+          <li><strong>Solo fuentes oficiales y públicas:</strong> BOE, boletines autonómicos y provinciales, ordenanzas municipales y portales oficiales de turismo.</li>
+          <li><strong>Todo citado:</strong> cada ficha enlaza a su fuente original e indica la fecha de la última revisión.</li>
+          <li><strong>Sin inventar:</strong> si no encuentro una norma, lo digo y te indico dónde preguntar.</li>
+          <li><strong>Gratis:</strong> consultar la web es y será siempre libre y gratuito. Si algún día incluye publicidad para cubrir sus costes, estos compromisos seguirán exactamente igual.</li>
+        </ul>
+        <p>El detalle de cómo contrasto cada ficha está en <a href={metodo}>Cómo verificamos</a>.</p>
+
+        <h2>Si eres de un ayuntamiento o una administración</h2>
+        <p>Si detectas un error en la ficha de tu municipio, o quieres enviarme vuestra ordenanza o los datos de un área para autocaravanas, escríbeme a <strong>{SITE.owner.email}</strong>. Lo reviso y lo corrijo cuanto antes, citando siempre el documento oficial.</p>
+
+        <h2>Contacto</h2>
+        <p>Para cualquier duda, sugerencia o colaboración: <strong>{SITE.owner.email}</strong>.</p>
+      </>
+    )}
+    {lang === "en" && (
+      <>
+        <h1>About us</h1>
+        <p class="lead">RutasCamper (rutascamper.com) is a personal project by Freddy Materano. In clear language, and always with the official source at hand, it explains where you can park and spend the night in a camper or motorhome.</p>
+
+        <h2>About me</h2>
+        <p>I'm Freddy Materano, a guy passionate about technology. My main mission with RutasCamper is to help: so that anyone travelling in a camper or motorhome can find in one place, without having to wrestle with official gazettes, what the rules say where they want to spend the night.</p>
+        <p>At the same time, this project is my way of carrying on learning. With it I'm learning to design and publish fast, accessible websites, to organise a lot of information so it is understood at first glance, and to work with artificial intelligence tools that help me search, read and sort the rules. I always have the final say: nothing is published without checking it against the official source.</p>
+
+        <h2>How I work</h2>
+        <ul>
+          <li><strong>Only official, public sources:</strong> the BOE (Spain's official state gazette), regional and provincial gazettes, municipal ordinances and official tourism portals.</li>
+          <li><strong>Everything cited:</strong> each page links to its original source and shows the date of the last review.</li>
+          <li><strong>No guesswork:</strong> if I cannot find a rule, I say so and tell you where to ask.</li>
+          <li><strong>Free:</strong> using the website is and will always be open and free. If one day it includes advertising to cover its costs, these commitments will stay exactly the same.</li>
+        </ul>
+        <p>The detail of how I check each page is in <a href={metodo}>How we verify</a>.</p>
+
+        <h2>If you work for a town council or another administration</h2>
+        <p>If you spot a mistake on the page for your municipality, or want to send me your ordinance or the details of a motorhome area, write to me at <strong>{SITE.owner.email}</strong>. I will check it and correct it as soon as possible, always citing the official document.</p>
+
+        <h2>Contact</h2>
+        <p>For any question, suggestion or collaboration: <strong>{SITE.owner.email}</strong>.</p>
+      </>
+    )}
+    {lang === "fr" && (
+      <>
+        <h1>Qui sommes-nous</h1>
+        <p class="lead">RutasCamper (rutascamper.com) est un projet personnel de Freddy Materano. En langage clair, et avec la source officielle toujours à portée de main, il explique où l'on peut stationner et passer la nuit en camping-car.</p>
+
+        <h2>À propos de moi</h2>
+        <p>Je suis Freddy Materano, un passionné de technologie. Ma principale mission avec RutasCamper est d'aider : que celui qui voyage en camping-car trouve au même endroit, sans avoir à se battre avec les bulletins officiels, ce que disent les règles du lieu où il veut passer la nuit.</p>
+        <p>En même temps, ce projet est ma façon de continuer à apprendre. J'y apprends à concevoir et à publier des sites rapides et accessibles, à organiser beaucoup d'informations pour qu'elles se comprennent du premier coup et à travailler avec des outils d'intelligence artificielle qui m'aident à chercher, lire et classer la réglementation. J'ai toujours le dernier mot : rien n'est publié sans vérification dans la source officielle.</p>
+
+        <h2>Comment je travaille</h2>
+        <ul>
+          <li><strong>Uniquement des sources officielles et publiques :</strong> le BOE (journal officiel de l'État espagnol), les bulletins officiels régionaux et provinciaux, les ordenanzas municipales (règlements municipaux) et les portails officiels de tourisme.</li>
+          <li><strong>Tout est cité :</strong> chaque fiche renvoie à sa source d'origine et indique la date de la dernière révision.</li>
+          <li><strong>Sans rien inventer :</strong> si je ne trouve pas de règle, je le dis et je vous indique où demander.</li>
+          <li><strong>Gratuit :</strong> consulter le site est et sera toujours libre et gratuit. Si un jour il inclut de la publicité pour couvrir ses coûts, ces engagements resteront exactement les mêmes.</li>
+        </ul>
+        <p>Le détail de la façon dont je vérifie chaque fiche se trouve dans <a href={metodo}>Comment nous vérifions</a>.</p>
+
+        <h2>Si vous travaillez pour une mairie ou une administration</h2>
+        <p>Si vous repérez une erreur dans la fiche de votre commune, ou si vous voulez m'envoyer votre ordenanza (règlement municipal) ou les données d'une aire pour camping-cars, écrivez-moi à <strong>{SITE.owner.email}</strong>. Je le vérifie et je le corrige dès que possible, en citant toujours le document officiel.</p>
+
+        <h2>Contact</h2>
+        <p>Pour toute question, suggestion ou collaboration : <strong>{SITE.owner.email}</strong>.</p>
+      </>
+    )}
+  </div>
+</Base>

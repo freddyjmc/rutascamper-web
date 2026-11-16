@@ -1,0 +1,24 @@
+---
+// Página de «todavía no traducida»: a ella lleva el selector de idioma cuando la página no existe en ese idioma.
+// La dirección española de origen viaja en ?p= y un pequeño script la pone en el enlace; sin JavaScript el enlace va al inicio en español.
+import Base from "../layouts/Base.astro";
+import { t, localePath, type Lang } from "../i18n";
+
+interface Props { lang: Exclude<Lang, "es"> }
+const { lang } = Astro.props;
+const T = t(lang);
+const d = T.ui.noDisp;
+---
+<Base title={d.titulo} noindex lang={lang} path="/">
+  <h1>{d.h1}</h1>
+  <p class="lead">{d.texto}</p>
+  <p><a class="btn" href="/" hreflang="es" lang="es" data-es>{d.enlace} →</a></p>
+  <p><a href={localePath(lang, "/")}>{d.inicio}</a></p>
+</Base>
+
+<script>
+  // Solo se acepta una dirección interna del sitio (empieza por una sola «/»).
+  const p = new URLSearchParams(location.search).get("p");
+  const enlace = document.querySelector<HTMLAnchorElement>("[data-es]");
+  if (enlace && p && /^\/(?!\/)[A-Za-z0-9\-_/.]*$/.test(p)) enlace.href = p;
+</script>

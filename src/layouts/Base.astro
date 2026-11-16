@@ -1,0 +1,249 @@
+---
+import { SITE } from "../site";
+import Logo from "../components/Logo.astro";
+import { getPaises } from "../lib/paises";
+import { t, META, LANGS, traducida, localePath, href as lhref, splitLang, switchHref, paisesEn, type Lang } from "../i18n";
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description?: string;
+  crumbs?: { name: string; href: string }[];
+  noindex?: boolean;
+  schema?: Record<string, unknown>;
+  home?: boolean;
+  /** Idioma de la página (es por defecto). */
+  lang?: Lang;
+  /** Dirección española equivalente, para el selector de idioma; por defecto, la de esta página sin prefijo. */
+  path?: string;
+}
+const { title, description = SITE.description, crumbs = [], noindex = false, schema, home = false, lang = "es" } = Astro.props;
+const T = t(lang);
+const path = Astro.props.path ?? splitLang(Astro.url.pathname).path;
+// hreflang solo entre versiones que existen de verdad (y nunca en páginas noindex).
+const alternates = noindex ? [] : LANGS.filter((l) => traducida(l, path));
+const canonical = new URL(Astro.url.pathname, SITE.url).href;
+// Google corta los títulos de más de ~60 caracteres: la marca solo se añade si cabe.
+const fullTitle = path === "/" || title.length > 44 ? title : `${title} · ${SITE.name}`;
+// El contador de visitas solo va en producción.
+const beacon = import.meta.env.PROD ? SITE.cfBeacon : undefined;
+const ogImage = new URL("/og.png", SITE.url).href;
+// Los enlaces van a la versión del idioma si existe y, si no, a la española (L).
+const L = (p: string) => lhref(lang, p);
+const nav = [
+  { href: L("/"), label: T.ui.inicio },
+  { href: L("/mapa-areas-autocaravanas/"), label: T.ui.mapa },
+  { href: L("/destinos/"), label: T.destinos.nav, destinos: true },
+  { href: L("/rutas/"), label: T.ui.rutas },
+];
+const cta = { href: L("/puedo-dormir-aqui/"), label: T.ui.cta };
+const guias = T.guiasEs.map((g) => ({ href: L(g.href), label: g.titulo }));
+const proyecto = [
+  { href: L("/metodo/"), label: T.ui.metodo },
+  { href: L("/quienes-somos/"), label: T.ui.quienes },
+  { href: L("/util-para-el-viaje/"), label: T.ui.util },
+  { href: L("/creditos-fotos/"), label: T.ui.creditos },
+  { href: L("/mi-ruta/"), label: T.ui.miRuta },
+  { href: L("/mis-guardados/"), label: T.ui.misGuardados },
+];
+const here = Astro.url.pathname;
+const inicio = localePath(lang, "/");
+const paises = paisesEn(await getPaises(), lang);
+// «Destinos» está activo en /destinos/ y en las páginas de cualquier país publicado.
+const actual = (href: string) => (href === inicio ? here === inicio : href === L("/destinos/") ? here.startsWith(href) || paises.some((p) => here.startsWith(p.base)) : here.startsWith(href));
+
+const breadcrumb = crumbs.length
+  ? {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [{ name: T.ui.inicio, href: inicio }, ...crumbs].map((c, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: c.name,
+        item: new URL(c.href, SITE.url).href,
+      })),
+    }
+  : null;
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {alternates.length > 1 && alternates.map((l) => <link rel="alternate" hreflang={l} href={new URL(localePath(l, path), SITE.url).href} />)}
+    {alternates.length > 1 && <link rel="alternate" hreflang="x-default" href={new URL(path, SITE.url).href} />}
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content={META[lang].locale} />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0f7c86" />
+    {breadcrumb && <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)} />}
+    {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
+  </head>
+  <body class={home ? "home" : undefined}>
+    <header class="top">
+      <div class="wrap top-in">
+        <a class="brand" href={inicio}><Logo /><span>Rutas<span>Camper</span></span></a>
+        <nav class="nav-desk" aria-label={T.ui.principal}>
+          {nav.map((n) => n.destinos ? (
+            <div class="nav-dd" data-dd>
+              <a href={n.href} aria-current={actual(n.href) ? "page" : undefined}>{n.label}</a>
+              <button type="button" class="dd-btn" aria-expanded="false" aria-controls="dd-panel" aria-label={T.destinos.abrir} hidden><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></button>
+              <div class="dd-panel" id="dd-panel" hidden>
+                <ul>
+                  {paises.map((p) => (
+                    <li><a href={p.base} aria-current={here.startsWith(p.base) ? "page" : undefined}><strong>{p.nombre}</strong><span>{p.nRegiones} {p.nRegiones === 1 ? p.regionUno : p.regionVarias} · {p.nMunicipios} {p.nMunicipios === 1 ? T.hub.revisado : T.hub.revisados}</span></a></li>
+                  ))}
+                  <li class="dd-all"><a href={n.href}>{T.destinos.verTodos}</a></li>
+                </ul>
+              </div>
+            </div>
+          ) : <a href={n.href} aria-current={actual(n.href) ? "page" : undefined}>{n.label}</a>)}
+          {lang === "es" && <a class="nav-ruta" href="/mi-ruta/" data-nav-ruta hidden aria-current={actual("/mi-ruta/") ? "page" : undefined}><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="18" r="2.2"/><circle cx="18" cy="6" r="2.2"/><path d="M8 18h7a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h7"/></svg><span class="nr-txt">Mi ruta</span><span class="nr-n" data-nr-n></span></a>}
+          <nav class="lang-sw" aria-label={T.ui.idioma}>
+            {LANGS.map((l) => <a href={switchHref(l, path)} lang={l} hreflang={l} aria-label={META[l].nombre} aria-current={l === lang ? "true" : undefined}>{META[l].corto}</a>)}
+          </nav>
+          <a class="nav-cta" href={cta.href} aria-current={actual(cta.href) ? "page" : undefined}>{cta.label}</a>
+        </nav>
+        <details class="menu">
+          <summary><i aria-hidden="true"></i>{T.ui.menu}</summary>
+          <nav class="links" aria-label={T.ui.principalMovil}>
+            {nav.map((n) => (
+              <>
+                <a href={n.href} aria-current={actual(n.href) ? "page" : undefined}>{n.label}</a>
+                {n.destinos && paises.map((p) => <a class="sub" href={p.base} aria-current={here.startsWith(p.base) ? "page" : undefined}>{p.nombre}</a>)}
+              </>
+            ))}
+            {lang === "es" && <a class="nav-ruta" href="/mi-ruta/" data-nav-ruta hidden aria-current={actual("/mi-ruta/") ? "page" : undefined}><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="18" r="2.2"/><circle cx="18" cy="6" r="2.2"/><path d="M8 18h7a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h7"/></svg><span class="nr-txt">Mi ruta</span><span class="nr-n" data-nr-n></span></a>}
+            <a class="nav-cta" href={cta.href} aria-current={actual(cta.href) ? "page" : undefined}>{cta.label}</a>
+            <nav class="lang-sw" aria-label={T.ui.idioma}>
+            {LANGS.map((l) => <a href={switchHref(l, path)} lang={l} hreflang={l} aria-label={META[l].nombre} aria-current={l === lang ? "true" : undefined}>{META[l].corto}</a>)}
+          </nav>
+          </nav>
+        </details>
+      </div>
+      <span class="progress" aria-hidden="true"></span>
+    </header>
+
+    {crumbs.length > 0 && (
+      <nav class="wrap crumbs" aria-label={T.ui.migas}>
+        <a href={inicio}>{T.ui.inicio}</a>
+        {crumbs.map((c, i) => (
+          <>
+            <span aria-hidden="true">/</span>
+            {i === crumbs.length - 1 ? <span aria-current="page">{c.name}</span> : <a href={c.href}>{c.name}</a>}
+          </>
+        ))}
+      </nav>
+    )}
+
+    <main class="wrap">
+      <slot />
+    </main>
+
+    <footer class="foot">
+      <div class="wrap foot-in">
+        <div>
+          <a class="brand" href={inicio}><Logo /><span>Rutas<span>Camper</span></span></a>
+          <p>{T.ui.pie}</p>
+        </div>
+        <div>
+          <h2>{T.ui.guiasTitulo}</h2>
+          <nav aria-label={T.ui.guiasTitulo}>
+            {guias.map((n) => <a href={n.href}>{n.label}</a>)}
+          </nav>
+        </div>
+        <div>
+          <h2>{T.ui.proyectoTitulo}</h2>
+          <nav aria-label={T.ui.proyectoTitulo}>
+            {proyecto.map((n) => <a href={n.href}>{n.label}</a>)}
+            <a href={cta.href}>{cta.label}</a>
+          </nav>
+        </div>
+        <div>
+          <h2>{T.ui.legalTitulo}</h2>
+          <nav aria-label={T.ui.legalTitulo}>
+            <a href={L("/aviso-legal/")}>{T.ui.avisoLegal}</a>
+            <a href={L("/privacidad/")}>{T.ui.privacidad}</a>
+            <a href={L("/cookies/")}>{T.ui.cookies}</a>
+          </nav>
+        </div>
+      </div>
+      <div class="wrap foot-legal">{T.ui.pieLegal}</div>
+    </footer>
+    <script>
+      import { getRuta, alCambiarRuta, paradas } from "../scripts/rc";
+      // Contador de «Mi ruta» en la cabecera: solo con JavaScript y si hay paradas (se lee del navegador, no se envía a ningún sitio).
+      const navRuta = document.querySelectorAll<HTMLAnchorElement>("[data-nav-ruta]");
+      const pintaNav = () => {
+        const n = getRuta().length;
+        navRuta.forEach((a) => {
+          a.hidden = n === 0;
+          const c = a.querySelector("[data-nr-n]");
+          if (c) c.textContent = String(n);
+          a.setAttribute("aria-label", `Mi ruta, ${paradas(n)}`);
+        });
+      };
+      pintaNav();
+      alCambiarRuta(pintaNav);
+      // Menú «Destinos»: el enlace lleva a /destinos/ y el botón despliega la lista de países
+      // (Intro/Espacio abren, Escape cierra y devuelve el foco, un clic fuera también cierra). Sin JavaScript solo queda el enlace.
+      document.querySelectorAll<HTMLElement>("[data-dd]").forEach((dd) => {
+        const btn = dd.querySelector<HTMLButtonElement>(".dd-btn")!;
+        const panel = dd.querySelector<HTMLElement>(".dd-panel")!;
+        btn.hidden = false;
+        const set = (open: boolean) => { btn.setAttribute("aria-expanded", String(open)); panel.hidden = !open; };
+        btn.addEventListener("click", () => set(panel.hidden));
+        dd.addEventListener("keydown", (ev) => { if (ev.key === "Escape" && !panel.hidden) { set(false); btn.focus(); } });
+        dd.addEventListener("focusout", (ev) => { if (!dd.contains(ev.relatedTarget as Node | null)) set(false); });
+        document.addEventListener("click", (ev) => { if (!dd.contains(ev.target as Node)) set(false); });
+      });
+      // Aparición suave de bloques al hacer scroll. Sin JavaScript todo se ve igual (la clase .js lo activa).
+      const els = document.querySelectorAll(".reveal");
+      if ("IntersectionObserver" in window && els.length) {
+        document.documentElement.classList.add("js");
+        const io = new IntersectionObserver((entries) => {
+          for (const e of entries) if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+        }, { rootMargin: "0px 0px -8% 0px" });
+        els.forEach((el) => io.observe(el));
+      }
+      // Escalonado: cada hijo de .stagger recibe su índice.
+      document.querySelectorAll<HTMLElement>(".stagger").forEach((g) => {
+        [...g.children].forEach((c, i) => (c as HTMLElement).style.setProperty("--i", String(i)));
+      });
+      // Cabecera con sombra al bajar.
+      const top = document.querySelector(".top");
+      const onScroll = () => top?.classList.toggle("scrolled", scrollY > 8);
+      addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+      // Brillo que sigue al puntero en las tarjetas .spot.
+      if (matchMedia("(hover: hover)").matches) {
+        document.addEventListener("pointermove", (ev) => {
+          const el = (ev.target as Element | null)?.closest?.<HTMLElement>(".spot");
+          if (!el) return;
+          const r = el.getBoundingClientRect();
+          el.style.setProperty("--mx", `${ev.clientX - r.left}px`);
+          el.style.setProperty("--my", `${ev.clientY - r.top}px`);
+        }, { passive: true });
+      }
+    </script>
+    {beacon && (
+      <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon={JSON.stringify({ token: beacon })}></script>
+    )}
+  </body>
+</html>

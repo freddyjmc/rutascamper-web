@@ -1,0 +1,56 @@
+---
+import Base from "../layouts/Base.astro";
+import PaisHub from "../components/PaisHub.astro";
+import AvisoTraduccion from "../components/AvisoTraduccion.astro";
+import { getEntry } from "astro:content";
+import { getPaises } from "../lib/paises";
+import { t, href as L, paisesEn, META, type Lang } from "../i18n";
+import { visibleFr, fecha } from "../site";
+import { SECCIONES_FR } from "../lib/francia";
+
+interface Props { lang?: Lang }
+const { lang = "es" } = Astro.props;
+const T = t(lang);
+const nac = (await getEntry("nacionalFr", "nacional"))!;
+const pais = paisesEn(await getPaises(), lang).find((p) => p.code === "fr")!;
+const n = nac.data;
+const loc = META[lang].fecha;
+const titulo = T.paises.fr.h1;
+// Texto nacional: el español es el original; en inglés y francés se usa la traducción guardada en `i18n` del propio JSON.
+const tr = lang === "es" ? undefined : n.i18n?.[lang];
+const resumen = tr?.resumen ?? n.resumen;
+const secciones = tr?.secciones ?? n.secciones;
+// Si falta la traducción, se muestra el original marcado con lang="es".
+const idiomaTexto = tr ? undefined : "es";
+---
+<Base title={titulo} description={T.paises.fr.resumen} noindex={!n.verificado} crumbs={[{ name: T.destinos.nav, href: L(lang, "/destinos/") }, { name: pais.nombre, href: pais.base }]} lang={lang}>
+  <PaisHub pais={pais} h1={titulo} lead={lang === "es" ? n.resumen : undefined} aviso={n.verificado ? undefined : T.ui.borrador} lang={lang}>
+    <div slot="nacional">
+      <AvisoTraduccion lang={lang} />
+      {!tr && lang !== "es" && <p class="solo-es">{T.ui.soloEs}</p>}
+      {lang !== "es" && <p class="lead" lang={idiomaTexto}>{resumen}</p>}
+      <p class="meta">{T.ui.revisadoEl} {fecha(n.revisado, loc)}.</p>
+      <div class="grid rules-grid stagger reveal" lang={idiomaTexto}>
+        {secciones.map((s, i) => (
+          <article class="card" id={SECCIONES_FR.length === secciones.length ? SECCIONES_FR[i] : undefined}>
+            <h3>{s.titulo}</h3>
+            <ul class="prose">{s.puntos.map((p) => <li>{p}</li>)}</ul>
+          </article>
+        ))}
+      </div>
+    </div>
+
+
+    {n.fuentes.length > 0 && (
+      <section class="section-hub" aria-labelledby="fuentes-t">
+        <h2 id="fuentes-t">{T.ui.fuentes}</h2>
+        <ul class="sources">
+          {n.fuentes.map((f) => (
+            <li><a href={f.url} rel="nofollow noopener" target="_blank">{f.titulo}</a> <span class="meta">· {f.tipo === "oficial" ? T.ui.fuenteOficial : T.ui.fuenteSecundaria}{f.fecha && ` · ${fecha(f.fecha, loc)}`}</span></li>
+          ))}
+        </ul>
+        <p class="meta">{T.ui.ultimaRevision}: {fecha(n.revisado, loc)} · <a href={L(lang, "/metodo/")}>{T.ui.metodo}</a>. {T.ui.noAbogado}</p>
+      </section>
+    )}
+  </PaisHub>
+</Base>

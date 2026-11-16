@@ -1,0 +1,14 @@
+---
+// Crédito de una foto. "completo": autor, licencia enlazada, origen y cambios.
+// "minimo": solo «Foto: autor (licencia)», sin enlaces (para tarjetas con enlace en toda la tarjeta).
+import type { Foto } from "../lib/fotos";
+interface Props { foto: Foto; variante?: "completo" | "minimo" }
+const { foto, variante = "completo" } = Astro.props;
+---
+{variante === "minimo" ? (
+  <p class="foto-credito foto-credito-min">Foto: {foto.atribucion ?? foto.autor} ({foto.licencia})</p>
+) : (
+  <p class="foto-credito">
+    Foto: {foto.atribucion ?? foto.autor} · <a href={foto.licenciaUrl} rel="license noopener" target="_blank">{foto.licencia === "Dominio público" ? "Dominio público (según su autor en Commons)" : foto.licencia}</a> · <a href={foto.origen} rel="noopener" target="_blank">«{foto.titulo}» en Wikimedia Commons</a> · {foto.cambios}
+  </p>
+)}

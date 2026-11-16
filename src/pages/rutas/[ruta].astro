@@ -1,0 +1,81 @@
+---
+import Base from "../../layouts/Base.astro";
+import { t } from "../../i18n";
+import { getCollection, getEntry } from "astro:content";
+import { SITE, ESTADOS, publicada, visible, visibleFr, fecha } from "../../site";
+
+export async function getStaticPaths() {
+  const rutas = (await getCollection("rutas")).filter(publicada);
+  return rutas.map((r) => ({ params: { ruta: r.id }, props: { r } }));
+}
+
+const { r } = Astro.props;
+const d = r.data;
+// Solo se enlazan fichas publicadas; si no, el texto de "dormir" va sin enlace.
+// España: "comunidad/slug" de municipios. Francia: "region/slug" de francia/municipios.
+const fr = d.pais === "fr";
+const fichas = Object.fromEntries(
+  fr
+    ? (await getCollection("municipiosFr")).filter(visibleFr).map((m) => [m.id, m])
+    : (await getCollection("municipios")).filter(visible).map((m) => [m.id, m]),
+);
+const base = fr ? "/francia" : "/pernocta";
+const descripcion = d.resumen.length <= 160 ? d.resumen : `${d.h1}: etapas y dónde dormir en cada parada, con la norma de cada municipio y su fuente oficial.`;
+const coms = await Promise.all(d.comunidades.map((c) => (fr ? getEntry("regionesFr", c) : getEntry("comunidades", c))));
+const comsVisibles = coms.filter((c) => c && (fr ? visibleFr(c) : c.data.verificado || import.meta.env.DEV));
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: d.titulo,
+  description: d.resumen,
+  inLanguage: "es",
+  dateModified: d.revisado.toISOString(),
+  publisher: { "@type": "Organization", name: SITE.name, url: SITE.url },
+};
+---
+<Base title={d.titulo} description={descripcion} noindex={!d.publicada} schema={schema} crumbs={[{ name: "Rutas", href: "/rutas/" }, { name: d.h1, href: Astro.url.pathname }]}>
+  <article class="prose">
+    <h1>{d.h1}</h1>
+    <p class="lead">{d.resumen}</p>
+    <p class="meta">{d.dias} días · Cuándo: {d.cuando} · Revisada: {fecha(d.revisado)}</p>
+    {!d.publicada && <p class="notice">{t("es").rutas.borrador}</p>}
+
+    {d.etapas.map((e) => {
+      const m = e.ficha ? fichas[e.ficha] : undefined;
+      const est = m ? ESTADOS[m.data.estado] : undefined;
+      return (
+        <section>
+          <h2>{e.dia}: {e.titulo}</h2>
+          <p>{e.texto}</p>
+          <p class="card" style="padding:12px 14px">
+            <strong>Dónde dormir:</strong> {e.dormir}
+            {m && est && (
+              <>
+                {" "}<a href={`${base}/${m.data.comunidad}/${m.id.split("/").pop()}/`}>Normativa de {m.data.nombre}</a>{" "}
+                <span class={`badge ${est.tone}`}>{est.label}</span>
+              </>
+            )}
+          </p>
+        </section>
+      );
+    })}
+
+    {d.consejos.length > 0 && (
+      <>
+        <h2>Consejos para esta ruta</h2>
+        <ul>{d.consejos.map((c) => <li>{c}</li>)}</ul>
+      </>
+    )}
+
+    <h2>{fr ? "Las regiones de la ruta" : "Normativa de las comunidades de la ruta"}</h2>
+    <ul>
+      {comsVisibles.map((c) => (
+        <li><a href={`${base}/${c!.id}/`}>Dormir en camper en {c!.data.nombre}</a></li>
+      ))}
+      {fr
+        ? <li><a href="/francia/">Francia: la norma nacional y las regiones</a></li>
+        : <li><a href="/normativa-pernocta-camper/">Pernoctar o acampar: la guía general</a></li>}
+    </ul>
+    <p class="meta">Los horarios, tarifas y accesos cambian: compruébalos antes de salir. La señalización prevalece sobre esta guía.</p>
+  </article>
+</Base>

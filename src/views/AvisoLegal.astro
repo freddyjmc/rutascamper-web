@@ -1,0 +1,86 @@
+---
+import Base from "../layouts/Base.astro";
+import AvisoTraduccion from "../components/AvisoTraduccion.astro";
+import { SITE } from "../site";
+import { localePath, type Lang } from "../i18n";
+
+interface Props { lang?: Lang }
+const { lang = "es" } = Astro.props;
+const o = SITE.owner;
+const title = { es: "Aviso legal", en: "Legal notice", fr: "Mentions légales" }[lang];
+---
+<Base title={title} crumbs={[{ name: title, href: localePath(lang, "/aviso-legal/") }]} lang={lang}>
+  <div class="prose">
+    {lang === "es" && (
+      <>
+        <h1>Aviso legal</h1>
+        <h2>Titular</h2>
+        {SITE.monetized ? (
+          <p>En cumplimiento de la Ley 34/2002, de servicios de la sociedad de la información y de comercio electrónico (LSSI), se informa de que este sitio web, {SITE.url}, pertenece a {o.name}, con NIF {o.nif}, con domicilio en {o.address} y correo de contacto {o.email}.</p>
+        ) : (
+          <p>{SITE.url} es un sitio personal e informativo, sin publicidad, sin enlaces de afiliado y sin actividad económica. Puedes contactar con su responsable en {o.email}.</p>
+        )}
+        <h2>Finalidad</h2>
+        <p>El sitio ofrece información sobre la normativa de estacionamiento y pernocta de autocaravanas y campers, y rutas de viaje. Es una recopilación informativa: no constituye asesoramiento jurídico y no sustituye a la señalización ni a las normas oficiales vigentes.</p>
+        <h2>Responsabilidad</h2>
+        <p>Revisamos la información con cuidado y la fechamos, pero las normas cambian. El titular no se hace responsable de las sanciones derivadas del uso de la información publicada.</p>
+        {SITE.monetized && (
+          <>
+            <h2>Enlaces de afiliado</h2>
+            <p>Algunos enlaces pueden ser de afiliado: si compras o reservas a través de ellos, podemos recibir una comisión sin coste adicional para ti. Se indicarán como tales.</p>
+          </>
+        )}
+        <h2>Propiedad intelectual</h2>
+        <p>Los textos de este sitio son propiedad de su titular, salvo indicación en contrario. Las normas citadas son de dominio público.</p>
+      </>
+    )}
+    {lang === "en" && (
+      <>
+        <h1>Legal notice</h1>
+        <AvisoTraduccion lang={lang} />
+        <h2>Owner</h2>
+        {SITE.monetized ? (
+          <p>In compliance with Ley 34/2002, de servicios de la sociedad de la información y de comercio electrónico (LSSI; the Spanish law on information society services and e-commerce), we state that this website, {SITE.url}, belongs to {o.name}, with tax ID (NIF) {o.nif}, whose address is {o.address} and whose contact email is {o.email}.</p>
+        ) : (
+          <p>{SITE.url} is a personal, informational website, with no advertising, no affiliate links and no economic activity. You can contact the person responsible at {o.email}.</p>
+        )}
+        <h2>Purpose</h2>
+        <p>The website provides information on the parking and overnight stay rules for motorhomes and campers, and travel routes. It is an informational compilation: it is not legal advice and does not replace the signs or the official rules in force.</p>
+        <h2>Liability</h2>
+        <p>We review the information carefully and date it, but rules change. The owner accepts no responsibility for penalties arising from the use of the published information.</p>
+        {SITE.monetized && (
+          <>
+            <h2>Affiliate links</h2>
+            <p>Some links may be affiliate links: if you buy or book through them, we may receive a commission at no extra cost to you. They will be marked as such.</p>
+          </>
+        )}
+        <h2>Intellectual property</h2>
+        <p>The texts on this website belong to its owner, unless stated otherwise. The rules cited are in the public domain.</p>
+      </>
+    )}
+    {lang === "fr" && (
+      <>
+        <h1>Mentions légales</h1>
+        <AvisoTraduccion lang={lang} />
+        <h2>Titulaire</h2>
+        {SITE.monetized ? (
+          <p>Conformément à la Ley 34/2002, de servicios de la sociedad de la información y de comercio electrónico (LSSI ; loi espagnole sur les services de la société de l'information et le commerce électronique), nous indiquons que ce site, {SITE.url}, appartient à {o.name}, NIF {o.nif}, domicilié à {o.address}, adresse de contact : {o.email}.</p>
+        ) : (
+          <p>{SITE.url} est un site personnel et informatif, sans publicité, sans liens d'affiliation et sans activité économique. Vous pouvez contacter son responsable à l'adresse {o.email}.</p>
+        )}
+        <h2>Finalité</h2>
+        <p>Le site fournit des informations sur la réglementation du stationnement et de la nuitée des camping-cars et des campers, ainsi que des itinéraires de voyage. Il s'agit d'une compilation informative : elle ne constitue pas un conseil juridique et ne remplace ni la signalisation ni les règles officielles en vigueur.</p>
+        <h2>Responsabilité</h2>
+        <p>Nous revoyons l'information avec soin et nous la datons, mais les règles changent. Le titulaire n'est pas responsable des sanctions découlant de l'utilisation des informations publiées.</p>
+        {SITE.monetized && (
+          <>
+            <h2>Liens d'affiliation</h2>
+            <p>Certains liens peuvent être des liens d'affiliation : si vous achetez ou réservez par leur intermédiaire, nous pouvons recevoir une commission sans frais supplémentaires pour vous. Ils seront signalés comme tels.</p>
+          </>
+        )}
+        <h2>Propriété intellectuelle</h2>
+        <p>Les textes de ce site sont la propriété de son titulaire, sauf indication contraire. Les règles citées relèvent du domaine public.</p>
+      </>
+    )}
+  </div>
+</Base>

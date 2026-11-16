@@ -1,0 +1,8 @@
+---
+// Aviso de traducción: solo en las versiones traducidas de páginas con contenido normativo.
+import { t, type Lang } from "../i18n";
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const T = t(lang);
+---
+{lang !== "es" && <p class="notice traduccion-aviso" lang={lang}>{T.ui.traduccion}</p>}

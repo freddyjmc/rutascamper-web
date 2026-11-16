@@ -1,0 +1,39 @@
+---
+import Base from "../layouts/Base.astro";
+import AvisoTraduccion from "../components/AvisoTraduccion.astro";
+import { localePath, type Lang } from "../i18n";
+
+interface Props { lang?: Lang }
+const { lang = "es" } = Astro.props;
+const title = { es: "Política de cookies", en: "Cookie policy", fr: "Politique de cookies" }[lang];
+---
+<Base title={title} crumbs={[{ name: "Cookies", href: localePath(lang, "/cookies/") }]} lang={lang}>
+  <div class="prose">
+    {lang === "es" && (
+      <>
+        <h1>Política de cookies</h1>
+        <p>Ahora mismo este sitio <strong>no instala cookies</strong>, ni propias ni de terceros. Las estadísticas de visitas se obtienen sin cookies.</p>
+        <p>Si pulsas «Guardar» o «Lo he visitado» en una ficha, o «Añadir a mi ruta» en una ficha o en el mapa, tu navegador guarda en su almacenamiento local (localStorage) la lista de fichas guardadas (nombre del municipio, comunidad y enlace), los municipios que marcas como visitados (los mismos datos) y la lista de paradas de «Mi ruta» (identificadores de las áreas), y el país que eliges en las pestañas de país de la portada o del mapa (<code>rc:pais</code>), solo si lo pulsas. Solo se guarda cuando tú lo pides, no sale de tu dispositivo ni nos llega (salvo que compartas un enlace de ruta: al abrirlo, sus identificadores de áreas viajan en la dirección web, como cualquier visita), y puedes borrarlo desde «Mis guardados» con «Borrar todos mis datos de este sitio», volviendo a pulsar el botón correspondiente o borrando los datos del sitio en tu navegador.</p>
+        <p>Si en el futuro incorporamos publicidad o servicios que las necesiten, actualizaremos esta página y te pediremos el consentimiento antes de instalarlas.</p>
+      </>
+    )}
+    {lang === "en" && (
+      <>
+        <h1>Cookie policy</h1>
+        <AvisoTraduccion lang={lang} />
+        <p>At the moment this website <strong>does not install cookies</strong>, neither its own nor third-party ones. Visit statistics are obtained without cookies.</p>
+        <p>If you press «Guardar» (save) or «Lo he visitado» (I have visited it) on a page, or «Añadir a mi ruta» (add to my route) on a page or on the map, your browser stores in its local storage (localStorage) the list of saved pages (municipality name, community and link), the municipalities you mark as visited (the same data) and the list of stops in «Mi ruta» (my route; identifiers of the areas), and the country you choose in the country tabs on the home page or the map (<code>rc:pais</code>), only if you press them. It is only stored when you ask for it, it does not leave your device or reach us (unless you share a route link: when it is opened, the identifiers of its areas travel in the web address, like any visit), and you can delete it from «Mis guardados» (my saved places) with «Borrar todos mis datos de este sitio» (delete all my data on this site), by pressing the corresponding button again or by clearing the site data in your browser.</p>
+        <p>If in the future we add advertising or services that need cookies, we will update this page and ask for your consent before installing them.</p>
+      </>
+    )}
+    {lang === "fr" && (
+      <>
+        <h1>Politique de cookies</h1>
+        <AvisoTraduccion lang={lang} />
+        <p>Pour le moment, ce site <strong>n'installe pas de cookies</strong>, ni les siens ni ceux de tiers. Les statistiques de visites sont obtenues sans cookies.</p>
+        <p>Si vous appuyez sur «Guardar» (enregistrer) ou «Lo he visitado» (je l'ai visité) sur une fiche, ou sur «Añadir a mi ruta» (ajouter à mon itinéraire) sur une fiche ou sur la carte, votre navigateur enregistre dans son stockage local (localStorage) la liste des fiches enregistrées (nom de la commune, communauté et lien), les communes que vous marquez comme visitées (les mêmes données) et la liste des étapes de «Mi ruta» (mon itinéraire ; identifiants des aires), et le pays que vous choisissez dans les onglets de pays de la page d'accueil ou de la carte (<code>rc:pais</code>), uniquement si vous cliquez dessus. Elles ne sont enregistrées que lorsque vous le demandez, ne quittent pas votre appareil et ne nous parviennent pas (sauf si vous partagez un lien d'itinéraire : à son ouverture, les identifiants de ses aires circulent dans l'adresse web, comme pour toute visite), et vous pouvez les supprimer depuis «Mis guardados» (mes favoris) avec «Borrar todos mis datos de este sitio» (supprimer toutes mes données sur ce site), en appuyant de nouveau sur le bouton correspondant ou en effaçant les données du site dans votre navigateur.</p>
+        <p>Si, à l'avenir, nous ajoutons de la publicité ou des services qui en ont besoin, nous mettrons cette page à jour et nous vous demanderons votre consentement avant de les installer.</p>
+      </>
+    )}
+  </div>
+</Base>

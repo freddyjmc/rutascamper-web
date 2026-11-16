@@ -1,0 +1,72 @@
+---
+// Regiones de un país con su estado: filtro por estado (con JavaScript), leyenda de colores y tarjetas.
+// Lo usan la portada (dentro de una pestaña) y las cabeceras de país, para que se vean igual.
+import ComunidadCard from "./ComunidadCard.astro";
+import { ESTADOS } from "../site";
+import { t, type Lang } from "../i18n";
+import type { Pais } from "../lib/paises";
+interface Props { pais: Pais; /** Dentro de una pestaña de la portada. */ panel?: { idBase: string; visible: boolean }; lang?: Lang }
+const { pais, panel, lang = "es" } = Astro.props;
+const T = t(lang);
+const claves = Object.keys(ESTADOS) as (keyof typeof ESTADOS)[];
+// Regiones con al menos un municipio revisado en cada estado, para el filtro.
+const cuenta = Object.fromEntries(claves.map((k) => [k, pais.regiones.filter((r) => (r.mix[k] ?? 0) > 0).length])) as Record<string, number>;
+const panelAttrs = panel
+  ? { role: "tabpanel", id: `${panel.idBase}-panel-${pais.code}`, "aria-labelledby": `${panel.idBase}-tab-${pais.code}`, hidden: !panel.visible, tabindex: 0 }
+  : {};
+---
+<div class="regiones" data-regiones data-pais={pais.code} {...panelAttrs}
+  data-uno={`${pais.regionUno} ${T.filtro.uno}`} data-varias={`${pais.regionVarias} ${T.filtro.varias}`} data-fmt={T.filtro.resultado}>
+  {panel && (
+    <p class="pais-resumen">
+      <span><strong>{pais.nombre}</strong>: {pais.resumen}</span>
+      <a href={pais.base}>{T.hub.verPais} {pais.nombre} <span aria-hidden="true">→</span></a>
+    </p>
+  )}
+  {pais.regiones.length ? (<>
+    <div class="com-filter" data-comfilter hidden>
+      <div class="com-chips" role="group" aria-label={T.hub.filtroEtiqueta}>
+        <button type="button" data-f="" aria-pressed="true">{T.hub.todas} <span>{pais.regiones.length}</span></button>
+        {claves.filter((k) => cuenta[k] > 0).map((k) => (
+          <button type="button" data-f={k} aria-pressed="false"><i class={`dot ${ESTADOS[k].tone}`} aria-hidden="true"></i>{T.estados[k]} <span>{cuenta[k]}</span></button>
+        ))}
+      </div>
+      <p class="com-count meta" role="status" aria-live="polite" data-comcount></p>
+    </div>
+    <ul class="com-key meta" aria-label={T.hub.estadoLeyenda}>
+      {claves.map((k) => <li><i class={`dot ${ESTADOS[k].tone}`} aria-hidden="true"></i>{T.estados[k]}</li>)}
+    </ul>
+    <div class="grid stagger reveal" data-comgrid>
+      {pais.regiones.map((r, i) => (
+        <ComunidadCard c={r.entry} n={r.n} mix={r.mix} i={i} href={r.href} nombre={r.nombre} nombreLocal={r.nombreLocal} foto={pais.fotos} fotoId={pais.fotoRegion(r.id)} areasPorDefecto={pais.fotos} lang={lang} />
+      ))}
+    </div>
+  </>) : <p class="muted">{T.hub.sinRegiones}</p>}
+</div>
+
+<script>
+  // Filtro de regiones por estado de sus municipios (sin JavaScript se ven todas).
+  document.querySelectorAll<HTMLElement>("[data-regiones]").forEach((box) => {
+    const fil = box.querySelector<HTMLElement>("[data-comfilter]");
+    const grid = box.querySelector<HTMLElement>("[data-comgrid]");
+    if (!fil || !grid) return;
+    fil.hidden = false;
+    const cards = [...grid.querySelectorAll<HTMLElement>("[data-e]")];
+    const btns = [...fil.querySelectorAll<HTMLButtonElement>("button[data-f]")];
+    const out = fil.querySelector<HTMLElement>("[data-comcount]")!;
+    const nombres: Record<string, string> = {};
+    btns.forEach((b) => (nombres[b.dataset.f!] = (b.childNodes[b.childNodes.length - 2]?.textContent ?? "").trim().toLowerCase()));
+    const aplicar = (f: string) => {
+      let n = 0;
+      cards.forEach((c) => {
+        const ok = !f || c.dataset.e!.split(" ").includes(f);
+        c.hidden = !ok;
+        if (ok) n++;
+      });
+      btns.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.f === f)));
+      const verbo = (n === 1 ? box.dataset.uno : box.dataset.varias) ?? "";
+      out.textContent = f ? (box.dataset.fmt ?? "").replace("{n}", String(n)).replace("{verbo}", verbo).replace("{estado}", nombres[f]) : "";
+    };
+    btns.forEach((b) => b.addEventListener("click", () => aplicar(b.dataset.f!)));
+  });
+</script>

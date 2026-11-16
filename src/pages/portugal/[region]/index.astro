@@ -1,0 +1,72 @@
+---
+import Base from "../../../layouts/Base.astro";
+import PaisSelector from "../../../components/PaisSelector.astro";
+import FotoDestino from "../../../components/FotoDestino.astro";
+import { getCollection, getEntry } from "astro:content";
+import { ESTADOS, visibleFr, fecha, fechaCorta, fuenteOficial, nombreFr } from "../../../site";
+
+export async function getStaticPaths() {
+  const nac = await getEntry("nacionalPt", "nacional");
+  if (!nac || !visibleFr(nac)) return [];
+  const regiones = (await getCollection("regionesPt")).filter(visibleFr);
+  const municipios = (await getCollection("municipiosPt")).filter(visibleFr);
+  return regiones.map((r) => ({
+    params: { region: r.id },
+    props: { r, municipios: municipios.filter((m) => m.data.comunidad === r.id).sort((a, b) => a.data.nombre.localeCompare(b.data.nombre, "fr")) },
+  }));
+}
+
+const { r, municipios } = Astro.props;
+const nom = nombreFr(r.data.nombre);
+const title = `Dormir en autocaravana en ${nom.es}: normativa`;
+---
+<Base title={title} description={r.data.resumen.slice(0, 155)} noindex={!r.data.verificado} crumbs={[{ name: "Destinos", href: "/destinos/" }, { name: "Portugal", href: "/portugal/" }, { name: nom.es, href: Astro.url.pathname }]}>
+  <PaisSelector actual="pt" />
+  <FotoDestino id={`portugal/${r.id}`} prioridad sizes="(min-width: 1180px) 1120px, calc(100vw - 32px)" />
+  <h1>Dormir en autocaravana en {nom.es}{nom.es !== nom.fr && <span class="meta"> ({nom.fr})</span>}</h1>
+  <div class="ficha-top">
+    <span class="badge idle" title="Fecha de la última revisión de esta ficha">Actualizado: {fechaCorta(r.data.revisado)}</span>
+    {fuenteOficial(r.data) && <a class="src-link" href={fuenteOficial(r.data)!.url} rel="nofollow noopener" target="_blank">Ver norma oficial ↗</a>}
+  </div>
+  <p class="lead">{r.data.resumen}</p>
+  {!r.data.verificado && <p class="notice">Borrador sin verificar. No se publica hasta contrastarlo con fuentes oficiales.</p>}
+  {r.data.bloqueado && <p class="notice">Ficha bloqueada: falta el permiso de una fuente. No se publica.</p>}
+  {r.data.normaAutonomica && (<><h2>Normas que afectan a la región</h2><p>{r.data.normaAutonomica}</p></>)}
+  {r.data.claves.length > 0 && (<><h2>Lo que tienes que saber</h2><ul class="prose">{r.data.claves.map((k) => <li>{k}</li>)}</ul></>)}
+  {r.data.temporada && r.data.temporada.length > 0 && (
+    <>
+      <h2>Solo en ciertas fechas</h2>
+      <ul class="prose">{r.data.temporada.map((t) => (
+        <li>{t.texto}{(t.desde || t.hasta) && <> <span class="meta">({t.desde ?? "…"} – {t.hasta ?? "…"})</span></>}{t.fuente && <> <span class="meta">· {t.fuente}</span></>}</li>
+      ))}</ul>
+    </>
+  )}
+  {r.data.notaAyuntamiento && (<><h2>Información del ayuntamiento (no está en el reglamento municipal)</h2><p>{r.data.notaAyuntamiento}</p></>)}
+  {r.data.fuentes.length > 0 && (
+    <>
+      <h2>Fuentes</h2>
+      <ul class="sources">
+        {r.data.fuentes.map((f) => (
+          <li><a href={f.url} rel="nofollow noopener" target="_blank">{f.titulo}</a> <span class="meta">· {f.tipo === "oficial" ? "fuente oficial" : "fuente secundaria"}{f.fecha && ` · ${fecha(f.fecha)}`}</span></li>
+        ))}
+      </ul>
+    </>
+  )}
+
+  <h2>Municipios revisados</h2>
+  {municipios.length ? (
+    <ul class="results">
+      {municipios.map((m) => {
+        const e = ESTADOS[m.data.estado];
+        return (
+          <li><a href={`/portugal/${r.id}/${m.id.split("/").pop()}/`}>
+            <span>{m.data.nombre}<br /><span class="where">{m.data.provincia} · revisado: {fecha(m.data.revisado)}</span></span>
+            <span class={`badge ${e.tone}`}>{e.label}</span>
+          </a></li>
+        );
+      })}
+    </ul>
+  ) : <p class="muted">Todavía no hay municipios revisados en esta región.</p>}
+  <p>Consulta la <a href="/portugal/">normativa nacional de Portugal</a>.</p>
+  <p class="meta">Última revisión de la ficha: {fecha(r.data.revisado)} · <a href="/metodo/">Cómo verificamos</a></p>
+</Base>

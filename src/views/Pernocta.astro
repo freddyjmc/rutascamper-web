@@ -1,0 +1,31 @@
+---
+import Base from "../layouts/Base.astro";
+import PaisHub from "../components/PaisHub.astro";
+import AvisoTraduccion from "../components/AvisoTraduccion.astro";
+import { getPaises } from "../lib/paises";
+import { t, href as L, paisesEn, type Lang } from "../i18n";
+
+interface Props { lang?: Lang }
+const { lang = "es" } = Astro.props;
+const T = t(lang);
+const pais = paisesEn(await getPaises(), lang).find((p) => p.code === "es")!;
+const tp = T.paises.es;
+const meta = {
+  es: { title: "Normativa de pernocta en camper por comunidad autónoma", description: "Qué dice cada comunidad autónoma y cada municipio sobre dormir en camper o autocaravana, con fuente y fecha de revisión." },
+  en: { title: "Overnight camper rules by autonomous community in Spain", description: "What each autonomous community and municipality says about sleeping in a camper or motorhome, with source and review date." },
+  fr: { title: "Nuitée en camping-car en Espagne : règles par communauté", description: "Ce que dit chaque communauté autonome et chaque commune sur le fait de dormir en camping-car, avec source et date de révision." },
+}[lang];
+---
+<Base title={meta.title} description={meta.description} crumbs={[{ name: T.destinos.nav, href: L(lang, "/destinos/") }, { name: pais.nombre, href: pais.base }]} lang={lang}>
+  <PaisHub pais={pais} h1={tp.h1} lead={tp.lead} lang={lang}>
+    <div slot="nacional">
+      <AvisoTraduccion lang={lang} />
+      <div class="grid guias-grid stagger reveal">
+        {T.guiasEs.map((g, i) => (
+          <a class="card stretch lift spot" style={`--i: ${i}`} href={g.href} hreflang="es"><h3>{g.titulo}</h3><p class="muted">{g.texto}{lang !== "es" && <span class="solo-es"> ({T.ui.guiaEs})</span>}</p></a>
+        ))}
+      </div>
+    </div>
+    <p class="meta"><a href="/creditos-fotos/" hreflang="es">{T.hub.creditos}</a></p>
+  </PaisHub>
+</Base>
