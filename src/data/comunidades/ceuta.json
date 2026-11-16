@@ -1,0 +1,28 @@
+{
+  "nombre": "Ceuta",
+  "resumen": "En Ceuta no hemos localizado una norma propia sobre autocaravanas ni sobre acampada con vehículos. Rige la normativa estatal de tráfico: puedes estacionar la autocaravana como cualquier otro vehículo si no despliegas nada, no usas patas estabilizadoras y no viertes nada. Antes de pasar la noche, pregunta en la Ciudad Autónoma, sobre todo en verano.",
+  "normaAutonomica": "No hemos localizado una ordenanza de la Ciudad Autónoma de Ceuta sobre autocaravanas, acampada o pernocta. Aplicamos la Instrucción PROT 2026/04 de la DGT, que resume la normativa estatal de tráfico.",
+  "claves": [
+    "Aparcar no es acampar: según la DGT, la autocaravana está estacionada si solo toca el suelo con las ruedas (los calzos se admiten), no ocupa más que cerrada y no emite fluidos ni ruidos; que haya gente dentro es irrelevante (Instrucción PROT 2026/04).",
+    "La administración local puede limitar el tiempo de estacionamiento y prohibir acampar en sus vías urbanas, como reconoce el Tribunal Supremo (sentencia de 13/03/2018, citada por la DGT): respeta siempre la ordenanza y las señales.",
+    "No hemos localizado áreas oficiales de autocaravanas ni una ordenanza que fije multas: no damos cifras.",
+    "Para preguntar: web oficial de la Ciudad Autónoma de Ceuta (ceuta.es)."
+  ],
+  "fuentes": [
+    {
+      "titulo": "Instrucción PROT 2026/04 de la Dirección General de Tráfico sobre autocaravanas (11/03/2026)",
+      "url": "https://www.dgt.es/export/sites/web-DGT/.galleries/downloads/muevete-con-seguridad/normas-de-trafico/NOR-normativa-general/report_Instruccion-PROT-2026_04-Autocaravanas.pdf",
+      "tipo": "oficial",
+      "fecha": "2026-03-11"
+    },
+    {
+      "titulo": "Web oficial de la Ciudad Autónoma de Ceuta: pregunta aquí por la normativa de estacionamiento y pernocta",
+      "url": "https://www.ceuta.es/",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-03",
+  "verificado": true,
+  "pernoctaVia": "Sin norma propia localizada: aparcar sin desplegar nada es tráfico (DGT).",
+  "estanciaAreas": "Sin áreas oficiales localizadas"
+}

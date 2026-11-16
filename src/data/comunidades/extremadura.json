@@ -1,0 +1,24 @@
+{
+  "nombre": "Extremadura",
+  "resumen": "En Extremadura puedes dormir dentro de tu camper o autocaravana si está bien estacionada en una zona autorizada y no despliegas nada: no se considera acampada. Sacar toldo, dispositivos de nivelación o soportes de estabilización fuera de un camping o área es acampada libre, que está prohibida. En las áreas de autocaravanas la estancia máxima es de 72 horas.",
+  "normaAutonomica": "Decreto 46/2025, de 27 de mayo, que regula campings, zonas de acampada públicas, áreas de autocaravanas y establecimientos singulares (DOE n.º 104, de 2 de junio de 2025), en desarrollo de la Ley 2/2011 de Turismo de Extremadura.",
+  "claves": [
+    "Solo se permite acampar en campings, zonas de acampada públicas, áreas de autocaravanas y acampadas provisionales para eventos (Decreto 46/2025, art. 3.1).",
+    "No está acampada la autocaravana parada o estacionada en zona autorizada de la vía pública que no despliega toldos, dispositivos de nivelación, soportes de estabilización ni otros elementos, no ocupa más que el vehículo, solo toca el suelo con las ruedas y no vierte nada (art. 3.3).",
+    "Instalar caravanas o autocaravanas fuera de los establecimientos regulados es acampada libre e infracción turística del artículo 102.f de la Ley 2/2011 (art. 3.2).",
+    "En las áreas de autocaravanas puedes abrir toldo, mesas y sillas y nivelar el vehículo dentro de tu parcela; no se permiten tiendas de campaña (art. 57.2 y 57.3).",
+    "La estancia máxima en un área de autocaravanas es de 72 horas (art. 57.4)."
+  ],
+  "fuentes": [
+    {
+      "titulo": "Decreto 46/2025, de 27 de mayo (DOE n.º 104, 02/06/2025)",
+      "url": "https://doe.juntaex.es/pdfs/doe/2025/1040o/25040083.pdf",
+      "tipo": "oficial",
+      "fecha": "2025-06-02"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true,
+  "pernoctaVia": "No es acampada si estás bien estacionado en zona autorizada y solo tocas el suelo con las ruedas (Decreto 46/2025, art. 3.3).",
+  "estanciaAreas": "72 h"
+}

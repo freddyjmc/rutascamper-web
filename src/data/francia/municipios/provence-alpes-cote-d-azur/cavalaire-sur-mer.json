@@ -1,0 +1,29 @@
+{
+  "nombre": "Cavalaire-sur-Mer",
+  "comunidad": "provence-alpes-cote-d-azur",
+  "provincia": "Var (83)",
+  "estado": "restringido",
+  "resumen": "La Oficina de Turismo cita un arrêté municipal de 14/03/2011 que no hemos leído; no hemos localizado el arrêté. Según la Oficina de Turismo, del 1 de marzo al 31 de octubre y en varias vacaciones está prohibido estacionar autocaravanas en las calles y aparcamientos del centro y del paseo marítimo; en el resto, el máximo es de 24 horas. Hay un área de servicios junto a la depuradora donde no se puede estacionar.",
+  "reglas": [
+    "Según la Oficina de Turismo, que cita un arrêté de 14/03/2011 que no hemos leído: prohibido estacionar autocaravanas y vehículos del mismo tamaño del 1 de marzo al 31 de octubre, en las vacaciones escolares de Todos los Santos, Navidad e invierno y durante los actos que organice el ayuntamiento, en las avenidas des Alliés, du Maréchal Lyautey y du Général de Gaulle, la place de la Gare, las calles Gabriel Péri, Pierre et Marie Curie y Pierre Rameil, la rue y el parking St Pierre, la place Jean Moulin, los parkings du Centre ville, René Revest, de la Promenade de la Mer, Mistral y des Vignes, el quai Marc Pajot y Le Parc de Cavalaire.",
+    "Según la Oficina de Turismo, que cita un arrêté de 14/03/2011 que no hemos leído: en las demás calles y aparcamientos se puede estacionar como máximo 24 horas, respetando las normas de estacionamiento vigentes.",
+    "No hemos localizado el arrêté."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de servicios de la depuradora",
+      "detalle": "A la entrada de la estación depuradora intercomunal, junto al cementerio, route du Dr Pardigon. Abierta todos los días, 24 horas. Vaciado gratuito de aguas grises y negras; agua potable a 2 € los 200 litros. Prohibido estacionar en ella.",
+      "soloServicios": true
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Camping car (Office de Tourisme de Cavalaire-sur-Mer)",
+      "url": "https://www.cavalairesurmer.fr/trouvez-votre-nid/bien-loge/camping-car/",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-05",
+  "verificado": false,
+  "bloqueado": true
+}

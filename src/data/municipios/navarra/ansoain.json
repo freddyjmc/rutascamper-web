@@ -1,0 +1,34 @@
+{
+  "nombre": "Ansoáin",
+  "comunidad": "navarra",
+  "provincia": "Navarra",
+  "estado": "prohibido",
+  "resumen": "En Ansoáin, junto a Pamplona, está prohibido pernoctar dentro de cualquier vehículo en todo el municipio, salvo con autorización o en el área de servicio del aparcamiento de la calle Canteras, donde el máximo es de 72 horas (sin límite del 5 al 15 de julio, con tasa diaria). Puedes parar y estacionar la autocaravana en la calle, pero no dormir en ella.",
+  "reglas": [
+    "Como norma general, y salvo autorización expresa, se prohíbe la pernocta en el interior de vehículos en todo el término municipal, salvo en los espacios regulados por la ordenanza (art. 2).",
+    "Se permite parar y estacionar autocaravanas en las vías urbanas si no es peligroso, está en lugar autorizado, no sobresale de la plaza y no se pone junto a portales, comercios o viviendas en planta baja (art. 5).",
+    "Está aparcada y no acampada si solo toca el suelo con las ruedas, no abre ventanas proyectables ni saca sillas, mesas o toldos y no vierte nada (art. 5).",
+    "En el área de la calle Canteras, máximo 72 horas; del 5 al 15 de julio no hay límite y se cobra una tasa diaria (art. 6.3)."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de servicio para autocaravanas de Ansoáin",
+      "detalle": "En el aparcamiento de la calle Canteras. Solo vehículos vivienda; máximo 72 horas (del 5 al 15 de julio sin límite y con tasa); vaciado de aguas grises y negras y toma de agua no tratada. No está vigilada.",
+      "lat": 42.834209,
+      "lon": -1.636488,
+      "coordFuente": "https://www.ansoain.es/wp-content/uploads/2018/09/ORDENANZA-AUTOCARAVANAS.pdf",
+      "coordTipo": "aproximada"
+    }
+  ],
+  "multa": "Cualquier infracción: de 90 a 300 €. Acampada libre: 300 €, hasta 450 € si hay daños, suciedad o barbacoas (art. 9).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza n.º 21 reguladora del estacionamiento y pernocta de autocaravanas de Ansoáin (BON n.º 176, 11/09/2018), web del Ayuntamiento",
+      "url": "https://www.ansoain.es/wp-content/uploads/2018/09/ORDENANZA-AUTOCARAVANAS.pdf",
+      "tipo": "oficial",
+      "fecha": "2018-09-11"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

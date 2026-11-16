@@ -1,0 +1,45 @@
+{
+  "nombre": "Santander",
+  "comunidad": "cantabria",
+  "provincia": "Cantabria",
+  "estado": "restringido",
+  "resumen": "En Santander puedes aparcar la autocaravana en casi todo el municipio, salvo en las zonas OLA y donde haya señales que prohíban vehículos de más de 1.800 kg. Pero pernoctar solo está permitido en el aparcamiento especial junto al Parque de Las Llamas, con un máximo de 48 horas. La ordenanza de circulación prohíbe además estacionar caravanas fuera de los lugares autorizados.",
+  "reglas": [
+    "Se puede aparcar la autocaravana en todo el municipio salvo en las zonas OLA (estacionamiento regulado) y en las zonas con señales que prohíben vehículos de más de 1.800 kg (portal oficial de turismo de Santander).",
+    "Pernoctar solo está permitido en el aparcamiento especial junto al Parque de Las Llamas, con un máximo de 48 horas (portal oficial de turismo de Santander).",
+    "La ordenanza de circulación prohíbe estacionar caravanas en todo el término municipal salvo en los lugares autorizados (art. 22.4, modificado en 2016).",
+    "En Cantabria no es acampada estar bien estacionado en zona autorizada sin desplegar nada; sí lo es bajar las patas estabilizadoras, abrir ventanas proyectables o sacar toldo, mesas o sillas (Decreto 35/2026, arts. 1.2.c y 1.3.b).",
+    "En la ciudad hay dos campings donde se puede pasar la noche en autocaravana: Cabo Mayor y Virgen del Mar."
+  ],
+  "areas": [
+    {
+      "nombre": "Aparcamiento de autocaravanas del Parque de Las Llamas",
+      "detalle": "Calle Marino Fernández Fontecha, junto al Parque de Las Llamas. Único lugar de la ciudad donde se permite pernoctar en autocaravana; máximo 48 horas. Autobuses cercanos: Instituto Las Llamas, UIMP y Los Castros. Datos del portal oficial de turismo de Santander.",
+      "lat": 43.47222,
+      "lon": -3.80361,
+      "coordFuente": "https://turismo.santander.es/en/organising-your-journey/mothorhomes-and-campervans"
+    }
+  ],
+  "multa": "Estacionar caravanas en el término municipal sin autorización: 150 € (ordenanza de circulación, art. 22.4, código 22d).",
+  "fuentes": [
+    {
+      "titulo": "Turismo de Santander (Ayuntamiento): autocaravanas y campers en Santander",
+      "url": "https://turismo.santander.es/en/organising-your-journey/mothorhomes-and-campervans",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Modificación del art. 22.4 de la Ordenanza de Circulación de Santander para el estacionamiento de autocaravanas (BOC n.º 103, 30/05/2016, CVE-2016-4734)",
+      "url": "https://turismo.santander.es/sites/default/files/inline-files/autocaravanas-boc.pdf",
+      "tipo": "oficial",
+      "fecha": "2016-05-30"
+    },
+    {
+      "titulo": "Decreto 35/2026, de 14 de mayo, de campamentos de turismo y áreas de servicio para autocaravanas de Cantabria (BOC n.º 95, 20/05/2026), copia publicada por Turismo de Cantabria",
+      "url": "https://profesional.turismodecantabria.com/wp-content/uploads/2026/05/DECRETO-AUTOCARAVANAS-Y-CAMPAMENTOS-TURISMO.pdf",
+      "tipo": "oficial",
+      "fecha": "2026-05-20"
+    }
+  ],
+  "revisado": "2026-11-03",
+  "verificado": true
+}

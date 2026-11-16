@@ -1,0 +1,30 @@
+{
+  "nombre": "Cabrales",
+  "comunidad": "asturias",
+  "provincia": "Asturias",
+  "estado": "sin-datos",
+  "resumen": "No hemos localizado una ordenanza de Cabrales sobre autocaravanas ni un área en el listado oficial de Turismo Asturias. Asturias prohíbe la acampada libre con un texto muy amplio, así que lo prudente es dormir en un camping o en un área. Las áreas verificadas más cercanas en nuestra web son las de Panes y Cangas de Onís.",
+  "reglas": [
+    "Asturias prohíbe cualquier forma de acampada libre, y la define incluyendo pernoctar en caravana o autocaravana fuera de campings y áreas sin autorización (Decreto 61/2022, art. 61.1).",
+    "El decreto no aclara si dormir dentro de un vehículo bien estacionado en la vía pública es acampada: ante la duda, usa un camping o un área.",
+    "En los espacios naturales protegidos mandan sus propios planes de uso (Decreto 61/2022, art. 62); infórmate antes de subir a los Picos de Europa.",
+    "No hemos localizado una ordenanza municipal publicada sobre estacionamiento o pernocta de autocaravanas: puede que el ayuntamiento tenga normas propias o señales en la calle. Pregunta en el ayuntamiento antes de pasar la noche y respeta siempre la señalización. No damos multas porque no las hemos visto en una fuente oficial.",
+    "Alternativas verificadas en nuestra web: las áreas de Panes (Peñamellera Baja) y de Cangas de Onís."
+  ],
+  "areas": [],
+  "fuentes": [
+    {
+      "titulo": "Decreto 61/2022, de 23 de septiembre, de campings y áreas de autocaravanas de Asturias (BOPA n.º 191, 04/10/2022)",
+      "url": "https://miprincipado.asturias.es/bopa/2022/10/04/2022-07386.pdf",
+      "tipo": "oficial",
+      "fecha": "2022-10-04"
+    },
+    {
+      "titulo": "Web oficial del Ayuntamiento de Cabrales: pregunta aquí por la ordenanza de estacionamiento y pernocta",
+      "url": "https://www.cabrales.es/",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

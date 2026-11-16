@@ -1,0 +1,21 @@
+{
+  "nombre": "Cassis",
+  "comunidad": "provence-alpes-cote-d-azur",
+  "provincia": "Bouches-du-Rhône (13)",
+  "estado": "restringido",
+  "resumen": "No hemos podido leer la orden municipal (arrêté). La Oficina de Turismo avisa de que las autocaravanas solo pueden estacionar en la avenue des Gorguettes, donde se permite pasar la noche. Según la misma Oficina, en Cassis no hay área de servicios para autocaravanas y el único camping es Les Cigales.",
+  "reglas": [
+    "Según la Oficina de Turismo: las autocaravanas solo pueden estacionar en la avenue des Gorguettes, y allí se permite el estacionamiento de noche.",
+    "No hemos podido leer el arrêté que establece esa norma (número y fecha)."
+  ],
+  "areas": [],
+  "fuentes": [
+    {
+      "titulo": "Stationnement – Parking (Office de Tourisme de Cassis)",
+      "url": "https://www.ot-cassis.com/infos-pratiques/stationnement-parking/",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-06",
+  "verificado": true
+}

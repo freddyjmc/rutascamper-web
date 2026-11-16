@@ -1,0 +1,49 @@
+{
+  "titulo": "Ruta en camper por Navarra y La Rioja en 4 días",
+  "h1": "Ruta en camper por Navarra y La Rioja",
+  "resumen": "Cuatro días del norte de Navarra a La Rioja Baja: Pamplona, Olite, las Bardenas Reales y Calahorra. Todas las noches caen en áreas municipales con ordenanza verificada: Sarriguren, junto a Pamplona, Arguedas y Calahorra.",
+  "dias": 4,
+  "comunidades": [
+    "navarra",
+    "la-rioja"
+  ],
+  "cuando": "primavera y otoño; del 5 al 15 de julio (San Fermín) cambian las condiciones de las áreas cercanas a Pamplona",
+  "etapas": [
+    {
+      "dia": "Día 1",
+      "titulo": "Pamplona / Iruña",
+      "texto": "Empieza en la capital navarra: el casco antiguo, las murallas y la Ciudadela. Deja la camper fuera del centro y entra a pie o en transporte público.",
+      "dormir": "Área de servicio de Sarriguren (Valle de Egüés), en la calle Elizmendi, 8: máximo 48 horas, vaciado y agua. En el Valle de Egüés puedes estacionar en la calle sin acampar. Ojo: en la vecina Ansoáin está prohibido dormir dentro de un vehículo fuera de su área.",
+      "ficha": "navarra/valle-de-egues"
+    },
+    {
+      "dia": "Día 2",
+      "titulo": "Olite y la Ribera",
+      "texto": "Baja hacia el sur por la Navarra Media: el Palacio Real de Olite y sus calles medievales merecen una parada larga. Sigue hasta la Ribera del Ebro para dormir cerca de las Bardenas.",
+      "dormir": "Área de autocaravanas de Arguedas, en el Paseo del Bordón, con un máximo de 48 horas seguidas. La acampada libre está prohibida en el término municipal salvo autorización.",
+      "ficha": "navarra/arguedas"
+    },
+    {
+      "dia": "Día 3",
+      "titulo": "Bardenas Reales",
+      "texto": "Dedica el día al paisaje semidesértico de las Bardenas Reales. Infórmate en el centro de información del parque sobre las pistas abiertas y las normas de circulación antes de entrar, y no salgas de las pistas autorizadas.",
+      "dormir": "Segunda noche en el área de Arguedas: con dos noches llegas justo al máximo de 48 horas seguidas.",
+      "ficha": "navarra/arguedas"
+    },
+    {
+      "dia": "Día 4",
+      "titulo": "Calahorra",
+      "texto": "Cruza a La Rioja Baja por la ribera del Ebro hasta Calahorra, con su catedral de Santa María y su casco histórico.",
+      "dormir": "Área municipal gratuita frente a la Catedral de Santa María: 8 plazas, electricidad, agua y vaciado, con un máximo de 72 horas. En el área no puedes sacar mesas, sillas ni toldo.",
+      "ficha": "la-rioja/calahorra"
+    }
+  ],
+  "consejos": [
+    "En Navarra y La Rioja la acampada libre está prohibida o necesita autorización: duerme en las áreas y no despliegues nada fuera del vehículo en la calle.",
+    "Alrededor de Pamplona cada municipio tiene su norma: el Valle de Egüés permite estacionar en la calle hasta 48 horas, pero Ansoáin prohíbe dormir dentro fuera de su área.",
+    "Del 5 al 15 de julio las áreas de Sarriguren y Ansoáin cambian de condiciones y cobran tasa diaria.",
+    "Las Bardenas Reales son un parque natural: consulta sus normas de acceso antes de entrar."
+  ],
+  "revisado": "2026-11-02",
+  "publicada": true
+}

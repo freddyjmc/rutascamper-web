@@ -1,0 +1,86 @@
+{
+  "comprobado": "2026-11-12",
+  "paises": {
+    "es": [
+      { "grupo": "Tiempo", "enlaces": [
+        { "nombre": "AEMET: predicción por municipios", "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios", "quien": "Agencia Estatal de Meteorología", "texto": "El tiempo previsto en el pueblo donde vas a dormir." },
+        { "nombre": "AEMET: avisos meteorológicos", "url": "https://www.aemet.es/es/eltiempo/prediccion/avisos", "quien": "Agencia Estatal de Meteorología", "texto": "Avisos por viento, lluvia, nieve o calor. Útil antes de aparcar en la costa o en la montaña." }
+      ] },
+      { "grupo": "Tráfico", "enlaces": [
+        { "nombre": "DGT: mapa del tráfico", "url": "https://etraffic.dgt.es/etrafficWEB/", "quien": "Dirección General de Tráfico", "texto": "Incidencias y estado de las carreteras." },
+        { "nombre": "DGT", "url": "https://www.dgt.es/inicio/", "quien": "Dirección General de Tráfico", "texto": "Web oficial de la DGT: normas de circulación y trámites." }
+      ] },
+      { "grupo": "Mapas", "enlaces": [
+        { "nombre": "IGN: visor Iberpix", "url": "https://www.ign.es/iberpix", "quien": "Instituto Geográfico Nacional", "texto": "Mapas topográficos y fotos aéreas de toda España." }
+      ] },
+      { "grupo": "Carburante", "enlaces": [
+        { "nombre": "Geoportal de gasolineras", "url": "https://geoportalgasolineras.es/", "quien": "Ministerio para la Transición Ecológica y el Reto Demográfico", "texto": "Precios de los carburantes por gasolinera." }
+      ] },
+      { "grupo": "Espacios naturales", "enlaces": [
+        { "nombre": "Red de Parques Nacionales", "url": "https://www.miteco.gob.es/es/parques-nacionales-oapn/red-parques-nacionales.html", "quien": "Organismo Autónomo Parques Nacionales", "texto": "Información de cada parque nacional. Consulta sus normas antes de entrar con la camper." }
+      ] },
+      { "grupo": "Turismo", "enlaces": [
+        { "nombre": "spain.info", "url": "https://www.spain.info/es/", "quien": "Turespaña", "texto": "Portal oficial de turismo de España." }
+      ] }
+    ],
+    "fr": [
+      { "grupo": "Tiempo", "enlaces": [
+        { "nombre": "Météo-France: previsiones", "url": "https://meteofrance.com/", "quien": "Météo-France", "texto": "El tiempo previsto en cada municipio (en francés)." },
+        { "nombre": "Météo-France: vigilancia", "url": "https://vigilance.meteofrance.fr/fr", "quien": "Météo-France", "texto": "Mapa de alertas por departamento, por ejemplo por viento, tormentas, nieve, olas o calor (en francés)." }
+      ] },
+      { "grupo": "Tráfico", "enlaces": [
+        { "nombre": "Bison Futé", "url": "https://www.bison-fute.gouv.fr/", "quien": "Ministerio de Transportes de Francia", "texto": "Previsiones de tráfico, atascos y obras. Muy útil en los días de salida de vacaciones." }
+      ] },
+      { "grupo": "Mapas", "enlaces": [
+        { "nombre": "cartes.gouv.fr", "url": "https://cartes.gouv.fr/explorer-les-cartes/", "quien": "Gobierno de Francia", "texto": "Mapas oficiales y fotos aéreas. La antigua dirección de Géoportail lleva aquí." }
+      ] },
+      { "grupo": "Carburante", "enlaces": [
+        { "nombre": "Prix des carburants", "url": "https://www.prix-carburants.gouv.fr/", "quien": "Gobierno de Francia", "texto": "Precios de los carburantes por gasolinera (en francés)." }
+      ] },
+      { "grupo": "Turismo", "enlaces": [
+        { "nombre": "France.fr", "url": "https://www.france.fr/es/", "quien": "Atout France", "texto": "Portal oficial de turismo de Francia, en español." }
+      ] }
+    ],
+    "pt": [
+      { "grupo": "Tiempo", "enlaces": [
+        { "nombre": "IPMA: previsión a 10 días por localidad", "url": "https://www.ipma.pt/pt/otempo/prev.localidade.hora/", "quien": "Instituto Português do Mar e da Atmosfera", "texto": "El tiempo previsto en la localidad donde vas a dormir (en portugués)." },
+        { "nombre": "IPMA: avisos meteorológicos", "url": "https://www.ipma.pt/pt/otempo/prev-sam/", "quien": "Instituto Português do Mar e da Atmosfera", "texto": "Avisos por viento, lluvia, oleaje o calor, en línea temporal (en portugués). Útil antes de aparcar en la costa." }
+      ] },
+      { "grupo": "Tráfico", "enlaces": [
+        { "nombre": "Infraestruturas de Portugal", "url": "https://www.infraestruturasdeportugal.pt/", "quien": "Infraestruturas de Portugal", "texto": "Gestor de la red de carreteras y ferrocarril de Portugal. Su web ofrece información de tránsito y alertas (en portugués)." }
+      ] },
+      { "grupo": "Carburante", "enlaces": [
+        { "nombre": "Preços dos combustíveis", "url": "https://precoscombustiveis.dgeg.gov.pt/", "quien": "Direção-Geral de Energia e Geologia", "texto": "Precios de los carburantes por gasolinera (en portugués)." }
+      ] },
+      { "grupo": "Espacios naturales", "enlaces": [
+        { "nombre": "ICNF", "url": "https://www.icnf.pt/", "quien": "Instituto da Conservação da Natureza e das Florestas", "texto": "Organismo estatal de conservación de la naturaleza y los bosques (en portugués). Útil para informarte de las áreas protegidas antes de entrar con la camper." }
+      ] },
+      { "grupo": "Turismo", "enlaces": [
+        { "nombre": "Visit Portugal", "url": "https://www.visitportugal.com/es", "quien": "Turismo de Portugal", "texto": "Portal oficial de turismo de Portugal, en español." }
+      ] }
+    ]
+  },
+  "emergencias": {
+    "es": {
+      "numeros": [{ "num": "112", "texto": "Emergencias: ambulancia, bomberos o policía. Gratuito, desde fijo o móvil." }],
+      "fuente": { "nombre": "Comisión Europea: 112, número de emergencia de la UE", "url": "https://digital-strategy.ec.europa.eu/es/policies/112" }
+    },
+    "fr": {
+      "numeros": [
+        { "num": "112", "texto": "Número europeo de emergencias: urgencia médica, infracción o peligro." },
+        { "num": "15", "texto": "Urgencia médica (SAMU)." },
+        { "num": "17", "texto": "Policía (Police secours): para avisar de una infracción." },
+        { "num": "18", "texto": "Bomberos: peligro o accidente." },
+        { "num": "196", "texto": "Salvamento en el mar (desde la costa, el 196 o el 112)." },
+        { "num": "114", "llamada": false, "texto": "Para personas sordas, sordociegas, con dificultades para oír o con afasia: por aplicación, internet o SMS." }
+      ],
+      "fuente": { "nombre": "Service-Public.fr: números de urgencia", "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F33954" }
+    },
+    "pt": {
+      "numeros": [
+        { "num": "112", "texto": "Emergencias: ambulancia, bomberos o policía. Gratuito, desde fijo o móvil." }
+      ],
+      "fuente": { "nombre": "Comisión Europea: 112, número de emergencia de la UE", "url": "https://digital-strategy.ec.europa.eu/es/policies/112" }
+    }
+  }
+}

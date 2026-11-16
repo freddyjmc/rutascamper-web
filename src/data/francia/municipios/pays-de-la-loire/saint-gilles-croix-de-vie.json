@@ -1,0 +1,27 @@
+{
+  "nombre": "Saint-Gilles-Croix-de-Vie",
+  "comunidad": "pays-de-la-loire",
+  "provincia": "Vendée (85)",
+  "estado": "sin-datos",
+  "resumen": "No hemos localizado ninguna orden municipal. Si no la hay, rige la norma nacional; respeta la señalización. El ayuntamiento tiene un área en la rue de la Rabalette, abierta todo el año, con vaciado y agua; del 15 de marzo al 15 de noviembre cuesta 6,50 € por noche. En la misma calle hay, desde 2023, una zona de 38 plazas más con borne de pago.",
+  "reglas": [
+    "No hemos localizado ninguna orden municipal. Si no la hay, rige la norma nacional; respeta la señalización.",
+    "Fuera de los campings, acampar en la orilla del mar está prohibido salvo excepción (art. R111-33 del Code de l'urbanisme)."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de autocaravanas rue de la Rabalette",
+      "detalle": "Abierta todo el año, con vaciado y agua (fichas de agua a 2,60 € en la Oficina de Turismo). De pago del 15 de marzo al 15 de noviembre: 6,50 € por noche en la borne. Desde 2023 hay una zona de 38 plazas en la misma calle (antigua piscina de la Soudinière) con borne de pago. Datos de la web municipal.",
+      "soloServicios": false
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Ville de Saint-Gilles-Croix-de-Vie: estacionamiento",
+      "url": "https://www.saintgillescroixdevie.fr/stationnement/",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-06",
+  "verificado": true
+}

@@ -1,0 +1,30 @@
+{
+  "nombre": "Pobladura del Valle",
+  "comunidad": "castilla-y-leon",
+  "provincia": "Zamora",
+  "estado": "restringido",
+  "resumen": "Pobladura del Valle (Zamora) tiene un área municipal para estacionar y pernoctar en autocaravana en la Avenida de Madrid, con un máximo de 72 horas, agua y vaciado. La ordenanza sanciona la acampada en todo el término municipal salvo en los lugares habilitados.",
+  "reglas": [
+    "Se sanciona la acampada libre en todo el término municipal, salvo en los lugares habilitados; es acampada sacar enseres fuera de la autocaravana o quedarse más tiempo del permitido (art. 4).",
+    "Se permite estacionar autocaravanas en la zona delimitada, sin acampar; el máximo es de 72 horas (art. 5).",
+    "Está aparcada y no acampada si solo toca el suelo con las ruedas, no abre ventanas ni saca sillas, mesas o toldos, no vierte nada ni hace ruido (art. 5).",
+    "Para cargar agua y vaciar hay 20 minutos; prohibido sacar sillas, mesas, barbacoas, toldos o patas estabilizadoras en el área."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de autocaravanas de Pobladura del Valle",
+      "detalle": "Avenida de Madrid (parcela 23 del polígono 502). Para autocaravanas, campers y caravanas; máximo 72 horas; agua potable y vaciado de aguas grises y negras. A la entrada hay dos puntos de recarga eléctrica de pago."
+    }
+  ],
+  "multa": "Leves (sacar toldo, mesas o sillas, verter líquidos): hasta 90 €. Graves (no pagar el precio público, ruidos de equipos de sonido): hasta 300 €. Muy graves: hasta 450 € (arts. 10 y 11).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza reguladora del estacionamiento y pernocta de vehículos vivienda de Pobladura del Valle (BOP de Zamora n.º 20, 19/02/2025)",
+      "url": "https://www.diputaciondezamora.es/opencms/export/sites/dipu-zamora/servicios/BOP/.Archivos/documentos/BOP/anuncios/2025/20/202500461.pdf",
+      "tipo": "oficial",
+      "fecha": "2025-02-19"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

@@ -1,0 +1,33 @@
+{
+  "nombre": "Zumaia",
+  "comunidad": "pais-vasco",
+  "provincia": "Gipuzkoa",
+  "estado": "sin-datos",
+  "resumen": "No hemos localizado una ordenanza de Zumaia en vigor sobre autocaravanas: en la web municipal solo hay un borrador de 2017, sin aprobación definitiva localizada. Se aplica la ley vasca: dormir dentro del vehículo bien estacionado en zona urbana, sin desplegar nada, no es acampada. Cerca tienes Getaria y Zarautz, con normas verificadas.",
+  "reglas": [
+    "No es acampada libre pernoctar dentro de una autocaravana estacionada correctamente en un área urbana, sin desbordar el sitio, sin desplegar nada y sin hacer un uso inapropiado del espacio público (Ley 13/2016, art. 67).",
+    "Fuera de zona urbana, en el medio natural, sí puede considerarse acampada aunque duermas dentro del vehículo (Ley 13/2016, art. 67).",
+    "No hemos localizado una ordenanza municipal publicada sobre estacionamiento o pernocta de autocaravanas: puede que el ayuntamiento tenga normas propias o señales en la calle. Pregunta en el ayuntamiento antes de pasar la noche y respeta siempre la señalización. No damos multas porque no las hemos visto en una fuente oficial.",
+    "Alternativas verificadas en la zona: Getaria y Zarautz."
+  ],
+  "areas": [],
+  "fuentes": [
+    {
+      "titulo": "Ley 13/2016, de 28 de julio, de Turismo del País Vasco, texto consolidado (BOE)",
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2016-8346",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Borrador de ordenanza de autocaravanas de 2017, para aprobación inicial (web del Ayuntamiento de Zumaia); no hemos localizado su aprobación definitiva",
+      "url": "https://zumaia.eus/files/Ordenantzaazkena.pdf",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Web oficial del Ayuntamiento de Zumaia: pregunta aquí por la ordenanza de estacionamiento y pernocta",
+      "url": "https://www.zumaia.eus/",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

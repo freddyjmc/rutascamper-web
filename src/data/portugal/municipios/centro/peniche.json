@@ -1,0 +1,31 @@
+{
+  "nombre": "Peniche",
+  "comunidad": "centro",
+  "provincia": "Leiria (distrito)",
+  "estado": "sin-datos",
+  "resumen": "Peniche aprobó en 2014 un reglamento municipal de campismo ocasional y caravanismo, pero no hemos podido leer su texto definitivo, así que no lo resumimos. Antes de pasar la noche, pregunta al ayuntamiento o usa un camping o un área autorizada. En la Rede Natura 2000, las áreas protegidas y las zonas del plan de la costa, el Código da Estrada prohíbe pernoctar fuera de los lugares autorizados.",
+  "reglas": [
+    "La Assembleia Municipal aprobó el 2 de octubre de 2014 el «Regulamento Municipal para Licenciamento das Atividades de Campismo Ocasional e Caravanismo no concelho de Peniche», en vigor quince días después de publicarse el edicto (Edital (extrato) n.º 976/2014). El edicto remite a la web municipal para leer el texto, que no hemos localizado.",
+    "En la Rede Natura 2000, las áreas protegidas y las zonas de los planes de la costa está prohibido pernoctar fuera de los lugares autorizados (art. 50.º-A n.º 1 del Código da Estrada; multa de 120 a 600 €).",
+    "En todo caso, no se puede acampar en la vía pública, verter aguas fuera de los puntos previstos ni ocupar más espacio que el perímetro del vehículo (art. 48.º n.º 7 del Código da Estrada; multa de 30 a 150 €)."
+  ],
+  "areas": [],
+  "notaAyuntamiento": "Câmara Municipal de Peniche: https://www.cm-peniche.pt, cmpeniche@cm-peniche.pt, +351 262 780 100.",
+  "fuentes": [
+    {
+      "titulo": "Edital (extrato) n.º 976/2014: aprobación del Regulamento Municipal para Licenciamento das Atividades de Campismo Ocasional e Caravanismo (Peniche)",
+      "url": "https://diariodarepublica.pt/dr/detalhe/edital-extrato/976-2014-58626821",
+      "tipo": "oficial",
+      "fecha": "2014-10-28",
+      "reutilizacion": "«O acesso universal e gratuito compreende a possibilidade de impressão, arquivo, pesquisa e livre acesso ao conteúdo dos atos publicados nas 1.ª e 2.ª séries do Diário da República.» (Avisos Legais del Diário da República, consulta 12/11/2026). No hay cláusula expresa sobre reutilización comercial."
+    },
+    {
+      "titulo": "Câmara Municipal de Peniche (web oficial)",
+      "url": "https://www.cm-peniche.pt",
+      "tipo": "oficial",
+      "reutilizacion": "Sin cláusula de reutilización localizada en la web (consulta 12/11/2026). Solo hechos con nuestras palabras y enlace."
+    }
+  ],
+  "revisado": "2026-11-12",
+  "verificado": false
+}

@@ -1,0 +1,30 @@
+{
+  "nombre": "Cañada Rosal",
+  "comunidad": "andalucia",
+  "provincia": "Sevilla",
+  "estado": "restringido",
+  "resumen": "Cañada Rosal tiene un área municipal para autocaravanas y campers, con vaciado de aguas y videovigilancia, donde puedes quedarte hasta una semana. También puedes aparcar en las calles como cualquier vehículo, pero en ningún sitio del municipio se puede acampar.",
+  "reglas": [
+    "Cuenta como acampada usar niveladores o soportes de estabilización (los calzos se permiten si hay mucha pendiente), abrir ventanas que sobresalgan del vehículo o sacar toldo, sillas o tendederos. Abrir ventanas solo para ventilar, sin salir del perímetro, está permitido (art. 3).",
+    "Acampar está prohibido tanto en el área de autocaravanas como en el resto de calles del municipio (art. 3.3).",
+    "Puedes aparcar en las calles en las mismas condiciones que cualquier otro vehículo, sin entorpecer el tráfico (art. 4.1).",
+    "En el área el máximo es de una semana (168 horas). Para volver tienes que dejar pasar cinco días (120 horas). El tiempo se registra con tótems a la entrada y la salida (art. 4.3).",
+    "El área es solo para autocaravanas y campers: no pueden entrar caravanas, furgonetas ni turismos. No se puede sacar toldo, patas, mesas, sillas ni tendederos, ni lavar el vehículo (art. 4.3)."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de servicio de autocaravanas y campers de Cañada Rosal",
+      "detalle": "Acceso desde la avenida de Andalucía, la calle El Gato y la calle Écija. Solo autocaravanas y campers, máximo una semana, con punto de vaciado de aguas grises y negras y videovigilancia."
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Ordenanza municipal reguladora del área de servicio de autocaravanas y campers de Cañada Rosal, aprobación definitiva (BOP de Sevilla n.º 220, 14/11/2025, CVE BOP-SE-2025-220011)",
+      "url": "https://bopsevilla.dipusevilla.es/export/sites/bop/.galleries/Documentos-Anuncios-en-PDF/firmado-1763078435271-final-52bdf47-1.pdf",
+      "tipo": "oficial",
+      "fecha": "2025-11-14"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

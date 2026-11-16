@@ -1,0 +1,69 @@
+{
+  "titulo": "Ruta en camper por Asturias en 7 días con dónde dormir",
+  "h1": "Ruta en camper por Asturias en 7 días",
+  "resumen": "Una semana de este a oeste por la costa y el interior asturiano: Llanes, Ribadesella, Cangas de Onís y Covadonga, Oviedo y Gijón, Avilés y Salinas, Cudillero y Luarca. Asturias tiene una definición amplia de acampada libre, así que esta ruta duerme en áreas autorizadas siempre que puede.",
+  "dias": 7,
+  "comunidades": [
+    "asturias"
+  ],
+  "cuando": "de mayo a octubre; julio y agosto con más gente",
+  "etapas": [
+    {
+      "dia": "Día 1",
+      "titulo": "Llanes",
+      "texto": "Empieza en el oriente asturiano. Pasea por el puerto y los Cubos de la Memoria y recorre a pie el Paseo de San Pedro, sobre los acantilados.",
+      "dormir": "Área de autocaravanas de La Talá: es el único sitio del concejo donde se puede pernoctar, con 86 plazas, un máximo de 48 horas y tarifa de 15 € al día (20 € con electricidad). Fuera del área solo puedes aparcar en zonas habilitadas de 9:00 a 22:00.",
+      "ficha": "asturias/llanes"
+    },
+    {
+      "dia": "Día 2",
+      "titulo": "Ribadesella",
+      "texto": "La desembocadura del Sella, la playa de Santa Marina y la cueva de Tito Bustillo, con arte rupestre (las visitas tienen plazas limitadas: reserva con antelación).",
+      "dormir": "Área pública de Ribadesella, en la carretera de la estación (AS-263): solo 5 plazas, máximo 48 horas, sin acampar. Si está llena, vuelve al área de La Talá, en Llanes.",
+      "ficha": "asturias/ribadesella"
+    },
+    {
+      "dia": "Día 3",
+      "titulo": "Cangas de Onís y Covadonga",
+      "texto": "El puente romano de Cangas de Onís y el santuario de Covadonga. Si quieres subir a los Lagos de Covadonga, consulta antes las restricciones de acceso para vehículos particulares, que cambian según la temporada.",
+      "dormir": "Área pública y gratuita de El Lleráu, en Cangas de Onís, junto a la rotonda hacia Covadonga: 40 plazas y máximo 48 horas. Dentro del Parque Nacional de los Picos de Europa rigen sus propias normas.",
+      "ficha": "asturias/cangas-de-onis"
+    },
+    {
+      "dia": "Día 4",
+      "titulo": "Oviedo y Gijón",
+      "texto": "Dos ciudades muy distintas a menos de una hora: el casco antiguo y la catedral de Oviedo, y el Cerro de Santa Catalina y la playa de San Lorenzo en Gijón.",
+      "dormir": "Siero, entre ambas ciudades, tiene una zona gratuita para autocaravanas con un máximo de 48 horas, y permite aparcar en sus calles hasta 24 horas sin desplegar nada.",
+      "ficha": "asturias/siero"
+    },
+    {
+      "dia": "Día 5",
+      "titulo": "Avilés y Salinas",
+      "texto": "El casco histórico de Avilés y, al lado, la playa de Salinas, en el concejo de Castrillón.",
+      "dormir": "Castrillón tiene áreas especiales de descanso donde puedes pernoctar hasta 48 horas seguidas, sin sacar mesas, sillas, toldo ni tendederos.",
+      "ficha": "asturias/castrillon"
+    },
+    {
+      "dia": "Día 6",
+      "titulo": "Cudillero",
+      "texto": "El pueblo marinero de casas de colores que bajan hacia el puerto. Sus calles son estrechas y empinadas: deja la camper fuera del casco y baja andando.",
+      "dormir": "Aparcamiento del dique, junto al puerto (de pago, 5 plazas, máximo 48 horas), o el área gratuita de la gasolinera de Avia (5 plazas, con agua y vaciado). En las dos se puede pernoctar.",
+      "ficha": "asturias/cudillero"
+    },
+    {
+      "dia": "Día 7",
+      "titulo": "Luarca y la costa occidental",
+      "texto": "Termina en Luarca, con su puerto encajado entre acantilados y el cementerio sobre el mar, y los miradores de la costa occidental.",
+      "dormir": "Área pública y gratuita de Luarca, junto a la estación de FEVE: 15 plazas y máximo 72 horas, con agua y vaciado.",
+      "ficha": "asturias/valdes-luarca"
+    }
+  ],
+  "consejos": [
+    "Asturias define la acampada libre como permanecer o pernoctar fuera de campings y áreas autorizadas: en caso de duda, duerme en un área.",
+    "En las áreas de autocaravanas el máximo autonómico es de 48 horas; dentro de tu plaza sí puedes sacar toldo, mesa y sillas si el reglamento del área lo permite.",
+    "Las carreteras de la costa y de los pueblos marineros son estrechas: aparca a la entrada y camina.",
+    "En verano las áreas se llenan: llega pronto o ten un plan B."
+  ],
+  "revisado": "2026-11-01",
+  "publicada": true
+}

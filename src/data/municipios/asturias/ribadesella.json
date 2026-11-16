@@ -1,0 +1,36 @@
+{
+  "nombre": "Ribadesella",
+  "comunidad": "asturias",
+  "provincia": "Asturias",
+  "estado": "restringido",
+  "resumen": "Ribadesella tiene un área pública de autocaravanas pequeña, de 5 plazas, a unos 800 m de la villa, donde puedes pernoctar un máximo de 48 horas pero no acampar. No hemos localizado una ordenanza municipal específica, así que fuera del área rige la norma asturiana.",
+  "reglas": [
+    "En el área se permite pernoctar, con un máximo de 48 horas; no se permite acampar.",
+    "Fuera del área, Asturias prohíbe la acampada libre, definida como permanecer o pernoctar fuera de campings y áreas autorizadas sin autorización (Decreto 61/2022, art. 61).",
+    "No hemos localizado una ordenanza municipal de autocaravanas de Ribadesella: respeta la señalización."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de autocaravanas de Ribadesella",
+      "detalle": "Ctra. de la Estación (AS-263), 33650 Ribadesella; salida 319 de la A-8 y dirección Llanes por la AS-263, a unos 800 m a la izquierda. Pública, 5 plazas, máximo 48 h. Carga de agua potable y vaciado de aguas grises y negras.",
+      "lat": 43.460278,
+      "lon": -5.054167,
+      "coordFuente": "https://www.turismoasturias.es/es/organiza-tu-viaje/como-llegar-y-moverse/autocaravanas/area-ribadesella"
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Turismo Asturias (Principado de Asturias): Área de autocaravanas de Ribadesella",
+      "url": "https://www.turismoasturias.es/es/organiza-tu-viaje/como-llegar-y-moverse/autocaravanas/area-ribadesella",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Decreto 61/2022 de Asturias (BOPA n.º 191, 04/10/2022)",
+      "url": "https://miprincipado.asturias.es/bopa/2022/10/04/2022-07386.pdf",
+      "tipo": "oficial",
+      "fecha": "2022-10-04"
+    }
+  ],
+  "revisado": "2026-11-01",
+  "verificado": true
+}

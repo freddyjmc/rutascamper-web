@@ -1,0 +1,54 @@
+{
+  "nombre": "Valdés (Luarca)",
+  "comunidad": "asturias",
+  "provincia": "Asturias",
+  "estado": "restringido",
+  "resumen": "Luarca tiene un área pública y gratuita de autocaravanas junto a la estación de tren, a unos 500 m del centro, con 15 plazas y un máximo de 72 horas, más que el límite habitual de 48. No hemos localizado una ordenanza municipal específica, así que fuera del área rige la norma asturiana.",
+  "reglas": [
+    "En el área de Luarca se puede pernoctar, con un máximo de 72 horas.",
+    "Fuera del área, Asturias prohíbe la acampada libre, definida como permanecer o pernoctar fuera de campings y áreas autorizadas sin autorización (Decreto 61/2022, art. 61).",
+    "Según la prensa regional (agosto de 2026), el concejo ha instalado barreras de altura en la playa de Cadavedo para impedir el paso de autocaravanas, y prevé extenderlas a otras playas. No lo hemos verificado en una fuente oficial.",
+    "No hemos localizado una ordenanza municipal de autocaravanas de Valdés: respeta la señalización."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de autocaravanas de Luarca",
+      "detalle": "Avda. de la Estación, 2-16, 33700 Luarca, junto a la estación de FEVE. Pública y gratuita, 15 plazas, máximo 72 h. Agua potable, vaciado de aguas grises y negras, mesas y parrillas.",
+      "lat": 43.53815,
+      "lon": -6.53685,
+      "coordFuente": "https://www.turismoasturias.es/es/organiza-tu-viaje/como-llegar-y-moverse/autocaravanas/area-de-autocaravanas-de-luarca"
+    },
+    {
+      "nombre": "Área de autocaravanas de Trevías",
+      "detalle": "C/ Jesús Peláez Rodríguez, 4. 33780. Trevías. 9 plazas. Gratuita. Máximo 72 horas. Pública. Agua potable, vaciado aguas grises, vaciado aguas negras.",
+      "lat": 43.49931,
+      "lon": -6.43676,
+      "coordFuente": "https://www.turismoasturias.es/organiza-tu-viaje/como-llegar-y-moverse/autocaravanas/area-de-autocaravanas-de-trevias"
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Turismo Asturias (Principado de Asturias): Área de autocaravanas de Luarca",
+      "url": "https://www.turismoasturias.es/es/organiza-tu-viaje/como-llegar-y-moverse/autocaravanas/area-de-autocaravanas-de-luarca",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "OpenVan: Valdés endurece el acceso de autocaravanas a las playas (cita a RTPA)",
+      "url": "https://openvan.camp/en/news/ban/valdes-endurece-el-acceso-de-autocaravanas-las",
+      "tipo": "secundaria"
+    },
+    {
+      "titulo": "Decreto 61/2022 de Asturias (BOPA n.º 191, 04/10/2022)",
+      "url": "https://miprincipado.asturias.es/bopa/2022/10/04/2022-07386.pdf",
+      "tipo": "oficial",
+      "fecha": "2022-10-04"
+    },
+    {
+      "titulo": "Turismo Asturias (Principado de Asturias): Área de autocaravanas de Trevías",
+      "url": "https://www.turismoasturias.es/organiza-tu-viaje/como-llegar-y-moverse/autocaravanas/area-de-autocaravanas-de-trevias",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

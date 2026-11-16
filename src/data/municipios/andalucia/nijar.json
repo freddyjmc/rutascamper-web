@@ -1,0 +1,36 @@
+{
+  "nombre": "Níjar",
+  "comunidad": "andalucia",
+  "provincia": "Almería",
+  "estado": "sin-datos",
+  "resumen": "En Níjar la ordenanza de playas prohíbe aparcar y acampar en las playas, y considera acampada una autocaravana con las patas estabilizadoras puestas, con toldo, mesas o sillas, con el generador en marcha o vertiendo líquidos. No hemos localizado el texto vigente de su ordenanza sobre estacionamiento de determinados vehículos en vías públicas.",
+  "reglas": [
+    "En las playas de Níjar están prohibidos el estacionamiento y la circulación de vehículos no autorizados, y la acampada (Ordenanza de playas, art. 9.1).",
+    "Una autocaravana cuenta como acampada si tiene las patas estabilizadoras puestas, elementos fuera del perímetro (toldo, mesas, sillas, ventanas extendidas), hace ruido con el generador o vierte fluidos (Ordenanza de playas, art. 9.2).",
+    "Estacionar o circular sin autorización en la playa, y acampar, son infracciones graves (Ordenanza de playas).",
+    "Andalucía prohíbe con carácter general la acampada y pernocta con fines vacacionales o de ocio fuera de campings y áreas de pernocta de autocaravanas (Decreto 26/2018, art. 1.5): para dormir, usa un área o un camping.",
+    "El ayuntamiento tiene además una ordenanza de 2009 sobre la prohibición de estacionar determinados vehículos en vías públicas y playas, cuyo texto no hemos podido leer: pregunta en el ayuntamiento.",
+    "Alternativa verificada en la provincia: Roquetas de Mar."
+  ],
+  "areas": [],
+  "multa": "Ordenanza de playas: leves, 50 €; graves (entre ellas aparcar en la playa o acampar), de 101 a 750 €; muy graves, de 751 a 3.000 € (art. 23).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza municipal de playas del Ayuntamiento de Níjar (publicada por la Diputación de Almería)",
+      "url": "https://www.dipalme.org/Servicios/Anexos/Anexos.nsf/A384BAC47B1317B8C125811A00287407/$file/Ordenanza%20de%20playas.rev01.pdf",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Decreto 26/2018, de 23 de enero, de ordenación de los campamentos de turismo de Andalucía (BOJA n.º 27 de 2018)",
+      "url": "https://www.juntadeandalucia.es/boja/2018/27/1",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Web oficial del Ayuntamiento de Níjar: pregunta aquí por la normativa de estacionamiento y pernocta",
+      "url": "https://nijar.es/",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-03",
+  "verificado": true
+}

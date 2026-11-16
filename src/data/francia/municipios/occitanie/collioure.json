@@ -1,0 +1,38 @@
+{
+  "nombre": "Collioure",
+  "comunidad": "occitanie",
+  "provincia": "Pyrénées-Orientales (66)",
+  "estado": "restringido",
+  "resumen": "La web del ayuntamiento (consulta 05/11/2026) avisa de que el único sitio donde pueden estacionar las autocaravanas es la zona habilitada del aparcamiento del Cap Dourats, y de que la acampada y el vivac libres se sancionan con dureza por el riesgo de incendio. No hemos localizado el arrêté municipal (orden del alcalde).",
+  "reglas": [
+    "Según la web del ayuntamiento (consulta 05/11/2026): el único estacionamiento posible para autocaravanas en el municipio es la zona habilitada del aparcamiento del Cap Dourats.",
+    "Según la web del ayuntamiento (consulta 05/11/2026): toda acampada y vivac libres, sobre todo en espacios naturales, se sancionan con dureza por el riesgo de incendio.",
+    "No hemos localizado el arrêté."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de autocaravanas del Cap Dourats",
+      "detalle": "Zona habilitada del aparcamiento del Cap Dourats, según la web municipal, que no indica plazas, precio ni servicios. La web municipal no dice expresamente si se puede pasar la noche.",
+      "pernocta": "sin-confirmar",
+      "coordCreador": "OT DE COLLIOURE",
+      "lat": 42.5256635,
+      "lon": 3.0687452,
+      "coordFuente": "https://data.datatourisme.fr/56/0e9623b7-2321-3566-92e3-da1024f1389c"
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Le stationnement (web municipal de Collioure)",
+      "url": "https://collioure.fr/le-stationnement/",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "DATAtourisme (ADN Tourisme), «AIRE DE CAMPING-CAR COLLIOURE», dato creado por OT DE COLLIOURE, actualizado el 27/10/2026. Licence Ouverte 2.0 (Etalab). Solo coordenadas",
+      "url": "https://data.datatourisme.fr/56/0e9623b7-2321-3566-92e3-da1024f1389c",
+      "tipo": "oficial",
+      "fecha": "2026-10-27"
+    }
+  ],
+  "revisado": "2026-11-06",
+  "verificado": true
+}

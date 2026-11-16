@@ -1,0 +1,32 @@
+{
+  "nombre": "Caravaca de la Cruz",
+  "comunidad": "murcia",
+  "provincia": "Murcia",
+  "estado": "permitido",
+  "resumen": "En Caravaca de la Cruz puedes aparcar la autocaravana en todo el municipio como cualquier otro vehículo, aunque estés dentro, si no se nota desde fuera. No puedes acampar. En las zonas señalizadas para autocaravanas se puede pernoctar hasta 72 horas seguidas por semana, y en las áreas de servicio sí puedes sacar toldo, mesas y sillas.",
+  "reglas": [
+    "Puedes estacionar en todo el municipio según las normas de tráfico, salvo en espacios naturales o culturales protegidos, terrenos forestales y dominio público (art. 4.1 y 4.3).",
+    "Se considera que estás aparcado si tocas el suelo solo con las ruedas o calzos de nivelación, sin bajar patas estabilizadoras, sin sacar nada ni abrir ventanas que sobresalgan, sin verter nada y sin ruidos. Puedes estar dentro si no trasciende al exterior (art. 4.5).",
+    "En las zonas señalizadas solo para autocaravanas se permite pernoctar, pero no acampar, un máximo de 72 horas seguidas en la misma semana. Ahí puedes abrir las ventanas proyectables, pero no sacar toldo, mesas, sillas ni tendederos (art. 5).",
+    "En las áreas de servicio sí puedes usar las patas estabilizadoras y sacar sillas, mesas y toldo, pero no tendederos. Se entra y sale entre las 8:00 y las 23:00 (art. 7).",
+    "No se puede acampar a menos de 5 km de un núcleo urbano o de lugares concurridos, ni a menos de 100 m de ríos o carreteras (art. 6.2)."
+  ],
+  "areas": [],
+  "multa": "Leves, hasta 750 € (por ejemplo, sacar toldo, mesas o sillas fuera de las zonas autorizadas); graves, de 751 a 1.500 € (acampar fuera de los lugares habilitados o vaciar aguas con la llave del desagüe abierta); muy graves, de 1.501 a 3.000 € (verter residuos a propósito fuera de los lugares indicados) (arts. 11 y 12).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza municipal reguladora de las zonas de estacionamiento y áreas de servicio de autocaravanas y vehículos-vivienda homologados de Caravaca de la Cruz, aprobación definitiva (BORM n.º 35, 13/02/2023, anuncio 813), copia en la web municipal",
+      "url": "https://www.caravaca.org/images/ficheros/Ayuntamiento/NormativaMunicipal/OrdenanzasMunicipales/20230202_2023-813_PUBLICACION_ANUNCIO_BORM_ORDENANZA_DEFINITIVA.pdf",
+      "tipo": "oficial",
+      "fecha": "2023-02-13"
+    },
+    {
+      "titulo": "Decreto n.º 193/2022 de campings y áreas de autocaravanas de la Región de Murcia (BORM n.º 254, 03/11/2022)",
+      "url": "https://borm.es/services/anuncio/ano/2022/numero/5528/pdf",
+      "tipo": "oficial",
+      "fecha": "2022-11-03"
+    }
+  ],
+  "revisado": "2026-11-03",
+  "verificado": true
+}

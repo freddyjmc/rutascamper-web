@@ -1,0 +1,38 @@
+{
+  "nombre": "Quiberon",
+  "comunidad": "bretagne",
+  "provincia": "Morbihan (56)",
+  "estado": "restringido",
+  "resumen": "La web del ayuntamiento (consulta 05/11/2026) afirma que el camping libre está prohibido en todo el municipio, sin citar la orden. No hemos localizado el arrêté. Para dormir ofrece el área de Kerné, en la Côte Sauvage (11,50 € las 24 h, de finales de marzo a principios de noviembre), y en invierno el camping municipal del Goviro.",
+  "reglas": [
+    "No hemos localizado el arrêté municipal sobre autocaravanas o camping.",
+    "Según la web del ayuntamiento (consulta 05/11/2026): el camping libre está prohibido en todo el municipio. La web no cita el arrêté.",
+    "Norma nacional: fuera de los campings, acampar en la orilla del mar está prohibido salvo excepción (art. R111-33 del Code de l'urbanisme)."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de autocaravanas de Kerné (Côte Sauvage)",
+      "detalle": "Aparcamiento cerrado con barreras, unas 100 plazas, sin reserva. Abierta del 29 de marzo al 3 de noviembre. Vaciado de aguas grises y casete, sin electricidad. 4 € las 2 horas, 11,50 € las 24 horas, agua 2 € los 80 litros, tasa turística incluida (la tabla de tarifas que enlaza la web municipal es de 2024). No se puede entrar con dos vehículos ni con un segundo vehículo en remolque. Datos de la web municipal.",
+      "soloServicios": false
+    },
+    {
+      "nombre": "Camping municipal du Goviro",
+      "detalle": "Acoge autocaravanas todo el año, a menos de 1 km del centro. Acoge las autocaravanas cuando cierra el área de Kerné. Tarifas en la web del camping.",
+      "soloServicios": false
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Ville de Quiberon: área de autocaravanas",
+      "url": "https://www.ville-quiberon.fr/aire-de-camping-cars/",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Ville de Quiberon: camping du Goviro",
+      "url": "https://www.ville-quiberon.fr/camping-du-goviro/",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-06",
+  "verificado": true
+}

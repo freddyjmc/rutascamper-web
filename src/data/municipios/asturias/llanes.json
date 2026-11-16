@@ -1,0 +1,45 @@
+{
+  "nombre": "Llanes",
+  "comunidad": "asturias",
+  "provincia": "Asturias",
+  "estado": "prohibido",
+  "resumen": "En el concejo de Llanes la pernocta en autocaravana solo está permitida en el área de servicio de La Talá, a la entrada oeste de la villa: 86 plazas, máximo 48 horas y tarifa de 15 € al día (20 € con electricidad). La acampada libre está prohibida en todo el concejo y fuera del área solo puedes estacionar en zonas habilitadas, de 9:00 a 22:00 y sin dormir. Así lo fija la ordenanza municipal aprobada en 2026.",
+  "reglas": [
+    "Prohibida la acampada libre en todo el término municipal y prohibido estacionar autocaravanas fuera de las zonas habilitadas (ordenanza 2026, art. 12.1).",
+    "Es acampada sacar toldos, patas de nivelación, mesas, sillas, barbacoas o tendales, verter fluidos o usar generadores de forma continuada (art. 12.3).",
+    "La pernocta solo se permite en el área de servicio para autocaravanas (art. 12.4).",
+    "En la villa de Llanes puedes estacionar de 9:00 a 22:00, gratis y sin pernocta, solo en la calle Francisco Mijares y en el aparcamiento entre las calles Vicente Pedregal Galguera y Periódico El Pueblo (art. 14.2). En el resto del concejo, el Ayuntamiento fija cada año las zonas antes del 1 de junio (art. 12.6).",
+    "Estancia máxima en el área: 48 horas consecutivas por vehículo; el Ayuntamiento puede cambiar el límite por resolución (art. 15.3)."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de autocaravanas de La Talá",
+      "detalle": "Entre las calles Francisco Mijares, Vicente Pedregal Galguera, Periódico El Pueblo y la carretera de Ribadesella (Avda. La Talá, 33500 Llanes). 86 plazas, abierta todo el año, control por matrícula. Agua y vaciado: 15 €/día; con electricidad: 20 €/día (IVA incluido). Máximo 48 horas.",
+      "lat": 43.423611,
+      "lon": -4.7675,
+      "coordFuente": "https://www.turismoasturias.es/organiza-tu-viaje/como-llegar-y-moverse/autocaravanas/area-llanes"
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Ordenanza de la zona ORA y del área/zonas de servicio para autocaravanas de Llanes (BOPA n.º 29, 12/02/2026)",
+      "url": "https://miprincipado.asturias.es/bopa/2026/02/12/2026-00874.pdf",
+      "tipo": "oficial",
+      "fecha": "2026-02-12"
+    },
+    {
+      "titulo": "Turismo Asturias (Principado de Asturias): Área de autocaravanas de Llanes",
+      "url": "https://www.turismoasturias.es/organiza-tu-viaje/como-llegar-y-moverse/autocaravanas/area-llanes",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Decreto 61/2022 de Asturias (BOPA n.º 191, 04/10/2022)",
+      "url": "https://miprincipado.asturias.es/bopa/2022/10/04/2022-07386.pdf",
+      "tipo": "oficial",
+      "fecha": "2022-10-04"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true,
+  "multa": "Leves (pasarte del tiempo en el área, no pagar): 100 €. Graves (salirte de la plaza, ocupar dos plazas): 200 €. Muy graves (estacionar fuera de las zonas habilitadas o fuera de horario, sacar toldo, mesas o sillas, vertidos, barbacoas): 500 € (ordenanza 2026, arts. 33 y 34)."
+}

@@ -1,0 +1,27 @@
+{
+  "nombre": "Ciudad Real",
+  "comunidad": "castilla-la-mancha",
+  "provincia": "Ciudad Real",
+  "estado": "restringido",
+  "resumen": "Ciudad Real regula sus áreas de servicio y zonas reservadas para autocaravanas: puedes estacionar y dormir dentro, de día o de noche, con un máximo de 72 horas, y después no puedes volver hasta pasados 4 días. Acampar en esas zonas es infracción grave, con multas desde 751 €.",
+  "reglas": [
+    "Estacionar es inmovilizar la autocaravana según las normas de tráfico, haya o no personas dentro, de día o de noche, sin desplegar nada, sobre ruedas o calzos, sin patas estabilizadoras y sin verter nada (art. 4).",
+    "Es acampada sacar toldo, mesas, sillas o abrir ventanas proyectables, quedarse más tiempo del permitido o verter fluidos (art. 4).",
+    "Estancia máxima en las áreas y zonas reservadas: 72 horas; al salir no puedes volver a entrar hasta pasados 4 días (art. 5.5).",
+    "Solo pueden usar las áreas las autocaravanas; quedan excluidas caravanas, furgonetas y turismos (art. 5.1).",
+    "Si el suelo está en pendiente, pueden justificarse calzos o patas de nivelación; puedes abrir ventanas solo para ventilar (art. 6).",
+    "La ordenanza no indica la ubicación de las áreas: guíate por la señalización."
+  ],
+  "areas": [],
+  "multa": "Leves: hasta 750 €. Graves (acampar en el área, vaciar aguas fuera de lugar, generador de 21:00 a 9:00, cocinar en la zona): de 751 a 1.500 €. Muy graves (reiteración de una grave): de 1.501 a 3.000 € (arts. 11 y 12).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza reguladora del aparcamiento de autocaravanas de Ciudad Real (BOP de Ciudad Real n.º 10, 15/01/2024), web del Ayuntamiento",
+      "url": "https://www.ciudadreal.es//documentos/transparencia/normativa/BOP_APROBACION_DFEFINITIVA_ORDENANZA.pdf",
+      "tipo": "oficial",
+      "fecha": "2024-01-15"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

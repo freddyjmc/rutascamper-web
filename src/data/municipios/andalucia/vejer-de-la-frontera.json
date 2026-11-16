@@ -1,0 +1,24 @@
+{
+  "nombre": "Vejer de la Frontera (El Palmar)",
+  "comunidad": "andalucia",
+  "provincia": "Cádiz",
+  "estado": "prohibido",
+  "resumen": "Vejer, que incluye la playa de El Palmar, permite aparcar en la calle autocaravanas de hasta 3.500 kg siempre que no se usen para habitar, alojarse o acampar. Su ordenanza de circulación considera peligroso que caravanas y autocaravanas aparquen a lo largo de todo el litoral, y lo multa con 200 €.",
+  "reglas": [
+    "Se permite estacionar en la vía pública autocaravanas de hasta 3.500 kg siempre que no se usen para habitar, alojarse o acampar (art. 22).",
+    "Los vehículos de más de 3.500 kg, o que no caben en la plaza, solo pueden estacionar en los lugares y periodos autorizados (art. 22).",
+    "Está prohibido estacionar caravanas o autocaravanas que se pretendan usar como lugar habitable con cierta vocación de permanencia (art. 29, letra x).",
+    "Se considera estacionamiento peligroso el de caravanas y autocaravanas a lo largo de todo el litoral (art. 29, letra x)."
+  ],
+  "multa": "Estacionar la autocaravana como lugar habitable con vocación de permanencia: 80 € (leve). Estacionar con caravana o autocaravana en la zona del litoral: 200 € (grave). Pagar pronto reduce la multa a la mitad (cuadro de infracciones de la ordenanza).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza municipal de circulación de Vejer de la Frontera (BOP de Cádiz n.º 131, 11/07/2012, texto íntegro), en la web municipal",
+      "url": "https://www.vejer.es/es/ayuntamiento/ordenanzas-municipales?download=1181:ordenanza-municipal-de-circulacion",
+      "tipo": "oficial",
+      "fecha": "2012-07-11"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

@@ -1,0 +1,30 @@
+{
+  "nombre": "Dénia",
+  "comunidad": "comunidad-valenciana",
+  "provincia": "Alicante",
+  "estado": "permitido",
+  "resumen": "Dénia reconoce en su ordenanza de tráfico el derecho a estacionar la autocaravana según las normas de circulación, con un máximo de 48 horas seguidas en vías urbanas y de 24 horas en primera línea de playa dentro de un periodo de 7 días. Fuera de los campings está prohibido usarla como medio de acampada.",
+  "reglas": [
+    "Se reconoce el derecho a estacionar en el municipio según las normas de tráfico, salvo en espacios naturales protegidos, terrenos forestales, suelo no urbanizable de especial protección y dominio público (art. 34, letra x, apdo. 3).",
+    "Tiempo máximo en vías urbanas: 48 horas seguidas; en primera línea de playa: 24 horas seguidas, en un periodo de 7 días desde que estacionas (art. 34, letra x, apdo. 6).",
+    "Salvo en campings autorizados, se prohíbe usar el vehículo vivienda como medio de acampada, es decir, con elementos desplegados que sobresalgan de su perímetro. Elevar el techo de una camper o abrir ventanas sin riesgo para otros no cuenta (art. 34, letra x, apdo. 1).",
+    "Cuenta como estacionada y no acampada si solo toca el suelo con las ruedas, sin estabilizadores, sin ventanas proyectables abiertas ni sillas, mesas o toldo, sin verter fluidos y sin ruidos molestos. Da igual lo que hagas dentro si no trasciende al exterior (art. 34, letra x, apdo. 7).",
+    "Hay que aparcar dentro de las marcas viales del estacionamiento (art. 34, letra x, apdo. 5), y está prohibido estacionar en los arcenes de las vías urbanas (apdo. 8)."
+  ],
+  "multa": "La ordenanza no fija una multa específica para autocaravanas. Con carácter general, sus infracciones se sancionan con hasta 100 € las leves, 200 € las graves y 500 € las muy graves (art. 131).",
+  "fuentes": [
+    {
+      "titulo": "Ayuntamiento de Dénia: Ordenanza general municipal sobre tráfico, circulación de vehículos a motor y seguridad vial, texto consolidado (art. 34)",
+      "url": "https://www.denia.es/adjuntos/normativa/ord_trafico2022.pdf",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Ayuntamiento de Dénia: aprobación definitiva de la modificación de la ordenanza de tráfico sobre autocaravanas (pleno del 24/02/2022)",
+      "url": "https://www.denia.es/es/denia/actualitat/noticia.aspx?id=6084",
+      "tipo": "oficial",
+      "fecha": "2022-02-25"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

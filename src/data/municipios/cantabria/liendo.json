@@ -1,0 +1,33 @@
+{
+  "nombre": "Liendo",
+  "comunidad": "cantabria",
+  "provincia": "Cantabria",
+  "estado": "restringido",
+  "resumen": "Liendo tiene ordenanza propia de autocaravanas. Puedes estacionar en el aparcamiento municipal del Barrio de Mollaneda hasta 48 horas, sin acampar. En los cascos urbanos la ordenanza es más estricta que la norma autonómica: abrir ventanas o elevar el techo ya cuenta como acampada.",
+  "reglas": [
+    "En suelo urbano se considera acampada libre: sacar toldo, mesas o sillas, abrir ventanas o elevar el techo, emitir fluidos o ruidos molestos (por ejemplo, un generador) o apoyar el vehículo en algo que no sean las ruedas (art. 3).",
+    "Se permite estacionar autocaravanas en el caravaning municipal del Barrio de Mollaneda, siempre que no se use para acampar (art. 4).",
+    "En esa zona: máximo 48 horas desde la llegada y no se puede volver hasta pasados siete días; respeta las plazas marcadas (art. 5).",
+    "Para que cuente como aparcada y no acampada: solo ruedas en el suelo, sin ocupar más que el vehículo cerrado y sin vaciar aguas (art. 4)."
+  ],
+  "areas": [
+    { "nombre": "Aparcamiento municipal de autocaravanas, Barrio de Mollaneda", "detalle": "junto a la antigua carretera nacional, zona del Arboreto; máximo 48 h" }
+  ],
+  "multa": "Acampada libre en casco urbano: 300 € (hasta 500 € si hay daños o suciedad). Incumplir las normas del aparcamiento de Mollaneda: 90 €, o 180 € si obstaculizas el acceso. Pago con reconocimiento de la infracción: 50 % (art. 7).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza reguladora del Estacionamiento y Pernocta de Autocaravanas de Liendo, aprobación definitiva (BOC n.º 59, 25/03/2019, CVE-2019-2514)",
+      "url": "https://boc.cantabria.es/boces/verAnuncioAction.do?idAnuBlob=336810",
+      "tipo": "oficial",
+      "fecha": "2019-03-25"
+    },
+    {
+      "titulo": "Decreto 35/2026 de Cantabria (BOC n.º 95, 20/05/2026)",
+      "url": "https://profesional.turismodecantabria.com/wp-content/uploads/2026/05/DECRETO-AUTOCARAVANAS-Y-CAMPAMENTOS-TURISMO.pdf",
+      "tipo": "oficial",
+      "fecha": "2026-05-20"
+    }
+  ],
+  "revisado": "2026-11-01",
+  "verificado": true
+}

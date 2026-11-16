@@ -1,0 +1,34 @@
+{
+  "nombre": "Crato",
+  "comunidad": "alentejo",
+  "provincia": "Portalegre (distrito)",
+  "estado": "restringido",
+  "resumen": "En Crato solo se puede pernoctar con autocaravana en el área de servicio municipal, en la Zona Desportiva, junto a la piscina cubierta (capacidad para 6 autocaravanas, 5 de ellas en plazas de pernocta con enchufe; máximo 72 horas, con reserva previa en la plataforma outdoor-routes.pt). Fuera de ella solo se puede estacionar según el Código da Estrada. Según la tabla de precios de 2023 del reglamento, «pernoita ou estacionamento, em período inferior a 72 horas» cuesta 4 € (5 € del 1 de junio al 15 de septiembre); la Câmara puede actualizar los precios (art. 12.º).",
+  "reglas": [
+    "Solo se permite el «aparcamento» para pernoctar en el área de servicio de autocaravanas del Crato (arts. 4.º y 5.º del Regulamento n.º 563/2023).",
+    "Fuera de ella solo se permite estacionar según el Código da Estrada (art. 6.º).",
+    "Cuenta como «aparcamento» bajar estabilizadores o poner calzos, abrir ventanas laterales, vaciar aguas residuales, poner el escalón, pernoctar, tender ropa o sacar mesas y sillas (art. 8.º).",
+    "Para entrar hay que registrarse antes en la plataforma outdoor-routes.pt, con los datos del conductor, de los ocupantes y la matrícula (art. 9.º n.º 4), y tener la reserva confirmada (art. 21.º a).",
+    "Máximo 72 horas; silencio de 22:00 a 8:00 (arts. 21.º m y 17.º).",
+    "Puede cerrar del 24 de diciembre (17:30) al 26 (9:00), del 31 de diciembre (17:30) al 2 de enero (9:00) y durante el Festival do Crato (art. 9.º n.º 2)."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de servicio de autocaravanas del Crato",
+      "detalle": "Zona Desportiva, junto a la piscina municipal cubierta, con acceso por la Estrada Municipal 363. Capacidad para 6 autocaravanas (5 plazas de pernocta con enchufe y 1 de servicio, arts. 4.º y 11.º), máximo 72 horas, reserva previa en outdoor-routes.pt. Agua, vaciado y electricidad. Tabla de precios de 2023 (anexo I) para «pernoita ou estacionamento, em período inferior a 72 horas»: 4 € del 16 de septiembre al 31 de mayo y 5 € del 1 de junio al 15 de septiembre; la Câmara puede actualizarla (art. 12.º)."
+    }
+  ],
+  "multa": "Coima desde 50 €; el máximo aparece escrito como «€ 500,00 (cinquenta euros)»: la cifra (500) y la palabra (cincuenta) no coinciden y no podemos decir cuál prevalece (art. 25.º n.º 2 del Regulamento n.º 563/2023, según el PDF del ayuntamiento). En casos graves, también expulsión inmediata del área (art. 25.º n.º 3).",
+  "notaAyuntamiento": "Câmara Municipal do Crato: https://cm-crato.pt, geral@cm-crato.pt, +351 245 990 110.",
+  "fuentes": [
+    {
+      "titulo": "Regulamento n.º 563/2023: Regulamento Municipal de Funcionamento e Utilização da Área de Serviço de Autocaravanas do Concelho do Crato (texto en la web municipal)",
+      "url": "https://cm-crato.pt/wp-content/uploads/2023/06/Regulamento_Municipal_Funcionamento_Utilizacao_Area_Servico_Autocaravanas_Concelho_Crato_C_Anexo.pdf",
+      "tipo": "oficial",
+      "reutilizacion": "Sin cláusula de reutilización localizada en la web (consulta 12/11/2026). Solo hechos con nuestras palabras y enlace.",
+      "fecha": "2023-05-23"
+    }
+  ],
+  "revisado": "2026-11-12",
+  "verificado": true
+}

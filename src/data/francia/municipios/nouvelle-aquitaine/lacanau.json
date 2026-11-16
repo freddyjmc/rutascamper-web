@@ -1,0 +1,32 @@
+{
+  "nombre": "Lacanau",
+  "comunidad": "nouvelle-aquitaine",
+  "provincia": "Gironde (33)",
+  "estado": "restringido",
+  "resumen": "La web del ayuntamiento (consulta 05/11/2026) dice que de día se tolera el estacionamiento de autocaravanas en todo el municipio y de noche salvo en una lista de calles y aparcamientos, donde está prohibido de 22:00 a 6:00 del 1 de mayo al 31 de octubre. No hemos localizado el arrêté (orden del alcalde) que lo establece. El área del Huga tiene 125 plazas y permite pasar la noche (de 22:00 a 6:00) a los vehículos equipados, por 15 € al día.",
+  "reglas": [
+    "Según la web del ayuntamiento (consulta 05/11/2026): de día, el estacionamiento de autocaravanas se tolera en todo el municipio si se respetan la seguridad, la salubridad, la tranquilidad y el entorno visual.",
+    "Según la web del ayuntamiento (consulta 05/11/2026): prohibido estacionar de 22:00 a 6:00, del 1 de mayo al 31 de octubre, en 34 calles y lugares de los sectores Océan, Lac y Ville, entre ellos la route du Lion, el boulevard de Pech-Lèbre, los aparcamientos de la Pointe du Bernos y del Moutchic y todas las orillas del lago.",
+    "No hemos localizado el arrêté (número y fecha) en la sección de actos reglamentarios del ayuntamiento."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de servicio del Huga",
+      "detalle": "Rue des Sauviels, Le Huga. 125 plazas; 15 € al día, con tarjeta. Los vehículos equipados pueden pasar la noche (de 22:00 a 6:00). Servicios, duración máxima y temporada: no detallados en la fuente oficial."
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Camping-cars (web municipal de Lacanau)",
+      "url": "https://www.lacanau.fr/camping-cars/",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Actes réglementaires (web municipal de Lacanau)",
+      "url": "https://www.lacanau.fr/vivre-ensemble/actes-reglementaires/",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-06",
+  "verificado": true
+}

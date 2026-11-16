@@ -1,0 +1,36 @@
+{
+  "pais": "fr",
+  "titulo": "Ruta en camper por Annecy y Chamonix con dónde dormir",
+  "h1": "Ruta en camper por el lago de Annecy y el valle de Chamonix",
+  "resumen": "Dos días en la Alta Saboya (Haute-Savoie): el lago de Annecy y el valle de Chamonix, a los pies del Mont Blanc. En cada parada indicamos las áreas y las normas que recogen nuestras fichas, con su fuente oficial.",
+  "dias": 2,
+  "comunidades": [
+    "auvergne-rhone-alpes"
+  ],
+  "cuando": "de finales de abril a mediados de noviembre, cuando abre el parking de Le Cry (fechas de 2026; pueden cambiar según la nieve)",
+  "etapas": [
+    {
+      "dia": "Día 1",
+      "titulo": "Lago de Annecy",
+      "texto": "El lago de Annecy es el protagonista del día: paseos junto al agua y visita a la ciudad.",
+      "dormir": "Área de autocaravanas de Colmyr (chemin de Colmyr; la Oficina de Turismo la sitúa en la avenue des Marquisats), a menos de 300 m del lago: gratuita, abierta todo el año, 10 plazas, no vigilada, máximo 24 horas. Agua potable y vaciado de aguas usadas; el agua se corta de diciembre a marzo. Sin electricidad. Solo se puede estacionar en las 10 plazas marcadas, está prohibida a coches y caravanas, no se pueden sacar mesas, sillas, sombrillas, tendederos ni barbacoa, ni lavar el vehículo, y vertiendo las aguas solo en la zona de vaciado (art. 4 del arrêté n.º 2007-2404 de 06/09/2007). Fuera del área, esa orden de 2007 limita a 24 horas el estacionamiento de autocaravanas en el dominio público municipal y lo prohíbe en el parking des Marquisats (que no es el área de Colmyr); no hemos confirmado si se aplica a todo el municipio actual.",
+      "ficha": "auvergne-rhone-alpes/annecy"
+    },
+    {
+      "dia": "Día 2",
+      "titulo": "Valle de Chamonix",
+      "texto": "Llega al valle de Chamonix, a los pies del Mont Blanc.",
+      "dormir": "Del 1 de mayo al 31 de octubre, una orden municipal (arrêté n.º 2026.00652 de 05/08/2026) prohíbe estacionar la autocaravana para alojarse en ella en espacios verdes, zonas boscosas, espacios sin señalizar y en una larga lista de calles y aparcamientos. Para dormir, el ayuntamiento indica el parking de autocaravanas de Le Cry (menos de 7 m), el parking Grépon Bus (más de 7 m) y los campings. Le Cry, a la entrada de Chamonix, es de pago, tiene unas 50 plazas y es para autocaravanas de más de 2,20 m de alto y menos de 7 m de largo (no admite las de 2,20 m de alto o menos); en 2026 abrió el 24 de abril y abre hasta el 15 de noviembre (puede cambiar según la nieve). No es camping ni área de servicio: no se puede hacer pícnic ni sacar enseres. El precio no figura en las fuentes que hemos leído. Para las autocaravanas de 2,20 m de alto o menos, las fuentes que hemos leído solo indican, además de los campings, el parking Grépon Bus (vehículos de más de 7 m), del que no tenemos más datos. El área de servicios de la Route Blanche sirve solo para vaciar y coger agua: está prohibido estacionar en ella. El folleto del ayuntamiento de septiembre de 2026 añade límites que no están en el texto de la orden: máximo 24 horas en el mismo sitio y no dormir de 22 h a 7 h fuera de esos dos parkings.",
+      "ficha": "auvergne-rhone-alpes/chamonix-mont-blanc"
+    }
+  ],
+  "consejos": [
+    "Cada alcalde puede limitar el estacionamiento de ciertos vehículos y prohibir el camping en algunas zonas con una orden municipal (arrêté): revisa siempre el municipio y respeta la señalización.",
+    "En Francia no existe en la ley un «derecho a pernoctar»: lo que puedes hacer depende del municipio.",
+    "Incumplir una orden municipal es, en general, una contravención de 2.ª clase (Code pénal, art. R610-5), con multa de hasta 150 € (art. 131-13). Según cómo esté redactada la orden, puede aplicarse otra norma, como el Code de la route.",
+    "En Chamonix, la orden municipal prohíbe del 1 de mayo al 31 de octubre estacionar la autocaravana para alojarse en ella en muchos lugares. Que esa orden no rija fuera de esas fechas no significa que se pueda dormir en cualquier sitio: el folleto del ayuntamiento de septiembre de 2026 añade límites (máximo 24 horas en el mismo sitio y no dormir de 22 h a 7 h fuera de los parkings de Le Cry y Grépon Bus), y siguen valiendo la señalización y las demás normas.",
+    "Las fechas de apertura, las tarifas y los accesos de las áreas cambian: compruébalos en la web del ayuntamiento o de la Oficina de Turismo antes de salir."
+  ],
+  "revisado": "2026-11-06",
+  "publicada": true
+}

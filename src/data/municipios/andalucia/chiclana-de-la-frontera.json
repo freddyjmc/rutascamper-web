@@ -1,0 +1,24 @@
+{
+  "nombre": "Chiclana de la Frontera",
+  "comunidad": "andalucia",
+  "provincia": "Cádiz",
+  "estado": "prohibido",
+  "resumen": "Chiclana prohíbe dormir dentro de la autocaravana, la caravana o la camper fuera de campings y zonas autorizadas por el ayuntamiento, y lo considera acampada libre. También prohíbe estacionarlas en las zonas del litoral señalizadas y ocupar con ellas caminos, pinares o aparcamientos públicos para hacer vida en ellas.",
+  "reglas": [
+    "Prohibido estacionar autocaravanas, caravanas y similares en las zonas del litoral señalizadas con la señal R-308 y su leyenda (art. 71.1).",
+    "Prohibido en todo el término municipal ocupar el dominio público (caminos, prados, pinares, solares o aparcamientos públicos) con autocaravanas para hacer dentro o fuera actos propios de una vivienda, como dormir, cocinar o asearse, salvo en campings o zonas autorizadas (art. 71.2).",
+    "Prohibido sacar toldos, estabilizadores, mesas, sillas o tendederos, verter líquidos o basura, lavar el vehículo o la ropa, instalar tiendas, hacer barbacoas o fuego, dormir dentro fuera de lugares autorizados y hacer ruidos molestos (art. 76).",
+    "Cualquiera de esas actividades cuenta como acampada libre: la Policía Local denuncia y hay que retirar el vehículo de la zona (art. 76)."
+  ],
+  "multa": "Estacionar en la vía pública una autocaravana usada como lugar habitable con vocación de permanencia, o en las zonas del litoral prohibidas: 80 € (leve), o 40 € con pronto pago (cuadro de infracciones, art. 71). No hemos localizado en el cuadro la cuantía para las actividades del art. 76.",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza municipal de circulación de Chiclana de la Frontera (aprobada definitivamente el 24/02/2022; BOP de Cádiz n.º 103, 1/06/2022), texto diligenciado en la web municipal",
+      "url": "https://www.chiclana.es/fileadmin/user_upload/acuerdos/00_ORDENANZA_DE_CIRCULACION_DILIGENCIADO_2022.pdf",
+      "tipo": "oficial",
+      "fecha": "2022-06-01"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

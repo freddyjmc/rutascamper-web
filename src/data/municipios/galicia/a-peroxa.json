@@ -1,0 +1,37 @@
+{
+  "nombre": "A Peroxa",
+  "comunidad": "galicia",
+  "provincia": "Ourense",
+  "estado": "sin-datos",
+  "resumen": "En el concello de A Peroxa hay un área para autocaravanas que recoge la Agencia de Turismo de Galicia, con su ubicación y servicios. No hemos localizado la ordenanza municipal de estacionamiento y pernocta: fuera de las áreas, aparca sin desplegar nada y respeta la señalización.",
+  "reglas": [
+    "Galicia prohíbe la acampada turística fuera de los campings autorizados (Decreto 159/2019, art. 1.4): fuera de las áreas no saques toldo, mesas ni sillas.",
+    "En las zonas de acogida de autocaravanas en tránsito que regulan los concellos, la estancia máxima es de una noche (Decreto 159/2019, art. 36.2).",
+    "Los servicios y si se puede pernoctar son los que publica la Agencia de Turismo de Galicia; respeta también la señalización del lugar.",
+    "No hemos localizado la ordenanza municipal sobre estacionamiento y pernocta: no damos multas."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de a Peroxa",
+      "detalle": "Campo da Feira. 32150 A Peroxa. Área pública y gratuita. Admite pernocta. Servicios: agua potable, vaciado de aguas grises, vaciado de aguas negras, zona de picnic. Datos de la Agencia de Turismo de Galicia, consultados el 02/11/2026.",
+      "lat": 42.44158,
+      "lon": -7.791941,
+      "coordFuente": "https://www.turismo.gal/recurso/-/detalle/280382474/area-de-servizo-de-a-peroxa?langId=es_ES"
+    }
+  ],
+  "fuentes": [
+    {
+      "titulo": "Agencia de Turismo de Galicia (Xunta de Galicia): Área de a Peroxa",
+      "url": "https://www.turismo.gal/recurso/-/detalle/280382474/area-de-servizo-de-a-peroxa?langId=es_ES",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Decreto 159/2019, de 21 de noviembre, de ordenación de los campamentos de turismo (DOG n.º 246, 27/12/2019)",
+      "url": "https://www.xunta.gal/dog/Publicados/2019/20191227/AnuncioG0535-131219-0001_es.html",
+      "tipo": "oficial",
+      "fecha": "2019-12-27"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

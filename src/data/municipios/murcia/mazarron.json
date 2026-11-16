@@ -1,0 +1,32 @@
+{
+  "nombre": "Mazarrón",
+  "comunidad": "murcia",
+  "provincia": "Murcia",
+  "estado": "permitido",
+  "resumen": "En Mazarrón puedes aparcar la autocaravana en las calles como cualquier otro vehículo, y da igual que estés dentro siempre que no se note desde fuera. Lo que no puedes es acampar: nada de toldo, mesas, sillas, patas estabilizadoras ni vaciar aguas en la calle. En las zonas señalizadas para autocaravanas se puede pernoctar hasta 48 horas seguidas por semana.",
+  "reglas": [
+    "Puedes estacionar en todo el municipio con las mismas normas y límites que cualquier otro vehículo, salvo en espacios naturales protegidos, terrenos forestales y otras zonas protegidas (art. 4.1 y 4.3).",
+    "Se considera que estás aparcado, y no acampado, si el vehículo solo toca el suelo con las ruedas, no ocupa más que cerrado, no vierte nada y no hace ruidos molestos (como un generador en horas de descanso). No importa que estés dentro si lo que haces no trasciende al exterior (art. 4.5).",
+    "En las zonas señalizadas solo para autocaravanas se puede pernoctar, pero no acampar, un máximo de 48 horas seguidas en la misma semana. Ahí puedes abrir las ventanas proyectables, pero no sacar toldo, patas, mesas, sillas ni tendederos (art. 5).",
+    "En las áreas de servicio el máximo es de 48 horas cada dos semanas en el municipio, y se entra y sale entre las 8:00 y las 23:00 (art. 7).",
+    "No se puede acampar en los lugares prohibidos por la ordenanza de playas (art. 6.2)."
+  ],
+  "areas": [],
+  "multa": "Leves, hasta 100 € (por ejemplo, sacar toldo o mesas fuera de las zonas autorizadas o llenar depósitos en fuentes públicas); graves, hasta 200 € (acampada fuera de lugares habilitados); muy graves, hasta 500 € (verter aguas o residuos fuera de los lugares indicados) (arts. 11 y 12).",
+  "fuentes": [
+    {
+      "titulo": "Ordenanza municipal de zonas de estacionamiento y áreas de servicio de autocaravanas y vehículos-vivienda de Mazarrón (BORM n.º 3, 05/01/2022, anuncio 74)",
+      "url": "https://borm.es/services/anuncio/ano/2022/numero/74/pdf?id=799073",
+      "tipo": "oficial",
+      "fecha": "2022-01-05"
+    },
+    {
+      "titulo": "Decreto n.º 193/2022 de campings y áreas de autocaravanas de la Región de Murcia (BORM n.º 254, 03/11/2022)",
+      "url": "https://borm.es/services/anuncio/ano/2022/numero/5528/pdf",
+      "tipo": "oficial",
+      "fecha": "2022-11-03"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

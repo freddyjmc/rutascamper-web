@@ -1,0 +1,30 @@
+{
+  "nombre": "País Vasco",
+  "resumen": "El País Vasco es de las comunidades más claras: la Ley de Turismo dice expresamente que dormir dentro de una autocaravana bien estacionada en zona urbana, sin desplegar nada, no es acampada libre. Lo que sí está prohibido es acampar, y los ayuntamientos regulan dónde y cuánto tiempo puedes aparcar.",
+  "normaAutonomica": "Ley 13/2016, de 28 de julio, de Turismo (art. 67), y Decreto 396/2013, de 30 de julio, de ordenación de los campings y otras modalidades de turismo de acampada (BOPV n.º 170, de 6 de septiembre de 2013).",
+  "claves": [
+    "No es acampada libre pernoctar dentro de una autocaravana estacionada correctamente en un área urbana, sin desbordar los límites de estacionamiento, sin desplegar ningún dispositivo externo y sin hacer un uso inapropiado del espacio público (Ley 13/2016, art. 67).",
+    "La acampada libre está prohibida con carácter general. La ley la define como permanecer al aire libre en el medio natural con ánimo de pernoctar, fuera de campings y zonas autorizadas, usando tiendas, caravanas o autocaravanas (Ley 13/2016, art. 67).",
+    "Fuera de zona urbana, en el medio natural, sí puede considerarse acampada aunque duermas dentro del vehículo.",
+    "En las áreas especiales de acogida de autocaravanas y caravanas en tránsito la estancia máxima es de 48 horas (Decreto 396/2013, art. 71).",
+    "En ningún caso se puede acampar libremente a menos de 2 km de un camping (Decreto 396/2013, art. 81.4), y en espacios protegidos y Red Natura 2000 mandan sus propios planes (art. 82).",
+    "Los ayuntamientos pueden limitar dónde y cuánto tiempo aparcan las autocaravanas: revisa siempre el municipio."
+  ],
+  "fuentes": [
+    {
+      "titulo": "Ley 13/2016, de 28 de julio, de Turismo del País Vasco, texto consolidado (BOE-A-2016-8346)",
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2016-8346",
+      "tipo": "oficial"
+    },
+    {
+      "titulo": "Decreto 396/2013, de 30 de julio (BOPV n.º 170, 06/09/2013)",
+      "url": "https://www.euskadi.eus/bopv2/datos/2013/09/1303845a.pdf",
+      "tipo": "oficial",
+      "fecha": "2013-09-06"
+    }
+  ],
+  "revisado": "2026-11-01",
+  "verificado": true,
+  "pernoctaVia": "No es acampada en zona urbana si estás bien estacionado y no despliegas nada (Ley 13/2016, art. 67).",
+  "estanciaAreas": "48 h"
+}

@@ -1,0 +1,29 @@
+{
+  "nombre": "Noja",
+  "comunidad": "cantabria",
+  "provincia": "Cantabria",
+  "estado": "sin-datos",
+  "resumen": "No hemos localizado una ordenanza de Noja sobre autocaravanas. Se aplica la norma de Cantabria: puedes estar estacionado sin desplegar nada, pero no acampar. Cerca tienes el área municipal de Liendo, con ordenanza verificada.",
+  "reglas": [
+    "Cantabria prohíbe acampar con caravana o autocaravana fuera de campings y áreas de servicio para autocaravanas, pero estar bien estacionado en una zona autorizada de la vía pública, sin desplegar nada, no es acampada (Decreto 35/2026, arts. 1.3.b y 2.3).",
+    "Cuenta como acampada bajar las patas estabilizadoras, abrir ventanas proyectables, sacar toldo, mesas o sillas, o verter residuos a la vía (Decreto 35/2026, art. 1.2.c).",
+    "No hemos localizado una ordenanza municipal publicada sobre estacionamiento o pernocta de autocaravanas: puede que el ayuntamiento tenga normas propias o señales en la calle. Pregunta en el ayuntamiento antes de pasar la noche y respeta siempre la señalización. No damos multas porque no las hemos visto en una fuente oficial.",
+    "Alternativa verificada en la zona: el caravaning municipal de Liendo (máximo 48 horas, con ordenanza publicada)."
+  ],
+  "areas": [],
+  "fuentes": [
+    {
+      "titulo": "Decreto 35/2026, de 14 de mayo, de campamentos de turismo y áreas de servicio para autocaravanas de Cantabria (BOC n.º 95, 20/05/2026), copia publicada por Turismo de Cantabria",
+      "url": "https://profesional.turismodecantabria.com/wp-content/uploads/2026/05/DECRETO-AUTOCARAVANAS-Y-CAMPAMENTOS-TURISMO.pdf",
+      "tipo": "oficial",
+      "fecha": "2026-05-20"
+    },
+    {
+      "titulo": "Web oficial del Ayuntamiento de Noja: pregunta aquí por la ordenanza de estacionamiento y pernocta",
+      "url": "https://ayuntamientodenoja.es/portal/",
+      "tipo": "oficial"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}

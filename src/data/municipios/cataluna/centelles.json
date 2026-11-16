@@ -1,0 +1,34 @@
+{
+  "nombre": "Centelles",
+  "comunidad": "cataluna",
+  "provincia": "Barcelona",
+  "estado": "restringido",
+  "resumen": "Centelles (Osona) tiene un área municipal de autocaravanas en el polígono La Gavarra, con 12 plazas, agua, luz y vaciado por 3 € al día y un máximo de 2 días. La acampada libre está prohibida en el área y en sus alrededores.",
+  "reglas": [
+    "El área está en la calle Can Minguet, esquina con la avenida Molí de la Llavina, polígono La Gavarra (art. 1 y 2).",
+    "Uso del área: 3 € al día (art. 3).",
+    "Estancia máxima: 2 días, salvo fuerza mayor con autorización del Ayuntamiento; como máximo 12 autocaravanas a la vez (art. 5.a y 5.h).",
+    "En el área no puedes sacar sillas, mesas, toldos ni sombrillas (art. 5.c).",
+    "Prohibida la acampada libre en el área de autocaravanas y en sus alrededores (art. 8)."
+  ],
+  "areas": [
+    {
+      "nombre": "Área de autocaravanas de Centelles",
+      "detalle": "Calle Can Minguet, esquina avenida Molí de la Llavina (polígono La Gavarra). 12 plazas, agua, luz y vaciado de aguas grises y negras. 3 € al día; máximo 2 días. No está vigilada.",
+      "lat": 41.791667,
+      "lon": 2.227222,
+      "coordFuente": "https://www.centelles.cat/ajuntament/informacio-oficial/docs/ordenances/ordenanca-autocaravanes.pdf"
+    }
+  ],
+  "multa": "Leves (acampar en el área, no pagar la tasa, lavar el vehículo): hasta 100 €. Graves (acampar fuera del área, verter líquidos, ruidos): de 101 a 300 €. Muy graves (dañar el área, obstaculizar el tráfico): de 301 a 600 € (art. 11).",
+  "fuentes": [
+    {
+      "titulo": "Ordenança municipal reguladora de l'ús de l'àrea d'autocaravanes de Centelles (BOPB, 21/10/2020, CVE 2020028441), web del Ajuntament",
+      "url": "https://www.centelles.cat/ajuntament/informacio-oficial/docs/ordenances/ordenanca-autocaravanes.pdf",
+      "tipo": "oficial",
+      "fecha": "2020-10-21"
+    }
+  ],
+  "revisado": "2026-11-02",
+  "verificado": true
+}
