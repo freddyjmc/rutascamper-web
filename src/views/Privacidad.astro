@@ -1,0 +1,76 @@
+---
+import Base from "../layouts/Base.astro";
+import AvisoTraduccion from "../components/AvisoTraduccion.astro";
+import { SITE } from "../site";
+import { localePath, type Lang } from "../i18n";
+
+interface Props { lang?: Lang }
+const { lang = "es" } = Astro.props;
+const o = SITE.owner;
+const title = { es: "Política de privacidad", en: "Privacy policy", fr: "Politique de confidentialité" }[lang];
+const crumb = { es: "Privacidad", en: "Privacy", fr: "Confidentialité" }[lang];
+const osm = "https://osmfoundation.org/wiki/Privacy_Policy";
+const cf = "https://www.cloudflare.com/privacypolicy/";
+// Nombre público del responsable (el mismo de /quienes-somos/). NIF y domicilio solo se publican con monetized: true.
+const responsable = "Freddy Materano";
+---
+<Base title={title} crumbs={[{ name: crumb, href: localePath(lang, "/privacidad/") }]} lang={lang}>
+  <div class="prose">
+    {lang === "es" && (
+      <>
+        <h1>Política de privacidad</h1>
+        <h2>Responsable</h2>
+        <p>{SITE.monetized ? `${o.name}, NIF ${o.nif}, correo ${o.email}.` : `${responsable}, contactable en ${o.email}.`}</p>
+        <h2>Qué datos tratamos</h2>
+        <p>Este sitio no tiene formularios ni registro de usuarios. Si nos escribes por correo, usamos tu dirección y tu mensaje solo para responderte, con base en nuestro interés legítimo en atender tu mensaje (art. 6.1.f del RGPD). Los correos se reciben y guardan en un buzón de Gmail (Google), que aplica su propia política de privacidad. Los borramos cuando ya no son necesarios para atender tu consulta.</p>
+        <h2>Fichas guardadas, visitados y ruta</h2>
+        <p>Si pulsas «Guardar» o «Lo he visitado» en una ficha, o «Añadir a mi ruta» en una ficha o en el mapa, tu navegador guarda en su almacenamiento local (localStorage) la lista de fichas guardadas (nombre del municipio, comunidad y enlace), los municipios que marcas como visitados (los mismos datos) y la lista de paradas de «Mi ruta» (identificadores de las áreas), y el país que eliges en las pestañas de país de la portada o del mapa (<code>rc:pais</code>), solo si lo pulsas. Solo se guarda cuando tú lo pides, no sale de tu dispositivo ni nos llega (salvo que compartas un enlace de ruta: al abrirlo, sus identificadores de áreas viajan en la dirección web, como cualquier visita), y puedes borrarlo desde «Mis guardados» con «Borrar todos mis datos de este sitio», volviendo a pulsar el botón correspondiente o borrando los datos del sitio en tu navegador. El enlace para compartir una ruta solo contiene los identificadores de sus áreas.</p>
+        <h2>Alojamiento y estadísticas</h2>
+        <p>El alojamiento lo presta Cloudflare, Inc., que trata los datos principalmente por encargo nuestro. Para servir las páginas y protegerlas recibe datos técnicos de conexión, como tu dirección IP, la página que pides y el tipo de navegador. Tu navegador también puede enviar a Cloudflare avisos automáticos de errores de red (Network Error Logging). Medimos las visitas con Cloudflare Web Analytics, que no usa cookies.</p>
+        <p>La base jurídica es nuestro interés legítimo en ofrecer el sitio de forma segura y saber, sin identificar a nadie, qué páginas se consultan (art. 6.1.f del RGPD). No guardamos direcciones IP en ningún sistema propio. Cloudflare conserva sus registros durante el tiempo que indica su <a href={cf} rel="noopener" target="_blank">política de privacidad</a>, que no fija un plazo concreto. Cloudflare puede tratar estos datos en Estados Unidos; según esa política (consultada el 12/11/2026), declara cumplir el Marco de Privacidad de Datos UE-EE. UU.</p>
+        <h2>Mapas</h2>
+        <p>El <a href="/mapa-areas-autocaravanas/">mapa de áreas</a> descarga las imágenes del mapa desde los servidores de OpenStreetMap, que reciben tu dirección IP para poder enviarlas. También se cargan en las fichas de municipio que muestran un minimapa. Solo se descargan al abrir esas páginas, y la base jurídica es nuestro interés legítimo en mostrarte el mapa (art. 6.1.f del RGPD). La OpenStreetMap Foundation, con sede en el Reino Unido, trata esos datos como responsable propia. Consulta su <a href={osm} rel="noopener" target="_blank">política de privacidad</a>. Si abres una ruta o un «Cómo llegar» en Google Maps, Apple Maps u OpenStreetMap desde «Mi ruta», el mapa o una ficha, esa aplicación recibe las coordenadas y los datos habituales de conexión (como tu IP) y aplica su propia política de privacidad; solo ocurre cuando pulsas el enlace.</p>
+        <h2>Tus derechos</h2>
+        <p>Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad escribiendo a {o.email}. Puedes oponerte en cualquier momento a los tratamientos basados en nuestro interés legítimo. No tomamos decisiones automatizadas ni elaboramos perfiles. También puedes reclamar ante la Agencia Española de Protección de Datos (aepd.es).</p>
+      </>
+    )}
+    {lang === "en" && (
+      <>
+        <h1>Privacy policy</h1>
+        <AvisoTraduccion lang={lang} />
+        <h2>Controller</h2>
+        <p>{SITE.monetized ? `${o.name}, NIF ${o.nif}, email ${o.email}.` : `${responsable}, who can be contacted at ${o.email}.`}</p>
+        <h2>What data we process</h2>
+        <p>This website has no forms and no user registration. If you write to us by email, we use your address and your message only to reply to you, on the basis of our legitimate interest in answering your message (GDPR, Article 6.1.f). Emails are received and stored in a Gmail (Google) mailbox, which applies its own privacy policy. We delete them when they are no longer needed to deal with your enquiry.</p>
+        <h2>Saved pages, visited places and route</h2>
+        <p>If you press «Guardar» (save) or «Lo he visitado» (I have visited it) on a page, or «Añadir a mi ruta» (add to my route) on a page or on the map, your browser stores in its local storage (localStorage) the list of saved pages (municipality name, community and link), the municipalities you mark as visited (the same data) and the list of stops in «Mi ruta» (my route; identifiers of the areas), and the country you choose in the country tabs on the home page or the map (<code>rc:pais</code>), only if you press them. It is only stored when you ask for it, it does not leave your device or reach us (unless you share a route link: when it is opened, the identifiers of its areas travel in the web address, like any visit), and you can delete it from «Mis guardados» (my saved places) with «Borrar todos mis datos de este sitio» (delete all my data on this site), by pressing the corresponding button again or by clearing the site data in your browser. The link for sharing a route only contains the identifiers of its areas.</p>
+        <h2>Hosting and statistics</h2>
+        <p>Hosting is provided by Cloudflare, Inc., which processes data mainly on our behalf. To serve and protect the pages it receives technical connection data, such as your IP address, the page you request and the type of browser. Your browser may also send Cloudflare automatic reports of network errors (Network Error Logging). We measure visits with Cloudflare Web Analytics, which uses no cookies.</p>
+        <p>The legal basis is our legitimate interest in offering the website securely and knowing, without identifying anyone, which pages are viewed (GDPR, Article 6.1.f). We do not store IP addresses in any system of our own. Cloudflare keeps its logs for the time stated in its <a href={cf} rel="noopener" target="_blank">privacy policy</a>, which does not set a specific period. Cloudflare may process this data in the United States; according to that policy (consulted on 12/11/2026), it states that it complies with the EU-U.S. Data Privacy Framework.</p>
+        <h2>Maps</h2>
+        <p>The <a href="/mapa-areas-autocaravanas/" hreflang="es">map of areas</a> (in Spanish) downloads the map images from the OpenStreetMap servers, which receive your IP address in order to send them. They are also loaded on the municipality pages that show a mini-map. They are only downloaded when you open those pages, and the legal basis is our legitimate interest in showing you the map (GDPR, Article 6.1.f). The OpenStreetMap Foundation, based in the United Kingdom, processes that data as an independent controller. See their <a href={osm} rel="noopener" target="_blank">privacy policy</a>. If you open a route or a «Cómo llegar» (directions) in Google Maps, Apple Maps or OpenStreetMap from «Mi ruta», the map or a page, that application receives the coordinates and the usual connection data (such as your IP) and applies its own privacy policy; this only happens when you press the link.</p>
+        <h2>Your rights</h2>
+        <p>You can exercise your rights of access, rectification, erasure, objection, restriction and portability by writing to {o.email}. You can object at any time to processing based on our legitimate interest. We do not make automated decisions or create profiles. You can also lodge a complaint with the Agencia Española de Protección de Datos (the Spanish Data Protection Agency, aepd.es).</p>
+      </>
+    )}
+    {lang === "fr" && (
+      <>
+        <h1>Politique de confidentialité</h1>
+        <AvisoTraduccion lang={lang} />
+        <h2>Responsable</h2>
+        <p>{SITE.monetized ? `${o.name}, NIF ${o.nif}, courriel ${o.email}.` : `${responsable}, joignable à l'adresse ${o.email}.`}</p>
+        <h2>Quelles données nous traitons</h2>
+        <p>Ce site n'a ni formulaires ni inscription d'utilisateurs. Si vous nous écrivez par courriel, nous utilisons votre adresse et votre message uniquement pour vous répondre, sur la base de notre intérêt légitime à répondre à votre message (RGPD, article 6.1.f). Les courriels sont reçus et conservés dans une boîte Gmail (Google), qui applique sa propre politique de confidentialité. Nous les supprimons lorsqu'ils ne sont plus nécessaires pour traiter votre demande.</p>
+        <h2>Fiches enregistrées, lieux visités et itinéraire</h2>
+        <p>Si vous appuyez sur «Guardar» (enregistrer) ou «Lo he visitado» (je l'ai visité) sur une fiche, ou sur «Añadir a mi ruta» (ajouter à mon itinéraire) sur une fiche ou sur la carte, votre navigateur enregistre dans son stockage local (localStorage) la liste des fiches enregistrées (nom de la commune, communauté et lien), les communes que vous marquez comme visitées (les mêmes données) et la liste des étapes de «Mi ruta» (mon itinéraire ; identifiants des aires), et le pays que vous choisissez dans les onglets de pays de la page d'accueil ou de la carte (<code>rc:pais</code>), uniquement si vous cliquez dessus. Elles ne sont enregistrées que lorsque vous le demandez, ne quittent pas votre appareil et ne nous parviennent pas (sauf si vous partagez un lien d'itinéraire : à son ouverture, les identifiants de ses aires circulent dans l'adresse web, comme pour toute visite), et vous pouvez les supprimer depuis «Mis guardados» (mes favoris) avec «Borrar todos mis datos de este sitio» (supprimer toutes mes données sur ce site), en appuyant de nouveau sur le bouton correspondant ou en effaçant les données du site dans votre navigateur. Le lien de partage d'un itinéraire ne contient que les identifiants de ses aires.</p>
+        <h2>Hébergement et statistiques</h2>
+        <p>L'hébergement est assuré par Cloudflare, Inc., qui traite les données principalement pour notre compte. Pour servir et protéger les pages, il reçoit des données techniques de connexion, comme votre adresse IP, la page que vous demandez et le type de navigateur. Votre navigateur peut aussi envoyer à Cloudflare des rapports automatiques d'erreurs de réseau (Network Error Logging). Nous mesurons les visites avec Cloudflare Web Analytics, qui n'utilise pas de cookies.</p>
+        <p>La base juridique est notre intérêt légitime à proposer le site de manière sûre et à savoir, sans identifier personne, quelles pages sont consultées (RGPD, article 6.1.f). Nous ne conservons aucune adresse IP dans un système qui nous appartient. Cloudflare conserve ses journaux pendant la durée indiquée dans sa <a href={cf} rel="noopener" target="_blank">politique de confidentialité</a>, qui ne fixe pas de délai précis. Cloudflare peut traiter ces données aux États-Unis ; selon cette politique (consultée le 12/11/2026), il déclare respecter le Cadre de protection des données UE-États-Unis.</p>
+        <h2>Cartes</h2>
+        <p>La <a href="/mapa-areas-autocaravanas/" hreflang="es">carte des aires</a> (en espagnol) télécharge les images de la carte depuis les serveurs d'OpenStreetMap, qui reçoivent votre adresse IP pour pouvoir les envoyer. Elles sont aussi chargées dans les fiches de commune qui affichent une mini-carte. Elles ne sont téléchargées qu'à l'ouverture de ces pages, et la base juridique est notre intérêt légitime à vous montrer la carte (RGPD, article 6.1.f). L'OpenStreetMap Foundation, établie au Royaume-Uni, traite ces données en tant que responsable indépendant. Consultez leur <a href={osm} rel="noopener" target="_blank">politique de confidentialité</a>. Si vous ouvrez un itinéraire ou un «Cómo llegar» (comment s'y rendre) dans Google Maps, Apple Maps ou OpenStreetMap depuis «Mi ruta», la carte ou une fiche, cette application reçoit les coordonnées et les données de connexion habituelles (comme votre IP) et applique sa propre politique de confidentialité ; cela ne se produit que lorsque vous appuyez sur le lien.</p>
+        <h2>Vos droits</h2>
+        <p>Vous pouvez exercer vos droits d'accès, de rectification, d'effacement, d'opposition, de limitation et de portabilité en écrivant à {o.email}. Vous pouvez vous opposer à tout moment aux traitements fondés sur notre intérêt légitime. Nous ne prenons pas de décisions automatisées et ne réalisons pas de profilage. Vous pouvez aussi déposer une réclamation auprès de l'Agencia Española de Protección de Datos (l'autorité espagnole de protection des données, aepd.es).</p>
+      </>
+    )}
+  </div>
+</Base>

@@ -1,0 +1,13 @@
+---
+import Francia from "../../../views/Francia.astro";
+import { getEntry } from "astro:content";
+import { langParams, type Lang } from "../../../i18n";
+import { visibleFr } from "../../../site";
+// Sin guía nacional publicada (verificada), /francia/ no se genera en ningún idioma.
+export async function getStaticPaths() {
+  const nac = await getEntry("nacionalFr", "nacional");
+  return nac && visibleFr(nac) ? langParams() : [];
+}
+const lang = Astro.params.lang as Lang;
+---
+<Francia lang={lang} />

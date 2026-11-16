@@ -1,0 +1,300 @@
+---
+import Base from "../layouts/Base.astro";
+import AcampadaCamper from "../components/AcampadaCamper.astro";
+import AvisoTraduccion from "../components/AvisoTraduccion.astro";
+import { getCollection } from "astro:content";
+import { SITE, ESTADOS, visible, fecha } from "../site";
+import { t, href as L, localePath, META, type Lang } from "../i18n";
+
+interface Props { lang?: Lang }
+const { lang = "es" } = Astro.props;
+const T = t(lang);
+const loc = META[lang].fecha;
+
+const comunidades = (await getCollection("comunidades")).filter(visible).sort((a, b) => a.data.nombre.localeCompare(b.data.nombre, "es"));
+const municipios = (await getCollection("municipios")).filter(visible);
+const nombreCom = Object.fromEntries(comunidades.map((c) => [c.id, c.data.nombre]));
+const porEstado = (Object.keys(ESTADOS) as (keyof typeof ESTADOS)[])
+  .map((k) => ({ k, label: lang === "es" ? ESTADOS[k].label : T.estados[k], tone: ESTADOS[k].tone, items: municipios.filter((m) => m.data.estado === k) }))
+  .filter((g) => g.items.length);
+
+const M = {
+  es: {
+    title: "Pernoctar o acampar con camper: la normativa en España (2026)",
+    description: "Cuándo dormir en tu camper o autocaravana es legal y cuándo es acampada: la norma de la DGT, lo que dice cada comunidad y las ordenanzas municipales, con fuentes oficiales.",
+    crumb: "Pernoctar o acampar",
+    th: ["Comunidad", "¿Dormir dentro, bien aparcado, en la vía pública?", "Estancia máxima en áreas"], lab: ["¿Dormir dentro, bien aparcado?", "Estancia máxima en áreas"], ver: "Ver ficha",
+    dgtFuente: "DGT: nota de prensa sobre la Instrucción PROT 2026/04 de autocaravanas (16/03/2026)",
+  },
+  en: {
+    title: "Camper overnight stay or camping: the rules in Spain",
+    description: "When sleeping in your camper or motorhome is legal and when it counts as camping: the DGT rule, what each region says and the municipal ordinances, with official sources.",
+    crumb: "Overnight stay or camping",
+    th: ["Region", "Sleeping inside, properly parked, on a public road?", "Maximum stay in areas"], lab: ["Sleeping inside, properly parked?", "Maximum stay in areas"], ver: "See page",
+    dgtFuente: "DGT: press release on Instruction PROT 2026/04 on motorhomes (16/03/2026)",
+  },
+  fr: {
+    title: "Nuitée ou camping en camping-car : règles en Espagne",
+    description: "Quand dormir dans votre camping-car est légal et quand cela compte comme du camping : la règle de la DGT, ce que dit chaque communauté et les ordenanzas municipales, avec des sources officielles.",
+    crumb: "Nuitée ou camping",
+    th: ["Communauté", "Dormir à l'intérieur, bien stationné, sur la voie publique ?", "Séjour maximal dans les aires"], lab: ["Dormir à l'intérieur, bien stationné ?", "Séjour maximal dans les aires"], ver: "Voir la fiche",
+    dgtFuente: "DGT : communiqué de presse sur l'Instruction PROT 2026/04 relative aux camping-cars (16/03/2026)",
+  },
+}[lang];
+const revisado = new Date("2026-11-01");
+const title = M.title;
+const description = M.description;
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: title,
+  description,
+  inLanguage: lang,
+  dateModified: revisado.toISOString(),
+  publisher: { "@type": "Organization", name: SITE.name, url: SITE.url },
+};
+const aviso = lang !== "es";
+---
+<Base title={title} description={description} schema={schema} crumbs={[{ name: M.crumb, href: localePath(lang, "/normativa-pernocta-camper/") }]} lang={lang}>
+  <article class="prose">
+    {lang === "es" && (
+      <>
+        <h1>Pernoctar o acampar con camper: qué dice la ley en España</h1>
+        <p class="lead">Dormir dentro de tu camper o autocaravana bien aparcada no es lo mismo que acampar. Pero cada comunidad y cada ayuntamiento ponen sus propios límites. Aquí tienes el mapa completo, con las fuentes oficiales de cada dato.</p>
+      </>
+    )}
+    {lang === "en" && (
+      <>
+        <h1>Overnight stay or camping with a camper: what the law says in Spain</h1>
+        <p class="lead">Sleeping inside your camper or motorhome while properly parked is not the same as camping. But each region and each town council sets its own limits. Here is the full map, with the official source for every piece of data.</p>
+      </>
+    )}
+    {lang === "fr" && (
+      <>
+        <h1>Nuitée ou camping en camping-car : ce que dit la loi en Espagne</h1>
+        <p class="lead">Dormir dans votre camping-car bien stationné n'est pas la même chose que camper. Mais chaque communauté et chaque commune fixent leurs propres limites. Voici la carte complète, avec la source officielle de chaque donnée.</p>
+      </>
+    )}
+    <p class="meta">{T.ui.ultimaRevision}: {fecha(revisado, loc)} · <a href={L(lang, "/metodo/")}>{lang === "es" ? "Cómo verificamos" : T.ui.metodo}</a></p>
+    <AvisoTraduccion lang={lang} />
+
+    {lang === "es" && (
+      <div class="card">
+        <h2 style="margin-top:0">La respuesta corta</h2>
+        <ul>
+          <li><strong>Aparcar y dormir dentro</strong>: la DGT trata a la autocaravana como a cualquier otro vehículo para parar y estacionar. Si está bien aparcada y no sacas nada, en general no es acampada.</li>
+          <li><strong>Acampar</strong>: sacar toldo, mesas o sillas, bajar las patas estabilizadoras o verter aguas convierte el estacionamiento en acampada, que está prohibida fuera de campings y áreas autorizadas.</li>
+          <li><strong>El ayuntamiento manda</strong>: puede limitar el tiempo de estacionamiento y prohibir la pernocta en zonas concretas. Mira siempre la <a href="/puedo-dormir-aqui/">ficha del municipio</a> y la señalización.</li>
+        </ul>
+      </div>
+    )}
+    {lang === "en" && (
+      <div class="card">
+        <h2 style="margin-top:0">The short answer</h2>
+        <ul>
+          <li><strong>Parking and sleeping inside</strong>: the DGT (Spain's traffic authority) treats a motorhome like any other vehicle for stopping and parking. If it is properly parked and you put nothing out, in general it is not camping.</li>
+          <li><strong>Camping</strong>: putting out an awning, tables or chairs, lowering the stabiliser legs or dumping water turns parking into camping, which is banned outside campsites and authorised areas.</li>
+          <li><strong>The town council decides</strong>: it can limit parking time and ban overnight stays in specific areas. Always check the <a href={L(lang, "/puedo-dormir-aqui/")}>municipality page</a> (in Spanish) and the signs.</li>
+        </ul>
+      </div>
+    )}
+    {lang === "fr" && (
+      <div class="card">
+        <h2 style="margin-top:0">La réponse courte</h2>
+        <ul>
+          <li><strong>Stationner et dormir à l'intérieur</strong> : la DGT (l'autorité espagnole de la circulation) traite le camping-car comme n'importe quel autre véhicule pour l'arrêt et le stationnement. S'il est bien stationné et que vous ne sortez rien, en général ce n'est pas du camping.</li>
+          <li><strong>Camper</strong> : sortir un auvent, des tables ou des chaises, baisser les béquilles stabilisatrices ou déverser des eaux transforme le stationnement en camping, interdit en dehors des campings et des aires autorisées.</li>
+          <li><strong>C'est la commune qui décide</strong> : elle peut limiter la durée de stationnement et interdire la nuitée dans certaines zones. Consultez toujours la <a href={L(lang, "/puedo-dormir-aqui/")}>fiche de la commune</a> (en espagnol) et la signalisation.</li>
+        </ul>
+      </div>
+    )}
+
+    {lang === "es" && (
+      <>
+        <h2>Qué dice la DGT: parar y estacionar como cualquier vehículo</h2>
+        <p>La Dirección General de Tráfico actualizó en marzo de 2026 su instrucción sobre autocaravanas (Instrucción PROT 2026/04). Según su nota oficial, con carácter general las autocaravanas pueden parar y estacionar en las mismas condiciones y con las mismas limitaciones que cualquier otro vehículo, pero deben respetar la normativa y la señalización que los ayuntamientos dispongan en sus vías urbanas.</p>
+        <p>La DGT se apoya en la sentencia del Tribunal Supremo de 13 de marzo de 2018: una ordenanza municipal puede limitar los tiempos de estacionamiento y prohibir acampar con caravanas o autocaravanas en las vías urbanas y sus espacios adyacentes, salvo en las zonas autorizadas por el ayuntamiento.</p>
+
+        <h2>Qué cuenta como acampada</h2>
+        <p>Las normas autonómicas y municipales que hemos revisado coinciden en lo esencial. Tu vehículo pasa de estar aparcado a estar acampado si:</p>
+        <ul>
+          <li>sacas toldo, mesas, sillas, tendederos o cualquier elemento fuera del perímetro del vehículo;</li>
+          <li>bajas las patas estabilizadoras;</li>
+          <li>abres ventanas proyectables que invaden más espacio que el vehículo cerrado (algunas normas sí lo permiten, como Vitoria-Gasteiz dentro de sus áreas);</li>
+          <li>viertes aguas grises, negras o cualquier residuo a la vía;</li>
+          <li>haces ruido con un generador en horas de descanso.</li>
+        </ul>
+        <p><strong>Ojo con los calzos.</strong> En Cantabria y en ordenanzas como las de Pamplona o Arguedas los calzos están permitidos. En Cataluña, en cambio, el Decreto 75/2020 exige que el vehículo se sostenga sobre sus propias ruedas «sin utilizar cuñas», y Begur incluye las cuñas en su lista de acampada.</p>
+      </>
+    )}
+    {lang === "en" && (
+      <>
+        <h2>What the DGT says: stopping and parking like any other vehicle</h2>
+        <p>In March 2026 the Dirección General de Tráfico (DGT) updated its instruction on motorhomes (Instrucción PROT 2026/04). According to its official press release, motorhomes can in general stop and park under the same conditions and with the same limits as any other vehicle, but they must respect the rules and signs that town councils set on their urban roads.</p>
+        <p>The DGT relies on the Tribunal Supremo ruling of 13 March 2018: a municipal ordinance can limit parking times and ban camping with caravans or motorhomes on urban roads and the adjoining spaces, except in areas authorised by the town council.</p>
+
+        <h2>What counts as camping</h2>
+        <p>The regional and municipal rules we have reviewed agree on the essentials. Your vehicle goes from being parked to camping if you:</p>
+        <ul>
+          <li>put out an awning, tables, chairs, clothes racks or anything else beyond the outline of the vehicle;</li>
+          <li>lower the stabiliser legs;</li>
+          <li>open projecting windows that take up more space than the closed vehicle (some rules do allow this, such as Vitoria-Gasteiz inside its areas);</li>
+          <li>dump grey water, black water or any waste onto the road;</li>
+          <li>run a generator during rest hours.</li>
+        </ul>
+        <p><strong>Watch out for levelling wedges.</strong> In Cantabria and in ordinances such as those of Pamplona or Arguedas, wedges are allowed. In Catalonia, however, Decreto 75/2020 requires the vehicle to rest on its own wheels «sin utilizar cuñas» (without using wedges), and Begur includes wedges in its list of what counts as camping.</p>
+      </>
+    )}
+    {lang === "fr" && (
+      <>
+        <h2>Ce que dit la DGT : s'arrêter et stationner comme n'importe quel véhicule</h2>
+        <p>En mars 2026, la Dirección General de Tráfico (DGT) a mis à jour son instruction sur les camping-cars (Instrucción PROT 2026/04). Selon son communiqué officiel, les camping-cars peuvent en général s'arrêter et stationner dans les mêmes conditions et avec les mêmes limites que n'importe quel autre véhicule, mais ils doivent respecter la réglementation et la signalisation que les communes fixent sur leurs voies urbaines.</p>
+        <p>La DGT s'appuie sur l'arrêt du Tribunal Supremo du 13 mars 2018 : une ordenanza (règlement municipal) peut limiter les durées de stationnement et interdire de camper avec des caravanes ou des camping-cars sur les voies urbaines et leurs abords, sauf dans les zones autorisées par la commune.</p>
+
+        <h2>Ce qui compte comme du camping</h2>
+        <p>Les règles régionales et municipales que nous avons consultées s'accordent sur l'essentiel. Votre véhicule passe du stationnement au camping si vous :</p>
+        <ul>
+          <li>sortez un auvent, des tables, des chaises, des étendoirs ou tout autre élément au-delà du périmètre du véhicule ;</li>
+          <li>baissez les béquilles stabilisatrices ;</li>
+          <li>ouvrez des fenêtres saillantes qui occupent plus de place que le véhicule fermé (certaines règles l'autorisent, comme Vitoria-Gasteiz à l'intérieur de ses aires) ;</li>
+          <li>déversez des eaux grises, des eaux noires ou tout autre déchet sur la voie ;</li>
+          <li>faites fonctionner un groupe électrogène aux heures de repos.</li>
+        </ul>
+        <p><strong>Attention aux cales.</strong> En Cantabrie et dans des ordenanzas comme celles de Pamplona ou d'Arguedas, les cales sont autorisées. En Catalogne, en revanche, le Decreto 75/2020 exige que le véhicule repose sur ses propres roues «sin utilizar cuñas» (sans utiliser de cales), et Begur inclut les cales dans sa liste de ce qui constitue du camping.</p>
+      </>
+    )}
+
+    <AcampadaCamper lang={lang} />
+
+    {lang === "es" && <h2>Comunidad por comunidad</h2>}
+    {lang === "en" && <h2>Region by region</h2>}
+    {lang === "fr" && <h2>Communauté par communauté</h2>}
+    <div class="table-wrap">
+      <table class="cmp">
+        <thead><tr><th>{M.th[0]}</th><th>{M.th[1]}</th><th>{M.th[2]}</th></tr></thead>
+        <tbody>
+          {comunidades.map((c) => (
+            <tr>
+              <td><a href={`/pernocta/${c.id}/`}><strong>{c.data.nombre}</strong></a></td>
+              <td data-label={M.lab[0]} lang={lang !== "es" && c.data.pernoctaVia ? "es" : undefined}>{c.data.pernoctaVia ?? M.ver}</td>
+              <td data-label={M.lab[1]} lang={lang !== "es" && c.data.estanciaAreas ? "es" : undefined}>{c.data.estanciaAreas ?? "—"}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    {lang === "es" && <p class="meta">Los límites de estancia se refieren a las áreas de autocaravanas reguladas por cada comunidad. Las áreas municipales pueden fijar los suyos.</p>}
+    {lang === "en" && <p class="meta">The stay limits refer to the motorhome areas regulated by each region. Municipal areas may set their own. The text in the table comes from the Spanish pages of each region, which are not translated yet.</p>}
+    {lang === "fr" && <p class="meta">Les limites de séjour concernent les aires de camping-cars réglementées par chaque communauté. Les aires municipales peuvent fixer les leurs. Le texte du tableau provient des fiches espagnoles de chaque communauté, qui ne sont pas encore traduites.</p>}
+
+    {lang === "es" && (
+      <>
+        <h2>Los ayuntamientos: donde se decide de verdad</h2>
+        <p>La mayoría de las multas vienen de ordenanzas municipales, no de la norma autonómica (tienes las cuantías en <a href="/multas-acampar-camper/">multas por acampar con camper</a>). Estos son los municipios que ya hemos verificado, agrupados por lo que permiten:</p>
+      </>
+    )}
+    {lang === "en" && (
+      <>
+        <h2>Town councils: where it is really decided</h2>
+        <p>Most fines come from municipal ordinances, not from the regional rule (the amounts are in <a href={L(lang, "/multas-acampar-camper/")}>fines for camping with a camper</a>). These are the municipalities we have already verified, grouped by what they allow. Their pages are in Spanish for now.</p>
+      </>
+    )}
+    {lang === "fr" && (
+      <>
+        <h2>Les communes : là où tout se décide vraiment</h2>
+        <p>La plupart des amendes viennent des ordenanzas municipales (règlements municipaux), pas de la règle de la communauté (vous trouverez les montants dans <a href={L(lang, "/multas-acampar-camper/")}>amendes pour camping en camping-car</a>). Voici les communes que nous avons déjà vérifiées, regroupées selon ce qu'elles autorisent. Leurs fiches sont pour l'instant en espagnol.</p>
+      </>
+    )}
+    {porEstado.map((g) => (
+      <>
+        <h3><span class={`badge ${g.tone}`}>{g.label}</span></h3>
+        <ul>
+          {g.items.map((m) => (
+            <li><a href={`/pernocta/${m.data.comunidad}/${m.id.split("/").pop()}/`}>{m.data.nombre}</a> <span class="meta">· {nombreCom[m.data.comunidad]}</span></li>
+          ))}
+        </ul>
+      </>
+    ))}
+
+    {lang === "es" && (
+      <>
+        <h2>Playas y espacios naturales</h2>
+        <p>Las playas, el dominio público costero, los parques naturales y la Red Natura 2000 tienen sus propias normas, casi siempre más estrictas. Varias ordenanzas que hemos revisado prohíben pernoctar o estacionar autocaravanas en los aparcamientos de playa, como <a href="/pernocta/cantabria/comillas/">Comillas</a> todo el año o <a href="/pernocta/cantabria/san-vicente-de-la-barquera/">San Vicente de la Barquera</a> en temporada de baño. Si ves una señal, manda la señal. Lo explicamos a fondo en <a href="/pernoctar-playa-camper/">camper y playa</a> y en <a href="/camper-parques-naturales/">camper en parques naturales</a>.</p>
+
+        <h2>ITV: autocaravana o furgón vivienda no es lo mismo</h2>
+        <p>La misma instrucción de la DGT recuerda que los plazos de ITV dependen del tipo de vehículo:</p>
+        <ul>
+          <li><strong>Autocaravanas (categoría M)</strong>: exentas hasta los 4 años, después cada dos años y, a partir de los 10, cada año.</li>
+          <li><strong>Furgones vivienda o camperizados (categoría N)</strong>: cada año hasta los 10 años y, después, cada seis meses.</li>
+        </ul>
+        <p>También incorpora la nueva señal <strong>S-128</strong>, «Punto de vaciado de caravanas y autocaravanas».</p>
+
+        <h2>Antes de dormir: lista rápida</h2>
+        <ol>
+          <li>Busca el municipio en <a href="/puedo-dormir-aqui/">¿Puedo dormir aquí?</a>.</li>
+          <li>Respeta la señalización: prevalece sobre cualquier guía, incluida esta.</li>
+          <li>Aparca dentro de la plaza, solo sobre las ruedas (y en Cataluña, sin cuñas).</li>
+          <li>No saques nada fuera y no viertas aguas: usa los puntos de vaciado.</li>
+          <li>Si estás en playa, parque natural o zona protegida, busca un área o un camping.</li>
+        </ol>
+      </>
+    )}
+    {lang === "en" && (
+      <>
+        <h2>Beaches and natural areas</h2>
+        <p>Beaches, the coastal public domain, natural parks and the Natura 2000 network have their own rules, almost always stricter. Several ordinances we have reviewed ban overnight stays or parking motorhomes in beach car parks, such as <a href="/pernocta/cantabria/comillas/">Comillas</a> all year round or <a href="/pernocta/cantabria/san-vicente-de-la-barquera/">San Vicente de la Barquera</a> in the bathing season. If you see a sign, the sign prevails. We explain this in depth in <a href={L(lang, "/pernoctar-playa-camper/")}>campers and beaches</a> and in <a href={L(lang, "/camper-parques-naturales/")}>campers in natural parks</a>.</p>
+
+        <h2>ITV: a motorhome and a camper van are not the same</h2>
+        <p>The same DGT instruction reminds us that the ITV (roadworthiness test) deadlines depend on the type of vehicle:</p>
+        <ul>
+          <li><strong>Motorhomes (category M)</strong>: exempt up to 4 years, then every two years and, from 10 years, every year.</li>
+          <li><strong>Camper vans or converted vans (category N)</strong>: every year up to 10 years and, after that, every six months.</li>
+        </ul>
+        <p>It also introduces the new sign <strong>S-128</strong>, «Punto de vaciado de caravanas y autocaravanas» (emptying point for caravans and motorhomes).</p>
+
+        <h2>Before you sleep: quick checklist</h2>
+        <ol>
+          <li>Look up the municipality in <a href={L(lang, "/puedo-dormir-aqui/")}>Can I sleep here?</a> (in Spanish).</li>
+          <li>Respect the signs: they prevail over any guide, this one included.</li>
+          <li>Park inside the space, resting only on the wheels (and in Catalonia, without wedges).</li>
+          <li>Put nothing out and do not dump water: use the emptying points.</li>
+          <li>If you are on a beach, in a natural park or in a protected area, look for an area or a campsite.</li>
+        </ol>
+      </>
+    )}
+    {lang === "fr" && (
+      <>
+        <h2>Plages et espaces naturels</h2>
+        <p>Les plages, le domaine public maritime, les parcs naturels et le réseau Natura 2000 ont leurs propres règles, presque toujours plus strictes. Plusieurs ordenanzas (règlements municipaux) que nous avons consultées interdisent la nuitée ou le stationnement des camping-cars sur les parkings de plage, comme <a href="/pernocta/cantabria/comillas/">Comillas</a> toute l'année ou <a href="/pernocta/cantabria/san-vicente-de-la-barquera/">San Vicente de la Barquera</a> en saison balnéaire. Si vous voyez un panneau, le panneau prime. Nous l'expliquons en détail dans <a href={L(lang, "/pernoctar-playa-camper/")}>camping-car et plage</a> et dans <a href={L(lang, "/camper-parques-naturales/")}>camping-car dans les parcs naturels</a>.</p>
+
+        <h2>ITV : camping-car et fourgon aménagé, ce n'est pas la même chose</h2>
+        <p>La même instruction de la DGT rappelle que les délais de l'ITV (contrôle technique) dépendent du type de véhicule :</p>
+        <ul>
+          <li><strong>Camping-cars (catégorie M)</strong> : exemptés jusqu'à 4 ans, puis tous les deux ans et, à partir de 10 ans, chaque année.</li>
+          <li><strong>Fourgons aménagés ou « campérisés » (catégorie N)</strong> : chaque année jusqu'à 10 ans, puis tous les six mois.</li>
+        </ul>
+        <p>Elle introduit aussi le nouveau panneau <strong>S-128</strong>, «Punto de vaciado de caravanas y autocaravanas» (point de vidange pour caravanes et camping-cars).</p>
+
+        <h2>Avant de dormir : liste rapide</h2>
+        <ol>
+          <li>Cherchez la commune dans <a href={L(lang, "/puedo-dormir-aqui/")}>Puis-je dormir ici ?</a> (en espagnol).</li>
+          <li>Respectez la signalisation : elle prime sur n'importe quel guide, y compris celui-ci.</li>
+          <li>Stationnez à l'intérieur de la place, en appui uniquement sur les roues (et en Catalogne, sans cales).</li>
+          <li>Ne sortez rien et ne déversez pas d'eaux : utilisez les points de vidange.</li>
+          <li>Si vous êtes sur une plage, dans un parc naturel ou dans une zone protégée, cherchez une aire ou un camping.</li>
+        </ol>
+      </>
+    )}
+
+    <h2>{lang === "es" ? "Fuentes" : T.ui.fuentes}</h2>
+    <ul class="sources">
+      <li><a href="https://www.dgt.es/export/sites/web-DGT/.galleries/downloads/nota_prensa/2026/20260316-nota-de-prensa.pdf" rel="nofollow noopener" target="_blank">{M.dgtFuente}</a> <span class="meta">· {lang === "es" ? "fuente oficial" : T.ui.fuenteOficial}</span></li>
+      {comunidades.flatMap((c) => c.data.fuentes.filter((f) => f.tipo === "oficial")).map((f) => (
+        <li><a href={f.url} rel="nofollow noopener" target="_blank" lang={aviso ? "es" : undefined}>{f.titulo}</a> <span class="meta">· {lang === "es" ? "fuente oficial" : T.ui.fuenteOficial}</span></li>
+      ))}
+    </ul>
+    {lang === "es" && <p class="meta">Esta guía es informativa y no constituye asesoramiento jurídico. Las normas cambian: cada ficha indica su fecha de revisión.</p>}
+    {lang === "en" && <p class="meta">This guide is for information only and is not legal advice. Rules change: each page shows its review date.</p>}
+    {lang === "fr" && <p class="meta">Ce guide est informatif et ne constitue pas un conseil juridique. La réglementation évolue : chaque fiche indique sa date de révision.</p>}
+  </article>
+</Base>

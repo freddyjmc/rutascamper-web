@@ -1,0 +1,355 @@
+---
+import Base from "../layouts/Base.astro";
+import { areasTodas } from "../lib/areas";
+
+// Índice de áreas con coordenadas de todos los países (mismo id que el mapa; Francia lleva el prefijo `fr-`).
+// Se pasa en línea: la página no hace ninguna petición.
+const areas = (await areasTodas()).map(({ id, nombre, municipio, comunidad, url, lat, lon, aproximada, soloServicios, sinConfirmar }) => ({ id, nombre, municipio, comunidad, url, lat, lon, aproximada, soloServicios, sinConfirmar }));
+const indiceJson = JSON.stringify(areas).replace(/</g, "\\u003c");
+---
+<Base
+  title="Mi ruta"
+  description="Ordena las paradas de tu próxima escapada en camper, mira las distancias en línea recta y ábrela en tu aplicación de mapas. Todo se guarda solo en tu navegador."
+  noindex
+  crumbs={[{ name: "Mi ruta", href: "/mi-ruta/" }]}
+>
+  <p class="eyebrow">Tu próxima escapada</p>
+  <h1>Mi ruta</h1>
+  <p class="lead">Ordena las áreas que te interesan y ábrelas en tu aplicación de mapas. La ruta se guarda solo en este navegador, solo cuando tú pulsas «Añadir a mi ruta»: no hay cuentas y no sale de tu dispositivo.</p>
+
+  <noscript>
+    <p class="notice">«Mi ruta» necesita JavaScript para guardar y ordenar las paradas en tu navegador. Mientras tanto puedes <a href="/mapa-areas-autocaravanas/">explorar el mapa de áreas</a> o consultar las <a href="/pernocta/">fichas por comunidad</a>.</p>
+  </noscript>
+
+  <div class="ruta-app" id="ruta-app" hidden>
+    <div class="notice ruta-banner" id="ruta-compartida" hidden>
+      <p id="rc-texto"></p>
+      <p class="meta" id="rc-reemplaza" hidden></p>
+      <div class="ruta-botones">
+        <button type="button" class="btn" id="rc-guardar" aria-describedby="rc-reemplaza">Guardar esta ruta en mi navegador</button>
+        <a class="btn alt" href="/mi-ruta/" id="rc-propia">Ver mi ruta guardada</a>
+      </div>
+    </div>
+    <p class="notice" id="ruta-descartadas" hidden></p>
+
+    <section class="ruta-vacia" id="ruta-vacia" aria-labelledby="vacia-h" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="18" r="2.2"/><circle cx="18" cy="6" r="2.2"/><path d="M8 18h7a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h7"/></svg>
+      <h2 id="vacia-h" tabindex="-1">Aún no has añadido paradas</h2>
+      <p>En el mapa, pulsa «Añadir a mi ruta» en las áreas que quieras visitar. También puedes hacerlo desde la ficha de cada municipio.</p>
+      <a class="btn" href="/mapa-areas-autocaravanas/">Explorar el mapa</a>
+    </section>
+
+    <div id="ruta-llena" hidden>
+      <h2 id="ruta-h" tabindex="-1">Paradas: <span id="ruta-n"></span></h2>
+      <p class="notice" id="ruta-aviso-serv" hidden></p>
+      <ol class="ruta-lista" id="ruta-lista"></ol>
+      <p class="ruta-total" id="ruta-total"></p>
+      <p class="meta" id="ruta-nota-dist">Las distancias son <strong>en línea recta, orientativas</strong>: no son el recorrido por carretera, que suele ser mayor.</p>
+
+      <section class="ruta-bloque no-print" aria-labelledby="h-abrir">
+        <h2 id="h-abrir">Abrir la ruta en tu aplicación de mapas</h2>
+        <p class="notice">La ruta del navegador puede no ser apta para tu vehículo: comprueba gálibos, pesos y la señalización. Que un área esté en tu ruta no garantiza que esté abierta ni que haya plaza; las normas cambian: revisa la ficha y la señalización.</p>
+        <ul class="ruta-enlaces" id="ruta-mapas"></ul>
+        <p class="meta" id="ruta-mapas-nota"></p>
+        <p class="meta">Al abrir uno de estos enlaces pasas a Google, Apple u OpenStreetMap, que reciben las coordenadas de las paradas y los datos habituales de conexión (como tu IP) y aplican su propia política de privacidad. Mientras no abras ninguno, no se les envía nada.</p>
+      </section>
+
+      <section class="ruta-bloque no-print" aria-labelledby="h-compartir">
+        <h2 id="h-compartir">Compartir esta ruta</h2>
+        <p>El enlace solo contiene los identificadores de las áreas, nada personal. Quien lo abra verá la ruta y podrá decidir si la guarda en su navegador.</p>
+        <label class="ruta-label" for="ruta-enlace">Enlace de la ruta</label>
+        <input class="ruta-input" id="ruta-enlace" type="text" readonly />
+        <div class="ruta-botones">
+          <button type="button" class="btn alt" id="ruta-copiar">Copiar enlace de la ruta</button>
+          <button type="button" class="btn alt" id="ruta-imprimir">Imprimir</button>
+        </div>
+      </section>
+
+      <section class="ruta-bloque no-print" aria-labelledby="h-borrar" id="ruta-borrar-bloque">
+        <h2 id="h-borrar">Empezar de nuevo</h2>
+        <button type="button" class="btn alt" id="ruta-vaciar">Vaciar mi ruta</button>
+        <div class="confirm" id="vaciar-confirm" role="group" aria-labelledby="vaciar-q" hidden>
+          <p id="vaciar-q"><strong>¿Vaciar tu ruta?</strong> Se quitarán todas las paradas de este navegador.</p>
+          <div class="ruta-botones">
+            <button type="button" class="btn" id="vaciar-si">Sí, vaciar</button>
+            <button type="button" class="btn alt" id="vaciar-no">Cancelar</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <p class="print-only" id="print-url"></p>
+  <p class="sr-only" id="ruta-aviso" role="status" aria-live="polite"></p>
+  <p class="meta ruta-pie"><a href="/mis-guardados/">Mis guardados y pasaporte viajero</a></p>
+
+  <script type="application/json" id="areas-index" set:html={indiceJson} />
+</Base>
+
+<script>
+  import { getRuta, setRuta, idValido, haversine, km, paradas, alCambiarRuta } from "../scripts/rc";
+
+  type Area = {
+    id: string; nombre: string; municipio: string; comunidad: string; url: string;
+    lat: number; lon: number; aproximada: boolean; soloServicios: boolean; sinConfirmar: boolean;
+  };
+  const indice = new Map<string, Area>(
+    (JSON.parse(document.getElementById("areas-index")?.textContent || "[]") as Area[]).map((a) => [a.id, a]),
+  );
+  const $ = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T;
+  const app = $("ruta-app");
+
+  // Ruta compartida (?p=id1,id2,…): se muestra tal cual y NO se guarda hasta que la persona lo pida.
+  const p = new URLSearchParams(location.search).get("p");
+  let compartida: string[] = [];
+  let ignoradas = 0;
+  if (p !== null) {
+    const pedidas = [...new Set(p.split(",").map((s) => s.trim()).filter(Boolean))].slice(0, 60);
+    compartida = pedidas.filter((id) => idValido(id) && indice.has(id));
+    ignoradas = pedidas.length - compartida.length;
+  }
+  let modo: "propia" | "compartida" = compartida.length ? "compartida" : "propia";
+
+  const aviso = (t: string) => {
+    const el = $("ruta-aviso");
+    el.textContent = "";
+    requestAnimationFrame(() => { el.textContent = t; });
+  };
+  const el = (tag: string, cls?: string, texto?: string) => {
+    const e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (texto !== undefined) e.textContent = texto;
+    return e;
+  };
+  const enlaceExt = (href: string, texto: string) => {
+    const a = el("a", "", texto) as HTMLAnchorElement;
+    a.href = href;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    a.append(el("span", "", " ↗"));
+    a.append(el("span", "sr-only", " (se abre en una pestaña nueva)"));
+    return a;
+  };
+  const ids = (): string[] => (modo === "compartida" ? compartida : getRuta().filter((id) => indice.has(id)));
+  const pos = (a: Area) => `${a.lat},${a.lon}`;
+
+  let foco: string | null = null; // selector del elemento que recibirá el foco tras pintar
+
+  function pintaMapas(lista: Area[]) {
+    const ul = $("ruta-mapas");
+    const nota = $("ruta-mapas-nota");
+    ul.replaceChildren();
+    nota.textContent = "";
+    if (!lista.length) return;
+    const primera = lista[0], ultima = lista[lista.length - 1];
+    const li = (...hijos: (Node | string)[]) => { const l = el("li"); l.append(...hijos); ul.append(l); return l; };
+    const notas: string[] = [];
+
+    // Google Maps: origen = primera, destino = última, intermedias en waypoints (máximo 9).
+    let g = "https://www.google.com/maps/dir/?api=1";
+    if (lista.length === 1) {
+      g += `&destination=${encodeURIComponent(pos(primera))}`;
+    } else {
+      const inter = lista.slice(1, -1);
+      const usadas = inter.slice(0, 9);
+      g += `&origin=${encodeURIComponent(pos(primera))}&destination=${encodeURIComponent(pos(ultima))}`;
+      if (usadas.length) g += `&waypoints=${encodeURIComponent(usadas.map(pos).join("|"))}`;
+      if (inter.length > 9) {
+        notas.push(`Google Maps admite 9 paradas intermedias como máximo. El enlace incluye la primera, las 9 primeras intermedias y la última; quedan fuera: ${inter.slice(9).map((a) => a.nombre).join(", ")}.`);
+      }
+    }
+    li(enlaceExt(g, "Google Maps"));
+
+    // Apple Maps: usamos solo un destino (la primera parada); no cargamos la ruta completa.
+    li(enlaceExt(`https://maps.apple.com/?daddr=${encodeURIComponent(pos(primera))}`, "Apple Maps: ir a la primera parada"));
+    if (lista.length > 1) notas.push("Apple Maps: el enlace abre solo la primera parada como destino; las demás no se cargan.");
+
+    // OpenStreetMap: un enlace por tramo.
+    if (lista.length === 1) {
+      li(enlaceExt(`https://www.openstreetmap.org/directions?to=${encodeURIComponent(pos(primera))}`, "OpenStreetMap: cómo llegar"));
+    } else {
+      for (let i = 0; i < lista.length - 1; i++) {
+        const a = lista[i], b = lista[i + 1];
+        li(enlaceExt(`https://www.openstreetmap.org/directions?from=${encodeURIComponent(pos(a))}&to=${encodeURIComponent(pos(b))}`, `OpenStreetMap, tramo ${i + 1}: ${a.nombre} → ${b.nombre}`));
+      }
+    }
+    if (lista.some((a) => a.aproximada)) notas.push("Alguna parada tiene ubicación aproximada: el navegador te llevará a un punto cercano. Sigue la señalización al llegar.");
+    nota.textContent = notas.join(" ");
+  }
+
+  function pintaParadas() {
+    const lista = ids().map((id) => indice.get(id)!);
+    const nServ = lista.filter((a) => a.soloServicios).length;
+    const avisoServ = $("ruta-aviso-serv");
+    avisoServ.hidden = nServ === 0;
+    avisoServ.textContent = nServ === 0 ? "" : `${nServ === 1 ? "Una de tus paradas es un punto" : `${nServ} de tus paradas son puntos`} de vaciado y agua, no ${nServ === 1 ? "un área" : "áreas"} para pasar la noche: mira la ficha del municipio antes de decidir dónde dormir.`;
+    const ol = $("ruta-lista");
+    ol.replaceChildren();
+    const editable = modo === "propia";
+
+    lista.forEach((a, i) => {
+      const li = el("li", "parada");
+      li.dataset.id = a.id;
+      if (i > 0) {
+        const d = haversine(lista[i - 1], a);
+        li.append(el("p", "tramo", `Desde la parada anterior: unos ${km(d)} en línea recta (orientativa).`));
+      }
+      li.append(el("span", "parada-n"));
+      const cuerpo = el("div", "parada-cuerpo");
+      cuerpo.append(el("strong", "parada-nombre", a.nombre));
+      cuerpo.append(el("span", "meta", `${a.municipio} · ${a.comunidad}`));
+      const marcas = el("p", "parada-marcas");
+      if (a.soloServicios) marcas.append(el("span", "badge warn", "Solo vaciado y agua"));
+      else if (a.sinConfirmar) marcas.append(el("span", "badge idle", "Estacionamiento para autocaravanas (la fuente no dice si se puede pasar la noche)"));
+      if (a.aproximada) marcas.append(el("span", "badge idle", "Ubicación aproximada"));
+      if (marcas.childNodes.length) cuerpo.append(marcas);
+      const fi = el("p", "parada-ficha");
+      const f = el("a", "", "Ficha del municipio") as HTMLAnchorElement;
+      f.href = a.url;
+      fi.append(f);
+      cuerpo.append(fi);
+      if (editable) {
+        const acc = el("div", "parada-acc");
+        const mk = (act: string, texto: string, off = false) => {
+          const b = el("button", "act act-sm", texto) as HTMLButtonElement;
+          b.type = "button";
+          b.dataset.act = act;
+          b.disabled = off;
+          b.setAttribute("aria-label", `${texto} «${a.nombre}»`);
+          b.addEventListener("click", () => (act === "quitar" ? quitar(a.id) : mover(a.id, act === "subir" ? -1 : 1)));
+          acc.append(b);
+        };
+        mk("subir", "Subir", i === 0);
+        mk("bajar", "Bajar", i === lista.length - 1);
+        mk("quitar", "Quitar");
+        cuerpo.append(acc);
+      }
+      li.append(cuerpo);
+      ol.append(li);
+    });
+
+    $("ruta-n").textContent = paradas(lista.length);
+    let total = 0;
+    for (let i = 1; i < lista.length; i++) total += haversine(lista[i - 1], lista[i]);
+    $("ruta-total").textContent = lista.length > 1
+      ? `Total: unos ${km(total)} en línea recta entre ${lista.length} paradas (orientativo; no es el recorrido por carretera).`
+      : "";
+    $("ruta-nota-dist").hidden = lista.length < 2;
+    pintaMapas(lista);
+
+    const enlace = lista.length ? `${location.origin}/mi-ruta/?p=${lista.map((a) => a.id).join(",")}` : "";
+    ($("ruta-enlace") as HTMLInputElement).value = enlace;
+    $("print-url").textContent = enlace ? `Ruta en línea: ${enlace}` : "";
+  }
+
+  function render() {
+    const lista = ids();
+    const hay = lista.length > 0;
+    app.hidden = false;
+    $("ruta-vacia").hidden = hay;
+    $("ruta-llena").hidden = !hay;
+    $("ruta-borrar-bloque").hidden = modo !== "propia";
+    $("ruta-compartida").hidden = modo !== "compartida";
+    const desc = $("ruta-descartadas");
+    if (modo === "compartida" && ignoradas) {
+      desc.hidden = false;
+      desc.textContent = ignoradas === 1
+        ? "Una parada del enlace no es válida o ya no existe, y no se muestra."
+        : `${ignoradas} paradas del enlace no son válidas o ya no existen, y no se muestran.`;
+    } else if (modo === "propia" && p !== null && compartida.length === 0) {
+      desc.hidden = false;
+      desc.textContent = "El enlace de ruta compartida no contenía paradas válidas. Te mostramos tu ruta guardada.";
+    } else {
+      desc.hidden = true;
+    }
+    if (modo === "compartida") {
+      $("rc-texto").textContent = `Estás viendo una ruta compartida con ${paradas(compartida.length)}. Todavía no está guardada en tu navegador.`;
+      const propia = getRuta().filter((id) => indice.has(id));
+      const r = $("rc-reemplaza");
+      r.hidden = propia.length === 0;
+      r.textContent = propia.length ? `Ya tienes una ruta guardada con ${paradas(propia.length)}: si guardas esta, la reemplazará.` : "";
+      $("rc-propia").hidden = propia.length === 0;
+    }
+    if (hay) pintaParadas();
+    else { $("print-url").textContent = ""; }
+    if (foco) {
+      const f = document.querySelector<HTMLElement>(foco);
+      foco = null;
+      f?.focus();
+    }
+  }
+
+  function mover(id: string, d: number) {
+    const l = ids();
+    const i = l.indexOf(id);
+    const j = i + d;
+    if (i < 0 || j < 0 || j >= l.length) return;
+    [l[i], l[j]] = [l[j], l[i]];
+    const nombre = indice.get(id)!.nombre;
+    if (!setRuta(l)) { aviso("No se ha podido guardar: tu navegador bloquea el almacenamiento local"); return; }
+    // El foco se queda en el mismo botón del elemento movido; si ya no puede usarse (primero/último), pasa al contrario.
+    const act = d < 0 ? "subir" : "bajar";
+    const otro = d < 0 ? "bajar" : "subir";
+    const quedaAct = d < 0 ? j > 0 : j < l.length - 1;
+    foco = `[data-id="${id}"] [data-act="${quedaAct ? act : otro}"]`;
+    render();
+    aviso(`${nombre}: ahora es la parada ${j + 1} de ${l.length}`);
+  }
+
+  function quitar(id: string) {
+    const l = ids();
+    const i = l.indexOf(id);
+    if (i < 0) return;
+    const nombre = indice.get(id)!.nombre;
+    const nueva = l.filter((x) => x !== id);
+    if (!setRuta(nueva)) { aviso("No se ha podido guardar: tu navegador bloquea el almacenamiento local"); return; }
+    const vecino = nueva[Math.min(i, nueva.length - 1)];
+    foco = nueva.length ? `[data-id="${vecino}"] [data-act="quitar"]` : "#vacia-h";
+    render();
+    aviso(`${nombre} quitada de tu ruta. ${nueva.length ? `Quedan ${paradas(nueva.length)}.` : "Tu ruta está vacía."}`);
+  }
+
+  // Guardar la ruta compartida: acción explícita, avisando de que reemplaza la anterior.
+  $("rc-guardar").addEventListener("click", () => {
+    if (!setRuta(compartida)) { aviso("No se ha podido guardar: tu navegador bloquea el almacenamiento local"); return; }
+    modo = "propia";
+    try { history.replaceState(null, "", "/mi-ruta/"); } catch { /* sin historial */ }
+    foco = "#ruta-h";
+    render();
+    aviso(`Ruta guardada en este navegador (${paradas(compartida.length)}).`);
+  });
+
+  // Copiar / compartir enlace.
+  $("ruta-copiar").addEventListener("click", async () => {
+    const enlace = ($("ruta-enlace") as HTMLInputElement).value;
+    if (!enlace) return;
+    if (navigator.share) {
+      try { await navigator.share({ title: document.title, url: enlace }); return; }
+      catch (e) { if ((e as DOMException).name === "AbortError") return; }
+    }
+    try { await navigator.clipboard.writeText(enlace); aviso("Enlace de la ruta copiado"); }
+    catch {
+      ($("ruta-enlace") as HTMLInputElement).select();
+      aviso("No se ha podido copiar automáticamente: el enlace está seleccionado, cópialo a mano");
+    }
+  });
+  $("ruta-enlace").addEventListener("focus", (e) => (e.target as HTMLInputElement).select());
+  $("ruta-imprimir").addEventListener("click", () => window.print());
+
+  // Vaciar con confirmación.
+  const conf = $("vaciar-confirm");
+  const vaciar = $("ruta-vaciar");
+  vaciar.addEventListener("click", () => { conf.hidden = false; vaciar.hidden = true; $("vaciar-no").focus(); });
+  $("vaciar-no").addEventListener("click", () => { conf.hidden = true; vaciar.hidden = false; vaciar.focus(); });
+  $("vaciar-si").addEventListener("click", () => {
+    conf.hidden = true;
+    vaciar.hidden = false;
+    if (!setRuta([])) { aviso("No se ha podido vaciar: tu navegador bloquea el almacenamiento local"); return; }
+    foco = "#vacia-h";
+    render();
+    aviso("Tu ruta está vacía");
+  });
+
+  render();
+  alCambiarRuta(() => { if (!foco) render(); });
+</script>

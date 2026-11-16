@@ -1,0 +1,162 @@
+---
+import Base from "../layouts/Base.astro";
+import AvisoTraduccion from "../components/AvisoTraduccion.astro";
+import { SITE, fecha } from "../site";
+import { t, href as L, localePath, META, type Lang } from "../i18n";
+
+interface Props { lang?: Lang }
+const { lang = "es" } = Astro.props;
+const T = t(lang);
+const loc = META[lang].fecha;
+const M = {
+  es: {
+    title: "Dormir en camper junto a la playa: Ley de Costas y ordenanzas",
+    description: "¿Se puede pernoctar con camper o autocaravana en una playa o en su aparcamiento? Qué dice la Ley de Costas y qué prohíben los ayuntamientos de la costa, con fuentes oficiales.",
+    crumb: "Camper y playa",
+  },
+  en: {
+    title: "Sleeping in a camper by the beach: Ley de Costas and ordinances",
+    description: "Can you stay overnight in a camper or motorhome on a beach or in its car park? What the Ley de Costas says and what coastal town councils ban, with official sources.",
+    crumb: "Campers and beaches",
+  },
+  fr: {
+    title: "Dormir en camping-car près de la plage : Ley de Costas",
+    description: "Peut-on passer la nuit en camping-car sur une plage ou sur son parking ? Ce que dit la Ley de Costas et ce que les communes du littoral interdisent, avec des sources officielles.",
+    crumb: "Camping-car et plage",
+  },
+}[lang];
+const revisado = new Date("2026-11-01");
+const title = M.title;
+const description = M.description;
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: title,
+  description,
+  inLanguage: lang,
+  dateModified: revisado.toISOString(),
+  publisher: { "@type": "Organization", name: SITE.name, url: SITE.url },
+};
+const es = lang === "es";
+---
+<Base title={title} description={description} schema={schema} crumbs={[{ name: M.crumb, href: localePath(lang, "/pernoctar-playa-camper/") }]} lang={lang}>
+  <article class="prose">
+    {lang === "es" && (
+      <>
+        <h1>Camper y playa: dónde se puede dormir junto al mar</h1>
+        <p class="lead">Las playas son donde más multas se ponen a campers y autocaravanas. Hay tres capas de normas: la Ley de Costas, que prohíbe aparcar y acampar en la propia playa; las ordenanzas municipales, que suelen restringir los aparcamientos de playa; y la señalización de cada lugar.</p>
+      </>
+    )}
+    {lang === "en" && (
+      <>
+        <h1>Campers and beaches: where you can sleep by the sea</h1>
+        <p class="lead">Beaches are where most fines are given to campers and motorhomes. There are three layers of rules: the Ley de Costas (Spain's Coastal Law), which bans parking and camping on the beach itself; municipal ordinances, which often restrict beach car parks; and the signs at each place.</p>
+      </>
+    )}
+    {lang === "fr" && (
+      <>
+        <h1>Camping-car et plage : où l'on peut dormir au bord de la mer</h1>
+        <p class="lead">Les plages sont l'endroit où l'on verbalise le plus les camping-cars. Il y a trois niveaux de règles : la Ley de Costas (la loi espagnole sur le littoral), qui interdit de stationner et de camper sur la plage elle-même ; les ordenanzas municipales (règlements municipaux), qui restreignent souvent les parkings de plage ; et la signalisation de chaque lieu.</p>
+      </>
+    )}
+    <p class="meta">{T.ui.ultimaRevision}: {fecha(revisado, loc)} · <a href={L(lang, "/metodo/")}>{es ? "Cómo verificamos" : T.ui.metodo}</a></p>
+    <AvisoTraduccion lang={lang} />
+
+    {lang === "es" && (
+      <>
+        <h2>Qué dice la Ley de Costas</h2>
+        <p>La Ley 22/1988, de Costas, regula el uso de las playas. Su artículo 33.5 es claro: en las playas <strong>quedan prohibidos el estacionamiento y la circulación no autorizada de vehículos, así como los campamentos y acampadas</strong>.</p>
+        <p>Esto se refiere a la playa en sí, dentro del dominio público marítimo-terrestre. La ley establece además una zona de servidumbre de protección de 100 metros tierra adentro desde el límite de la ribera del mar (art. 23), que la Administración puede ampliar.</p>
+        <p>Los aparcamientos situados junto a las playas dependen normalmente de cada ayuntamiento, y ahí es donde entran las ordenanzas.</p>
+
+        <h2>Lo que hacen los ayuntamientos: ejemplos</h2>
+        <ul>
+          <li><a href="/pernocta/cantabria/comillas/">Comillas</a>: prohibido acampar y pernoctar en el aparcamiento de la playa todo el año, también en autocaravana. Multa de 91 a 300 €.</li>
+          <li><a href="/pernocta/cantabria/san-vicente-de-la-barquera/">San Vicente de la Barquera</a>: en temporada de baño no se pueden estacionar autocaravanas en los aparcamientos de acceso a las playas; además, prohibidos los vehículos de más de 1.600 kg en el Tostadero y La Barra.</li>
+          <li><a href="/pernocta/galicia/boiro/">Boiro</a>: el ejemplo contrario. Tiene zonas reservadas para autocaravanas en las playas de Barraña y Mañóns, con un máximo de 48 horas seguidas y 72 por semana.</li>
+          <li><a href="/pernocta/cataluna/llanca/">Llançà</a>: permite aparcar en la calle pero no pernoctar; solo se puede dormir en las zonas reservadas y en el área municipal.</li>
+          <li><a href="/pernocta/pais-vasco/donostia-san-sebastian/">Donostia</a>: según la prensa, prohíbe aparcar de noche en varios paseos de la costa a vehículos sin distintivo de residente. Duerme en sus áreas de Berio o Illunbe.</li>
+          <li><a href="/pernocta/asturias/valdes-luarca/">Valdés (Luarca)</a>: según la prensa regional, ha instalado barreras de altura en la playa de Cadavedo. Su área de Luarca permite estar hasta 72 horas.</li>
+        </ul>
+
+        <h2>Antes de aparcar junto al mar</h2>
+        <ol>
+          <li>Nunca aparques ni duermas en la arena ni en el propio arenal: lo prohíbe la Ley de Costas.</li>
+          <li>Mira las señales del aparcamiento: muchas prohíben la pernocta o limitan el horario.</li>
+          <li>Comprueba la temporada de baño: algunas prohibiciones solo se aplican en verano.</li>
+          <li>Si la playa está en un espacio natural protegido, aplica sus normas: lee la <a href="/camper-parques-naturales/">guía de parques naturales</a>.</li>
+          <li>Busca el área de autocaravanas más cercana en <a href="/puedo-dormir-aqui/">¿Puedo dormir aquí?</a>.</li>
+        </ol>
+      </>
+    )}
+    {lang === "en" && (
+      <>
+        <h2>What the Ley de Costas says</h2>
+        <p>Ley 22/1988, de Costas, regulates the use of beaches. Its article 33.5 is clear: on beaches <strong>parking and unauthorised driving of vehicles are banned, as are camps and camping</strong>.</p>
+        <p>This refers to the beach itself, within the maritime-terrestrial public domain. The law also sets a protection easement zone of 100 metres inland from the edge of the shore (art. 23), which the authorities can extend.</p>
+        <p>Car parks next to beaches normally depend on each town council, and that is where ordinances come in.</p>
+
+        <h2>What town councils do: examples</h2>
+        <p class="meta">The pages of these municipalities are in Spanish for now.</p>
+        <ul>
+          <li><a href="/pernocta/cantabria/comillas/">Comillas</a>: camping and overnight stays are banned in the beach car park all year round, motorhomes included. Fine of €91 to €300.</li>
+          <li><a href="/pernocta/cantabria/san-vicente-de-la-barquera/">San Vicente de la Barquera</a>: in the bathing season motorhomes cannot park in the car parks giving access to the beaches; in addition, vehicles over 1,600 kg are banned at El Tostadero and La Barra.</li>
+          <li><a href="/pernocta/galicia/boiro/">Boiro</a>: the opposite example. It has areas reserved for motorhomes on the beaches of Barraña and Mañóns, with a maximum of 48 hours in a row and 72 per week.</li>
+          <li><a href="/pernocta/cataluna/llanca/">Llançà</a>: it allows parking on the street but not staying overnight; you can only sleep in the reserved zones and in the municipal area.</li>
+          <li><a href="/pernocta/pais-vasco/donostia-san-sebastian/">Donostia</a>: according to the press, it bans night parking on several coastal promenades for vehicles without a resident sticker. Sleep in its areas at Berio or Illunbe.</li>
+          <li><a href="/pernocta/asturias/valdes-luarca/">Valdés (Luarca)</a>: according to the regional press, it has installed height barriers at Cadavedo beach. Its area in Luarca allows stays of up to 72 hours.</li>
+        </ul>
+
+        <h2>Before you park by the sea</h2>
+        <ol>
+          <li>Never park or sleep on the sand or on the beach itself: the Ley de Costas bans it.</li>
+          <li>Read the signs at the car park: many ban overnight stays or limit the hours.</li>
+          <li>Check the bathing season: some bans only apply in summer.</li>
+          <li>If the beach is in a protected natural area, its rules apply: read the <a href={L(lang, "/camper-parques-naturales/")}>guide to natural parks</a>.</li>
+          <li>Find the nearest motorhome area in <a href={L(lang, "/puedo-dormir-aqui/")}>Can I sleep here?</a> (in Spanish).</li>
+        </ol>
+      </>
+    )}
+    {lang === "fr" && (
+      <>
+        <h2>Ce que dit la Ley de Costas</h2>
+        <p>La Ley 22/1988, de Costas, réglemente l'usage des plages. Son article 33.5 est clair : sur les plages, <strong>le stationnement et la circulation non autorisée de véhicules sont interdits, de même que les campements et le camping</strong>.</p>
+        <p>Cela concerne la plage elle-même, à l'intérieur du domaine public maritime et terrestre (dominio público marítimo-terrestre). La loi fixe en outre une zone de servitude de protection de 100 mètres vers l'intérieur des terres à partir de la limite du rivage (art. 23), que l'Administration peut étendre.</p>
+        <p>Les parkings situés à côté des plages dépendent normalement de chaque commune, et c'est là qu'interviennent les ordenanzas.</p>
+
+        <h2>Ce que font les communes : exemples</h2>
+        <p class="meta">Les fiches de ces communes sont pour l'instant en espagnol.</p>
+        <ul>
+          <li><a href="/pernocta/cantabria/comillas/">Comillas</a> : interdiction de camper et de passer la nuit sur le parking de la plage toute l'année, y compris en camping-car. Amende de 91 à 300 €.</li>
+          <li><a href="/pernocta/cantabria/san-vicente-de-la-barquera/">San Vicente de la Barquera</a> : en saison balnéaire, les camping-cars ne peuvent pas stationner sur les parkings d'accès aux plages ; de plus, les véhicules de plus de 1 600 kg sont interdits à El Tostadero et La Barra.</li>
+          <li><a href="/pernocta/galicia/boiro/">Boiro</a> : l'exemple inverse. Il y a des zones réservées aux camping-cars sur les plages de Barraña et de Mañóns, avec un maximum de 48 heures consécutives et 72 par semaine.</li>
+          <li><a href="/pernocta/cataluna/llanca/">Llançà</a> : le stationnement dans la rue est autorisé, mais pas la nuitée ; on ne peut dormir que dans les zones réservées et dans l'aire municipale.</li>
+          <li><a href="/pernocta/pais-vasco/donostia-san-sebastian/">Donostia</a> : selon la presse, elle interdit le stationnement de nuit sur plusieurs promenades du front de mer aux véhicules sans vignette de résident. Dormez dans ses aires de Berio ou d'Illunbe.</li>
+          <li><a href="/pernocta/asturias/valdes-luarca/">Valdés (Luarca)</a> : selon la presse régionale, elle a installé des barrières de hauteur sur la plage de Cadavedo. Son aire de Luarca autorise un séjour allant jusqu'à 72 heures.</li>
+        </ul>
+
+        <h2>Avant de vous garer près de la mer</h2>
+        <ol>
+          <li>Ne vous garez ni ne dormez jamais sur le sable ni sur la plage elle-même : la Ley de Costas l'interdit.</li>
+          <li>Lisez les panneaux du parking : beaucoup interdisent la nuitée ou limitent les horaires.</li>
+          <li>Vérifiez la saison balnéaire : certaines interdictions ne s'appliquent qu'en été.</li>
+          <li>Si la plage se trouve dans un espace naturel protégé, ses règles s'appliquent : lisez le <a href={L(lang, "/camper-parques-naturales/")}>guide des parcs naturels</a>.</li>
+          <li>Trouvez l'aire de camping-cars la plus proche dans <a href={L(lang, "/puedo-dormir-aqui/")}>Puis-je dormir ici ?</a> (en espagnol).</li>
+        </ol>
+      </>
+    )}
+
+    <h2>{es ? "Fuentes" : T.ui.fuentes}</h2>
+    <ul class="sources">
+      {lang === "es" && <li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-1988-18762" rel="nofollow noopener" target="_blank">Ley 22/1988, de 28 de julio, de Costas, texto consolidado (BOE-A-1988-18762), arts. 23 y 33.5</a> <span class="meta">· fuente oficial</span></li>}
+      {lang === "en" && <li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-1988-18762" rel="nofollow noopener" target="_blank">Ley 22/1988, de 28 de julio, de Costas, consolidated text (BOE-A-1988-18762), arts. 23 and 33.5</a> <span class="meta">· {T.ui.fuenteOficial}</span></li>}
+      {lang === "fr" && <li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-1988-18762" rel="nofollow noopener" target="_blank">Ley 22/1988, de 28 de julio, de Costas, texte consolidé (BOE-A-1988-18762), art. 23 et 33.5</a> <span class="meta">· {T.ui.fuenteOficial}</span></li>}
+      {lang === "es" && <li>Ordenanzas municipales citadas: consulta las fuentes en cada ficha.</li>}
+      {lang === "en" && <li>Municipal ordinances cited: see the sources on each municipality page.</li>}
+      {lang === "fr" && <li>Ordenanzas municipales citées : consultez les sources sur chaque fiche.</li>}
+    </ul>
+    {lang === "es" && <p class="meta">Esta guía es informativa y no constituye asesoramiento jurídico.</p>}
+    {lang === "en" && <p class="meta">This guide is for information only and is not legal advice.</p>}
+    {lang === "fr" && <p class="meta">Ce guide est informatif et ne constitue pas un conseil juridique.</p>}
+  </article>
+</Base>

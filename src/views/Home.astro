@@ -1,0 +1,185 @@
+---
+import Base from "../layouts/Base.astro";
+import HeroArt from "../components/HeroArt.astro";
+import PaisTarjetas from "../components/PaisTarjetas.astro";
+import AtajosViaje from "../components/AtajosViaje.astro";
+import { SITE } from "../site";
+import { getPaises } from "../lib/paises";
+import { getBuscador } from "../lib/buscador";
+import { t, href as L, paisesEn, type Lang } from "../i18n";
+
+interface Props { lang?: Lang }
+const { lang = "es" } = Astro.props;
+const T = t(lang);
+const paises = paisesEn(await getPaises(), lang);
+// Datos mínimos para las sugerencias del buscador de la portada (municipios y regiones de todos los países).
+const sugerencias = await getBuscador(lang);
+// Ejemplos del buscador: una sola línea con los de todos los países.
+const ejemplosDe: Record<string, string[]> = { es: ["Llanes", "Pamplona", "Zarautz", "Comillas"], fr: T.home.ejemplosFr, pt: T.home.ejemplosPt };
+const ejemplos = paises.flatMap((p) => (ejemplosDe[p.code] ?? [])
+  .map((n) => sugerencias.find((s) => s.n === n && s.pc === p.code && s.k !== "region"))
+  .filter((s) => s !== undefined));
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: SITE.name,
+  alternateName: ["RutasCamper", "rutascamper.com"],
+  url: SITE.url,
+  inLanguage: lang,
+  publisher: { "@type": "Person", name: "Freddy Materano", email: SITE.owner.email, url: `${SITE.url}/quienes-somos/` },
+  potentialAction: { "@type": "SearchAction", target: `${SITE.url}/puedo-dormir-aqui/?q={q}`, "query-input": "required name=q" },
+};
+---
+<Base title={T.home.title} description={T.home.description} schema={schema} home lang={lang}>
+  <section class="hero" data-hero>
+    <div class="hero-in">
+      <div class="hero-copy">
+        <p class="eyebrow">{T.home.eyebrow}</p>
+        <h1>{T.home.h1.map((w, i) => i < T.home.h1.length - 1
+          ? <><span class="w" style={`--i: ${i}`}>{w}</span>{" "}</>
+          : <em class="w" style={`--i: ${i}`}>{w}<svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M4 14 C80 4 200 4 296 12" /></svg></em>)}</h1>
+        <p class="lead">{T.home.lead}</p>
+        <div class="finder" data-revisado={T.home.revisado} data-sin={T.home.sinResultado}>
+          <form action={L(lang, "/puedo-dormir-aqui/")} method="get" role="search">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg>
+            <label for="hero-q" class="sr-only">{T.home.municipio}</label>
+            <input id="hero-q" class="search" name="q" type="search" placeholder={T.home.placeholder} autocomplete="off"
+              role="combobox" aria-expanded="false" aria-controls="hero-sug" aria-autocomplete="list" />
+            <button class="btn" type="submit">{T.home.buscar}</button>
+          </form>
+          <ul class="suggest" id="hero-sug" role="listbox" aria-label={T.home.sugerencias} hidden></ul>
+          <script type="application/json" id="hero-data" set:html={JSON.stringify(sugerencias)} />
+        </div>
+        {ejemplos.length > 0 && (
+          <p class="try">{T.home.prueba}
+            {ejemplos.map((s) => <a href={s.h}>{s.n}</a>)}
+          </p>
+        )}
+      </div>
+    </div>
+    <HeroArt />
+  </section>
+
+  <section class="section" aria-labelledby="elige-pais-t">
+    <div class="section-head reveal">
+      <div>
+        <p class="eyebrow">{T.portada.eyebrow}</p>
+        <h2 id="elige-pais-t">{T.home.elige}</h2>
+      </div>
+      <p class="muted">{T.portada.nota}</p>
+    </div>
+    <PaisTarjetas lang={lang} />
+  </section>
+
+  <p class="stats-note">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.4 3 8 7.5 9.5 4.5-1.5 7.5-5.1 7.5-9.5V6z" /><path d="m9 12 2.2 2.2L15.5 10" /></svg>
+    <span>{T.home.nota}</span>
+  </p>
+
+  <section class="section atajos-sec" aria-label={T.home.atajos}>
+    <AtajosViaje lang={lang} />
+  </section>
+
+  <section class="cta reveal">
+    <div>
+      <h2>{T.portada.ctaTitulo}</h2>
+      <p>{T.portada.ctaTexto}</p>
+    </div>
+    <div class="btns">
+      <a class="btn light" href={L(lang, "/destinos/")}>{T.portada.ctaDestinos}</a>
+      <a class="btn alt" href={L(lang, "/metodo/")}>{T.ui.metodo}</a>
+    </div>
+  </section>
+</Base>
+
+<script>
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Parallax del paisaje: con el scroll y, solo con ratón, con el movimiento del puntero.
+  const hero = document.querySelector<HTMLElement>("[data-hero]");
+  const desktop = matchMedia("(min-width: 900px) and (hover: hover)");
+  if (hero && !reduce) {
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        hero.style.setProperty("--sy", String(Math.min(window.scrollY, hero.offsetHeight)));
+        ticking = false;
+      });
+    };
+    addEventListener("scroll", onScroll, { passive: true });
+
+    let moving = false;
+    let px = 0, py = 0;
+    hero.addEventListener("pointermove", (ev) => {
+      if (ev.pointerType !== "mouse" || !desktop.matches) return;
+      const r = hero.getBoundingClientRect();
+      px = ((ev.clientX - r.left) / r.width - 0.5) * 2;
+      py = ((ev.clientY - r.top) / r.height - 0.5) * 2;
+      if (moving) return;
+      moving = true;
+      requestAnimationFrame(() => {
+        hero.style.setProperty("--hx", px.toFixed(3));
+        hero.style.setProperty("--hy", py.toFixed(3));
+        moving = false;
+      });
+    });
+    hero.addEventListener("pointerleave", () => {
+      hero.style.setProperty("--hx", "0");
+      hero.style.setProperty("--hy", "0");
+    });
+  }
+
+  // Sugerencias del buscador (combobox accesible con flechas, Intro y Escape).
+  type Sug = { n: string; d: string; h: string; e: string; t: string; r: string; p: string; q: string };
+  const input = document.getElementById("hero-q") as HTMLInputElement | null;
+  const list = document.getElementById("hero-sug") as HTMLUListElement | null;
+  const data: Sug[] = JSON.parse(document.getElementById("hero-data")?.textContent || "[]");
+  const finder = document.querySelector<HTMLElement>(".finder");
+  const revisado = finder?.dataset.revisado ?? "";
+  const sinTpl = finder?.dataset.sin ?? "";
+  if (input && list) {
+    const norm = (s: string) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+    const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
+    let active = -1;
+    let hits: Sug[] = [];
+    const close = () => { list.hidden = true; input.setAttribute("aria-expanded", "false"); input.removeAttribute("aria-activedescendant"); active = -1; };
+    const paint = () => {
+      list.querySelectorAll("li[role=option]").forEach((li, i) => li.setAttribute("aria-selected", String(i === active)));
+      if (active >= 0) input.setAttribute("aria-activedescendant", `sug-${active}`);
+      else input.removeAttribute("aria-activedescendant");
+    };
+    const render = () => {
+      const v = norm(input.value.trim());
+      if (!v) return close();
+      hits = data.filter((s) => norm(`${s.q} ${s.d}`).includes(v)).sort((a, b) => Number(norm(b.n).startsWith(v)) - Number(norm(a.n).startsWith(v))).slice(0, 6);
+      active = -1;
+      list.innerHTML = hits.length
+        ? hits.map((s, i) => {
+            const k = norm(s.n).indexOf(v);
+            const name = k >= 0 ? `${esc(s.n.slice(0, k))}<mark>${esc(s.n.slice(k, k + v.length))}</mark>${esc(s.n.slice(k + v.length))}` : esc(s.n);
+            return `<li role="option" id="sug-${i}" aria-selected="false"><a href="${esc(s.h)}" tabindex="-1"><span class="sg-txt"><span class="sg-name">${name}${s.p ? `<span class="sg-pais">${esc(s.p)}</span>` : ""}</span><small>${esc(s.d)}</small>${s.r ? `<small class="sg-date">${esc(revisado)} ${esc(s.r)}</small>` : ""}</span><span class="badge ${esc(s.t)}">${esc(s.e)}</span></a></li>`;
+          }).join("")
+        : `<li class="none">${esc(sinTpl).replace("{q}", esc(input.value.trim()))}</li>`;
+      list.hidden = false;
+      input.setAttribute("aria-expanded", "true");
+    };
+    input.addEventListener("input", render);
+    input.addEventListener("keydown", (ev) => {
+      if (list.hidden) return;
+      if (ev.key === "ArrowDown" || ev.key === "ArrowUp") {
+        ev.preventDefault();
+        if (!hits.length) return;
+        active = (active + (ev.key === "ArrowDown" ? 1 : -1) + hits.length) % hits.length;
+        paint();
+      } else if (ev.key === "Enter" && active >= 0) {
+        ev.preventDefault();
+        location.href = hits[active].h;
+      } else if (ev.key === "Escape") {
+        close();
+      }
+    });
+    input.addEventListener("blur", () => setTimeout(close, 150));
+  }
+</script>

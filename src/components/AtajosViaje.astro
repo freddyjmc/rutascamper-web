@@ -1,0 +1,54 @@
+---
+// Botones grandes de atajo. En la portada: mapa, Mi ruta, Útil para el viaje y Mis guardados.
+// En la pantalla de país se reutiliza con `saltos` (enlaces a las secciones de la página) y sin mapa ni Mi ruta,
+// de modo que todo sale en una sola cuadrícula. «Útil para el viaje» y «Mis guardados» solo existen en español:
+// en inglés y francés llevan hreflang="es" y la nota «en español».
+import { t, href as L, type Lang } from "../i18n";
+
+type Icono = "mapa" | "ruta" | "util" | "guardados" | "norma" | "regiones" | "radar" | "rutas";
+interface Salto { href: string; label: string; icono: Icono }
+interface Props { lang?: Lang; pais?: string; saltos?: Salto[]; /** Sin Mapa ni Mi ruta (pantalla de país). */ sinMapa?: boolean; /** No mostrar Útil ni Guardados. */ sinEs?: boolean }
+const { lang = "es", pais, saltos = [], sinMapa = false, sinEs = false } = Astro.props;
+const T = t(lang);
+const q = pais ? `?pais=${pais}` : "";
+const es = lang !== "es";
+type Item = { href: string; label: string; icono: Icono; soloEs?: boolean; guardados?: boolean };
+const items: Item[] = [
+  ...saltos,
+  ...(sinMapa ? [] : [
+    { href: `${L(lang, "/mapa-areas-autocaravanas/")}${q}`, label: T.ui.mapa, icono: "mapa" as const },
+    { href: L(lang, "/mi-ruta/"), label: T.ui.miRuta, icono: "ruta" as const },
+  ]),
+  ...(sinEs ? [] : [
+    { href: `/util-para-el-viaje/${q}`, label: T.ui.util, icono: "util" as const, soloEs: true },
+    { href: "/mis-guardados/", label: T.ui.misGuardados, icono: "guardados" as const, soloEs: true, guardados: true },
+  ]),
+];
+const cols = sinMapa ? "tres" : "cuatro";
+---
+<nav class={`atajos atajos-${cols}`} aria-label={T.home.atajos}>
+  {items.map((a) => (
+    <a class="atajo lift" href={a.href} hreflang={a.soloEs && es ? "es" : undefined}>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        {a.icono === "mapa" && <><path d="m9 4-6 2v14l6-2 6 2 6-2V4l-6 2z" /><path d="M9 4v14M15 6v14" /></>}
+        {a.icono === "ruta" && <><circle cx="6" cy="18" r="2.5" /><circle cx="18" cy="6" r="2.5" /><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5" /></>}
+        {a.icono === "util" && <><circle cx="12" cy="12" r="9" /><path d="M12 11v5M12 8h.01" /></>}
+        {a.icono === "guardados" && <path d="M6 3h12v18l-6-4-6 4z" />}
+        {a.icono === "norma" && <><path d="M12 3 4.5 6v5.5c0 4.4 3 8 7.5 9.5 4.5-1.5 7.5-5.1 7.5-9.5V6z" /><path d="m9 12 2.2 2.2L15.5 10" /></>}
+        {a.icono === "regiones" && <><rect x="3" y="3" width="7" height="7" rx="1.5" /><rect x="14" y="3" width="7" height="7" rx="1.5" /><rect x="3" y="14" width="7" height="7" rx="1.5" /><rect x="14" y="14" width="7" height="7" rx="1.5" /></>}
+        {a.icono === "radar" && <><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="4.5" /><path d="M12 12 18 6" /></>}
+        {a.icono === "rutas" && <><path d="M5 21V4" /><path d="M5 5h12l-2 4 2 4H5" /></>}
+      </svg>
+      <span>{a.label}{a.soloEs && es && <span class="sr-only"> ({T.ui.guiaEs})</span>}{a.guardados && <> <span data-guardados-n hidden></span></>}</span>
+    </a>
+  ))}
+</nav>
+
+<script>
+  // Número de fichas guardadas en este navegador (solo se lee; nada sale del dispositivo).
+  import { leer, KEYS } from "../scripts/rc";
+  const n = leer(KEYS.guardados).length;
+  document.querySelectorAll<HTMLElement>("[data-guardados-n]").forEach((el) => {
+    if (n > 0) { el.textContent = `(${n})`; el.hidden = false; }
+  });
+</script>

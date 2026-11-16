@@ -1,0 +1,7 @@
+---
+import Destinos from "../../views/Destinos.astro";
+import { langParams, type Lang } from "../../i18n";
+export function getStaticPaths() { return langParams(); }
+const lang = Astro.params.lang as Lang;
+---
+<Destinos lang={lang} />

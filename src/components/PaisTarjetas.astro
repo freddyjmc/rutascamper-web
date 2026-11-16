@@ -1,0 +1,38 @@
+---
+// Una tarjeta grande por país del registro (portada y /destinos/). Toda la tarjeta es un enlace a la pantalla del país.
+// `data-pais-hub` lo usa scripts/check.mjs para comprobar que cada país es alcanzable.
+import FotoDestino from "./FotoDestino.astro";
+import { getPaises } from "../lib/paises";
+import { ESTADOS } from "../site";
+import { t, paisesEn, type Lang } from "../i18n";
+
+interface Props { lang?: Lang }
+const { lang = "es" } = Astro.props;
+const T = t(lang);
+const paises = paisesEn(await getPaises(), lang);
+const claves = Object.keys(ESTADOS) as (keyof typeof ESTADOS)[];
+---
+<div class="paises-tarjetas stagger reveal" data-destinos>
+  {paises.map((p, i) => {
+    const mix = Object.fromEntries(claves.map((k) => [k, p.municipios.filter((m) => m.data.estado === k).length]));
+    const partes = claves.filter((k) => mix[k]);
+    const resumen = partes.map((k) => `${mix[k]} ${T.estados[k].toLowerCase()}`).join(", ");
+    return (
+      <article class="card destino pais-card lift spot" style={`--i: ${i}`} data-pais-hub={p.base}>
+        <FotoDestino id={`paises/${p.code}`} tamano="mini" sizes="(min-width: 900px) 560px, calc(100vw - 64px)" />
+        <h3><a href={p.base}>{p.nombre}</a></h3>
+        <p class="muted">{p.resumen}</p>
+        <ul class="pais-stats" aria-label={`${T.hub.resumenDe} ${p.nombre}`}>
+          <li><b>{p.nRegiones}</b> {p.nRegiones === 1 ? p.regionUno : p.regionVarias}</li>
+          <li><b>{p.nMunicipios}</b> {p.nMunicipios === 1 ? T.hub.revisado : T.hub.revisados}</li>
+        </ul>
+        {partes.length > 0 && (
+          <div class="mix" role="img" aria-label={`${T.card.mix}: ${resumen}`} title={resumen}>
+            {partes.map((k) => <span class={ESTADOS[k].tone} style={`flex: ${mix[k]}`} />)}
+          </div>
+        )}
+        <p class="destino-go"><span class="btn" aria-hidden="true">{T.destinos.entrar} {p.nombre} →</span></p>
+      </article>
+    );
+  })}
+</div>

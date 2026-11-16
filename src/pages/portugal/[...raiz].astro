@@ -1,0 +1,12 @@
+---
+import Portugal from "../../views/Portugal.astro";
+import { getEntry } from "astro:content";
+import { visibleFr } from "../../site";
+
+// Sin guía nacional publicada (verificada), /portugal/ no se genera.
+export async function getStaticPaths() {
+  const nac = await getEntry("nacionalPt", "nacional");
+  return nac && visibleFr(nac) ? [{ params: { raiz: undefined } }] : [];
+}
+---
+<Portugal lang="es" />

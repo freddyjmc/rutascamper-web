@@ -1,0 +1,102 @@
+---
+import Base from "../layouts/Base.astro";
+import AvisoTraduccion from "../components/AvisoTraduccion.astro";
+import { SITE } from "../site";
+import { t, localePath, type Lang } from "../i18n";
+
+interface Props { lang?: Lang }
+const { lang = "es" } = Astro.props;
+const T = t(lang);
+const meta = {
+  es: { title: "Cómo verificamos la normativa", description: "Qué fuentes usamos, cómo contrastamos cada ordenanza y cada cuánto revisamos las fichas de pernocta.", crumb: "Método" },
+  en: { title: "How we verify the rules", description: "Which sources we use, how we check each ordinance and how often we review the overnight stay pages.", crumb: "Method" },
+  fr: { title: "Comment nous vérifions la réglementation", description: "Quelles sources nous utilisons, comment nous confrontons chaque règlement municipal et à quelle fréquence nous révisons les fiches de nuitée.", crumb: "Méthode" },
+}[lang];
+---
+<Base title={meta.title} description={meta.description} crumbs={[{ name: meta.crumb, href: localePath(lang, "/metodo/") }]} lang={lang}>
+  <div class="prose">
+    {lang === "es" && (
+      <>
+        <h1>Cómo verificamos la normativa</h1>
+        <p class="lead">Una ficha solo se publica cuando la hemos contrastado con una fuente oficial. Si no la encontramos, lo decimos.</p>
+
+        <h2>Qué fuentes usamos</h2>
+        <ul>
+          <li><strong>Oficiales:</strong> BOE, boletines autonómicos y provinciales, ordenanzas municipales e instrucciones de la DGT.</li>
+          <li><strong>Secundarias:</strong> prensa, foros y aplicaciones de viajeros. Las usamos solo como pista para encontrar la norma, nunca como fuente única.</li>
+          <li><strong>Coordenadas en Francia:</strong> cuando la web del ayuntamiento no da la ubicación exacta de un área, usamos la del registro nacional de datos turísticos DATAtourisme (ADN Tourisme), publicado en data.gouv.fr con la Licence Ouverte 2.0 de Etalab. Cada punto lo crea una oficina de turismo; citamos quién lo creó y la fecha de su última actualización, y enlazamos el registro. Solo usamos la ubicación de áreas que ya están en nuestras fichas; no reproducimos la base de datos. Ni DATAtourisme, ni ADN Tourisme, ni las oficinas de turismo han revisado ni avalan esta web.</li>
+        </ul>
+
+        <h2>Qué significa cada estado</h2>
+        <ul>
+          <li><span class="badge ok">{T.estados.permitido}</span> No hemos encontrado prohibición y se aplica la norma general de estacionamiento.</li>
+          <li><span class="badge warn">{T.estados.restringido}</span> Hay límites de horario, zonas o tiempo máximo.</li>
+          <li><span class="badge bad">{T.estados.prohibido}</span> Solo se puede dormir en áreas habilitadas.</li>
+          <li><span class="badge idle">{T.estados["sin-datos"]}</span> No hemos encontrado una norma municipal propia.</li>
+        </ul>
+
+        <h2>Revisiones</h2>
+        <p>Cada ficha muestra la fecha de su última revisión. Las revisamos antes de cada temporada alta y cuando sale una norma nueva.</p>
+
+        <h2>¿Has visto un error?</h2>
+        <p>Escríbenos a {SITE.owner.email} con el enlace a la norma y lo corregimos. La señalización en el lugar siempre prevalece sobre esta web.</p>
+      </>
+    )}
+    {lang === "en" && (
+      <>
+        <h1>How we verify the rules</h1>
+        <AvisoTraduccion lang={lang} />
+        <p class="lead">A page is only published once we have checked it against an official source. If we cannot find one, we say so.</p>
+
+        <h2>Which sources we use</h2>
+        <ul>
+          <li><strong>Official:</strong> the BOE (Spain's official state gazette), regional and provincial gazettes, municipal ordinances and instructions from the DGT (Spain's traffic authority).</li>
+          <li><strong>Secondary:</strong> press, forums and traveller apps. We only use them as a clue to find the rule, never as the only source.</li>
+          <li><strong>Coordinates in France:</strong> when the town's website does not give the exact location of an area, we use the one in the national tourism data register DATAtourisme (ADN Tourisme), published on data.gouv.fr under Etalab's Licence Ouverte 2.0. Each point is created by a tourist office; we name who created it and the date of its last update, and we link to the record. We only use the location of areas that are already in our pages; we do not reproduce the database. Neither DATAtourisme, ADN Tourisme nor the tourist offices have reviewed or endorse this website.</li>
+        </ul>
+
+        <h2>What each status means</h2>
+        <ul>
+          <li><span class="badge ok">{T.estados.permitido}</span> We have not found a ban and the general parking rule applies.</li>
+          <li><span class="badge warn">{T.estados.restringido}</span> There are limits on hours, zones or maximum time.</li>
+          <li><span class="badge bad">{T.estados.prohibido}</span> You can only sleep in designated areas.</li>
+          <li><span class="badge idle">{T.estados["sin-datos"]}</span> We have not found a municipal rule of its own.</li>
+        </ul>
+
+        <h2>Reviews</h2>
+        <p>Each page shows the date of its last review. We review them before every high season and whenever a new rule is published.</p>
+
+        <h2>Have you spotted a mistake?</h2>
+        <p>Write to us at {SITE.owner.email} with the link to the rule and we will correct the mistake. The signs on the spot always prevail over this website.</p>
+      </>
+    )}
+    {lang === "fr" && (
+      <>
+        <h1>Comment nous vérifions la réglementation</h1>
+        <AvisoTraduccion lang={lang} />
+        <p class="lead">Une fiche n'est publiée que lorsque nous l'avons confrontée à une source officielle. Si nous n'en trouvons pas, nous le disons.</p>
+
+        <h2>Quelles sources nous utilisons</h2>
+        <ul>
+          <li><strong>Officielles :</strong> le BOE (journal officiel de l'État espagnol), les bulletins officiels régionaux et provinciaux, les ordenanzas municipales (règlements municipaux) et les instructions de la DGT (l'autorité espagnole de la circulation).</li>
+          <li><strong>Secondaires :</strong> presse, forums et applications de voyageurs. Nous ne les utilisons que comme piste pour trouver la règle, jamais comme source unique.</li>
+          <li><strong>Coordonnées en France :</strong> lorsque le site de la commune ne donne pas l'emplacement exact d'une aire, nous utilisons celui du registre national des données touristiques DATAtourisme (ADN Tourisme), publié sur data.gouv.fr sous la Licence Ouverte 2.0 d'Etalab. Chaque point est créé par un office de tourisme ; nous citons qui l'a créé et la date de sa dernière mise à jour, et nous renvoyons vers la fiche du registre. Nous n'utilisons que l'emplacement d'aires déjà présentes dans nos fiches ; nous ne reproduisons pas la base de données. Ni DATAtourisme, ni ADN Tourisme, ni les offices de tourisme n'ont revu ni n'approuvent ce site.</li>
+        </ul>
+
+        <h2>Ce que signifie chaque statut</h2>
+        <ul>
+          <li><span class="badge ok">{T.estados.permitido}</span> Nous n'avons pas trouvé d'interdiction et la règle générale de stationnement s'applique.</li>
+          <li><span class="badge warn">{T.estados.restringido}</span> Il existe des limites d'horaires, de zones ou de durée maximale.</li>
+          <li><span class="badge bad">{T.estados.prohibido}</span> On ne peut dormir que dans les aires prévues à cet effet.</li>
+          <li><span class="badge idle">{T.estados["sin-datos"]}</span> Nous n'avons pas trouvé de règle municipale propre.</li>
+        </ul>
+
+        <h2>Révisions</h2>
+        <p>Chaque fiche indique la date de sa dernière révision. Nous les révisons avant chaque haute saison et chaque fois qu'une nouvelle règle est publiée.</p>
+
+        <h2>Vous avez repéré une erreur ?</h2>
+        <p>Écrivez-nous à {SITE.owner.email} avec le lien vers la règle et nous corrigerons l'erreur. La signalisation sur place prévaut toujours sur ce site.</p>
+      </>
+    )}
+  </div>
+</Base>

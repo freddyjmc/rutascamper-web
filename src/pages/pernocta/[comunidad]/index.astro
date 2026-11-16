@@ -1,0 +1,57 @@
+---
+import Base from "../../../layouts/Base.astro";
+import { getCollection } from "astro:content";
+import FotoDestino from "../../../components/FotoDestino.astro";
+import { ESTADOS, visible, fecha, fechaCorta, fuenteOficial } from "../../../site";
+
+export async function getStaticPaths() {
+  const comunidades = (await getCollection("comunidades")).filter(visible);
+  const municipios = (await getCollection("municipios")).filter(visible);
+  return comunidades.map((c) => ({
+    params: { comunidad: c.id },
+    props: { c, municipios: municipios.filter((m) => m.data.comunidad === c.id).sort((a, b) => a.data.nombre.localeCompare(b.data.nombre, "es")) },
+  }));
+}
+
+const { c, municipios } = Astro.props;
+const title = `Dormir en camper en ${c.data.nombre}: normativa`;
+---
+<Base title={title} description={c.data.resumen.slice(0, 155)} noindex={!c.data.verificado} crumbs={[{ name: "Destinos", href: "/destinos/" }, { name: "España", href: "/pernocta/" }, { name: c.data.nombre, href: Astro.url.pathname }]}>
+  <h1>Dormir en camper en {c.data.nombre}</h1>
+  <FotoDestino id={`comunidades/${c.id}`} prioridad sizes="(min-width: 1180px) 1120px, calc(100vw - 32px)" />
+  <div class="ficha-top">
+    <span class="badge idle" title="Fecha de la última revisión de esta ficha">Actualizado: {fechaCorta(c.data.revisado)}</span>
+    {fuenteOficial(c.data) && <a class="src-link" href={fuenteOficial(c.data)!.url} rel="nofollow noopener" target="_blank">Ver norma oficial ↗</a>}
+  </div>
+  <p class="lead">{c.data.resumen}</p>
+  {!c.data.verificado && <p class="notice">Borrador sin verificar. No se publica hasta contrastarlo con fuentes oficiales.</p>}
+  {c.data.normaAutonomica && (<><h2>Norma autonómica</h2><p>{c.data.normaAutonomica}</p></>)}
+  {c.data.claves.length > 0 && (<><h2>Lo que tienes que saber</h2><ul class="prose">{c.data.claves.map((k) => <li>{k}</li>)}</ul></>)}
+  {c.data.fuentes.length > 0 && (
+    <>
+      <h2>Fuentes</h2>
+      <ul class="sources">
+        {c.data.fuentes.map((f) => (
+          <li><a href={f.url} rel="nofollow noopener" target="_blank">{f.titulo}</a> <span class="meta">· {f.tipo === "oficial" ? "fuente oficial" : "fuente secundaria"}{f.fecha && ` · ${fecha(f.fecha)}`}</span></li>
+        ))}
+      </ul>
+    </>
+  )}
+
+  <h2>Municipios revisados</h2>
+  {municipios.length ? (
+    <ul class="results">
+      {municipios.map((m) => {
+        const e = ESTADOS[m.data.estado];
+        return (
+          <li><a href={`/pernocta/${c.id}/${m.id.split("/").pop()}/`}>
+            <span>{m.data.nombre}<br /><span class="where">{m.data.provincia} · revisado: {fecha(m.data.revisado)}</span></span>
+            <span class={`badge ${e.tone}`}>{e.label}</span>
+          </a></li>
+        );
+      })}
+    </ul>
+  ) : <p class="muted">Todavía no hay municipios revisados en esta comunidad.</p>}
+  <p>Compara con otras comunidades en la <a href="/normativa-pernocta-camper/">guía de normativa: pernoctar o acampar</a>.</p>
+  <p class="meta">Última revisión de la ficha: {fecha(c.data.revisado)} · <a href="/metodo/">Cómo verificamos</a></p>
+</Base>

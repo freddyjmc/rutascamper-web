@@ -1,0 +1,46 @@
+---
+// Foto principal de un destino, con crédito visible. Si no hay foto, no pinta nada.
+import { Picture } from "astro:assets";
+import { getFoto } from "../lib/fotos";
+import FotoCredito from "./FotoCredito.astro";
+
+interface Props {
+  id: string;
+  // Imagen principal de la página: carga inmediata y prioridad alta.
+  prioridad?: boolean;
+  // "grande": cabecera a todo el ancho de la lectura. "mini": miniatura de tarjeta.
+  tamano?: "grande" | "mini";
+  sizes?: string;
+}
+const { id, prioridad = false, tamano = "grande", sizes } = Astro.props;
+const foto = await getFoto(id);
+const mini = tamano === "mini";
+const anchos = mini ? [480] : [480, 800, 1200, 1600];
+// El img de reserva (src) se limita al ancho mayor que se usa: nunca se sirve el original.
+const ancho = anchos[anchos.length - 1];
+const alto = foto ? Math.round((ancho * foto.imagen.height) / foto.imagen.width) : 0;
+const sizesAttr = sizes ?? (mini ? "(min-width: 900px) 360px, 90vw" : "(min-width: 900px) 740px, calc(100vw - 32px)");
+---
+{foto && (
+  <figure class={`foto-destino${mini ? " foto-mini" : ""}`}>
+    <div class="foto-marco">
+      <Picture
+        src={foto.imagen}
+        alt={foto.alt}
+        formats={["avif", "webp"]}
+        fallbackFormat="jpg"
+        width={ancho}
+        height={alto}
+        widths={anchos}
+        sizes={sizesAttr}
+        loading={prioridad ? "eager" : "lazy"}
+        decoding={prioridad ? "sync" : "async"}
+        fetchpriority={prioridad ? "high" : "auto"}
+        style={foto.focal ? `object-position: ${foto.focal}` : undefined}
+      />
+    </div>
+    <figcaption>
+      <FotoCredito foto={foto} variante={mini ? "minimo" : "completo"} />
+    </figcaption>
+  </figure>
+)}

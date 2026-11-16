@@ -1,0 +1,48 @@
+---
+import Base from "../../../layouts/Base.astro";
+import FichaFr from "../../../components/FichaFr.astro";
+import FotoDestino from "../../../components/FotoDestino.astro";
+import { getCollection, getEntry } from "astro:content";
+import { visibleFr, nombreFr } from "../../../site";
+
+export async function getStaticPaths() {
+  const nac = await getEntry("nacionalFr", "nacional");
+  if (!nac || !visibleFr(nac)) return [];
+  const all = (await getCollection("municipiosFr")).filter(visibleFr);
+  return all.map((m) => ({ params: { region: m.data.comunidad, municipio: m.id.split("/").pop() }, props: { m } }));
+}
+
+const { m } = Astro.props;
+const r = await getEntry("regionesFr", m.data.comunidad);
+const rNombre = r ? nombreFr(r.data.nombre).es : m.data.comunidad;
+const title = `¿Se puede dormir en autocaravana en ${m.data.nombre}?`;
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: title,
+  inLanguage: "es",
+  dateModified: m.data.revisado?.toISOString(),
+  about: { "@type": "Place", name: `${m.data.nombre}, ${m.data.provincia}` },
+};
+---
+<Base
+  title={title}
+  description={m.data.resumen.slice(0, 150)}
+  noindex={!m.data.verificado}
+  schema={schema}
+  crumbs={[
+    { name: "Destinos", href: "/destinos/" },
+    { name: "Francia", href: "/francia/" },
+    { name: rNombre, href: `/francia/${m.data.comunidad}/` },
+    { name: m.data.nombre, href: Astro.url.pathname },
+  ]}
+>
+  <div class="ficha-page">
+    <h1>¿Se puede dormir en autocaravana en {m.data.nombre}?</h1>
+    <div class="ficha-main">
+      <FotoDestino id={`francia/${m.data.comunidad}/${m.id.split("/").pop()}`} />
+      <FichaFr m={m.data} />
+      <p class="ficha-nav"><a href={`/francia/${m.data.comunidad}/`}>← Normativa en {rNombre}</a> · <a href="/francia/">Francia</a></p>
+    </div>
+  </div>
+</Base>
