@@ -1,0 +1,25 @@
+{
+  "name": "rutascamper",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "deploy": "astro build && node scripts/check.mjs && wrangler deploy",
+    "check": "node scripts/check.mjs",
+    "check:external": "node scripts/check.mjs --external"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "3.7.4",
+    "@fontsource-variable/bricolage-grotesque": "^5.3.0",
+    "@fontsource-variable/nunito": "^5.3.0",
+    "astro": "7.4.4",
+    "leaflet": "^1.9.4",
+    "leaflet.markercluster": "^1.5.3"
+  },
+  "devDependencies": {
+    "wrangler": "^4.156.0"
+  }
+}
